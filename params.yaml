@@ -8,7 +8,7 @@ backlog_size: 120
 backlog_width: 4
 batch_size: 10
 delay_penalty: -1
-discount: 0.95
+discount: 0.1
 dismiss_penalty: -1
 dist: !!python/object:job_distribution.Dist
   anomalous_job_len_lower: 19
@@ -30,7 +30,7 @@ dist: !!python/object:job_distribution.Dist
   num_res: 2
   other_res_lower: 1
   other_res_upper: 5
-episode_max_length: 400
+episode_max_length: 200
 evaluate_policy_name: SJF
 hold_penalty: -1
 job_num_cap: 40
@@ -43,8 +43,8 @@ network_input_height: 30
 network_input_width: 225
 network_output_dim: 16
 new_job_rate: 0.7
-num_epochs: 151
-num_ex: 20
+num_epochs: 1001
+num_ex: 15
 num_frames: 1
 num_nw: 5
 num_res: 2
@@ -56,6 +56,6 @@ res_slot2: 10
 res_slot3: 15
 rms_eps: 1.0e-09
 rms_rho: 0.9
-simu_len: 40
+simu_len: 45
 time_horizon: 30
 unseen: false
