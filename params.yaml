@@ -8,7 +8,7 @@ backlog_size: 120
 backlog_width: 4
 batch_size: 10
 delay_penalty: -1
-discount: 0.1
+discount: 1
 dismiss_penalty: -1
 dist: !!python/object:job_distribution.Dist
   anomalous_job_len_lower: 19
