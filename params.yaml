@@ -43,7 +43,7 @@ network_input_height: 30
 network_input_width: 225
 network_output_dim: 16
 new_job_rate: 0.7
-num_epochs: 1001
+num_epochs: 1501
 num_ex: 15
 num_frames: 1
 num_nw: 5
