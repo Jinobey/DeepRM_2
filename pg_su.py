@@ -89,21 +89,10 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job'):
             # ---- get current state ----
             ob = env.observe()
             
-            a = evaluate_policy(env.machine, env.job_slot, env.remove_slot, pa)
-            #print('job from queue starting : ', a)
-            #print(env.machine, 'and', env.job_slot , 'machine x slots')
+            a = evaluate_policy(env.machine, env.job_slot1,pa)
+
             if counter < pa.simu_len * pa.num_ex * mem_alloc: # 72
-                #if a == pa.num_nw:
-               #     target = pa.num_nw
-                    #print("pa.num_nw:", pa.num_nw)
-              #  elif a == pa.remove:
-            # 3       target = pa.remove
-            #        #print("pa.remove:", pa.remove)
-           #     else:
-          #          target = a
-                    #print('the a', a)
-                #print('sample added and counter check', counter)
-                #add_sample(X, y, counter, ob, a)
+
                 add_sample(X, y, counter, ob, a)
                 #print('added sample, ', add_sample(X, y, counter, ob, a))
                 counter += 1

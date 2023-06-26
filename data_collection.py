@@ -21,7 +21,9 @@ class Data_collection:
                         'num_nw':pa.num_nw,
                         'time_horizon':pa.time_horizon,
                         'max_job_len':pa.max_job_len,
-                        'res_slot':pa.res_slot,
+                        'res_slot1':pa.res_slot1,
+                        'res_slot2':pa.res_slot2,
+                        'res_slot3':pa.res_slot3,
                         'max_job_size':pa.max_job_size,
                         'anomalous_job_len_upper_bound':pa.anomalous_job_len_upper_bound,
                         'anomalous_job_len-middle_bound': pa.anomalous_job_len_middle_bound,
@@ -42,8 +44,6 @@ class Data_collection:
                         'delay_penalty':pa.delay_penalty,
                         'hold_penalty':pa.hold_penalty,
                         'dismiss_penalty':pa.dismiss_penalty,
-                        'remove_penalty':pa.removed_penality,
-                        'destroy_penality':pa.destroy_penality,
                         'num_frames':pa.num_frames,
                         'lr_rate':pa.lr_rate,
                         'rms_rho':pa.rms_rho,
@@ -53,12 +53,8 @@ class Data_collection:
                         'evaluate_policy_name':pa.evaluate_policy_name 
                         }
                 
-                with open('parameter.yaml', 'w') as file:
+                with open('params.yaml', 'w') as file:
                         yaml.dump(parameters, file)
-
-        def convert_to_metrics(self, a,b,c,d,e):
-                df = pd.DataFrame
-                print('guiltyyy')
 
         def csv_check(self, file, headers):
                 if not os.path.isfile(file) or os.path.getsize(file) == 0:

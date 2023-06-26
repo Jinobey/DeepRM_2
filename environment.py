@@ -45,11 +45,10 @@ class Env:
         self.anomalous = False
 
         
-        self.jobsHeaders = ['iteration','job object', 'job ID', 'job Length', 'job ressource requirement', 'job enter time', 'job start time', 'job finish time', 'job waiting time', 'current time']
-        self.destroyedJobsFile = 'destroyedJobs.csv'
-        self.injectJobsFile = 'injectedJobs.csv'
-        self.removedJobsFile = 'removedJobs.csv'
-        self.allocatedJobsFile = 'allocatedJobs.csv'
+
+        self.allocatedJobsFile1 = 'allocatedJobsM1.csv'
+        self.allocatedJobsFile2 = 'allocatedJobsM2.csv'
+        self.allocatedJobsFile3 = 'allocatedJobsM3.csv'
         self.allocatedJobsHeaders = ['iteration','job object', 'job ID', 'job Length', 'job ressource requirement', 'job enter time', 'job start time', 'job finish time', 'job waiting time', 'current time']
 
 
@@ -70,7 +69,7 @@ class Env:
             for i in xrange(pa.num_res):
                 self.workload[i] = \
                     np.sum(self.nw_size_seqs[:, i] * self.nw_len_seqs) / \
-                    float(pa.res_slot) / \
+                    float(pa.res_slot1) / \
                     float(len(self.nw_len_seqs))
                 print("Load on # " + str(i) + " resource dimension is " + str(self.workload[i])) #change res slot here as well.
               #  print('workload2', self.workload)
@@ -90,11 +89,6 @@ class Env:
         self.machine = Machine(pa)
     #    self.job_slot = JobSlot(pa)
         self.job_slot1 = JobSlot1(pa)
-        self.job_slot2 = JobSlot2(pa)
-        self.job_slot3 = JobSlot3(pa)        
-        self.remove_slot = RemovedJobs(pa)
-        self.destroyed_slot = DestroyedJobs(pa)
-        #print('job slots:',self.job_slot.slot)
         self.job_backlog = JobBacklog(pa)
         self.job_record = JobRecord()
         self.extra_info = ExtraInfo(pa)
@@ -132,16 +126,24 @@ class Env:
             backlog_width = int(math.ceil(self.pa.backlog_size / float(self.pa.time_horizon)))
         #    print('width of backlog: ', backlog_width)
             image_repr = np.zeros((self.pa.network_input_height, self.pa.network_input_width))
-       #     print('image repre before: ', image_repr.shape)
+            #print('image repre before: ', image_repr.shape, image_repr)
             ir_pt = 0
 
             for i in xrange(self.pa.num_res):
                 #print("Shape of image_repr: ", image_repr.shape)
                # print("Shape of machine.canvas for resource ", i, ": ", self.machine.canvas[i, :, :].shape)
               #  print("Value of res_slot: ", self.pa.res_slot)
-                image_repr[:, ir_pt: ir_pt + self.pa.res_slot] = self.machine.canvas[i, :, :] #change res slot to anomalous. #explore this in more details TODO
-                ir_pt += self.pa.res_slot
-             #   print('check the image representation pt: ', ir_pt)
+                image_repr[:, ir_pt: ir_pt + self.pa.res_slot1] = self.machine.canvas1[i, :, :] #change res slot to anomalous. #explore this in more details TODO
+                ir_pt += self.pa.res_slot1
+             #   print('check the image representation pt after canvas 1: ', ir_pt, "and img", image_repr.shape)
+
+                image_repr[:, ir_pt: ir_pt + self.pa.res_slot2] += self.machine.canvas2[i, :, :] #change res slot to anomalous. #explore this in more details TODO
+                ir_pt += self.pa.res_slot2
+             #   print('check the image representation pt after canvas 2: ', ir_pt, "and img", image_repr.shape)
+
+                image_repr[:, ir_pt: ir_pt + self.pa.res_slot3] += self.machine.canvas3[i, :, :] #change res slot to anomalous. #explore this in more details TODO
+                ir_pt += self.pa.res_slot3
+             #   print('check the image representation after canva 3 pt: ', ir_pt, "and img", image_repr.shape)
 
                 for j in xrange(self.pa.num_nw):
 
@@ -151,16 +153,7 @@ class Env:
                     ir_pt += self.pa.anomalous_job_resources_upper
             #        print('check ir_pt value: ', ir_pt)
                     #print(' max job size: ', ir_pt)
-                for k in xrange(self.pa.num_nw):
-                    if self.job_slot2.slot[k] is not None:
-                        image_repr[: self.job_slot2.slot[k].len, ir_pt: ir_pt + self.job_slot2.slot[k].res_vec[i]] = 1
-                     #   append_to_csv('./image_repr.csv', image_repr)
-                    ir_pt += self.pa.anomalous_job_resources_upper
-                for l in xrange(self.pa.num_nw):
-                    if self.job_slot3.slot[l] is not None:
-                        image_repr[: self.job_slot3.slot[l].len, ir_pt: ir_pt + self.job_slot3.slot[l].res_vec[i]] = 1
-                     #   append_to_csv('./image_repr.csv', image_repr)
-                    ir_pt += self.pa.anomalous_job_resources_upper    
+                
             image_repr[: self.job_backlog.curr_size / backlog_width,
                        ir_pt: ir_pt + backlog_width] = 1
            # print('image rep backlog ting: ', image_repr)
@@ -177,6 +170,7 @@ class Env:
             ir_pt += 1
             #print('image represenation: ', image_repr, 'and shape of image: ', image_repr.shape)
             #print('check backlog: ',  )
+            #print('the image at the end of obv func: ', image_repr,  image_repr.shape, 'and irpt', ir_pt)
             assert ir_pt == image_repr.shape[1]
 
             return image_repr
@@ -207,15 +201,15 @@ class Env:
             # new work duration and size
             for i in range(self.pa.num_nw):
 
-                if self.job_slot.slot[i] is None:
+                if self.job_slot1.slot[i] is None:
                     compact_repr[cr_pt: cr_pt + self.pa.num_res + 1] = 0
                     cr_pt += self.pa.num_res + 1
                 else:
-                    compact_repr[cr_pt] = self.job_slot.slot[i].len
+                    compact_repr[cr_pt] = self.job_slot1.slot[i].len
                     cr_pt += 1
 
                     for j in range(self.pa.num_res):
-                        compact_repr[cr_pt] = self.job_slot.slot[i].res_vec[j]
+                        compact_repr[cr_pt] = self.job_slot1.slot[i].res_vec[j]
                         cr_pt += 1
 
             # backlog queue
@@ -237,19 +231,19 @@ class Env:
                         1 + self.pa.num_nw + 1,  # first +1 for current work, last +1 for backlog queue
                         i * (self.pa.num_nw + 1) + skip_row + 1)  # plot the backlog at the end, +1 to avoid 0
 
-            plt.imshow(self.machine.canvas[i, :, :], interpolation='nearest', vmax=1)
+            plt.imshow(self.machine.canvas1[i, :, :], interpolation='nearest', vmax=1)
 
             for j in xrange(self.pa.num_nw):
 
-                job_slot = np.zeros((self.pa.time_horizon, self.pa.max_job_size))
-                if self.job_slot.slot[j] is not None:  # fill in a block of work
-                    job_slot[: self.job_slot.slot[j].len, :self.job_slot.slot[j].res_vec[i]] = 1
+                job_slot1 = np.zeros((self.pa.time_horizon, self.pa.max_job_size))
+                if self.job_slot1.slot[j] is not None:  # fill in a block of work
+                    job_slot1[: self.job_slot1.slot[j].len, :self.job_slot1.slot[j].res_vec[i]] = 1
 
                 plt.subplot(self.pa.num_res,
                             1 + self.pa.num_nw + 1,  # first +1 for current work, last +1 for backlog queue
                             1 + i * (self.pa.num_nw + 1) + j + skip_row + 1)  # plot the backlog at the end, +1 to avoid 0
 
-                plt.imshow(job_slot, interpolation='nearest', vmax=1)
+                plt.imshow(job_slot1, interpolation='nearest', vmax=1)
 
                 if j == self.pa.num_nw - 1:
                     skip_row += 1
@@ -284,53 +278,39 @@ class Env:
 
         reward = 0
         for j in self.machine.running_job:
-          #  print('this is list of running job: ', self.machine.running_job)
-         #   print('this is j', j.id, j.len, j.res_vec)
-           # if max(j.res_vec) >= self.pa.anomalous_job_resources_lower or j.len >= self.pa.anomalous_job_len_lower_bound:
-           #     reward += self.pa.delay_penalty / (float(j.len)/1.5)
-           # else: 
-            reward += self.pa.delay_penalty / float(j.len)
-            #print('delay penality', reward)
+           # if j.len >= self.pa.anomalous_job_len_middle_bound:
+          #      reward += self.pa.delay_penalty / (-float(j.len))
+         #   else: 
+            if j.len >= self.pa.anomalous_job_len_middle_bound:
+                reward += self.pa.delay_penalty / (-(float(j.len)))
+            else:
+                reward += self.pa.delay_penalty / float(j.len)
 
-        for j in self.job_slot.slot:
+        for j in self.machine.running_job2:
+ 
+            reward += self.pa.delay_penalty / float(j.len)
+
+        for j in self.machine.running_job3:
+            if max(j.res_vec) >= self.pa.anomalous_job_resources_lower:
+                reward += self.pa.delay_penalty / (-float(max(j.res_vec)))
+            
+            else:
+                reward += self.pa.delay_penalty / float(j.len)
+
+        for j in self.job_slot1.slot:
             if j is not None:
-                #if max(j.res_vec) >= self.pa.anomalous_job_resources_lower or j.len >= self.pa.anomalous_job_len_lower_bound:
-                #    reward += self.pa.hold_penalty / (float(j.len)/1.5)
-                #else: 
                 reward += self.pa.hold_penalty / float(j.len)
 
         for j in self.job_backlog.backlog:
             if j is not None:
                 reward += self.pa.dismiss_penalty / float(j.len)
-             #   print('dismiss penality', reward)
-        for j in self.remove_slot.slot:
-            if j is not None:
-                #if max(j.res_vec) >= self.pa.anomalous_job_resources_lower or j.len >= self.pa.anomalous_job_len_lower_bound:
-                #    reward += self.pa.removed_penality / float(j.len)
-                #else: 
-                reward += self.pa.removed_penality / (float(j.len) * 1.5)
-                #reward += self.pa.removed_penality / float(j.len)
         
-        for j in self.machine.destroyed_jobs:
-            if max(j.res_vec) >= self.pa.anomalous_job_resources_lower:     
-                reward += self.pa.destroy_penality / (-(float(max(j.res_vec)))) #maybe divide by 2.
-            elif j.len >= self.pa.anomalous_job_len_middle_bound:
-                reward += self.pa.destroy_penality / (-(float(j.len)))
-             #   print('reward: ', reward, 'max res: ', max(j.res_vec))
-            else:
-                reward += self.pa.destroy_penality * 2#/ #((float(j.len)/1.5))
-
-        
-        #access remove reward
-                #what kind of formula to use for penality?
-        #print('reward in the reward function: ', reward)
-
-
         return reward
 
-    def step(self, a, s=None, repeat=False):
+    def step(self, a, s=None, repeat=False, test_type=None):
         #print("Active child processes:- ", multiprocessing.active_children())
         #print("Active threads:", threading.enumerate())
+    #    print('testtype', test_type)
         status = None
         list_of_actions = []
         done = False
@@ -338,115 +318,58 @@ class Env:
         info = None
         list_of_actions.append(a)
         append_to_csv('./output_re.csv', [[a]])
-        print('current timestep: ', self.curr_time, "and actions taken: ", a, "job_slots: ", self.job_slot1.slot, "remove slots: ", self.remove_slot.slot, "backlog size: ", self.job_backlog.curr_size)
+        #print('current timestep: ', self.curr_time, "and actions taken: ", a, "job_slots: ", self.job_slot1.slot, "backlog size: ", self.job_backlog.curr_size)
         
       #  print('the action a is: ', a , 'at time: ', self.curr_time)
 
         if a == self.pa.num_nw:  # explicit void action # if action taken is 5 then move on
             status = 'MoveOn'
 
-        elif a > self.pa.num_nw and a <= (self.pa.num_nw*2):
-            a = a - self.pa.num_nw - 1
+        elif (a >= (self.pa.num_nw) + 1) and (a <= (self.pa.num_nw * 2)):
+            a = a - (self.pa.num_nw) - 1
             if self.job_slot1.slot[a] is None:
                 status = 'MoveOn'
-            else:    
-                migrate_1_2 = self.machine.migrate_1_to_2(self.job_slot1, self.curr_time, a, self.job_slot1.slot[a], self.job_slot2, self.pa, self.job_record)
-                if not migrate_1_2:
+            else:  
+                allocated2 = self.machine.allocate_job_machine2(self.job_slot1.slot[a], self.curr_time)
+                if not allocated2:  # implicit void action
                     status = 'MoveOn'
+                
                 else:
-                    self.job_info = [self.iteration,self.job_slot.slot[a], self.job_slot.slot[a].id, self.job_slot.slot[a].len, self.job_slot.slot[a].res_vec,self.job_slot.slot[a].enter_time,self.job_slot.slot[a].start_time, self.job_slot.slot[a].finish_time, self.job_slot.slot[a].waiting_time,  self.curr_time]
-                    self.data_collection_instance.append_job_to_csv(self.removedJobsFile,self.jobsHeaders,self.job_info)
-                    status = 'migrate1_2'
+                    #if(test_type == "PG"):
+                    #    print('the test type: ', test_type)
+                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile2,self.allocatedJobsHeaders,self.job_info)
+                    status = 'Allocate2'
 
-        elif (a >= (self.pa.num_nw * 2) + 1) and (a <= (self.pa.num_nw * 3)): # should be + 1 not 2
+        elif (a >= (self.pa.num_nw * 2 + 1) and (a <= (self.pa.num_nw *3))):  
             a = a - (self.pa.num_nw * 2) - 1
             if self.job_slot1.slot[a] is None:
                 status = 'MoveOn'
-            else:
-                migrate_1_3 = self.machine.migrate_1_to_3(self.job_slot1, self.curr_time, a, self.job_slot1.slot[a], self.job_slot3, self.pa, self.job_record)
-                if not migrate_1_3:
+            else:        
+                allocated3 = self.machine.allocate_job_machine3(self.job_slot1.slot[a], self.curr_time)
+                if not allocated3:  # implicit void action
                     status = 'MoveOn'
                 else:
-                    status = 'migrate1_3'   
-
-        elif (a >= (self.pa.num_nw * 3) + 1) and (a <= (self.pa.num_nw * 4)):
-            a = a - (self.pa.num_nw * 3) - 1
-            allocated2 = self.machine.allocate_job_machine2(self.job_slot2.slot[a], self.curr_time)
-            if not allocated2:  # implicit void action
-                status = 'MoveOn'
-            
-            else:
-                self.job_info = [self.iteration,self.job_slot.slot[a], self.job_slot.slot[a].id, self.job_slot.slot[a].len, self.job_slot.slot[a].res_vec,self.job_slot.slot[a].enter_time,self.job_slot.slot[a].start_time, self.job_slot.slot[a].finish_time, self.job_slot.slot[a].waiting_time,  self.curr_time]
-                self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile,self.jobsHeaders,self.job_info)
-                status = 'Allocate2'
-
-        elif (a >= (self.pa.nunm_nw * 4 + 1) and (a <= (self.pa.num_nw * 5))):  
-            a = a - (self.pa.num_nw * 4) - 1
-            allocated3 = self.machine.allocate_job_machine3(self.job_slot3.slot[a], self.curr_time)
-            if not allocated3:  # implicit void action
-                status = 'MoveOn'
-            else:
-                self.job_info = [self.iteration,self.job_slot.slot[a], self.job_slot.slot[a].id, self.job_slot.slot[a].len, self.job_slot.slot[a].res_vec,self.job_slot.slot[a].enter_time,self.job_slot.slot[a].start_time, self.job_slot.slot[a].finish_time, self.job_slot.slot[a].waiting_time,  self.curr_time]
-                self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile,self.jobsHeaders,self.job_info)
-                status = 'Allocate3'
-
-
-        elif (a >= (self.pa.num_nw * 5) + 1) and (a <= (self.pa.num_nw * 6)): # should be + 1 not 2
-            a = a - (self.pa.num_nw * 5) - 1
-            if self.job_slot3.slot[a] is None:
-                status = 'MoveOn'
-            else:
-                migrate_3_1 = self.machine.migrate_3_to_1(self.job_slot3, self.curr_time, a, self.job_slot3.slot[a], self.job_slot1, self.pa, self.job_record)
-                if not migrate_3_1:
-                    status = 'MoveOn'
-                else:
-                    status = 'migrate3_1' 
-
-        elif (a >= (self.pa.num_nw * 6) + 1) and (a <= (self.pa.num_nw * 7)): # should be + 1 not 2
-            a = a - (self.pa.num_nw * 6) - 1
-            if self.job_slot2.slot[a] is None:
-                status = 'MoveOn'
-            else:
-                migrate_2_1 = self.machine.migrate_2_to_1(self.job_slot2, self.curr_time, a, self.job_slot2.slot[a], self.job_slot1, self.pa, self.job_record)
-                if not migrate_2_1:
-                    status = 'MoveOn'
-                else:
-                    status = 'migrate2_1' 
-
-        elif (a >= (self.pa.num_nw * 7) + 1) and (a <= (self.pa.num_nw * 8)): # should be + 1 not 2
-            a = a - (self.pa.num_nw * 7) - 1
-            if self.job_slot3.slot[a] is None:
-                status = 'MoveOn'
-            else:
-                migrate_2_3 = self.machine.migrate_2_to_3(self.job_slot2, self.curr_time, a, self.job_slot2.slot[a], self.job_slot3, self.pa, self.job_record)
-                if not migrate_2_3:
-                    status = 'MoveOn'
-                else:
-                    status = 'migrate2_3' 
-
-        elif (a >= (self.pa.num_nw * 8) + 1) and (a <= (self.pa.num_nw * 9)): # should be + 1 not 2
-            a = a - (self.pa.num_nw * 8) - 1
-            if self.job_slot2.slot[a] is None:
-                status = 'MoveOn'
-            else:
-                migrate_3_2 = self.machine.migrate_3_to_2(self.job_slot3, self.curr_time, a, self.job_slot3.slot[a], self.job_slot2, self.pa, self.job_record)
-                if not migrate_3_2:
-                    status = 'MoveOn'
-                else:
-                    status = 'migrate3_2' 
-
+                    #if(test_type == "PG"):    
+                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile3,self.allocatedJobsHeaders,self.job_info)
+                    status = 'Allocate3'
         elif self.job_slot1.slot[a] is None:  # implicit void action # if no actions then move on        
           #  print("Status : Value of a:", a, 'and job slots: ', self.job_slot.slot[a])
             status = 'MoveOn'
-            
+
         else:
-            allocated = self.machine.allocate_job_machine1(self.job_slot1.slot[a], self.curr_time)
-            if not allocated:  # implicit void action
+            if self.job_slot1.slot[a] is None:
                 status = 'MoveOn'
-            else:
-                self.job_info = [self.iteration,self.job_slot.slot[a], self.job_slot.slot[a].id, self.job_slot.slot[a].len, self.job_slot.slot[a].res_vec,self.job_slot.slot[a].enter_time,self.job_slot.slot[a].start_time, self.job_slot.slot[a].finish_time, self.job_slot.slot[a].waiting_time,  self.curr_time]
-                self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile,self.jobsHeaders,self.job_info)
-                status = 'Allocate1'
+            else:  
+                allocated = self.machine.allocate_job_machine1(self.job_slot1.slot[a], self.curr_time)
+                if not allocated:  # implicit void action
+                    status = 'MoveOn'
+                else:
+            #        if(test_type == "PG"):
+                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile1,self.allocatedJobsHeaders,self.job_info)
+                    status = 'Allocate1'
 
         if status == 'MoveOn':
             self.curr_time += 1
@@ -468,17 +391,15 @@ class Env:
                    len(self.machine.running_job2) == 0 and \
                    len(self.machine.running_job3) == 0 and \
                    all(s is None for s in self.job_slot1.slot) and \
-                   all(s is None for s in self.job_backlog.backlog) and \
-                    all(s is None for s in self.job_slot2.slot) and \
-                        all(s is None for s in self.job_slot3.slot):
+                   all(s is None for s in self.job_backlog.backlog):
                     done = True
                 elif self.curr_time > self.pa.episode_max_length:  # run too long, force termination
-                    print('It ran for too long: destroyed list: ', self.machine.destroyed_jobs, 'job slots: ', self.job_slot.slot , 'remove list:', self.remove_slot.slot, 'backlog: ', self.job_backlog.curr_size)
+                    print('It ran for too long: ', 'job slots: ', self.job_slot1.slot, 'backlog: ', self.job_backlog.curr_size)
                     done = True
                    # print('ran for too long')
 
             if not done:
-                print('back log size',self.job_backlog.curr_size)
+                #print('back log size',self.job_backlog.curr_size)
                 #print('the backlog: ', self.job_backlog.curr_size, 'the job slots: ', self.job_slot.slot, 'the remove slots', self.remove_slot.slot, 'destroy slots: ', self.destroyed_slot.slot[:10])# self.job_backlog.backlog[0:10])
                 if self.seq_idx < self.pa.simu_len:  # otherwise, end of new job sequence, i.e. no new jobs
                     new_job = self.get_new_job_from_seq(self.seq_no, self.seq_idx)
@@ -506,33 +427,7 @@ class Env:
             reward = self.get_reward()
             #print('the reward: ', reward)
         
-        elif status == 'migrate1_2':
-            self.job_slot1.slot[a] = None
-            if self.job_backlog.curr_size > 0:
-                self.job_slot1.slot[a] = self.job_backlog.backlog[0]  # if backlog empty, it will be 0
-                self.job_backlog.backlog[: -1] = self.job_backlog.backlog[1:]
-                self.job_backlog.backlog[-1] = None
-                self.job_backlog.curr_size -= 1   
-        
-        elif status == 'migrate1_3':
-            self.job_slot1.slot[a] = None
-            if self.job_backlog.curr_size > 0:
-                self.job_slot1.slot[a] = self.job_backlog.backlog[0]  # if backlog empty, it will be 0
-                self.job_backlog.backlog[: -1] = self.job_backlog.backlog[1:]
-                self.job_backlog.backlog[-1] = None
-                self.job_backlog.curr_size -= 1  
-        
-        elif status == 'migrate3_1':
-            self.job_slot3.slot[a] = None
 
-        elif status == 'migrate2_1':
-            self.job_slot2.slot[a] = None
-
-        elif status == 'migrate3_2':
-            self.job_slot3.slot[a] = None    
-        
-        elif status == 'migrate2_3':
-            self.job_slot2.slot[a] = None
 
         elif status == 'Allocate1':
             self.job_record.record[self.job_slot1.slot[a].id] = self.job_slot1.slot[a]
@@ -544,12 +439,23 @@ class Env:
                 self.job_backlog.backlog[-1] = None
                 self.job_backlog.curr_size -= 1
         elif status == 'Allocate2':
-            self.job_record.record[self.job_slot2.slot[a].id] = self.job_slot2.slot[a]
-            self.job_slot2.slot[a] = None
-
+            self.job_record.record[self.job_slot1.slot[a].id] = self.job_slot1.slot[a]
+            self.job_slot1.slot[a] = None
+            # dequeue backlog
+            if self.job_backlog.curr_size > 0:
+                self.job_slot1.slot[a] = self.job_backlog.backlog[0]  # if backlog empty, it will be 0
+                self.job_backlog.backlog[: -1] = self.job_backlog.backlog[1:]
+                self.job_backlog.backlog[-1] = None
+                self.job_backlog.curr_size -= 1
         elif status == 'Allocate3':
-            self.job_record.record[self.job_slot3.slot[a].id] = self.job_slot3.slot[a]
-            self.job_slot3.slot[a] = None
+            self.job_record.record[self.job_slot1.slot[a].id] = self.job_slot1.slot[a]
+            self.job_slot1.slot[a] = None
+            # dequeue backlog
+            if self.job_backlog.curr_size > 0:
+                self.job_slot1.slot[a] = self.job_backlog.backlog[0]  # if backlog empty, it will be 0
+                self.job_backlog.backlog[: -1] = self.job_backlog.backlog[1:]
+                self.job_backlog.backlog[-1] = None
+                self.job_backlog.curr_size -= 1
 
     
             #print('reward allocate act: ', reward)
@@ -562,7 +468,7 @@ class Env:
             self.iteration_counter += 1
             #print("job records: ", self.job_record.record)
             print('finished!!!!')
-            print('final destroyed list: ', self.machine.destroyed_jobs, 'remove list:', self.remove_slot.slot, 'backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
+            #print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
             final_list = map(lambda x: [self.iteration_counter] + list(x), self.machine.job_information)
             #print('the test list: ', self.machine.test_list)
             if not os.path.isfile('./output_re.csv') or os.path.getsize('./output_re.csv') == 0:
@@ -576,7 +482,7 @@ class Env:
             if not repeat:
                 self.seq_no = (self.seq_no + 1) % self.pa.num_ex
                 print(' not finished!!!!')
-            print('reset the environment...')
+            #print('reset the environment...')
             self.reset()
         
         if self.render:
@@ -590,12 +496,7 @@ class Env:
 
         # initialize system
         self.machine = Machine(self.pa)
-       # self.job_slot = JobSlot(self.pa)
         self.job_slot1 = JobSlot1(self.pa)
-        self.job_slot2 = JobSlot2(self.pa)
-        self.job_slot3 = JobSlot3(self.pa)
-        self.remove_slot = RemovedJobs(self.pa)
-        self.destroyed_slot = DestroyedJobs(self.pa)
         self.job_backlog = JobBacklog(self.pa)
         self.job_record = JobRecord()
         self.extra_info = ExtraInfo(self.pa)
@@ -613,27 +514,13 @@ class Job:
         self.finish_time = -1
 
         self.waiting_time = -1
+        self.color = None
 
 
 class JobSlot1:
     def __init__(self, pa):
         self.slot = [None] * pa.num_nw
 
-class JobSlot2:
-    def __init__(self,pa):
-        self.slot = [None] * pa.num_nw
-
-class JobSlot3:
-    def __init__(self,pa):
-        self.slot = [None] * pa.num_nw
-
-
-class RemovedJobs:
-    def __init__(self, pa):
-        self.slot = [None] * pa.num_nw
-class DestroyedJobs:
-    def __init__(self,pa):
-        self.slot = [None] * pa.destroyed_size
 
 class JobBacklog:
     def __init__(self, pa):
@@ -686,13 +573,12 @@ class Machine:
         self.avbl_slot2 = np.ones((self.time_horizon, self.num_res)) * self.res_slot2 #change res slot to anomalous.
         self.avbl_slot3 = np.ones((self.time_horizon, self.num_res)) * self.res_slot3 #change res slot to anomalous.
        
-        self.removed_jobs = []
-        self.destroyed_jobs = []
         
         self.running_job = []
         self.running_job2 = []
         self.running_job3 = []
 
+        self.used_colors_set = set()
 
         self.job_information = []
         self.test_list = []
@@ -704,119 +590,44 @@ class Machine:
         np.random.shuffle(self.colormap)
 
         # graphical representation
-        self.canvas = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot))
+        #self.canvas = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot1))
+        self.canvas1 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot1))
+        self.canvas2 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot2))
+        self.canvas3 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot3))
        # print('the canvas: ', self.canvas, 'and shape: ', self.canvas.shape)
     
     # implement two logics one for with s and one without. 
-    def destroy_job(self, job_slot, curr_time, job_backlog, a, job, job_record, pa, destroyed_slot):
-        job.finish_time = curr_time + job.len
-        self.destroyed_jobs.append(job)
-        print('destroyed jobs list: ', self.destroyed_jobs)
-        
 
-    def migrate_1_to_2(self, job_slot1, curr_time, a, job, job_slot2, pa, job_record):
-        migrate_1_2 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot2.slot[i] is None:
-                migrate_1_2 = True    
-                job_slot2.slot[i] = job_slot1.slot[a]
-                job_record.record[job_slot2.slot[i].id] = job_slot1.slot[a]
-
-                break
-
-        return migrate_1_2
-
-    def migrate_2_to_1(self, job_slot2, curr_time, a, job, job_slot1, pa, job_record):
-        migrate_2_1 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot1.slot[i] is None:
-                migrate_2_1 = True    
-                job_slot1.slot[i] = job_slot2.slot[a]
-                job_record.record[job_slot1.slot[i].id] = job_slot2.slot[a]
-
-                break
-
-        return migrate_2_1
-
-    def migrate_1_to_3(self, job_slot1, curr_time, a, job, job_slot3, pa, job_record):
-        migrate_1_3 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot3.slot[i] is None:
-                migrate_1_3 = True    
-                job_slot3.slot[i] = job_slot1.slot[a]
-                job_record.record[job_slot3.slot[i].id] = job_slot1.slot[a]
-
-                break
-
-        return migrate_1_3
-    
-    def migrate_3_to_2(self, job_slot3, curr_time, a, job, job_slot2, pa, job_record):
-       # print('timestep for removal: ', curr_time)
-        migrate_3_2 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot2.slot[i] is None:
-                migrate_3_2 = True    
-                job_slot2.slot[i] = job_slot3.slot[a]
-                job_record.record[job_slot2.slot[i].id] = job_slot3.slot[a]
-
-                break
-
-        return migrate_3_2
-
-    def migrate_2_to_3(self, job_slot2, curr_time, a, job, job_slot3, pa, job_record):
-       # print('timestep for removal: ', curr_time)
-        migrate_2_3 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot3.slot[i] is None:
-                migrate_2_3 = True    
-                job_slot3.slot[i] = job_slot2.slot[a]
-                job_record.record[job_slot3.slot[i].id] = job_slot2.slot[a]
-
-                break
-
-        return migrate_2_3
-    
-
-    def migrate_3_to_1(self, job_slot3, curr_time, a, job, job_slot1, pa, job_record):
-       # print('timestep for removal: ', curr_time)
-        migrate_3_1 = False
-        for i in xrange(pa.num_nw):    
-            if job_slot1.slot[i] is None:
-                migrate_3_1 = True    
-                job_slot1.slot[i] = job_slot3.slot[a]
-                job_record.record[job_slot1.slot[i].id] = job_slot3.slot[a]
-
-                break
-
-        return migrate_3_1
             
     
     def allocate_job_machine1(self, job, curr_time):
         allocated = False
         #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
-            new_avbl_res = self.avbl_slot1[t: t + job.len, :] - job.res_vec
-            if np.all(new_avbl_res[:] >= 0):
+            new_avbl_res1 = self.avbl_slot1[t: t + job.len, :] - job.res_vec
+            if np.all(new_avbl_res1[:] >= 0):
                 allocated = True
-                self.avbl_slot1[t: t + job.len, :] = new_avbl_res
+                self.avbl_slot1[t: t + job.len, :] = new_avbl_res1
                 job.start_time = curr_time + t
                 job.finish_time = job.start_time + job.len
                 job.waiting_time = job.start_time - job.enter_time
                 self.running_job.append(job)
                 
-                self.resource_utilisation.append((curr_time, new_avbl_res))
+                self.resource_utilisation.append((curr_time, new_avbl_res1))
                 # update graphical representation
-                print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res1)
                
-                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res))
+                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res1))
                 self.test_list.append((job.id, job.len, job.res_vec))
-                used_color = np.unique(self.canvas[:])
+                used_color = np.unique(self.canvas1[:])
                 # WARNING: there should be enough colors in the color map
                 for color in self.colormap:
-                    if color not in used_color:
+                    if color not in self.used_colors_set:#used_color:
                         new_color = color
+                        self.used_colors_set.add(new_color)
                         break
 
+                job.color = new_color
                 assert job.start_time != -1
                 assert job.finish_time != -1
                 assert job.finish_time > job.start_time
@@ -826,8 +637,8 @@ class Machine:
 
                 for res in xrange(self.num_res):
                     for i in range(canvas_start_time, canvas_end_time):
-                        avbl_slot = np.where(self.canvas[res, i, :] == 0)[0] #TODO probably need to change that
-                        self.canvas[res, i, avbl_slot[: job.res_vec[res]]] = new_color
+                        avbl_slot1 = np.where(self.canvas1[res, i, :] == 0)[0] #TODO probably need to change that
+                        self.canvas1[res, i, avbl_slot1[: job.res_vec[res]]] = new_color
                 break
             
         return allocated
@@ -837,39 +648,40 @@ class Machine:
         allocated = False
         #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
-            new_avbl_res = self.avbl_slot2[t: t + job.len, :] - job.res_vec
-            if np.all(new_avbl_res[:] >= 0):
+            new_avbl_res2 = self.avbl_slot2[t: t + job.len, :] - job.res_vec
+            if np.all(new_avbl_res2[:] >= 0):
                 allocated = True
-                self.avbl_slot2[t: t + job.len, :] = new_avbl_res
+                self.avbl_slot2[t: t + job.len, :] = new_avbl_res2
                 job.start_time = curr_time + t
                 job.finish_time = job.start_time + job.len
                 job.waiting_time = job.start_time - job.enter_time
                 self.running_job2.append(job)
                 
-                self.resource_utilisation.append((curr_time, new_avbl_res))
+                self.resource_utilisation.append((curr_time, new_avbl_res2))
                 # update graphical representation
-                print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res2)
                
-                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res))
+                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res2))
                 self.test_list.append((job.id, job.len, job.res_vec))
-                used_color = np.unique(self.canvas[:])
+                used_color = np.unique(self.canvas2[:])
                 # WARNING: there should be enough colors in the color map
                 for color in self.colormap:
-                    if color not in used_color:
+                    if color not in self.used_colors_set:#used_color:
                         new_color = color
+                        self.used_colors_set.add(new_color)
                         break
-
+                job.color = new_color
                 assert job.start_time != -1
                 assert job.finish_time != -1
                 assert job.finish_time > job.start_time
-                canvas_start_time = job.start_time - curr_time
-                canvas_end_time = job.finish_time - curr_time
+                canvas_start_time2 = job.start_time - curr_time
+                canvas_end_time2 = job.finish_time - curr_time
                 #print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
 
                 for res in xrange(self.num_res):
-                    for i in range(canvas_start_time, canvas_end_time):
-                        avbl_slot = np.where(self.canvas[res, i, :] == 0)[0] #TODO probably need to change that
-                        self.canvas[res, i, avbl_slot[: job.res_vec[res]]] = new_color
+                    for i in range(canvas_start_time2, canvas_end_time2):
+                        avbl_slot2 = np.where(self.canvas2[res, i, :] == 0)[0] #TODO probably need to change that
+                        self.canvas2[res, i, avbl_slot2[: job.res_vec[res]]] = new_color
                    # print('and print the start-end: ', canvas_start_time, canvas_end_time, canvas_end_time-canvas_start_time, 'and color', new_color)
                 break
             
@@ -880,39 +692,41 @@ class Machine:
         allocated = False
         #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
-            new_avbl_res = self.avbl_slot3[t: t + job.len, :] - job.res_vec
-            if np.all(new_avbl_res[:] >= 0):
+            new_avbl_res3 = self.avbl_slot3[t: t + job.len, :] - job.res_vec
+            if np.all(new_avbl_res3[:] >= 0):
                 allocated = True
-                self.avbl_slot3[t: t + job.len, :] = new_avbl_res
+                self.avbl_slot3[t: t + job.len, :] = new_avbl_res3
                 job.start_time = curr_time + t
                 job.finish_time = job.start_time + job.len
                 job.waiting_time = job.start_time - job.enter_time
                 self.running_job3.append(job)
                 
-                self.resource_utilisation.append((curr_time, new_avbl_res))
+                self.resource_utilisation.append((curr_time, new_avbl_res3))
                 # update graphical representation
-                print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res3)
                
-                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res))
+                self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res3))
                 self.test_list.append((job.id, job.len, job.res_vec))
-                used_color = np.unique(self.canvas[:])
+                used_color = np.unique(self.canvas3[:])
                 # WARNING: there should be enough colors in the color map
                 for color in self.colormap:
-                    if color not in used_color:
+                    if color not in self.used_colors_set:#used_color:
                         new_color = color
+                        self.used_colors_set.add(new_color)
                         break
 
+                job.color = new_color
                 assert job.start_time != -1
                 assert job.finish_time != -1
                 assert job.finish_time > job.start_time
-                canvas_start_time = job.start_time - curr_time
-                canvas_end_time = job.finish_time - curr_time
+                canvas_start_time3 = job.start_time - curr_time
+                canvas_end_time3 = job.finish_time - curr_time
                 #print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
 
                 for res in xrange(self.num_res):
-                    for i in range(canvas_start_time, canvas_end_time):
-                        avbl_slot = np.where(self.canvas[res, i, :] == 0)[0] #TODO probably need to change that
-                        self.canvas[res, i, avbl_slot[: job.res_vec[res]]] = new_color
+                    for i in range(canvas_start_time3, canvas_end_time3):
+                        avbl_slot3 = np.where(self.canvas3[res, i, :] == 0)[0] #TODO probably need to change that
+                        self.canvas3[res, i, avbl_slot3[: job.res_vec[res]]] = new_color
                    # print('and print the start-end: ', canvas_start_time, canvas_end_time, canvas_end_time-canvas_start_time, 'and color', new_color)
                 break
             
@@ -920,33 +734,52 @@ class Machine:
     
     def time_proceed(self, curr_time):
 
-        self.avbl_slot1[:-1, :] = self.avbl_slot[1:, :] #TODO probably copy that stuff for the others.
-        self.avbl_slot[-1, :] = self.res_slot
+        self.avbl_slot1[:-1, :] = self.avbl_slot1[1:, :] #TODO probably copy that stuff for the others.
+        self.avbl_slot1[-1, :] = self.res_slot1
+
+        self.avbl_slot2[:-1, :] = self.avbl_slot2[1:, :] #TODO probably copy that stuff for the others.
+        self.avbl_slot2[-1, :] = self.res_slot2
+
+        self.avbl_slot3[:-1, :] = self.avbl_slot3[1:, :] #TODO probably copy that stuff for the others.
+        self.avbl_slot3[-1, :] = self.res_slot3
+
 
         for job in self.running_job:
 
             if job.finish_time <= curr_time:
-                print('job finish time: ', job.finish_time, 'current time', curr_time, 'job id',job.id )
+              #  print('job finish time: ', job.finish_time, 'current time', curr_time, 'job id',job.id )
+                if job.color in self.used_colors_set:
+                    self.used_colors_set.remove(job.color)
                 self.running_job.remove(job)
         
 
         for job2 in self.running_job2:
 
             if job2.finish_time <= curr_time:
-                print('job finish time: ', job2.finish_time, 'current time', curr_time, 'job id',job2.id )
-                self.running_job.remove2(job2)
+            #    print('job finish time: ', job2.finish_time, 'current time', curr_time, 'job id',job2.id )
+                if job2.color in self.used_colors_set:
+                    self.used_colors_set.remove(job2.color)
+                self.running_job2.remove(job2)
 
 
         for job3 in self.running_job3:
 
             if job3.finish_time <= curr_time:
-                print('job finish time: ', job3.finish_time, 'current time', curr_time, 'job id',job3.id )
+             #   print('job finish time: ', job3.finish_time, 'current time', curr_time, 'job id',job3.id )
+                if job3.color in self.used_colors_set:
+                    self.used_colors_set.remove(job3.color)
                 self.running_job3.remove(job3)
 
         # update graphical representation
 
-        self.canvas[:, :-1, :] = self.canvas[:, 1:, :]
-        self.canvas[:, -1, :] = 0
+        self.canvas1[:, :-1, :] = self.canvas1[:, 1:, :]
+        self.canvas1[:, -1, :] = 0
+
+        self.canvas2[:, :-1, :] = self.canvas2[:, 1:, :]
+        self.canvas2[:, -1, :] = 0
+
+        self.canvas3[:, :-1, :] = self.canvas3[:, 1:, :]
+        self.canvas3[:, -1, :] = 0
 
 
 class ExtraInfo:
@@ -995,25 +828,25 @@ def test_backlog():
 
     job = env.job_backlog.backlog[0]
     env.step(0)
-    assert env.job_slot.slot[0] == job
+    assert env.job_slot1.slot[0] == job
 
     job = env.job_backlog.backlog[0]
     env.step(0)
-    assert env.job_slot.slot[0] == job
+    assert env.job_slot1.slot[0] == job
 
     job = env.job_backlog.backlog[0]
     env.step(1)
-    assert env.job_slot.slot[1] == job
+    assert env.job_slot1.slot[1] == job
 
     job = env.job_backlog.backlog[0]
     env.step(1)
-    assert env.job_slot.slot[1] == job
+    assert env.job_slot1.slot[1] == job
 
     env.step(5)
 
     job = env.job_backlog.backlog[0]
     env.step(3)
-    assert env.job_slot.slot[3] == job
+    assert env.job_slot1.slot[3] == job
 
     print "- Backlog test passed -"
 
@@ -1033,7 +866,7 @@ def test_compact_speed():
 
     start_time = time.time()
     for i in xrange(100000):
-        a = other_agents.get_sjf_action(env.machine, env.job_slot)
+        a = other_agents.get_sjf_action(env.machine, env.job_slot1)
         env.step(a)
     end_time = time.time()
     print "- Elapsed time: ", end_time - start_time, "sec -"
@@ -1054,7 +887,7 @@ def test_image_speed():
 
     start_time = time.time()
     for i in xrange(100000):
-        a = other_agents.get_sjf_action(env.machine, env.job_slot)
+        a = other_agents.get_sjf_action(env.machine, env.job_slot1)
         env.step(a)
     end_time = time.time()
     print "- Elapsed time: ", end_time - start_time, "sec -"

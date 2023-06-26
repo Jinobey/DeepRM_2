@@ -58,7 +58,6 @@ def adam_update(grads, params, learning_rate=0.001, beta1=0.9,
 class PGLearner:
     def __init__(self, pa):
 
-        self.remove = pa.remove
         self.input_height = pa.network_input_height
         self.input_width = pa.network_input_width
         self.output_height = pa.network_output_dim
@@ -77,14 +76,14 @@ class PGLearner:
         print 'network_output_dim=', pa.network_output_dim
 
         # image representation
-        #self.l_out = \
-         #   build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        self.l_out = \
+            build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
         #self.l_out = \
          #   build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
 
         # compact representation
-        self.l_out = \
-             build_compact_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        #self.l_out = \
+         #    build_compact_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
 
         self.lr_rate = pa.lr_rate
         self.rms_rho = pa.rms_rho
@@ -195,10 +194,12 @@ class PGLearner:
         
         #print('target', target)
         loss, prob_act = self._su_train_fn(states, target)
+        #return loss, prob_act
         return np.sqrt(loss), prob_act
 
     def su_test(self, states, target):
         loss, prob_act = self._su_loss(states, target)
+        #return loss, prob_act
         return np.sqrt(loss), prob_act
 
     #  -------- Save/Load network parameters --------

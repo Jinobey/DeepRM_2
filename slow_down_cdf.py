@@ -62,17 +62,17 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, render=Fals
 
         elif test_type == 'Tetris':
           #  append = False
-            a = other_agents.get_packer_action(env.machine, env.job_slot)
+            a = other_agents.get_packer_action(env.machine, env.job_slot1)
 
         elif test_type == 'SJF':
          #   append = False
-            a = other_agents.get_sjf_action(env.machine, env.job_slot, env.remove_slot, pa)
+            a = other_agents.get_sjf_action(env.machine, env.job_slot1, pa)
 
         elif test_type == 'Random':
           #  append = False
-            a = other_agents.get_random_action(env.job_slot)
+            a = other_agents.get_random_action(env.job_slot1)
 
-        ob, rew, done, info = env.step(a, repeat=True)
+        ob, rew, done, info = env.step(a, repeat=True, test_type=test_type)
 
         rews.append(rew)
 
@@ -166,6 +166,10 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='no_n
             job_remain_delay[test_type].append(
                 np.sum(pa.episode_max_length - enter_time[unfinished_idx])
             )
+            print(finish_time[finished_idx].shape)
+            print(enter_time[finished_idx].shape)
+            print(job_len[finished_idx].shape)
+            print('job slowdown: ', np.mean(np.concatenate(jobs_slow_down[test_type])))
             print("job length array", work_complete[test_type])
             print('job total size:',job_total_size[finished_idx])
             print('job total size:',job_len[finished_idx])
