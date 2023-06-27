@@ -44,7 +44,7 @@ network_input_width: 225
 network_output_dim: 16
 new_job_rate: 0.7
 num_epochs: 3001
-num_ex: 10
+num_ex: 15
 num_frames: 1
 num_nw: 5
 num_res: 2
@@ -56,6 +56,6 @@ res_slot2: 10
 res_slot3: 15
 rms_eps: 1.0e-09
 rms_rho: 0.9
-simu_len: 50
+simu_len: 45
 time_horizon: 30
 unseen: false
