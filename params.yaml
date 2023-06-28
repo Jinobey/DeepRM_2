@@ -30,7 +30,7 @@ dist: !!python/object:job_distribution.Dist
   num_res: 2
   other_res_lower: 1
   other_res_upper: 5
-episode_max_length: 200
+episode_max_length: 300
 evaluate_policy_name: SJF
 hold_penalty: -1
 job_num_cap: 40
