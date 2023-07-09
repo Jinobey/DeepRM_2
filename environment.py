@@ -22,12 +22,17 @@ def append_to_csv(file, data):
 
 class Env:
     def __init__(self, pa, nw_len_seqs=None, nw_size_seqs=None,
-                 seed=42, render=False, repre='image', end='no_new_job'):
+                 seed=54378, render=False, repre='image', end='all_done'):
        # print('repre = ',repre)
         print('initialize the environment...')
         self.job_information = []
         self.anomalous_jobs = []
         self.job_enter_time_lst = []
+#4200
+#39486
+#92381
+#85439
+#54378
 
         self.iteration_counter = 0
         
@@ -54,7 +59,7 @@ class Env:
 
         # set up random seed
         if self.pa.unseen:
-            np.random.seed(314159)
+            np.random.seed(54378)
         else:
             np.random.seed(seed)
 
@@ -281,21 +286,23 @@ class Env:
            # if j.len >= self.pa.anomalous_job_len_middle_bound:
           #      reward += self.pa.delay_penalty / (-float(j.len))
          #   else: 
-            if j.len >= self.pa.anomalous_job_len_middle_bound:
-                reward += self.pa.delay_penalty / (-(float(j.len)))
-            else:
-                reward += self.pa.delay_penalty / float(j.len)
+          #  if j.len >= self.pa.anomalous_job_len_middle_bound:
+           #     reward += self.pa.delay_penalty / (-(float(j.len)))
+            #else:
+            reward += self.pa.delay_penalty / float(j.len)
 
         for j in self.machine.running_job2:
  
             reward += self.pa.delay_penalty / float(j.len)
 
         for j in self.machine.running_job3:
-            if max(j.res_vec) >= self.pa.anomalous_job_resources_lower:
-                reward += self.pa.delay_penalty / (-float(max(j.res_vec)))
+            if j.len >= self.pa.anomalous_job_len_lower_bound:
+                reward += self.pa.delay_penalty * float(-3) #(-(float(j.len)))
+            #if max(j.res_vec) >= self.pa.anomalous_job_resources_lower:
+             #   reward += self.pa.delay_penalty / (-float(max(j.res_vec)))
             
             else:
-                reward += self.pa.delay_penalty / float(j.len)
+                reward += self.pa.delay_penalty * float(2)
 
         for j in self.job_slot1.slot:
             if j is not None:
@@ -335,10 +342,10 @@ class Env:
                     status = 'MoveOn'
                 
                 else:
-                    #if(test_type == "PG"):
-                    #    print('the test type: ', test_type)
-                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
-                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile2,self.allocatedJobsHeaders,self.job_info)
+                    if(test_type == "PG"):
+                        print('the test type: ', test_type)
+                        self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                        self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile2,self.allocatedJobsHeaders,self.job_info)
                     status = 'Allocate2'
 
         elif (a >= (self.pa.num_nw * 2 + 1) and (a <= (self.pa.num_nw *3))):  
@@ -350,9 +357,9 @@ class Env:
                 if not allocated3:  # implicit void action
                     status = 'MoveOn'
                 else:
-                    #if(test_type == "PG"):    
-                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
-                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile3,self.allocatedJobsHeaders,self.job_info)
+                    if(test_type == "PG"):    
+                        self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                        self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile3,self.allocatedJobsHeaders,self.job_info)
                     status = 'Allocate3'
         elif self.job_slot1.slot[a] is None:  # implicit void action # if no actions then move on        
           #  print("Status : Value of a:", a, 'and job slots: ', self.job_slot.slot[a])
@@ -366,9 +373,9 @@ class Env:
                 if not allocated:  # implicit void action
                     status = 'MoveOn'
                 else:
-            #        if(test_type == "PG"):
-                    self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
-                    self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile1,self.allocatedJobsHeaders,self.job_info)
+                    if(test_type == "PG"):
+                        self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
+                        self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile1,self.allocatedJobsHeaders,self.job_info)
                     status = 'Allocate1'
 
         if status == 'MoveOn':
@@ -392,6 +399,7 @@ class Env:
                    len(self.machine.running_job3) == 0 and \
                    all(s is None for s in self.job_slot1.slot) and \
                    all(s is None for s in self.job_backlog.backlog):
+                    print('nice')
                     done = True
                 elif self.curr_time > self.pa.episode_max_length:  # run too long, force termination
                     print('It ran for too long: ', 'job slots: ', self.job_slot1.slot, 'backlog: ', self.job_backlog.curr_size)
@@ -468,7 +476,7 @@ class Env:
             self.iteration_counter += 1
             #print("job records: ", self.job_record.record)
             print('finished!!!!')
-            #print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
+            print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
             final_list = map(lambda x: [self.iteration_counter] + list(x), self.machine.job_information)
             #print('the test list: ', self.machine.test_list)
             if not os.path.isfile('./output_re.csv') or os.path.getsize('./output_re.csv') == 0:

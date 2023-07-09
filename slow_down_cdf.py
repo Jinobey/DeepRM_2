@@ -7,6 +7,7 @@ import parameters
 import pg_network
 import other_agents
 
+import data_collection
 from cycler import cycler
 
 import csv
@@ -83,11 +84,13 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, render=Fals
     return np.array(rews), info
 
 
-def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='no_new_job'):
-
+def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_done'):
+    data_collection_instances = data_collection.Data_collection()
+    csv_header = ['Test Type', 'Average Slowdown', 'Total Slowdown','Workload','Dist Proba', 'Anomaly rate']
+    test_file = 'test_metrics.csv'
     # ---- Parameters ----
 
-    test_types = ['Tetris', 'SJF', 'Random']
+    test_types = ['SJF']
 
     # colors:
 
@@ -119,7 +122,7 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='no_n
     for seq_idx in xrange(pa.num_ex):
         print('\n\n')
         print("=============== " + str(seq_idx) + " ===============")
-
+        
         for test_type in test_types:
             if test_type is not 'PG':
                 deepRM_test = False
@@ -166,6 +169,17 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='no_n
             job_remain_delay[test_type].append(
                 np.sum(pa.episode_max_length - enter_time[unfinished_idx])
             )
+            
+            job_slowdown = (finish_time[finished_idx] - enter_time[finished_idx]) / job_len[finished_idx]
+            mean_slowdown = np.mean(job_slowdown)
+            total_slowdown = np.sum(job_slowdown)
+            test_type_name = ''
+            if test_type == 'PG':
+                test_type_name = 'DeepRM_ECO'
+            else:
+                test_type_name = test_type
+            run_info = [test_type_name, mean_slowdown, total_slowdown,pa.simu_len,pa.new_job_rate,pa.anomalous_job_rate]
+            data_collection_instances.append_job_to_csv(test_file,csv_header,run_info)
             print(finish_time[finished_idx].shape)
             print(enter_time[finished_idx].shape)
             print(job_len[finished_idx].shape)

@@ -233,17 +233,18 @@ def get_traj_worker(pg_learner, env, pa, result):
                    "all_entropy": all_entropy})
 
 
-def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job'):
+def launch(pa, pg_resume=None, render=False, repre='image', end='all_done'):
     # ----------------------------
     print("Preparing for workers...")
     # ----------------------------
+    pg_resume=None#'data/pg_re_620.pkl'
     data_collector = data_collection.Data_collection()
     data_collector.convert_parameter_to_yaml(pa)
 
     with open('./parameters.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow("param")
-                         
+        #'data/pg_re_620.pkl'                 
 
 
         #the way jobs are created are in the blocks so we can visualize them in the same manner. 
@@ -452,7 +453,7 @@ def main():
 
     render = False
 
-    launch(pa, pg_resume, render, repre='image', end='all_done')
+    launch(pa, pg_resume, render, repre='image', end='no_new_job')
 
 
 if __name__ == '__main__':

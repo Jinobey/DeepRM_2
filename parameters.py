@@ -17,12 +17,12 @@ class Parameters:
         self.simu_len = 30             # length of the busy cycle that repeats itself
         self.num_ex = 20                # number of sequences
 
-        self.anomalous_job_rate = 0.1
+        self.anomalous_job_rate = 0.5
 
         self.output_freq = 10          # interval for output and store parameters
 
         self.num_seq_per_batch = 10 #5 #10    # number of sequences to compute baseline
-        self.episode_max_length = 200 #200 # enforcing an artificial terminal
+        self.episode_max_length = 3000 #200 # enforcing an artificial terminal
 
         self.num_res = 2               # number of resources in the system
         self.num_nw = 5#5#5                # maximum allowed number of work in the queue
@@ -53,9 +53,9 @@ class Parameters:
 
         self.job_num_cap = 40          # maximum number of distinct colors in current work graph
 
-        self.new_job_rate = 0.7#0.7        # lambda in new job arrival Poisson Process
+        self.new_job_rate = 1#1#0.7        # lambda in new job arrival Poisson Process
 
-        self.discount = 1#0.1           # discount factor
+        self.discount = 0.95#1#0.1           # discount factor
 
         # distribution for new job arrival
         self.dist = job_distribution.Dist(self.num_res, self.max_job_size, self.max_job_len, self.anomalous_job_len_upper_bound, self.anomalous_job_len_lower_bound, self.anomalous_job_len_middle_bound, self.anomalous_job_resources_lower, self.anomalous_job_resources_upper)
