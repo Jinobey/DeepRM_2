@@ -1,0 +1,61 @@
+anomalous_job_len-middle_bound: 23
+anomalous_job_len_lower_bound: 19
+anomalous_job_len_upper_bound: 29
+anomalous_job_rate: 0.1
+anomalous_job_resources_lower: 11
+anomalous_job_resources_upper: 15
+backlog_size: 120
+backlog_width: 4
+batch_size: 10
+delay_penalty: -1
+destroy_penality: -1
+discount: 1
+dismiss_penalty: -1
+dist: !!python/object:job_distribution.Dist
+  anomalous_job_len_lower: 19
+  anomalous_job_len_middle: 23
+  anomalous_job_len_upper: 29
+  anomalous_job_rate: 0.1
+  anomalous_resource_lower: 11
+  anomalous_resource_rate: 0.1
+  anomalous_resource_upper: 15
+  dominant_res_lower: 5
+  dominant_res_upper: 10
+  job_len: 18
+  job_len_big_lower: 12
+  job_len_big_upper: 18
+  job_len_small_lower: 1
+  job_len_small_upper: 3
+  job_small_chance: 0.5
+  max_nw_size: 10
+  num_res: 2
+  other_res_lower: 1
+  other_res_upper: 5
+episode_max_length: 200
+evaluate_policy_name: SJF
+hold_penalty: -1
+job_num_cap: 40
+lr_rate: 0.001
+max_job_len: 18
+max_job_size: 10
+max_track_since_new: 10
+network_compact_dim: 106
+network_input_height: 30
+network_input_width: 185
+network_output_dim: 11
+new_job_rate: 0.7
+num_epochs: 3001
+num_ex: 10
+num_frames: 1
+num_nw: 5
+num_res: 2
+num_seq_per_batch: 10
+output_filename: data/pg_re
+output_freq: 10
+remove_penalty: -1
+res_slot: 15
+rms_eps: 1.0e-09
+rms_rho: 0.9
+simu_len: 50
+time_horizon: 30
+unseen: false
