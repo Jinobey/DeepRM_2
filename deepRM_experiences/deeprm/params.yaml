@@ -16,7 +16,7 @@ dist: !!python/object:job_distribution.Dist
   anomalous_job_len_upper: 29
   anomalous_job_rate: 0.1
   anomalous_resource_lower: 11
-  anomalous_resource_rate: 0.100
+  anomalous_resource_rate: 0.1000
   anomalous_resource_upper: 15
   dominant_res_lower: 5
   dominant_res_upper: 10
