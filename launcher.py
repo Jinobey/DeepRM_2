@@ -1,5 +1,5 @@
 import os
-os.environ["THEANO_FLAGS"] = "device=cpu,floatX=float32"
+os.environ["THEANO_FLAGS"] = "device=gpu,floatX=float32"
 import sys
 import getopt
 import matplotlib
@@ -10,6 +10,8 @@ import pg_re
 import pg_su
 import slow_down_cdf
 
+import multiprocessing
+multiprocessing.freeze_support()
 
 def script_usage():
     print('--exp_type <type of experiment> \n'

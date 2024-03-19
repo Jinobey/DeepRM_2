@@ -13,10 +13,10 @@ class Dist:
 
         self.anomalous_resource_lower = anomalous_resource_lower
         self.anomalous_resource_upper = anomalous_resource_upper
-        self.anomalous_resource_rate = 0.5 #0.15#0.05 for RL training
+        self.anomalous_resource_rate = 0.05 #0.15#0.05 for RL training
 
-        self.job_small_chance = 0.3#0.75
-        self.anomalous_job_rate =  0.5 #0.05 for RL training
+        self.job_small_chance = 0.75#0.3
+        self.anomalous_job_rate =  0.05 #0.05 for RL training
 
         self.job_len_big_lower = job_len * 2 / 3 
         self.job_len_big_upper = job_len
@@ -28,7 +28,7 @@ class Dist:
         self.dominant_res_upper = max_nw_size
 
         self.other_res_lower = 1
-        self.other_res_upper = max_nw_size / 2#5
+        self.other_res_upper = max_nw_size / 5#2
 
     def normal_dist(self):
 
