@@ -13,7 +13,7 @@ def generate_and_save_jobs_to_csv(num_jobs=100000, csv_file_path='data/jobs.csv'
     data_collector = Data_collection()
 
     # Prepare CSV file and headers
-    headers = ['Job Length'] + [f'Job Resource {i+1}' for i in range(pa.num_res)]
+    headers = ['Job Duration'] + [f'Job Resource {i+1}' for i in range(pa.num_res)]
     data_collector.csv_check(csv_file_path, headers)
 
     # Generate jobs and append to CSV
