@@ -47,9 +47,7 @@ class Env:
 
         self.curr_time = 0
 
-        self.anomalous = False
-
-        
+        self.anomalous = False        
 
         self.allocatedJobsFile1 = 'allocatedJobsM1.csv'
         self.allocatedJobsFile2 = 'allocatedJobsM2.csv'
@@ -113,7 +111,7 @@ class Env:
                 nw_len_seq[i], nw_size_seq[i, :] = self.nw_dist()
 
         return nw_len_seq, nw_size_seq
-    
+        
 
     def get_new_job_from_seq(self, seq_no, seq_idx):
 
@@ -434,7 +432,6 @@ class Env:
 
             reward = self.get_reward()
             #print('the reward: ', reward)
-        
 
 
         elif status == 'Allocate1':
@@ -559,13 +556,10 @@ class Machine:
         self.allocatedJobsFile = 'allocatedJobs.csv'
         self.allocatedJobsHeaders = ['iteration','job object', 'job ID', 'job Length', 'job ressource requirement', 'job enter time', 'job start time', 'job finish time', 'job waiting time', 'current time']
 
-
         self.anomalous_len = pa.anomalous_job_len_middle_bound
         self.epochs_count = pa.num_epochs
 
         self.anomalous_res = pa.anomalous_job_resources_lower
-
-
 
         self.num_res = pa.num_res
         self.time_horizon = pa.time_horizon
@@ -581,7 +575,6 @@ class Machine:
         self.avbl_slot2 = np.ones((self.time_horizon, self.num_res)) * self.res_slot2 #change res slot to anomalous.
         self.avbl_slot3 = np.ones((self.time_horizon, self.num_res)) * self.res_slot3 #change res slot to anomalous.
        
-        
         self.running_job = []
         self.running_job2 = []
         self.running_job3 = []
@@ -606,7 +599,6 @@ class Machine:
     
     # implement two logics one for with s and one without. 
 
-            
     
     def allocate_job_machine1(self, job, curr_time):
         allocated = False

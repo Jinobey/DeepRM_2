@@ -6,7 +6,6 @@ import csv
 
 class Data_collection:
 
-
         def convert_parameter_to_yaml(self,pa):
                 parameters = {                
                         'output_filename': pa.output_filename,
