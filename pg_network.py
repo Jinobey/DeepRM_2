@@ -78,6 +78,7 @@ class PGLearner:
         # image representation
         self.l_out = \
             build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        
         #self.l_out = \
          #   build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
 
@@ -216,85 +217,72 @@ class PGLearner:
 
 
 def build_pg_network(input_height, input_width, output_length):
-#def build_pg_network(input_height, input_width, output_length):
-    # l_in = lasagne.layers.InputLayer(
-    #     shape=(None, 1, input_height, input_width),
-    # )
-    #
-    # l_hid1 = lasagne.layers.DenseLayer(
+
+    # Input layer
+    l_in = lasagne.layers.InputLayer(
+        shape=(None, 1, input_height, input_width),
+    )
+    
+    # First convolutional layer
+    l_conv1 = lasagne.layers.Conv2DLayer(
+        l_in,
+        num_filters=32,
+        filter_size=(3, 3),
+        nonlinearity=lasagne.nonlinearities.rectify,
+        W=lasagne.init.GlorotUniform()
+    )
+    
+    # Pooling layer
+    l_pool1 = lasagne.layers.MaxPool2DLayer(l_conv1, pool_size=(2, 2))
+                                                                
+    # Second convolutional layer
+    l_conv2 = lasagne.layers.Conv2DLayer(
+        l_pool1,
+        num_filters=64,
+        filter_size=(3, 3),
+        nonlinearity=lasagne.nonlinearities.rectify
+    )
+    
+    # Pooling layer
+    l_pool2 = lasagne.layers.MaxPool2DLayer(l_conv2, pool_size=(2, 2))
+    
+    # Fully connected layer
+    l_hid = lasagne.layers.DenseLayer(
+        l_pool2,
+        num_units=128,
+        nonlinearity=lasagne.nonlinearities.rectify,
+        W=lasagne.init.GlorotUniform()
+    )
+    
+    # Dropout layer
+    l_dropout = lasagne.layers.DropoutLayer(l_hid, p=0.5)
+    
+    # Output layer 
+    l_out = lasagne.layers.DenseLayer(
+        l_dropout,
+        num_units=output_length,
+        nonlinearity=lasagne.nonlinearities.softmax
+    )
+                                                       
+    # l_hid = lasagne.layers.DenseLayer(
     #     l_in,
     #     num_units=20,
     #     # nonlinearity=lasagne.nonlinearities.tanh,
     #     nonlinearity=lasagne.nonlinearities.rectify,
     #     # W=lasagne.init.Normal(.0201),
-    #     #W=lasagne.init.Normal(.01),
-    #     W=lasagne.init.HeNormal('relu'),
-    #     b=lasagne.init.Constant(0.05)
+    #     W=lasagne.init.Normal(.01),
+    #     b=lasagne.init.Constant(0)
     # )
-    #
-    # #l_hid1_drop = lasagne.layers.DropoutLayer(l_hid1, p=0.5)
-    #
-    # l_hid2 = lasagne.layers.DenseLayer(
-    #     l_hid1,
-    #     num_units=20,
-    #     # nonlinearity=lasagne.nonlinearities.tanh,
-    #     nonlinearity=lasagne.nonlinearities.rectify,
-    #     # W=lasagne.init.Normal(.0201),
-    #     #W=lasagne.init.Normal(.01),
-    #     W=lasagne.init.HeNormal('relu'),
-    #     b=lasagne.init.Constant(0.05)
-    # )
-    #
-    # l_hid3 = lasagne.layers.DenseLayer(
-    #     l_hid2,
-    #     num_units=20,
-    #     # nonlinearity=lasagne.nonlinearities.tanh,
-    #     nonlinearity=lasagne.nonlinearities.rectify,
-    #     # W=lasagne.init.Normal(.0201),
-    #     #W=lasagne.init.Normal(.01),
-    #     W=lasagne.init.HeNormal('relu'),
-    #     b=lasagne.init.Constant(0.05)
-    # )
-    #
-    #
-    # #50% dropout again:
-    # #l_hid2_drop = lasagne.layers.DropoutLayer(l_hid2, p=0.5)
-    #
+
     # l_out = lasagne.layers.DenseLayer(
-    #     l_hid3,
-    #     num_units=output_length,
+    #     l_hid,
+    #     num_units=output_length, 
+    #    # num_units=output_length,
     #     nonlinearity=lasagne.nonlinearities.softmax,
     #     # W=lasagne.init.Normal(.0001),
-    #     #W=lasagne.init.Normal(.01),
-    #     W=lasagne.init.HeNormal('relu'),
-    #     b=lasagne.init.Constant(0.05)
+    #     W=lasagne.init.Normal(.01),
+    #     b=lasagne.init.Constant(0)
     # )
-    #
-    # return l_out
-
-    l_in = lasagne.layers.InputLayer(
-        shape=(None, 1, input_height, input_width),
-    )
-
-    l_hid = lasagne.layers.DenseLayer(
-        l_in,
-        num_units=20,
-        # nonlinearity=lasagne.nonlinearities.tanh,
-        nonlinearity=lasagne.nonlinearities.rectify,
-        # W=lasagne.init.Normal(.0201),
-        W=lasagne.init.Normal(.01),
-        b=lasagne.init.Constant(0)
-    )
-
-    l_out = lasagne.layers.DenseLayer(
-        l_hid,
-        num_units=output_length, 
-       # num_units=output_length,
-        nonlinearity=lasagne.nonlinearities.softmax,
-        # W=lasagne.init.Normal(.0001),
-        W=lasagne.init.Normal(.01),
-        b=lasagne.init.Constant(0)
-    )
 
     return l_out
 

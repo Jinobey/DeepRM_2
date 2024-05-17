@@ -3,6 +3,7 @@ import theano
 import time
 import sys
 import cPickle
+from multiprocessing import Pool
 
 import environment
 import pg_network
@@ -17,6 +18,12 @@ def add_sample(X, y, idx, X_to_add, y_to_add):
     #print('observation of the state: ', X_to_add)
     y[idx] = y_to_add
     #print('sample print', X, y)
+    
+    
+def add_sample_parallel(args):
+    X, y, idx, X_to_add, y_to_add = args
+    add_sample(X, y, idx, X_to_add, y_to_add)
+    return idx, X[idx, 0, :, :], y[idx]
 
 
 def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
@@ -64,60 +71,60 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job'):
 
     mem_alloc = 4
 
-
     X = np.zeros([pa.simu_len * pa.num_ex * mem_alloc, 1,
                   pa.network_input_height, pa.network_input_width],
                  dtype=theano.config.floatX)
-    print('Da X', X, X.shape)
+    print('X, X.shape', X, X.shape)
     y = np.zeros(pa.simu_len * pa.num_ex * mem_alloc,
                  dtype='int32')
-    #print('Da Y', y)
+    #print('Y', y)
 
     print 'network_input_height=', pa.network_input_height
     print 'network_input_width=', pa.network_input_width
 
     counter = 0
-
-    job_lengths = [] #list to keep track of the job lengths and calucalte the percentiles
-
+    results = []
+    
+    pool = Pool()
+    
     for train_ex in range(pa.num_ex):
-        #print('da num', pa.num_ex)
         env.reset()
 
-        for _ in xrange(pa.episode_max_length):
-
+        for _ in range(pa.episode_max_length):
             # ---- get current state ----
             ob = env.observe()
-            
             a = evaluate_policy(env.machine, env.job_slot1,pa)
-
             if counter < pa.simu_len * pa.num_ex * mem_alloc: # 72
-
-                add_sample(X, y, counter, ob, a)
-                #print('added sample, ', add_sample(X, y, counter, ob, a))
+                results.append((X, y, counter, ob, a))
                 counter += 1
-
-
             ob, rew, done, info = env.step(a,repeat=True)
             #print('counter check 2', counter)
             if done:  # hit void action, exit
                 print('exit, void action')
                 break
+            
+        # # roll to next example
+        # env.seq_no = (env.seq_no + 1) % env.pa.num_ex
 
-        # roll to next example
-        env.seq_no = (env.seq_no + 1) % env.pa.num_ex
-
+    processed_data = pool.map(add_sample_parallel, results)
+    pool.close()
+    pool.join()
+    
+    for idx, X_sample, y_sample in processed_data:
+        X[idx, 0, :, :] = X_sample
+        y[idx] = y_sample
+    
     num_train = int(0.8 * counter)
-  #  print("shape of training: ", num_train)
+    # print("shape of training: ", num_train)
     num_test = int(0.2 * counter)
 
     X_train, X_test = X[:num_train], X[num_train: num_train + num_test]
     y_train, y_test = y[:num_train], y[num_train: num_train + num_test]
-    #print('print features: ', X_train[3])
+    # print('print features: ', X_train[3])
     print('shape of xtrain', X_train.shape)
     print('print labels: ', y_train, 'and test: ', y_test, y_train.shape)
     training_list.append((X_train, y_train))
-  #  print('the training list: ',training_list)
+    # print('the training list: ',training_list)
 
     # Normalization, make sure nothing becomes NaN
 
