@@ -56,7 +56,7 @@ def adam_update(grads, params, learning_rate=0.001, beta1=0.9,
 
 
 class PGLearner:
-    def __init__(self, pa, use_cnn=False):
+    def __init__(self, pa, use_cnn=True):
 
         self.input_height = pa.network_input_height
         self.input_width = pa.network_input_width

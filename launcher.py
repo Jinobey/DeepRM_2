@@ -53,7 +53,7 @@ def main():
     log = None
 
     render = False
-    use_cnn = False
+    use_cnn = True
 
     try:
         opts, args = getopt.getopt(
