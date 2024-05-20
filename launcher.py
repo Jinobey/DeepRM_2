@@ -1,5 +1,5 @@
 import os
-os.environ["THEANO_FLAGS"] = "device=gpu,floatX=float32"
+os.environ["THEANO_FLAGS"] = "device=gpu, floatX=float32"
 import sys
 import getopt
 import matplotlib
@@ -37,7 +37,8 @@ def script_usage():
           '--ofile <output file name> \n'
           '--log <log file name> \n'
           '--render <plot dynamics> \n'
-          '--unseen <generate unseen example> \n')
+          '--unseen <generate unseen example> \n'
+          '--use_cnn <use CNN instead of dense network> \n')
 
 
 def main():
@@ -52,6 +53,7 @@ def main():
     log = None
 
     render = False
+    use_cnn = False
 
     try:
         opts, args = getopt.getopt(
@@ -79,7 +81,8 @@ def main():
                       "ofile=",
                       "log=",
                       "render=",
-                      "unseen="])
+                      "unseen=",
+                      "use_cnn"])
 
     except getopt.GetoptError:
         script_usage()
@@ -137,6 +140,8 @@ def main():
             render = (arg == 'True')
         elif opt in ("-u", "--unseen"):
             pa.generate_unseen = (arg == 'True')
+        elif opt in ("--use_cnn"):
+            use_cnn = (arg == 'True')
         else:
             script_usage()
             sys.exit()
@@ -148,7 +153,7 @@ def main():
     elif type_exp == 'v_su':
         v_su.launch(pa, v_resume, render)
     elif type_exp == 'pg_re':
-        pg_re.launch(pa, pg_resume, render, repre='image', end='all_done')
+        pg_re.launch(pa, pg_resume, render, repre='image', end='all_done', use_cnn=use_cnn)
     elif type_exp == 'pg_v_re':
         pg_v_re.launch(pa, pg_resume, v_resume, render)
     elif type_exp == 'test':

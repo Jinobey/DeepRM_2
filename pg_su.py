@@ -39,13 +39,13 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
         yield inputs[excerpt], targets[excerpt]
 
 
-def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job'):
+def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job', use_cnn=False):
     print('launching')
     env = environment.Env(pa, render=False, repre=repre, end=end)
 
     training_list = []
 
-    pg_learner = pg_network.PGLearner(pa)
+    pg_learner = pg_network.PGLearner(pa, use_cnn)
 
     if pg_resume is not None:
         net_handle = open(pg_resume, 'r')
@@ -192,7 +192,6 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job'):
 def main():
 
     import parameters
-
     pa = parameters.Parameters()
 
     pa.simu_len = 1000  # 1000
@@ -200,21 +199,15 @@ def main():
     pa.num_nw = 10
     pa.num_seq_per_batch = 20
     pa.output_freq = 50
-
-    # pa.max_nw_size = 5
-    # pa.job_len = 5
     pa.new_job_rate = 0.3
-
     pa.episode_max_length = 10000  # 2000
-
     pa.compute_dependent_parameters()
 
     pg_resume = None
-    # pg_resume = 'data/tmp_450.pkl'
-
     render = False
-
-    launch(pa, pg_resume, render, repre='image', end='all_done')
+    use_cnn = False
+    
+    launch(pa, pg_resume, render, repre='image', end='all_done', use_cnn=False)
 
 
 if __name__ == '__main__':

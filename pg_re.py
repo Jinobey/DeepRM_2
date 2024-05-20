@@ -233,7 +233,7 @@ def get_traj_worker(pg_learner, env, pa, result):
                    "all_entropy": all_entropy})
 
 
-def launch(pa, pg_resume=None, render=False, repre='image', end='all_done'):
+def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_cnn=True):
     # ----------------------------
     print("Preparing for workers...")
     # ----------------------------
@@ -269,7 +269,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done'):
 
         print "-prepare for worker-", ex
 
-        pg_learner = pg_network.PGLearner(pa)
+        pg_learner = pg_network.PGLearner(pa, use_cnn)
 
         if pg_resume is not None:
             net_handle = open(pg_resume, 'rb')
@@ -452,8 +452,9 @@ def main():
     # pg_resume = 'data/tmp_450.pkl'
 
     render = False
+    use_cnn=True
 
-    launch(pa, pg_resume, render, repre='image', end='no_new_job')
+    launch(pa, pg_resume, render, repre='image', end='no_new_job', use_cnn=use_cnn)
 
 
 if __name__ == '__main__':

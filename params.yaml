@@ -14,9 +14,9 @@ dist: !!python/object:job_distribution.Dist
   anomalous_job_len_lower: 19
   anomalous_job_len_middle: 23
   anomalous_job_len_upper: 29
-  anomalous_job_rate: 0.5
+  anomalous_job_rate: 0.05
   anomalous_resource_lower: 11
-  anomalous_resource_rate: 0.5
+  anomalous_resource_rate: 0.05
   anomalous_resource_upper: 15
   dominant_res_lower: 5
   dominant_res_upper: 10
@@ -25,11 +25,11 @@ dist: !!python/object:job_distribution.Dist
   job_len_big_upper: 18
   job_len_small_lower: 1
   job_len_small_upper: 3
-  job_small_chance: 0.3
+  job_small_chance: 0.75
   max_nw_size: 10
   num_res: 2
   other_res_lower: 1
-  other_res_upper: 5
+  other_res_upper: 2
 episode_max_length: 3000
 evaluate_policy_name: SJF
 hold_penalty: -1
@@ -43,19 +43,19 @@ network_input_height: 30
 network_input_width: 225
 network_output_dim: 16
 new_job_rate: 1
-num_epochs: 3001
-num_ex: 20
+num_epochs: 21
+num_ex: 5
 num_frames: 1
 num_nw: 5
 num_res: 2
 num_seq_per_batch: 10
-output_filename: data/tmp
+output_filename: data/pg_re
 output_freq: 10
 res_slot1: 10
 res_slot2: 10
 res_slot3: 15
 rms_eps: 1.0e-09
 rms_rho: 0.9
-simu_len: 30
+simu_len: 5
 time_horizon: 30
 unseen: false

@@ -56,7 +56,7 @@ def adam_update(grads, params, learning_rate=0.001, beta1=0.9,
 
 
 class PGLearner:
-    def __init__(self, pa):
+    def __init__(self, pa, use_cnn=False):
 
         self.input_height = pa.network_input_height
         self.input_width = pa.network_input_width
@@ -75,9 +75,14 @@ class PGLearner:
         print 'network_input_width=', pa.network_input_width
         print 'network_output_dim=', pa.network_output_dim
 
+        if use_cnn:  # choose network based on use_cnn parameter
+            self.l_out = build_cnn_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        else:
+            self.l_out = build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        
         # image representation
-        self.l_out = \
-            build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+        # self.l_out = \
+        #     build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
         
         #self.l_out = \
          #   build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
@@ -91,9 +96,7 @@ class PGLearner:
         self.rms_eps = pa.rms_eps
 
         params = lasagne.layers.helper.get_all_params(self.l_out)
-
         print ' params=', params, ' count=', lasagne.layers.count_params(self.l_out)
-
         self._get_param = theano.function([], params)
 
         # ===================================
@@ -101,17 +104,13 @@ class PGLearner:
         # ===================================
 
         prob_act = lasagne.layers.get_output(self.l_out, states)
-
         self._get_act_prob = theano.function([states], prob_act, allow_input_downcast=True)
 
         # --------  Policy Gradient  --------
 
         N = states.shape[0]
-
         loss = T.log(prob_act[T.arange(N), actions]).dot(values) / N  # call it "loss"
-
         grads = T.grad(loss, params)
-
         updates = rmsprop_updates(
             grads, params, self.lr_rate, self.rms_rho, self.rms_eps)
 
@@ -120,35 +119,23 @@ class PGLearner:
 
         self._train_fn = theano.function([states, actions, values], loss,
                                          updates=updates, allow_input_downcast=True)
-
         self._get_loss = theano.function([states, actions, values], loss, allow_input_downcast=True)
-
         self._get_grad = theano.function([states, actions, values], grads, allow_input_downcast=True)
 
         # --------  Supervised Learning  --------
 
         su_target = T.ivector('su_target')
-
-        # su_diff = su_target - prob_act
-        # su_loss = 0.5 * su_diff ** 2
-
         su_loss = lasagne.objectives.categorical_crossentropy(prob_act, su_target)
         su_loss = su_loss.mean()
-
         l2_penalty = lasagne.regularization.regularize_network_params(self.l_out, lasagne.regularization.l2)
         # l1_penalty = lasagne.regularization.regularize_network_params(self.l_out, lasagne.regularization.l1)
-
         su_loss += 1e-3*l2_penalty
         print 'lr_rate=', self.lr_rate
-
         su_updates = lasagne.updates.rmsprop(su_loss, params,
                                              self.lr_rate, self.rms_rho, self.rms_eps)
         #su_updates = lasagne.updates.nesterov_momentum(su_loss, params, self.lr_rate)
-
         self._su_train_fn = theano.function([states, su_target], [su_loss, prob_act], updates=su_updates)
-
         self._su_loss = theano.function([states, su_target], [su_loss, prob_act])
-
         self._debug = theano.function([states], [states.flatten(2)])
 
     # get the action based on the estimated value
@@ -217,7 +204,36 @@ class PGLearner:
 
 
 def build_pg_network(input_height, input_width, output_length):
+     
+    l_in = lasagne.layers.InputLayer(
+        shape=(None, 1, input_height, input_width),
+    )
+                                                       
+    l_hid = lasagne.layers.DenseLayer(
+        l_in,
+        num_units=20,
+        # nonlinearity=lasagne.nonlinearities.tanh,
+        nonlinearity=lasagne.nonlinearities.rectify,
+        # W=lasagne.init.Normal(.0201),
+        W=lasagne.init.Normal(.01),
+        b=lasagne.init.Constant(0)
+    )
 
+    l_out = lasagne.layers.DenseLayer(
+        l_hid,
+        num_units=output_length, 
+       # num_units=output_length,
+        nonlinearity=lasagne.nonlinearities.softmax,
+        # W=lasagne.init.Normal(.0001),
+        W=lasagne.init.Normal(.01),
+        b=lasagne.init.Constant(0)
+    )
+
+    return l_out
+
+
+def build_cnn_pg_network(input_height, input_width, output_length):
+    
     # Input layer
     l_in = lasagne.layers.InputLayer(
         shape=(None, 1, input_height, input_width),
@@ -263,27 +279,7 @@ def build_pg_network(input_height, input_width, output_length):
         num_units=output_length,
         nonlinearity=lasagne.nonlinearities.softmax
     )
-                                                       
-    # l_hid = lasagne.layers.DenseLayer(
-    #     l_in,
-    #     num_units=20,
-    #     # nonlinearity=lasagne.nonlinearities.tanh,
-    #     nonlinearity=lasagne.nonlinearities.rectify,
-    #     # W=lasagne.init.Normal(.0201),
-    #     W=lasagne.init.Normal(.01),
-    #     b=lasagne.init.Constant(0)
-    # )
-
-    # l_out = lasagne.layers.DenseLayer(
-    #     l_hid,
-    #     num_units=output_length, 
-    #    # num_units=output_length,
-    #     nonlinearity=lasagne.nonlinearities.softmax,
-    #     # W=lasagne.init.Normal(.0001),
-    #     W=lasagne.init.Normal(.01),
-    #     b=lasagne.init.Constant(0)
-    # )
-
+    
     return l_out
 
 

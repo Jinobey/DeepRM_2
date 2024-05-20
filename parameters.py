@@ -92,7 +92,7 @@ class Parameters:
         #the way jobs are created are in the blocks so we can visualize them in the same manner. 
 
         # supervised learning mimic policy
-        self.batch_size = 10
+        self.batch_size = 512
         self.evaluate_policy_name = "SJF"
 
     def compute_dependent_parameters(self):
