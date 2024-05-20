@@ -82,7 +82,7 @@ def main():
                       "log=",
                       "render=",
                       "unseen=",
-                      "use_cnn"])
+                      "use_cnn="])
 
     except getopt.GetoptError:
         script_usage()
@@ -142,11 +142,17 @@ def main():
             pa.generate_unseen = (arg == 'True')
         elif opt in ("--use_cnn"):
             use_cnn = (arg == 'True')
+            print("Argument use_cnn set to: ", use_cnn)  # Debug print statement
         else:
             script_usage()
             sys.exit()
 
     pa.compute_dependent_parameters()
+    
+    # Debugging print statements to verify values
+    print("Experiment Type:", type_exp)
+    print("Use CNN:", use_cnn)
+    print("Parameters:", pa)
 
     if type_exp == 'pg_su':
         pg_su.launch(pa, pg_resume, render, repre='image', end='all_done')
