@@ -21452,3 +21452,5 @@ Job Wall-clock time: 00:07:39
 Memory Utilized: 0.00 MB (estimated maximum)
 Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
 WARNING: Efficiency statistics may be misleading for RUNNING jobs.
+
+srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=50 --num_ex=15 --ofile=data/pg_re --num_epochs=101 --use_cnn=False
