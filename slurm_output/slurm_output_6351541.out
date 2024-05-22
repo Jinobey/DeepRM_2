@@ -1,0 +1,2045 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/signal/downsample.py:6: UserWarning: downsample module has been moved to the theano.tensor.signal.pool module.
+  "downsample module has been moved to the theano.tensor.signal.pool module.")
+('Experiment Type:', 'pg_re')
+('Use CNN:', False)
+Preparing for workers...
+('pg_resume is set to:', None)
+('rand val', 0.9507143064099162)
+test2
+('big job', 14)
+('the random val for res', 0.5986584841970366)
+('the resource vector req: ', array([1., 6.]))
+('rand val', 0.05808361216819946)
+('small job', 1)
+('the random val for res', 0.14286681792194078)
+('the resource vector req: ', array([ 1., 10.]))
+('rand val', 0.7219987722668247)
+('small job', 2)
+('the random val for res', 0.0007787658410143283)
+('the resource vector req: ', array([ 2., 11.]))
+('rand val', 0.6116531604882809)
+('small job', 1)
+('the random val for res', 0.023062425041415757)
+('the resource vector req: ', array([ 1., 13.]))
+('rand valx', 0.04666566321361543)
+('anomalous job', 21)
+('the random val for res', 0.5142344384136116)
+('the resource vector req: ', array([2., 5.]))
+('rand val', 0.6075448519014384)
+('small job', 1)
+('the random val for res', 0.06505159298527952)
+('the resource vector req: ', array([8., 1.]))
+('rand val', 0.8083973481164611)
+test2
+('big job', 12)
+('the random val for res', 0.09767211400638387)
+('the resource vector req: ', array([2., 8.]))
+('rand val', 0.12203823484477883)
+('small job', 1)
+('the random val for res', 0.034388521115218396)
+('the resource vector req: ', array([ 2., 11.]))
+('rand val', 0.662522284353982)
+('small job', 2)
+('the random val for res', 0.5200680211778108)
+('the resource vector req: ', array([2., 8.]))
+-prepare for env- 0
+initialize the environment...
+-prepare for env- 1
+initialize the environment...
+-prepare for env- 2
+initialize the environment...
+-prepare for worker- 0
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 1
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 2
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 3
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 4
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 5
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 6
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 7
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 8
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 9
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 10
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 11
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 12
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 13
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 14
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 15
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+-prepare for worker- 16
+('use cnn type:', False, <type 'bool'>)
+('use_cnn is now set to:', False)
+ params= [W, b, W, b]  count= 135356
+Preparing for reference data...
+Initial values:
+('pg_resume:', None)
+('use_cnn:', False)
+initialize the environment...
+('rand val', 0.2384460988728453)
+('small job', 3)
+('the random val for res', 0.32731285837473323)
+('the resource vector req: ', array([ 1., 10.]))
+('rand val', 0.7129396749434563)
+('small job', 2)
+('the random val for res', 0.9287371966973894)
+('the resource vector req: ', array([10.,  2.]))
+('rand val', 0.9406686778176713)
+test2
+('big job', 13)
+('the random val for res', 0.6000987108374178)
+('the resource vector req: ', array([2., 8.]))
+('rand val', 0.6410608358696614)
+('small job', 1)
+('the random val for res', 0.06369160066785517)
+('the resource vector req: ', array([1., 5.]))
+('rand val', 0.6107630772649082)
+('small job', 3)
+('the random val for res', 0.9385139069526973)
+('the resource vector req: ', array([8., 1.]))
+('rand val', 0.05758499009884377)
+('small job', 3)
+('the random val for res', 0.6498981027201829)
+('the resource vector req: ', array([10.,  2.]))
+('rand val', 0.5577648760943111)
+('small job', 2)
+('the random val for res', 0.8658692883483883)
+('the resource vector req: ', array([1., 9.]))
+('rand val', 0.4616659206871453)
+('small job', 1)
+('the random val for res', 0.8019154820324793)
+('the resource vector req: ', array([5., 2.]))
+('rand val', 0.705021659330321)
+('small job', 3)
+('the random val for res', 0.7180341879486238)
+('the resource vector req: ', array([5., 1.]))
+(u'workload', array([0., 0.]))
+Load on # 0 resource dimension is 1.4
+Load on # 1 resource dimension is 1.9444444444444444
+
+
+
+=============== 0 ===============
+Before calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+('pg_resume in get_traj is: ', None)
+('resleft2', array([[0., 8.],
+       [0., 8.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 0, 2, array([10,  2]))
+('resleft2', array([[8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.],
+       [8., 2.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 1, 13, array([2, 8]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+After calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+---------- SJF -----------
+total discount reward : 	 -1.6337951573551113
+(2,)
+(2,)
+(2,)
+('job slowdown: ', 1.0)
+('job length array', [154])
+('job total size:', array([12, 10]))
+('job total size:', array([ 2, 13]))
+
+
+
+=============== 1 ===============
+Before calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+('pg_resume in get_traj is: ', None)
+('resleft2', array([[2., 9.],
+       [2., 9.],
+       [2., 9.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 0, 3, array([8, 1]))
+('resleft2', array([[0., 8.],
+       [0., 8.],
+       [0., 8.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 1, 3, array([10,  2]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+After calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+---------- SJF -----------
+total discount reward : 	 -2.255895145572916
+(2,)
+(2,)
+(2,)
+('job slowdown: ', 1.0)
+('job length array', [154, 63])
+('job total size:', array([ 9, 12]))
+('job total size:', array([3, 3]))
+
+
+
+=============== 2 ===============
+Before calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+('pg_resume in get_traj is: ', None)
+('resleft2', array([[5., 8.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 0, 1, array([5, 2]))
+('resleft2', array([[5., 9.],
+       [5., 9.],
+       [5., 9.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 1, 3, array([5, 1]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+After calling get_traj:
+('pg_resume:', None)
+('use_cnn:', False)
+---------- SJF -----------
+total discount reward : 	 -1.830262395833333
+(2,)
+(2,)
+(2,)
+('job slowdown: ', 1.0)
+('job length array', [154, 63, 25])
+('job total size:', array([7, 6]))
+('job total size:', array([1, 3]))
+Start training...
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/subtensor.py:2166: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0] = inputs[0].__getitem__(inputs[1:])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 1
+NumTrajs: 	 30
+NumTimesteps: 	 632
+MaxRew: 	 8.642197129626503
+MeanRew: 	 -5.675287980193383 +- 8.393325499079051
+MeanSlowdown: 	 5.0
+MeanLen: 	 21.066666666666666 +- 13.72329730381474
+MeanEntropy 	 2.7725856
+Elapsed time	 0.491998910904 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 2
+NumTrajs: 	 30
+NumTimesteps: 	 665
+MaxRew: 	 8.037318531755735
+MeanRew: 	 -6.773840056243347 +- 8.749533729892764
+MeanSlowdown: 	 5.533333333333333
+MeanLen: 	 22.166666666666668 +- 9.483611595214605
+MeanEntropy 	 2.772558
+Elapsed time	 0.597494125366 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 3
+NumTrajs: 	 30
+NumTimesteps: 	 664
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -6.618351222909561 +- 8.79504067394383
+MeanSlowdown: 	 5.466666666666667
+MeanLen: 	 22.133333333333333 +- 10.506294409649017
+MeanEntropy 	 2.7724526
+Elapsed time	 0.607564926147 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 4
+NumTrajs: 	 30
+NumTimesteps: 	 664
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -6.618351222909561 +- 8.79504067394383
+MeanSlowdown: 	 5.466666666666667
+MeanLen: 	 22.133333333333333 +- 10.506294409649017
+MeanEntropy 	 2.7721336
+Elapsed time	 0.571604013443 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 5
+NumTrajs: 	 30
+NumTimesteps: 	 632
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -5.904876158307519 +- 8.214831307724086
+MeanSlowdown: 	 4.733333333333333
+MeanLen: 	 21.066666666666666 +- 10.314822129128332
+MeanEntropy 	 2.7714725
+Elapsed time	 0.546015024185 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 6
+NumTrajs: 	 30
+NumTimesteps: 	 623
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -1.9535625402194976 +- 13.309518134125797
+MeanSlowdown: 	 5.05
+MeanLen: 	 20.766666666666666 +- 10.121539189053983
+MeanEntropy 	 2.7709048
+Elapsed time	 0.61013507843 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 7
+NumTrajs: 	 30
+NumTimesteps: 	 625
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -1.3574959596584695 +- 13.825196396229854
+MeanSlowdown: 	 5.066666666666666
+MeanLen: 	 20.833333333333332 +- 8.850925877493772
+MeanEntropy 	 2.7698717
+Elapsed time	 0.651490926743 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 8
+NumTrajs: 	 30
+NumTimesteps: 	 631
+MaxRew: 	 8.466720332302609
+MeanRew: 	 -0.4365347882839031 +- 15.062355802711098
+MeanSlowdown: 	 5.233333333333333
+MeanLen: 	 21.033333333333335 +- 8.88250465177975
+MeanEntropy 	 2.7693655
+Elapsed time	 0.617734909058 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 9
+NumTrajs: 	 30
+NumTimesteps: 	 642
+MaxRew: 	 8.166300755937597
+MeanRew: 	 -3.332919162508375 +- 12.656794117234675
+MeanSlowdown: 	 4.916666666666667
+MeanLen: 	 21.4 +- 8.773444781460322
+MeanEntropy 	 2.767205
+Elapsed time	 0.620992183685 seconds
+-----------------
+2 out of 3
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+('current params:', [(6750, 20), (20,), (20, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+-----------------
+Iteration: 	 10
+NumTrajs: 	 30
+NumTimesteps: 	 587
+MaxRew: 	 6.673954177292067
+MeanRew: 	 -3.00388261267701 +- 11.122384841044688
+MeanSlowdown: 	 4.166666666666667
+MeanLen: 	 19.566666666666666 +- 9.46108990667683
+MeanEntropy 	 2.7615712
+Elapsed time	 0.560139894485 seconds
+-----------------
+Initial values:
+('pg_resume:', 'data/pg_re_10.pkl')
+('use_cnn:', True)
+initialize the environment...
+('rand val', 0.2384460988728453)
+('small job', 3)
+('the random val for res', 0.32731285837473323)
+('the resource vector req: ', array([ 1., 10.]))
+('rand val', 0.7129396749434563)
+('small job', 2)
+('the random val for res', 0.9287371966973894)
+('the resource vector req: ', array([10.,  2.]))
+('rand val', 0.9406686778176713)
+test2
+('big job', 13)
+('the random val for res', 0.6000987108374178)
+('the resource vector req: ', array([2., 8.]))
+('rand val', 0.6410608358696614)
+('small job', 1)
+('the random val for res', 0.06369160066785517)
+('the resource vector req: ', array([1., 5.]))
+('rand val', 0.6107630772649082)
+('small job', 3)
+('the random val for res', 0.9385139069526973)
+('the resource vector req: ', array([8., 1.]))
+('rand val', 0.05758499009884377)
+('small job', 3)
+('the random val for res', 0.6498981027201829)
+('the resource vector req: ', array([10.,  2.]))
+('rand val', 0.5577648760943111)
+('small job', 2)
+('the random val for res', 0.8658692883483883)
+('the resource vector req: ', array([1., 9.]))
+('rand val', 0.4616659206871453)
+('small job', 1)
+('the random val for res', 0.8019154820324793)
+('the resource vector req: ', array([5., 2.]))
+('rand val', 0.705021659330321)
+('small job', 3)
+('the random val for res', 0.7180341879486238)
+('the resource vector req: ', array([5., 1.]))
+(u'workload', array([0., 0.]))
+Load on # 0 resource dimension is 1.4
+Load on # 1 resource dimension is 1.9444444444444444
+
+
+
+=============== 0 ===============
+Before calling get_traj:
+('pg_resume:', 'data/pg_re_10.pkl')
+('use_cnn:', True)
+('pg_resume in get_traj is: ', 'data/pg_re_10.pkl')
+('use_cnn is now set to:', True)
+('cnn: use_cnn is:', True)
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 32, 28, 223))
+('Pool1 layer shape: ', (None, 32, 14, 111))
+('Conv2 layer shape: ', (None, 64, 12, 109))
+('Pool2 layer shape: ', (None, 64, 6, 54))
+('Hidden layer shape: ', (None, 128))
+('Dropout layer shape: ', (None, 128))
+('Output layer shape: ', (None, 16))
+ params= [W, b, W, b, W, b, W, b]  count= 2675216
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/lasagne/layers/conv.py:489: UserWarning: The `image_shape` keyword argument to `tensor.nnet.conv2d` is deprecated, it has been renamed to `input_shape`.
+  border_mode=border_mode)
+('current params:', [(32, 1, 3, 3), (32,), (64, 32, 3, 3), (64,), (20736, 128), (128,), (128, 16), (16,)])
+('net params', [(6750, 20), (20,), (20, 16), (16,)])
+Traceback (most recent call last):
+  File "launcher.py", line 174, in <module>
+    main()
+  File "launcher.py", line 160, in main
+    pg_re.launch(pa, pg_resume, render, repre='image', end='all_done', use_cnn=use_cnn)
+  File "/gpfs/home6/terhard/DeepRM_2/pg_re.py", line 424, in launch
+    render=False, plot=True, repre=repre, end=end, use_cnn=True)
+  File "/gpfs/home6/terhard/DeepRM_2/slow_down_cdf.py", line 139, in launch
+    rews, info = get_traj(test_type, pa, env, pa.episode_max_length, pg_resume=pg_resume, use_cnn=use_cnn, render=render)
+  File "/gpfs/home6/terhard/DeepRM_2/slow_down_cdf.py", line 53, in get_traj
+    pg_learner.set_net_params(net_params)
+  File "/gpfs/home6/terhard/DeepRM_2/pg_network.py", line 204, in set_net_params
+    lasagne.layers.helper.set_all_param_values(self.l_out, net_params)
+  File "/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/lasagne/layers/helper.py", line 446, in set_all_param_values
+    (len(values), len(params)))
+ValueError: mismatch: got 4 values to set 8 parameters
+srun: error: gcn34: task 0: Exited with exit code 1
+srun: Terminating StepId=6351541.0
+
+JOB STATISTICS
+==============
+Job ID: 6351541
+Cluster: snellius
+User/Group: terhard/terhard
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:13:48 core-walltime
+Job Wall-clock time: 00:00:46
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

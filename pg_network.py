@@ -10,12 +10,12 @@ def rmsprop_updates(grads, params, stepsize, rho=0.9, epsilon=1e-9):
 
     for param, grad in zip(params, grads):
         accum = theano.shared(np.zeros(param.get_value(borrow=True).shape, dtype=param.dtype))
-        #print('thanos car thanos car', accum)
+        # print('thanos car thanos car', accum)
         accum_new = rho * accum + (1 - rho) * grad ** 2
-       # print('thanos bus', accum_new)
+        # print('thanos bus', accum_new)
         updates.append((accum, accum_new))
         updates.append((param, param + (stepsize * grad / T.sqrt(accum_new + epsilon))))
-        #print('upadata,', updates)
+        # print('upadata,', updates)
         # lasagne has '-' after param
     return updates
 
@@ -68,15 +68,16 @@ class PGLearner:
 
         states = T.tensor4('states')
         actions = T.ivector('actions')
-        print('network actions', actions)
+        # print('network actions', actions)
         values = T.vector('values')
 
-        print 'network_input_height=', pa.network_input_height
-        print 'network_input_width=', pa.network_input_width
-        print 'network_output_dim=', pa.network_output_dim
+        # print 'network_input_height=', pa.network_input_height
+        # print 'network_input_width=', pa.network_input_width
+        # print 'network_output_dim=', pa.network_output_dim
 
+        print("use_cnn is now set to:", use_cnn)
         if use_cnn:  # choose network based on use_cnn parameter
-            self.l_out = build_cnn_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
+            self.l_out = build_cnn_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim, use_cnn)
         else:
             self.l_out = build_pg_network(pa.network_input_height, pa.network_input_width, pa.network_output_dim)
         
@@ -130,7 +131,7 @@ class PGLearner:
         l2_penalty = lasagne.regularization.regularize_network_params(self.l_out, lasagne.regularization.l2)
         # l1_penalty = lasagne.regularization.regularize_network_params(self.l_out, lasagne.regularization.l1)
         su_loss += 1e-3*l2_penalty
-        print 'lr_rate=', self.lr_rate
+        # print 'lr_rate=', self.lr_rate
         su_updates = lasagne.updates.rmsprop(su_loss, params,
                                              self.lr_rate, self.rms_rho, self.rms_eps)
         #su_updates = lasagne.updates.nesterov_momentum(su_loss, params, self.lr_rate)
@@ -142,13 +143,13 @@ class PGLearner:
     def choose_action(self, state):
 
         act_prob = self.get_one_act_prob(state)
-        #print('action proba: ', act_prob, 'state', state)
+        # print('action proba: ', act_prob, 'state', state)
         csprob_n = np.cumsum(act_prob)
-        #print('csprob_n 1', csprob_n)
+        # print('csprob_n 1', csprob_n)
         act = (csprob_n > np.random.rand()).argmax()
 
         # print(act_prob, act)
-        print('actions taken', act)
+        # print('actions taken', act)
         return act
 
     def train(self, states, actions, values):
@@ -165,12 +166,14 @@ class PGLearner:
         return self._get_grad(states, actions, values)
     #that one is used
     def get_one_act_prob(self, state):
-
+        state = state.astype(theano.config.floatX)
         states = np.zeros((1, 1, self.input_height, self.input_width), dtype=theano.config.floatX)
-        #print('states print: ', states)
+        # print('states print: ', states)
         states[0, :, :] = state
+        # print('state.dtype: ', state.dtype)
+        # print('states.dtype: ', states.dtype)
         act_prob = self._get_act_prob(states)[0]
-        #print('action proba', act_prob)
+        # print('action proba', act_prob)
         return act_prob
 
     def get_act_probs(self, states):  # multiple states, assuming in floatX format
@@ -180,14 +183,14 @@ class PGLearner:
     #  -------- Supervised Learning --------
     def su_train(self, states, target):
         
-        #print('target', target)
+        # print('target', target)
         loss, prob_act = self._su_train_fn(states, target)
-        #return loss, prob_act
+        # return loss, prob_act
         return np.sqrt(loss), prob_act
 
     def su_test(self, states, target):
         loss, prob_act = self._su_loss(states, target)
-        #return loss, prob_act
+        # return loss, prob_act
         return np.sqrt(loss), prob_act
 
     #  -------- Save/Load network parameters --------
@@ -195,6 +198,9 @@ class PGLearner:
         return lasagne.layers.helper.get_all_param_values(self.l_out)
 
     def set_net_params(self, net_params):
+        current_params = lasagne.layers.helper.get_all_param_values(self.l_out)
+        print("current params:", [param.shape for param in current_params])
+        print("net params", [param.shape for param in net_params])
         lasagne.layers.helper.set_all_param_values(self.l_out, net_params)
 
 
@@ -222,7 +228,7 @@ def build_pg_network(input_height, input_width, output_length):
     l_out = lasagne.layers.DenseLayer(
         l_hid,
         num_units=output_length, 
-       # num_units=output_length,
+        # num_units=output_length,
         nonlinearity=lasagne.nonlinearities.softmax,
         # W=lasagne.init.Normal(.0001),
         W=lasagne.init.Normal(.01),
@@ -232,12 +238,15 @@ def build_pg_network(input_height, input_width, output_length):
     return l_out
 
 
-def build_cnn_pg_network(input_height, input_width, output_length):
+def build_cnn_pg_network(input_height, input_width, output_length, use_cnn):
     
+    print("cnn: use_cnn is:", use_cnn)
     # Input layer
     l_in = lasagne.layers.InputLayer(
         shape=(None, 1, input_height, input_width),
     )
+    
+    print("Input layer shape: ", l_in.output_shape)
     
     # First convolutional layer
     l_conv1 = lasagne.layers.Conv2DLayer(
@@ -248,8 +257,12 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         W=lasagne.init.GlorotUniform()
     )
     
+    print("Conv1 layer shape: ", l_conv1.output_shape)
+    
     # Pooling layer
     l_pool1 = lasagne.layers.MaxPool2DLayer(l_conv1, pool_size=(2, 2))
+    
+    print("Pool1 layer shape: ",l_pool1.output_shape)
                                                                 
     # Second convolutional layer
     l_conv2 = lasagne.layers.Conv2DLayer(
@@ -259,8 +272,12 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         nonlinearity=lasagne.nonlinearities.rectify
     )
     
+    print("Conv2 layer shape: ", l_conv2.output_shape)
+    
     # Pooling layer
     l_pool2 = lasagne.layers.MaxPool2DLayer(l_conv2, pool_size=(2, 2))
+    
+    print("Pool2 layer shape: ", l_pool2.output_shape) 
     
     # Fully connected layer
     l_hid = lasagne.layers.DenseLayer(
@@ -270,8 +287,12 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         W=lasagne.init.GlorotUniform()
     )
     
+    print("Hidden layer shape: ", l_hid.output_shape)
+    
     # Dropout layer
     l_dropout = lasagne.layers.DropoutLayer(l_hid, p=0.5)
+    
+    print("Dropout layer shape: ", l_dropout.output_shape)
     
     # Output layer 
     l_out = lasagne.layers.DenseLayer(
@@ -279,6 +300,8 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         num_units=output_length,
         nonlinearity=lasagne.nonlinearities.softmax
     )
+    
+    print("Output layer shape: ", l_out.output_shape)
     
     return l_out
 

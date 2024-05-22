@@ -237,7 +237,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
     # ----------------------------
     print("Preparing for workers...")
     # ----------------------------
-    pg_resume=None#'data/pg_re_620.pkl'
+    pg_resume=None #'data/pg_re_620.pkl'
+    print("pg_resume is set to:", pg_resume)
     data_collector = data_collection.Data_collection()
     data_collector.convert_parameter_to_yaml(pa)
 
@@ -269,9 +270,11 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
         print "-prepare for worker-", ex
 
+        print("use cnn type:", use_cnn, type(use_cnn))
         pg_learner = pg_network.PGLearner(pa, use_cnn)
-
+        
         if pg_resume is not None:
+            print("pg_resume used", pg_resume)
             net_handle = open(pg_resume, 'rb')
             net_params = cPickle.load(net_handle)
             pg_learner.set_net_params(net_params)
@@ -287,7 +290,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
     with open('./test_type.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow([testvar, testvar])
-    ref_discount_rews, ref_slow_down = slow_down_cdf.launch(pa, pg_resume=None, render=False, plot=False, repre=repre, end=end)
+    ref_discount_rews, ref_slow_down = slow_down_cdf.launch(pa, pg_resume=None, render=False, plot=False, repre=repre, end=end, use_cnn=use_cnn)
     
     mean_rew_lr_curve = []
     max_rew_lr_curve = []
@@ -418,7 +421,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
             pa.unseen = True
             slow_down_cdf.launch(pa, pa.output_filename + '_' + str(iteration) + '.pkl',
-                                 render=False, plot=True, repre=repre, end=end)
+                                 render=False, plot=True, repre=repre, end=end, use_cnn=True)
             pa.unseen = False
             # test on unseen examples
 
@@ -443,7 +446,6 @@ def main():
     # pa.max_nw_size = 5
     # pa.job_len = 5
     pa.new_job_rate = 0.3
-
     pa.episode_max_length = 2000  # 2000
 
     pa.compute_dependent_parameters()

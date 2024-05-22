@@ -37,15 +37,16 @@ def categorical_sample(prob_n):
     return (csprob_n > np.random.rand()).argmax()
 
 
-def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, render=False):
+def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=True, render=False):
     """
     Run agent-environment loop for one whole episode (trajectory)
     Return dictionary of results
     """
+    print("pg_resume in get_traj is: ", pg_resume)
    # append = False
     if test_type == 'PG':  # load trained parameters
       #  append = True
-        pg_learner = pg_network.PGLearner(pa)
+        pg_learner = pg_network.PGLearner(pa, use_cnn=use_cnn)
 
         net_handle = open(pg_resume, 'rb')
         net_params = cPickle.load(net_handle)
@@ -84,7 +85,12 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, render=Fals
     return np.array(rews), info
 
 
-def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_done'):
+def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_done', use_cnn=True):
+    
+    print("Initial values:")
+    print("pg_resume:", pg_resume)
+    print("use_cnn:", use_cnn)
+    
     data_collection_instances = data_collection.Data_collection()
     csv_header = ['Test Type', 'Average Slowdown', 'Total Slowdown','Workload','Dist Proba', 'Anomaly rate']
     test_file = 'test_metrics.csv'
@@ -93,7 +99,6 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
     test_types = ['SJF']
 
     # colors:
-
     if pg_resume is not None:
         test_types = ['PG'] + test_types
 
@@ -126,7 +131,17 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
         for test_type in test_types:
             if test_type is not 'PG':
                 deepRM_test = False
-            rews, info = get_traj(test_type, pa, env, pa.episode_max_length, pg_resume)
+                
+            print("Before calling get_traj:")
+            print("pg_resume:", pg_resume)
+            print("use_cnn:", use_cnn)
+            
+            rews, info = get_traj(test_type, pa, env, pa.episode_max_length, pg_resume=pg_resume, use_cnn=use_cnn, render=render)
+            
+            print("After calling get_traj:")
+            print("pg_resume:", pg_resume)
+            print("use_cnn:", use_cnn)
+            
             with open('./test_type.csv', 'a') as f:
                 writer = csv.writer(f)
                 writer.writerow([seq_idx, test_type])
@@ -242,7 +257,7 @@ def main():
 
     pa.unseen = True
 
-    launch(pa, pg_resume, render, plot, repre='image', end='all_done')
+    launch(pa, pg_resume, render, plot, repre='image', end='all_done', use_cnn=True)
 
 
 if __name__ == '__main__':
