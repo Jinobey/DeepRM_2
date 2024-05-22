@@ -420,8 +420,10 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
             param_file.close()
 
             pa.unseen = True
+            
             slow_down_cdf.launch(pa, pa.output_filename + '_' + str(iteration) + '.pkl',
-                                 render=False, plot=True, repre=repre, end=end, use_cnn=True)
+                                 render=False, plot=True, repre=repre, end=end, use_cnn=use_cnn)
+            
             pa.unseen = False
             # test on unseen examples
 
@@ -454,7 +456,7 @@ def main():
     # pg_resume = 'data/tmp_450.pkl'
 
     render = False
-    use_cnn=True
+    use_cnn = True
 
     launch(pa, pg_resume, render, repre='image', end='no_new_job', use_cnn=use_cnn)
 
