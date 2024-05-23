@@ -42,7 +42,7 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=Tru
     Run agent-environment loop for one whole episode (trajectory)
     Return dictionary of results
     """
-    print("pg_resume in get_traj is: ", pg_resume)
+    # print("pg_resume in get_traj is: ", pg_resume)
    # append = False
     if test_type == 'PG':  # load trained parameters
       #  append = True
@@ -87,13 +87,14 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=Tru
 
 def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_done', use_cnn=True):
     
-    print("Initial values:")
-    print("pg_resume:", pg_resume)
-    print("use_cnn:", use_cnn)
+    # print("Initial values:")
+    # print("pg_resume:", pg_resume)
+    # print("use_cnn:", use_cnn)
     
     data_collection_instances = data_collection.Data_collection()
     csv_header = ['Test Type', 'Average Slowdown', 'Total Slowdown','Workload','Dist Proba', 'Anomaly rate']
     test_file = 'test_metrics.csv'
+    
     # ---- Parameters ----
 
     test_types = ['SJF']
@@ -131,16 +132,8 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
         for test_type in test_types:
             if test_type is not 'PG':
                 deepRM_test = False
-                
-            print("Before calling get_traj:")
-            print("pg_resume:", pg_resume)
-            print("use_cnn:", use_cnn)
             
             rews, info = get_traj(test_type, pa, env, pa.episode_max_length, pg_resume=pg_resume, use_cnn=use_cnn, render=render)
-            
-            print("After calling get_traj:")
-            print("pg_resume:", pg_resume)
-            print("use_cnn:", use_cnn)
             
             with open('./test_type.csv', 'a') as f:
                 writer = csv.writer(f)
@@ -190,7 +183,10 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
             total_slowdown = np.sum(job_slowdown)
             test_type_name = ''
             if test_type == 'PG':
-                test_type_name = 'DeepRM_ECO'
+                if use_cnn:
+                    test_type_name = 'DeepRM_2'
+                else:
+                    test_type_name = 'DeepRM_ECO'
             else:
                 test_type_name = test_type
             run_info = [test_type_name, mean_slowdown, total_slowdown,pa.simu_len,pa.new_job_rate,pa.anomalous_job_rate]

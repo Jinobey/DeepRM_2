@@ -147,10 +147,6 @@ def main():
             sys.exit()
 
     pa.compute_dependent_parameters()
-    
-    # Debugging print statements
-    print("Experiment Type:", type_exp)
-    print("Use CNN:", use_cnn)
 
     if type_exp == 'pg_su':
         pg_su.launch(pa, pg_resume, render, repre='image', end='all_done')

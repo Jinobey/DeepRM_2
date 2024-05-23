@@ -270,11 +270,11 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
         print "-prepare for worker-", ex
 
-        print("use cnn type:", use_cnn, type(use_cnn))
+        # print("use cnn type:", use_cnn, type(use_cnn))
         pg_learner = pg_network.PGLearner(pa, use_cnn)
         
         if pg_resume is not None:
-            print("pg_resume used", pg_resume)
+            # print("pg_resume used", pg_resume)
             net_handle = open(pg_resume, 'rb')
             net_params = cPickle.load(net_handle)
             pg_learner.set_net_params(net_params)
