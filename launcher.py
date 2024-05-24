@@ -158,7 +158,7 @@ def main():
         pg_v_re.launch(pa, pg_resume, v_resume, render)
     elif type_exp == 'test':
         # quick_test.launch(pa, pg_resume, render)
-        slow_down_cdf.launch(pa, pg_resume, render, True)
+        slow_down_cdf.launch(pa, pg_resume, render, True, use_cnn=use_cnn)
     # elif type_exp == 'q_re':
     #     q_re.launch(pa, q_resume, render)
     else:
