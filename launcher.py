@@ -146,6 +146,9 @@ def main():
             script_usage()
             sys.exit()
 
+    print("\n" + "Experiment type: " + type_exp)
+    print("CNN used: " + str(use_cnn) + "\n")
+    
     pa.compute_dependent_parameters()
 
     if type_exp == 'pg_su':
