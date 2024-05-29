@@ -100,7 +100,7 @@ def get_traj(agent, env, episode_max_length):
             'info': info
             }
 
-#TODO Check this function in more details.
+# TODO Check this function in more details.
 def concatenate_all_ob(trajs, pa):
 
     timesteps_total = 0
@@ -238,7 +238,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
     print("Preparing for workers...")
     # ----------------------------
     pg_resume=None #'data/pg_re_620.pkl'
-    print("pg_resume is set to:", pg_resume)
+    # print("pg_resume is set to:", pg_resume)
     data_collector = data_collection.Data_collection()
     data_collector.convert_parameter_to_yaml(pa)
 
@@ -384,7 +384,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
         timer_end = time.time()
 
         print "-----------------"
-        print "Iteration: \t %i" % iteration
+        print "Epoch: \t %i" % iteration
         print "NumTrajs: \t %i" % len(eprews)
         print "NumTimesteps: \t %i" % np.sum(eplens)
         # print "Loss:     \t %s" % np.mean(loss_all)
@@ -404,7 +404,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
         with open('./metrics.csv', 'a') as f:
             writer = csv.writer(f)
             if os.stat('./metrics.csv').st_size == 0:
-                writer.writerow(['Name', 'Value', 'Timestamp', 'Step'])
+                writer.writerow(['Metric', 'Value', 'Timestamp', 'Epoch'])
             writer.writerow(['NumTrajs', float(len(eprews)), 0, iteration])
             writer.writerow(['NumTimesteps', float(np.sum(eplens)), 0, iteration])
             writer.writerow(['MaxRew', float(np.average([np.max(rew) for rew in all_eprews])), 0,iteration])
@@ -414,6 +414,18 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
             writer.writerow(['MeanLen+', float(np.mean(eplens)), 0, iteration])
             writer.writerow(['MeanLen-', float(np.std(eplens)), 0, iteration])
             writer.writerow(['MeanEntropy', float(np.mean(all_entropy)), 0, iteration])
+            
+        # Write heuristic metrics to CSV
+        with open('./metrics-heuristics.csv', 'a') as f:
+            writer = csv.writer(f)
+            if os.stat('./metrics-heuristics.csv').st_size == 0:
+                writer.writerow(['Heuristic', 'Metric', 'Value', 'Epoch'])
+            for k in ref_slow_down:
+                writer.writerow([k, 'MeanSlowdown', np.average(np.concatenate(ref_slow_down[k])), iteration])
+            for k in ref_discount_rews:
+                writer.writerow([k, 'MaxRew', np.max(ref_discount_rews[k]), iteration])
+                writer.writerow([k, 'MeanRew_upper', np.mean(ref_discount_rews[k]), iteration])
+                
         if iteration % pa.output_freq == 0:
             param_file = open(pa.output_filename + '_' + str(iteration) + '.pkl', 'wb')
             cPickle.dump(pg_learners[pa.batch_size].get_params(), param_file, -1)
