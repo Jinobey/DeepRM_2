@@ -39,8 +39,7 @@ def script_usage():
           '--render <plot dynamics> \n'
           '--unseen <generate unseen example> \n'
           '--use_cnn <use CNN instead of dense network> \n')
-
-
+    
 def main():
 
     pa = parameters.Parameters()

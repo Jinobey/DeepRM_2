@@ -19,7 +19,6 @@ import csv
 import yaml
 import os
 
-
 def init_accums(pg_learner):  # in rmsprop
     #This initializes the accumulator which is a variable used for storing intermediates values during optimization updates.
     #So, here store running average of the squared gradient for each param.
@@ -31,7 +30,6 @@ def init_accums(pg_learner):  # in rmsprop
         accums.append(accum)
     return accums
 
-
 def rmsprop_updates_outside(grads, params, accums, stepsize, rho=0.9, epsilon=1e-9):
 
     assert len(grads) == len(params)
@@ -39,7 +37,6 @@ def rmsprop_updates_outside(grads, params, accums, stepsize, rho=0.9, epsilon=1e
     for dim in xrange(len(grads)):
         accums[dim] = rho * accums[dim] + (1 - rho) * grads[dim] ** 2
         params[dim] += (stepsize * grads[dim] / np.sqrt(accums[dim] + epsilon))
-
 
 def discount(x, gamma):
     """
@@ -55,13 +52,11 @@ def discount(x, gamma):
     # scipy.signal.lfilter([1],[1,-gamma],x[::-1], axis=0)[::-1]
     return out
 
-
 def get_entropy(vec):
     entropy = - np.sum(vec * np.log(vec))
     if np.isnan(entropy):
         entropy = 0
     return entropy
-
 
 def get_traj(agent, env, episode_max_length):
     """
@@ -139,7 +134,6 @@ def concatenate_all_ob_across_examples(all_ob, pa):
 
     return all_ob_contact
 
-
 def process_all_info(trajs):
     enter_time = []
     finish_time = []
@@ -155,7 +149,6 @@ def process_all_info(trajs):
     job_len = np.concatenate(job_len)
 
     return enter_time, finish_time, job_len
-
 
 def plot_lr_curve(output_file_prefix, max_rew_lr_curve, mean_rew_lr_curve, slow_down_lr_curve,
                   ref_discount_rews, ref_slow_down):
@@ -189,7 +182,6 @@ def plot_lr_curve(output_file_prefix, max_rew_lr_curve, mean_rew_lr_curve, slow_
     plt.ylabel("Slowdown", fontsize=20)
 
     plt.savefig(output_file_prefix + "_lr_curve" + ".pdf")
-
 
 def get_traj_worker(pg_learner, env, pa, result):
 
@@ -259,7 +251,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
     for ex in xrange(pa.num_ex):
 
-        print "-prepare for env-", ex
+        print("-prepare for env-", ex)
 
         env = environment.Env(pa, nw_len_seqs=nw_len_seqs, nw_size_seqs=nw_size_seqs,
                               render=False, repre=repre, end=end)
@@ -268,7 +260,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
     for ex in xrange(pa.batch_size + 1):  # last worker for updating the parameters
 
-        print "-prepare for worker-", ex
+        print("-prepare for worker-", ex)
 
         # print("use cnn type:", use_cnn, type(use_cnn))
         pg_learner = pg_network.PGLearner(pa, use_cnn)
@@ -332,7 +324,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
             if ex_counter >= pa.batch_size or ex == pa.num_ex - 1:
 
-                print ex, "out of", pa.num_ex
+                print(ex, "out of", pa.num_ex)
 
                 ex_counter = 0
 
@@ -352,18 +344,30 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
                 all_ob = concatenate_all_ob_across_examples([r["all_ob"] for r in result], pa)
                 all_action = np.concatenate([r["all_action"] for r in result])
                 all_adv = np.concatenate([r["all_adv"] for r in result])
+                
+                # Batch updates
+                num_batches = int(np.ceil(len(all_ob) / float(pa.batch_size)))
+                for batch in range(num_batches):
+                    start = batch * pa.batch_size
+                    end = min(start + pa.batch_size, len(all_ob))
+                    
+                    batch_states = all_ob[start:end]
+                    batch_actions = all_action[start:end]
+                    batch_values = all_adv[start:end]
+                    
+                    grads = pg_learners[pa.batch_size].get_grad(batch_states, batch_actions, batch_values)
+                    grads_all.append(grads)
 
                 # Do policy gradient update step, using the first agent
                 # put the new parameter in the last 'worker', then propagate the update at the end
-                grads = pg_learners[pa.batch_size].get_grad(all_ob, all_action, all_adv)
+                # grads = pg_learners[pa.batch_size].get_grad(all_ob, all_action, all_adv)
 
-                grads_all.append(grads)
+                # grads_all.append(grads)
 
                 all_eprews.extend([r["all_eprews"] for r in result])
 
                 eprews.extend(np.concatenate([r["all_eprews"] for r in result]))  # episode total rewards
                 eplens.extend(np.concatenate([r["all_eplens"] for r in result]))  # episode lengths
-
                 all_slowdown.extend(np.concatenate([r["all_slowdown"] for r in result]))
                 all_entropy.extend(np.concatenate([r["all_entropy"] for r in result]))
 
@@ -383,18 +387,18 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
         timer_end = time.time()
 
-        print "-----------------"
-        print "Epoch: \t %i" % iteration
-        print "NumTrajs: \t %i" % len(eprews)
-        print "NumTimesteps: \t %i" % np.sum(eplens)
-        # print "Loss:     \t %s" % np.mean(loss_all)
-        print "MaxRew: \t %s" % np.average([np.max(rew) for rew in all_eprews])
-        print "MeanRew: \t %s +- %s" % (np.mean(eprews), np.std(eprews))
-        print "MeanSlowdown: \t %s" % np.mean(all_slowdown)
-        print "MeanLen: \t %s +- %s" % (np.mean(eplens), np.std(eplens))
-        print "MeanEntropy \t %s" % (np.mean(all_entropy))
-        print "Elapsed time\t %s" % (timer_end - timer_start), "seconds"
-        print "-----------------"
+        print("Epoch: \t %i" % iteration)
+        print("NumTrajs: \t %i" % len(eprews))
+        print("NumTimesteps: \t %i" % np.sum(eplens))
+        print("-----------------")
+        # print("Loss:     \t %s" % np.mean(loss_all))
+        print("MaxRew: \t %s" % np.average([np.max(rew) for rew in all_eprews]))
+        print("MeanRew: \t %s +- %s" % (np.mean(eprews), np.std(eprews)))
+        print("MeanSlowdown: \t %s" % np.mean(all_slowdown))
+        print("MeanLen: \t %s +- %s" % (np.mean(eplens), np.std(eplens)))
+        print("MeanEntropy \t %s" % (np.mean(all_entropy)))
+        print("Elapsed time \t %s" % (timer_end - timer_start), "seconds")
+        print("-----------------")
 
         timer_start = time.time()
 

@@ -1,6 +1,7 @@
 import numpy as np
 import cPickle
 import matplotlib.pyplot as plt
+# from memory_profiler import profile
 
 import environment
 import parameters
@@ -9,7 +10,6 @@ import other_agents
 
 import data_collection
 from cycler import cycler
-
 import csv
 
 def discount(x, gamma):
@@ -26,7 +26,6 @@ def discount(x, gamma):
     # scipy.signal.lfilter([1],[1,-gamma],x[::-1], axis=0)[::-1]
     return out
 
-
 def categorical_sample(prob_n):
     """
     Sample from categorical distribution,
@@ -35,7 +34,6 @@ def categorical_sample(prob_n):
     prob_n = np.asarray(prob_n)
     csprob_n = np.cumsum(prob_n)
     return (csprob_n > np.random.rand()).argmax()
-
 
 def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=True, render=False):
     """
@@ -83,7 +81,6 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=Tru
         # env.render()
 
     return np.array(rews), info
-
 
 def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_done', use_cnn=True):
     
@@ -225,7 +222,6 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
         print(plt.savefig(pg_resume + "_slowdown_fig" + ".pdf"))
 
     return all_discount_rews, jobs_slow_down
-
 
 def main():
     pa = parameters.Parameters()
