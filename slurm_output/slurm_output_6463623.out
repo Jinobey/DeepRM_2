@@ -1,0 +1,1827 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/signal/downsample.py:6: UserWarning: downsample module has been moved to the theano.tensor.signal.pool module.
+  "downsample module has been moved to the theano.tensor.signal.pool module.")
+
+Experiment type: pg_re
+CNN used: True
+
+Preparing for workers...
+('rand val', 0.9507143064099162)
+test2
+('big job', 14)
+('the random val for res', 0.5986584841970366)
+('the resource vector req: ', array([1., 6.]))
+('rand valx', 0.05808361216819946)
+('anomalous job', 26)
+('the random val for res', 0.6011150117432088)
+('the resource vector req: ', array([7., 2.]))
+('rand val', 0.7219987722668247)
+('small job', 2)
+('the random val for res', 0.0007787658410143283)
+('the resource vector req: ', array([ 2., 11.]))
+('rand val', 0.6116531604882809)
+('small job', 1)
+('the random val for res', 0.023062425041415757)
+('the resource vector req: ', array([ 1., 13.]))
+('rand valx', 0.04666566321361543)
+('anomalous job', 21)
+('the random val for res', 0.5142344384136116)
+('the resource vector req: ', array([2., 5.]))
+('rand val', 0.6075448519014384)
+('small job', 1)
+('the random val for res', 0.06505159298527952)
+('the resource vector req: ', array([14.,  1.]))
+('rand val', 0.8083973481164611)
+test2
+('big job', 12)
+('the random val for res', 0.09767211400638387)
+('the resource vector req: ', array([ 2., 14.]))
+('rand valx', 0.12203823484477883)
+('anomalous job', 26)
+('the random val for res', 0.17336465350777208)
+('the resource vector req: ', array([11.,  2.]))
+('rand val', 0.7553614103176525)
+test2
+('big job', 17)
+('the random val for res', 0.20794166286818883)
+('the resource vector req: ', array([ 2., 12.]))
+('rand val', 0.8422847745949985)
+test2
+('big job', 15)
+('the random val for res', 0.3951502360018144)
+('the resource vector req: ', array([ 2., 12.]))
+('rand valx', 0.3265407688058354)
+('anomalous job', 25)
+('the random val for res', 0.045227288910538066)
+('the resource vector req: ', array([ 2., 11.]))
+('rand valx', 0.2713490317738959)
+('anomalous job', 23)
+('the random val for res', 0.3567533266935893)
+('the resource vector req: ', array([ 2., 14.]))
+('rand valx', 0.14092422497476265)
+('anomalous job', 19)
+('the random val for res', 0.9868869366005173)
+('the resource vector req: ', array([5., 2.]))
+('rand valx', 0.014079822715084456)
+('anomalous job', 21)
+('the random val for res', 0.71134195274865)
+('the resource vector req: ', array([7., 1.]))
+('rand val', 0.926300878513349)
+test2
+('big job', 13)
+('the random val for res', 0.9149596755437808)
+('the resource vector req: ', array([5., 2.]))
+('rand valx', 0.09541011649041131)
+('anomalous job', 25)
+('the random val for res', 0.6688412526636073)
+('the resource vector req: ', array([9., 1.]))
+('rand valx', 0.27472179299006416)
+('anomalous job', 21)
+('the random val for res', 0.38292687475378984)
+('the resource vector req: ', array([13.,  2.]))
+('rand val', 0.7217295211648732)
+('small job', 3)
+('the random val for res', 0.25606832276132396)
+('the resource vector req: ', array([13.,  1.]))
+('rand valx', 0.11089082081183133)
+('anomalous job', 21)
+('the random val for res', 0.8957635956735194)
+('the resource vector req: ', array([5., 2.]))
+('rand val', 0.6955160864261275)
+('small job', 1)
+('the random val for res', 0.6044173792778172)
+('the resource vector req: ', array([7., 1.]))
+('rand valx', 0.07697990982879299)
+('anomalous job', 21)
+('the random val for res', 0.8804678390152577)
+('the resource vector req: ', array([2., 9.]))
+('rand valx', 0.10549425983027061)
+('anomalous job', 22)
+('the random val for res', 0.8832802589188683)
+('the resource vector req: ', array([2., 6.]))
+('rand valx', 0.3562978380769749)
+('anomalous job', 19)
+('the random val for res', 0.22793516254194168)
+('the resource vector req: ', array([12.,  1.]))
+('rand val', 0.8607305832563434)
+test2
+('big job', 18)
+('the random val for res', 0.5107473025775657)
+('the resource vector req: ', array([ 1., 10.]))
+('rand valx', 0.1198653673336828)
+('anomalous job', 26)
+('the random val for res', 0.16829104217293056)
+('the resource vector req: ', array([14.,  2.]))
+('-prepare for env-', 0)
+initialize the environment...
+('-prepare for env-', 1)
+initialize the environment...
+('-prepare for env-', 2)
+initialize the environment...
+('-prepare for env-', 3)
+initialize the environment...
+('-prepare for env-', 4)
+initialize the environment...
+('-prepare for worker-', 0)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/lasagne/layers/conv.py:489: UserWarning: The `image_shape` keyword argument to `tensor.nnet.conv2d` is deprecated, it has been renamed to `input_shape`.
+  border_mode=border_mode)
+('-prepare for worker-', 1)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 2)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 3)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 4)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 5)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 6)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 7)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+('-prepare for worker-', 8)
+(' params=', [W, b, W, b, W, b, W, b], ' count=', 2675216)
+Preparing for reference data...
+initialize the environment...
+('rand valx', 0.2384460988728453)
+('anomalous job', 28)
+('the random val for res', 0.19624246729327466)
+('the resource vector req: ', array([ 2., 11.]))
+('rand valx', 0.3719692415996759)
+('anomalous job', 24)
+('the random val for res', 0.9138706948638771)
+('the resource vector req: ', array([ 1., 10.]))
+('rand val', 0.6000987108374178)
+('small job', 2)
+('the random val for res', 0.6410608358696614)
+('the resource vector req: ', array([2., 5.]))
+('rand val', 0.9343228163924074)
+test2
+('big job', 18)
+('the random val for res', 0.4524101284476577)
+('the resource vector req: ', array([ 1., 12.]))
+('rand val', 0.6985668684431456)
+('small job', 2)
+('the random val for res', 0.7551209332561897)
+('the resource vector req: ', array([1., 7.]))
+('rand valx', 0.3169517000214108)
+('anomalous job', 24)
+('the random val for res', 0.8810190595761771)
+('the resource vector req: ', array([6., 1.]))
+('rand valx', 0.16746802586558296)
+('anomalous job', 25)
+('the random val for res', 0.7629309801466684)
+('the resource vector req: ', array([7., 1.]))
+('rand valx', 0.04642420775314582)
+('anomalous job', 19)
+('the random val for res', 0.3386230053439301)
+('the resource vector req: ', array([ 1., 13.]))
+('rand val', 0.7180341879486238)
+('small job', 1)
+('the random val for res', 0.601803513030503)
+('the resource vector req: ', array([7., 2.]))
+('rand val', 0.7003467445579096)
+('small job', 2)
+('the random val for res', 0.9459330854420219)
+('the resource vector req: ', array([2., 5.]))
+('rand val', 0.6222030677584274)
+('small job', 2)
+('the random val for res', 0.524998279334503)
+('the resource vector req: ', array([8., 1.]))
+('rand val', 0.6570319871415825)
+('small job', 3)
+('the random val for res', 0.40241667975027207)
+('the resource vector req: ', array([ 1., 14.]))
+('rand val', 0.7965736340971555)
+test2
+('big job', 14)
+('the random val for res', 0.5148217788238416)
+('the resource vector req: ', array([10.,  2.]))
+('rand valx', 0.2895430144210672)
+('anomalous job', 22)
+('the random val for res', 0.6559707692417717)
+('the resource vector req: ', array([2., 6.]))
+('rand valx', 0.2741921001091605)
+('anomalous job', 27)
+('the random val for res', 0.9475670481834888)
+('the resource vector req: ', array([1., 8.]))
+('rand val', 0.6540636669327086)
+('small job', 3)
+('the random val for res', 0.03299898535447465)
+('the resource vector req: ', array([14.,  2.]))
+('rand valx', 0.2764304106533044)
+('anomalous job', 24)
+('the random val for res', 0.2966093922180567)
+('the resource vector req: ', array([ 2., 13.]))
+('rand valx', 0.3627420520486354)
+('anomalous job', 19)
+('the random val for res', 0.35010101912193625)
+('the resource vector req: ', array([ 1., 12.]))
+('rand val', 0.6560510683503847)
+('small job', 3)
+('the random val for res', 0.1234109639806964)
+('the resource vector req: ', array([ 1., 13.]))
+('rand val', 0.6132321626762276)
+('small job', 3)
+('the random val for res', 0.8358187754013422)
+('the resource vector req: ', array([1., 6.]))
+('rand valx', 0.23086676757048696)
+('anomalous job', 21)
+('the random val for res', 0.3452586336279444)
+('the resource vector req: ', array([14.,  2.]))
+('rand val', 0.6045434773319355)
+('small job', 3)
+('the random val for res', 0.7954010371845133)
+('the resource vector req: ', array([7., 1.]))
+('rand valx', 0.01736979379247161)
+('anomalous job', 22)
+('the random val for res', 0.44088363813690923)
+('the resource vector req: ', array([14.,  2.]))
+('rand valx', 0.312300230632807)
+('anomalous job', 25)
+('the random val for res', 0.36616080319238864)
+('the resource vector req: ', array([ 2., 12.]))
+('rand val', 0.5599063185473864)
+('small job', 3)
+('the random val for res', 0.9318916062415152)
+('the resource vector req: ', array([7., 2.]))
+(u'workload', array([0., 0.]))
+Load on # 0 resource dimension is 5.968
+Load on # 1 resource dimension is 10.056000000000001
+
+
+
+=============== 0 ===============
+('resleft1', array([[9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.],
+       [9., 0.]]))
+('action returned cloud node for long jobs', 0, 'and job info: ', 0, 24, array([ 1, 10]))
+('resleft2', array([[8., 5.],
+       [8., 5.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 1, 2, array([2, 5]))
+('resleft3', array([[14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 2, 18, array([ 1, 12]))
+('resleft2', array([[9., 3.],
+       [9., 3.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 3, 2, array([1, 7]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+---------- SJF -----------
+total discount reward : 	 -18.42894840332832
+(4,)
+(4,)
+(4,)
+('job slowdown: ', 1.0)
+('job length array', [528])
+('job total size:', array([11,  7, 13,  8]))
+('job total size:', array([24,  2, 18,  2]))
+
+
+
+=============== 1 ===============
+('resleft1', array([[3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.],
+       [3., 9.]]))
+('action returned cloud node for long jobs', 0, 'and job info: ', 0, 25, array([7, 1]))
+('resleft3', array([[14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.],
+       [14.,  2.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 1, 19, array([ 1, 13]))
+('resleft2', array([[3., 8.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 2, 1, array([7, 2]))
+('resleft2', array([[8., 5.],
+       [8., 5.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 3, 2, array([2, 5]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+---------- SJF -----------
+total discount reward : 	 24.88534459007315
+(4,)
+(4,)
+(4,)
+('job slowdown: ', 1.0)
+('job length array', [528, 489])
+('job total size:', array([ 8, 14,  9,  7]))
+('job total size:', array([25, 19,  1,  2]))
+
+
+
+=============== 2 ===============
+('resleft3', array([[14.,  1.],
+       [14.,  1.],
+       [14.,  1.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 0, 3, array([ 1, 14]))
+('resleft2', array([[0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.],
+       [0., 8.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 1, 14, array([10,  2]))
+('resleft1', array([[9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.],
+       [9., 2.]]))
+('action returned cloud node for long jobs', 1, 'and job info: ', 3, 27, array([1, 8]))
+('resleft2', array([[8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.],
+       [8., 4.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 2, 22, array([2, 6]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+---------- SJF -----------
+total discount reward : 	 -5.356811302937467
+(4,)
+(4,)
+(4,)
+('job slowdown: ', 1.0)
+('job length array', [528, 489, 632])
+('job total size:', array([15, 12,  8,  9]))
+('job total size:', array([ 3, 14, 22, 27]))
+
+
+
+=============== 3 ===============
+('resleft3', array([[13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.],
+       [13.,  2.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 0, 24, array([ 2, 13]))
+('resleft2', array([[9., 4.],
+       [9., 4.],
+       [9., 4.]]))
+('act return normal edge node for normal jobs', 8, 'and job info: ', 3, 3, array([1, 6]))
+('resleft3', array([[14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.],
+       [14.,  3.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 1, 19, array([ 1, 12]))
+('resleft3', array([[14.,  2.],
+       [14.,  2.],
+       [14.,  2.]]))
+('act return cloud node for expensive jobs', 12, 'and job info: ', 2, 3, array([ 1, 13]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+---------- SJF -----------
+total discount reward : 	 38.073572867653304
+(4,)
+(4,)
+(4,)
+('job slowdown: ', 1.875)
+('job length array', [528, 489, 632, 670])
+('job total size:', array([15, 13, 14,  7]))
+('job total size:', array([24, 19,  3,  3]))
+
+
+
+=============== 4 ===============
+('resleft2', array([[3., 9.],
+       [3., 9.],
+       [3., 9.]]))
+('act return normal edge node for normal jobs', 6, 'and job info: ', 0, 3, array([7, 1]))
+('resleft3', array([[ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.],
+       [ 1., 13.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 1, 22, array([14,  2]))
+('resleft2', array([[3., 8.],
+       [3., 8.],
+       [3., 8.]]))
+('act return normal edge node for normal jobs', 7, 'and job info: ', 3, 3, array([7, 2]))
+('resleft3', array([[13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.],
+       [13.,  3.]]))
+('act return cloud node for expensive jobs', 11, 'and job info: ', 2, 25, array([ 2, 12]))
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+---------- SJF -----------
+total discount reward : 	 38.87647261278498
+(4,)
+(4,)
+(4,)
+('job slowdown: ', 1.7)
+('job length array', [528, 489, 632, 670, 753])
+('job total size:', array([ 8, 16, 14,  9]))
+('job total size:', array([ 3, 22, 25,  3]))
+Start training...
+(4, 'out of', 5)
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/subtensor.py:2166: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0] = inputs[0].__getitem__(inputs[1:])
+Epoch: 	 1
+NumTrajs: 	 50
+NumTimesteps: 	 2833
+-----------------
+MaxRew: 	 35.91973117200567
+MeanRew: 	 9.121924979969835 +- 24.615201418902135
+MeanSlowdown: 	 2.85
+MeanLen: 	 56.66 +- 18.636104743212837
+MeanEntropy 	 2.7710407
+('Elapsed time \t 34.062721014', 'seconds')
+-----------------
+(4, 'out of', 5)
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+Epoch: 	 2
+NumTrajs: 	 50
+NumTimesteps: 	 2654
+-----------------
+MaxRew: 	 38.48550906546614
+MeanRew: 	 16.792414881943593 +- 25.96985104607965
+MeanSlowdown: 	 3.27
+MeanLen: 	 53.08 +- 21.38302130195824
+MeanEntropy 	 2.6626706
+('Elapsed time \t 29.0381169319', 'seconds')
+-----------------
+(4, 'out of', 5)
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+Epoch: 	 3
+NumTrajs: 	 50
+NumTimesteps: 	 4392
+-----------------
+MaxRew: 	 51.10312103786575
+MeanRew: 	 34.12247144512002 +- 27.101385654462387
+MeanSlowdown: 	 3.945
+MeanLen: 	 87.84 +- 98.34782356514049
+MeanEntropy 	 1.9525506
+('Elapsed time \t 48.0687990189', 'seconds')
+-----------------
+(4, 'out of', 5)
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+nice
+(u'final reward', 0)
+finished!!!!
+(u'final backlog: ', 0, u'job slots: ', [None, None, None, None, None])
+Epoch: 	 4
+NumTrajs: 	 50
+NumTimesteps: 	 35712
+-----------------
+MaxRew: 	 53.59277397591827
+MeanRew: 	 31.2671441113079 +- 22.20215080428673
+MeanSlowdown: 	 9.356020942408376
+MeanLen: 	 714.24 +- 1107.323991612211
+MeanEntropy 	 0.3435648
+('Elapsed time \t 405.032501936', 'seconds')
+-----------------
+Filename: /gpfs/home6/terhard/DeepRM_2/pg_re.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+   228    144.8 MiB    144.8 MiB   @profile
+   229                             def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_cnn=True):
+   230                                 # ----------------------------
+   231    144.8 MiB      0.0 MiB       print("Preparing for workers...")
+   232                                 # ----------------------------
+   233    144.8 MiB      0.0 MiB       pg_resume=None #'data/pg_re_620.pkl'
+   234                                 # print("pg_resume is set to:", pg_resume)
+   235    144.8 MiB      0.0 MiB       data_collector = data_collection.Data_collection()
+   236    144.8 MiB      0.0 MiB       data_collector.convert_parameter_to_yaml(pa)
+   237                             
+   238    144.8 MiB      0.0 MiB       with open('./parameters.csv', 'a') as f:
+   239    144.8 MiB      0.0 MiB           writer = csv.writer(f)
+   240    144.8 MiB      0.0 MiB           writer.writerow("param")
+   241                                     #'data/pg_re_620.pkl'                 
+   242                             
+   243                             
+   244                                     #the way jobs are created are in the blocks so we can visualize them in the same manner. 
+   245                             
+   246                                     # supervised learning mimic policy
+   247                             
+   248    144.8 MiB      0.0 MiB       pg_learners = []
+   249    144.8 MiB      0.0 MiB       envs = []
+   250                                 
+   251    144.8 MiB      0.1 MiB       nw_len_seqs, nw_size_seqs = job_distribution.generate_sequence_work(pa, seed=42)
+   252                             
+   253    144.8 MiB      0.0 MiB       for ex in xrange(pa.num_ex):
+   254                             
+   255    144.8 MiB      0.0 MiB           print("-prepare for env-", ex)
+   256                             
+   257    144.8 MiB      0.0 MiB           env = environment.Env(pa, nw_len_seqs=nw_len_seqs, nw_size_seqs=nw_size_seqs,
+   258    144.8 MiB      0.0 MiB                                 render=False, repre=repre, end=end)
+   259    144.8 MiB      0.0 MiB           env.seq_no = ex
+   260    144.8 MiB      0.0 MiB           envs.append(env)
+   261                             
+   262    790.8 MiB      0.0 MiB       for ex in xrange(pa.batch_size + 1):  # last worker for updating the parameters
+   263                             
+   264    713.0 MiB      0.0 MiB           print("-prepare for worker-", ex)
+   265                             
+   266                                     # print("use cnn type:", use_cnn, type(use_cnn))
+   267    790.8 MiB     77.8 MiB           pg_learner = pg_network.PGLearner(pa, use_cnn)
+   268                                     
+   269    790.8 MiB      0.0 MiB           if pg_resume is not None:
+   270                                         # print("pg_resume used", pg_resume)
+   271                                         net_handle = open(pg_resume, 'rb')
+   272                                         net_params = cPickle.load(net_handle)
+   273                                         pg_learner.set_net_params(net_params)
+   274                             
+   275    790.8 MiB      0.0 MiB           pg_learners.append(pg_learner)
+   276                             
+   277    790.9 MiB      0.1 MiB       accums = init_accums(pg_learners[pa.batch_size])
+   278                             
+   279                                 # --------------------------------------
+   280    790.9 MiB      0.0 MiB       print("Preparing for reference data...")
+   281                                 # --------------------------------------
+   282    790.9 MiB      0.0 MiB       testvar = "started to train"
+   283    790.9 MiB      0.0 MiB       with open('./test_type.csv', 'a') as f:
+   284    790.9 MiB      0.0 MiB           writer = csv.writer(f)
+   285    790.9 MiB      0.0 MiB           writer.writerow([testvar, testvar])
+   286    791.0 MiB      0.1 MiB       ref_discount_rews, ref_slow_down = slow_down_cdf.launch(pa, pg_resume=None, render=False, plot=False, repre=repre, end=end, use_cnn=use_cnn)
+   287                                 
+   288    791.0 MiB      0.0 MiB       mean_rew_lr_curve = []
+   289    791.0 MiB      0.0 MiB       max_rew_lr_curve = []
+   290    791.0 MiB      0.0 MiB       slow_down_lr_curve = []
+   291                             
+   292                                 # --------------------------------------
+   293                                 
+   294    791.0 MiB      0.0 MiB       print("Start training...")
+   295                                 # --------------------------------------
+   296                             
+   297    791.0 MiB      0.0 MiB       timer_start = time.time()
+   298                             
+   299  48345.6 MiB      0.0 MiB       for iteration in xrange(1, pa.num_epochs):
+   300                             
+   301   6831.8 MiB      0.0 MiB           ps = []  # threads
+   302   6831.8 MiB      0.3 MiB           manager = Manager()  # managing return results
+   303   6831.8 MiB      0.0 MiB           manager_result = manager.list([])
+   304                             
+   305   6831.8 MiB      0.0 MiB           ex_indices = range(pa.num_ex)
+   306   6831.8 MiB      0.0 MiB           np.random.shuffle(ex_indices)
+   307                             
+   308   6831.8 MiB      0.0 MiB           all_eprews = []
+   309   6831.8 MiB      0.0 MiB           grads_all = []
+   310   6831.8 MiB      0.0 MiB           loss_all = []
+   311   6831.8 MiB      0.0 MiB           eprews = []
+   312   6831.8 MiB      0.0 MiB           eplens = []
+   313   6831.8 MiB      0.0 MiB           all_slowdown = []
+   314   6831.8 MiB      0.0 MiB           all_entropy = []
+   315                             
+   316   6831.8 MiB      0.0 MiB           ex_counter = 0
+   317  48304.3 MiB      0.0 MiB           for ex in xrange(pa.num_ex):
+   318                             
+   319   6831.8 MiB      0.0 MiB               ex_idx = ex_indices[ex]
+   320   6831.8 MiB      0.0 MiB               p = Process(target=get_traj_worker,
+   321   6831.8 MiB      0.0 MiB                           args=(pg_learners[ex_counter], envs[ex_idx], pa, manager_result, ))
+   322   6831.8 MiB      0.0 MiB               ps.append(p)
+   323                             
+   324   6831.8 MiB      0.0 MiB               ex_counter += 1
+   325                             
+   326   6831.8 MiB      0.0 MiB               if ex_counter >= pa.batch_size or ex == pa.num_ex - 1:
+   327                             
+   328   6831.8 MiB      0.0 MiB                   print(ex, "out of", pa.num_ex)
+   329                             
+   330   6831.8 MiB      0.0 MiB                   ex_counter = 0
+   331                             
+   332   6831.8 MiB      0.0 MiB                   for p in ps:
+   333   6831.8 MiB      0.0 MiB                       p.start()
+   334                             
+   335   6831.8 MiB      0.0 MiB                   for p in ps:
+   336   6831.8 MiB      0.0 MiB                       p.join()
+   337                             
+   338   6831.8 MiB      0.0 MiB                   result = []  # convert list from shared memory
+   339   6831.8 MiB     20.7 MiB                   for r in manager_result:
+   340   6831.8 MiB      0.2 MiB                       result.append(r)
+   341                             
+   342   6831.8 MiB      0.0 MiB                   ps = []
+   343   6831.8 MiB      0.1 MiB                   manager_result = manager.list([])
+   344                             
+   345   6831.8 MiB     72.8 MiB                   all_ob = concatenate_all_ob_across_examples([r["all_ob"] for r in result], pa)
+   346   6831.8 MiB      0.0 MiB                   all_action = np.concatenate([r["all_action"] for r in result])
+   347   6831.8 MiB      0.0 MiB                   all_adv = np.concatenate([r["all_adv"] for r in result])
+   348                                             
+   349                                             # Batch updates
+   350   6831.8 MiB      0.0 MiB                   num_batches = int(np.ceil(len(all_ob) / float(pa.batch_size)))
+   351  48303.3 MiB      0.3 MiB                   for batch in range(num_batches):
+   352  48293.0 MiB      0.1 MiB                       start = batch * pa.batch_size
+   353  48293.0 MiB      0.1 MiB                       end = min(start + pa.batch_size, len(all_ob))
+   354                                                 
+   355  48293.0 MiB      0.2 MiB                       batch_states = all_ob[start:end]
+   356  48293.0 MiB      0.1 MiB                       batch_actions = all_action[start:end]
+   357  48293.0 MiB      0.0 MiB                       batch_values = all_adv[start:end]
+   358                                                 
+   359  48303.3 MiB     78.9 MiB                       grads = pg_learners[pa.batch_size].get_grad(batch_states, batch_actions, batch_values)
+   360  48303.3 MiB      0.3 MiB                       grads_all.append(grads)
+   361                             
+   362                                             # Do policy gradient update step, using the first agent
+   363                                             # put the new parameter in the last 'worker', then propagate the update at the end
+   364                                             # grads = pg_learners[pa.batch_size].get_grad(all_ob, all_action, all_adv)
+   365                             
+   366                                             # grads_all.append(grads)
+   367                             
+   368  48303.3 MiB      0.0 MiB                   all_eprews.extend([r["all_eprews"] for r in result])
+   369                             
+   370  48303.3 MiB      0.0 MiB                   eprews.extend(np.concatenate([r["all_eprews"] for r in result]))  # episode total rewards
+   371  48303.3 MiB      0.0 MiB                   eplens.extend(np.concatenate([r["all_eplens"] for r in result]))  # episode lengths
+   372  48303.3 MiB      0.0 MiB                   all_slowdown.extend(np.concatenate([r["all_slowdown"] for r in result]))
+   373  48304.3 MiB      1.0 MiB                   all_entropy.extend(np.concatenate([r["all_entropy"] for r in result]))
+   374                             
+   375                                     # assemble gradients
+   376  48304.3 MiB      0.0 MiB           grads = grads_all[0]
+   377  48306.1 MiB      0.0 MiB           for i in xrange(1, len(grads_all)):
+   378  48306.1 MiB      0.0 MiB               for j in xrange(len(grads)):
+   379  48306.1 MiB      2.2 MiB                   grads[j] += grads_all[i][j]
+   380                             
+   381                                     # propagate network parameters to others
+   382  48314.3 MiB      9.8 MiB           params = pg_learners[pa.batch_size].get_params()
+   383                             
+   384  48344.9 MiB     40.4 MiB           rmsprop_updates_outside(grads, params, accums, pa.lr_rate, pa.rms_rho, pa.rms_eps)
+   385                             
+   386  48345.6 MiB      0.0 MiB           for i in xrange(pa.batch_size + 1):
+   387  48345.6 MiB     10.3 MiB               pg_learners[i].set_net_params(params)
+   388                             
+   389  48345.6 MiB      0.0 MiB           timer_end = time.time()
+   390                             
+   391  48345.6 MiB      0.0 MiB           print("Epoch: \t %i" % iteration)
+   392  48345.6 MiB      0.0 MiB           print("NumTrajs: \t %i" % len(eprews))
+   393  48345.6 MiB      0.1 MiB           print("NumTimesteps: \t %i" % np.sum(eplens))
+   394  48345.6 MiB      0.0 MiB           print("-----------------")
+   395                                     # print("Loss:     \t %s" % np.mean(loss_all))
+   396  48345.6 MiB      0.0 MiB           print("MaxRew: \t %s" % np.average([np.max(rew) for rew in all_eprews]))
+   397  48345.6 MiB      0.0 MiB           print("MeanRew: \t %s +- %s" % (np.mean(eprews), np.std(eprews)))
+   398  48345.6 MiB      0.0 MiB           print("MeanSlowdown: \t %s" % np.mean(all_slowdown))
+   399  48345.6 MiB      0.0 MiB           print("MeanLen: \t %s +- %s" % (np.mean(eplens), np.std(eplens)))
+   400  48345.6 MiB      0.0 MiB           print("MeanEntropy \t %s" % (np.mean(all_entropy)))
+   401  48345.6 MiB      0.0 MiB           print("Elapsed time \t %s" % (timer_end - timer_start), "seconds")
+   402  48345.6 MiB      0.0 MiB           print("-----------------")
+   403                             
+   404  48345.6 MiB      0.0 MiB           timer_start = time.time()
+   405                             
+   406  48345.6 MiB      0.0 MiB           max_rew_lr_curve.append(np.average([np.max(rew) for rew in all_eprews]))
+   407  48345.6 MiB      0.0 MiB           mean_rew_lr_curve.append(np.mean(eprews))
+   408  48345.6 MiB      0.0 MiB           slow_down_lr_curve.append(np.mean(all_slowdown))
+   409  48345.6 MiB      0.0 MiB           with open('./metrics.csv', 'a') as f:
+   410  48345.6 MiB      0.0 MiB               writer = csv.writer(f)
+   411  48345.6 MiB      0.0 MiB               if os.stat('./metrics.csv').st_size == 0:
+   412                                             writer.writerow(['Metric', 'Value', 'Timestamp', 'Epoch'])
+   413  48345.6 MiB      0.0 MiB               writer.writerow(['NumTrajs', float(len(eprews)), 0, iteration])
+   414  48345.6 MiB      0.0 MiB               writer.writerow(['NumTimesteps', float(np.sum(eplens)), 0, iteration])
+   415  48345.6 MiB      0.0 MiB               writer.writerow(['MaxRew', float(np.average([np.max(rew) for rew in all_eprews])), 0,iteration])
+   416  48345.6 MiB      0.0 MiB               writer.writerow(['MeanRew_lower', float(np.std(eprews)), 0, iteration])
+   417  48345.6 MiB      0.0 MiB               writer.writerow(['MeanRew_upper', float(np.mean(eprews)), 0, iteration])
+   418  48345.6 MiB      0.0 MiB               writer.writerow(['MeanSlowdown', float(np.mean(all_slowdown)), 0, iteration])
+   419  48345.6 MiB      0.0 MiB               writer.writerow(['MeanLen+', float(np.mean(eplens)), 0, iteration])
+   420  48345.6 MiB      0.0 MiB               writer.writerow(['MeanLen-', float(np.std(eplens)), 0, iteration])
+   421  48345.6 MiB      0.0 MiB               writer.writerow(['MeanEntropy', float(np.mean(all_entropy)), 0, iteration])
+   422                                         
+   423                                     # Write heuristic metrics to CSV
+   424  48345.6 MiB      0.0 MiB           with open('./metrics-heuristics.csv', 'a') as f:
+   425  48345.6 MiB      0.0 MiB               writer = csv.writer(f)
+   426  48345.6 MiB      0.0 MiB               if os.stat('./metrics-heuristics.csv').st_size == 0:
+   427                                             writer.writerow(['Heuristic', 'Metric', 'Value', 'Epoch'])
+   428  48345.6 MiB      0.0 MiB               for k in ref_slow_down:
+   429  48345.6 MiB      0.0 MiB                   writer.writerow([k, 'MeanSlowdown', np.average(np.concatenate(ref_slow_down[k])), iteration])
+   430  48345.6 MiB      0.0 MiB               for k in ref_discount_rews:
+   431  48345.6 MiB      0.0 MiB                   writer.writerow([k, 'MaxRew', np.max(ref_discount_rews[k]), iteration])
+   432  48345.6 MiB      0.0 MiB                   writer.writerow([k, 'MeanRew_upper', np.mean(ref_discount_rews[k]), iteration])
+   433                                             
+   434  48345.6 MiB      0.0 MiB           if iteration % pa.output_freq == 0:
+   435                                         param_file = open(pa.output_filename + '_' + str(iteration) + '.pkl', 'wb')
+   436                                         cPickle.dump(pg_learners[pa.batch_size].get_params(), param_file, -1)
+   437                                         param_file.close()
+   438                             
+   439                                         pa.unseen = True
+   440                                         
+   441                                         slow_down_cdf.launch(pa, pa.output_filename + '_' + str(iteration) + '.pkl',
+   442                                                              render=False, plot=True, repre=repre, end=end, use_cnn=use_cnn)
+   443                                         
+   444                                         pa.unseen = False
+   445                                         # test on unseen examples
+   446                             
+   447                                         plot_lr_curve(pa.output_filename,
+   448                                                       max_rew_lr_curve, mean_rew_lr_curve, slow_down_lr_curve,
+   449                                                       ref_discount_rews, ref_slow_down)
+
+
+Filename: launcher.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    44    144.7 MiB    144.7 MiB   @profile
+    45                             def main():
+    46                             
+    47    144.7 MiB      0.0 MiB       pa = parameters.Parameters()
+    48                             
+    49    144.7 MiB      0.0 MiB       type_exp = 'pg_re'  # 'pg_su' 'pg_su_compact' 'v_su', 'pg_v_re', 'pg_re', q_re', 'test'
+    50                             
+    51    144.7 MiB      0.0 MiB       pg_resume = None
+    52    144.7 MiB      0.0 MiB       v_resume = None
+    53    144.7 MiB      0.0 MiB       q_resume = None
+    54    144.7 MiB      0.0 MiB       log = None
+    55                             
+    56    144.7 MiB      0.0 MiB       render = False
+    57    144.7 MiB      0.0 MiB       use_cnn = True
+    58                             
+    59    144.7 MiB      0.0 MiB       try:
+    60    144.7 MiB      0.0 MiB           opts, args = getopt.getopt(
+    61    144.7 MiB      0.0 MiB               sys.argv[1:],
+    62    144.7 MiB      0.0 MiB               "hi:o:", ["exp_type=",
+    63    144.7 MiB      0.0 MiB                         "num_res=",
+    64    144.7 MiB      0.0 MiB                         "num_nw=",
+    65    144.7 MiB      0.0 MiB                         "simu_len=",
+    66    144.7 MiB      0.0 MiB                         "num_ex=",
+    67    144.7 MiB      0.0 MiB                         "num_seq_per_batch=",
+    68    144.7 MiB      0.0 MiB                         "eps_max_len=",
+    69    144.7 MiB      0.0 MiB                         "num_epochs=",
+    70    144.7 MiB      0.0 MiB                         "time_horizon=",
+    71    144.7 MiB      0.0 MiB                         "res_slot=",
+    72    144.7 MiB      0.0 MiB                         "max_job_len=",
+    73    144.7 MiB      0.0 MiB                         "max_job_size=",
+    74    144.7 MiB      0.0 MiB                         "new_job_rate=",
+    75    144.7 MiB      0.0 MiB                         "dist=",
+    76    144.7 MiB      0.0 MiB                         "lr_rate=",
+    77    144.7 MiB      0.0 MiB                         "ba_size=",
+    78    144.7 MiB      0.0 MiB                         "pg_re=",
+    79    144.7 MiB      0.0 MiB                         "v_re=",
+    80    144.7 MiB      0.0 MiB                         "q_re=",
+    81    144.7 MiB      0.0 MiB                         "out_freq=",
+    82    144.7 MiB      0.0 MiB                         "ofile=",
+    83    144.7 MiB      0.0 MiB                         "log=",
+    84    144.7 MiB      0.0 MiB                         "render=",
+    85    144.7 MiB      0.0 MiB                         "unseen=",
+    86    144.7 MiB      0.0 MiB                         "use_cnn="])
+    87                             
+    88                                 except getopt.GetoptError:
+    89                                     script_usage()
+    90                                     sys.exit(2)
+    91                             
+    92    144.7 MiB      0.0 MiB       for opt, arg in opts:
+    93    144.7 MiB      0.0 MiB           if opt == '-h':
+    94                                         script_usage()
+    95                                         sys.exit()
+    96    144.7 MiB      0.0 MiB           elif opt in ("-e", "--exp_type"):
+    97    144.7 MiB      0.0 MiB               type_exp = arg
+    98    144.7 MiB      0.0 MiB           elif opt in ("-n", "--num_res"):
+    99                                         pa.num_res = int(arg)
+   100    144.7 MiB      0.0 MiB           elif opt in ("-w", "--num_nw"):
+   101                                         pa.num_nw = int(arg)
+   102    144.7 MiB      0.0 MiB           elif opt in ("-s", "--simu_len"):
+   103    144.7 MiB      0.0 MiB               pa.simu_len = int(arg)
+   104    144.7 MiB      0.0 MiB           elif opt in ("-n", "--num_ex"):
+   105    144.7 MiB      0.0 MiB               pa.num_ex = int(arg)
+   106    144.7 MiB      0.0 MiB           elif opt in ("-sp", "--num_seq_per_batch"):
+   107                                         pa.num_seq_per_batch = int(arg)
+   108    144.7 MiB      0.0 MiB           elif opt in ("-el", "--eps_max_len"):
+   109                                         pa.episode_max_length = int(arg)
+   110    144.7 MiB      0.0 MiB           elif opt in ("-ne", "--num_epochs"):
+   111    144.7 MiB      0.0 MiB               pa.num_epochs = int(arg)
+   112    144.7 MiB      0.0 MiB           elif opt in ("-t", "--time_horizon"):
+   113                                         pa.time_horizon = int(arg)
+   114    144.7 MiB      0.0 MiB           elif opt in ("-rs", "--res_slot"):
+   115                                         pa.res_slot = int(arg)
+   116    144.7 MiB      0.0 MiB           elif opt in ("-ml", "--max_job_len"):
+   117                                         pa.max_job_len = int(arg)
+   118    144.7 MiB      0.0 MiB           elif opt in ("-ms", "--max_job_size"):
+   119                                         pa.max_job_size = int(arg)
+   120    144.7 MiB      0.0 MiB           elif opt in ("-nr", "--new_job_rate"):
+   121                                         pa.new_job_rate = float(arg)
+   122    144.7 MiB      0.0 MiB           elif opt in ("-d", "--dist"):
+   123                                         pa.discount = float(arg)
+   124    144.7 MiB      0.0 MiB           elif opt in ("-l", "--lr_rate"):
+   125                                         pa.lr_rate = float(arg)
+   126    144.7 MiB      0.0 MiB           elif opt in ("-b", "--ba_size"):
+   127    144.7 MiB      0.0 MiB               pa.batch_size = int(arg)
+   128    144.7 MiB      0.0 MiB           elif opt in ("-p", "--pg_re"):
+   129    144.7 MiB      0.0 MiB               pg_resume = arg
+   130    144.7 MiB      0.0 MiB           elif opt in ("-v", "--v_re"):
+   131                                         v_resume = arg
+   132    144.7 MiB      0.0 MiB           elif opt in ("-q", "--q_re"):
+   133                                         q_resume = arg
+   134    144.7 MiB      0.0 MiB           elif opt in ("-f", "--out_freq"):
+   135                                         pa.output_freq = int(arg)
+   136    144.7 MiB      0.0 MiB           elif opt in ("-o", "--ofile"):
+   137    144.7 MiB      0.0 MiB               pa.output_filename = arg
+   138    144.7 MiB      0.0 MiB           elif opt in ("-lg", "--log"):
+   139                                         log = arg
+   140    144.7 MiB      0.0 MiB           elif opt in ("-r", "--render"):
+   141                                         render = (arg == 'True')
+   142    144.7 MiB      0.0 MiB           elif opt in ("-u", "--unseen"):
+   143                                         pa.generate_unseen = (arg == 'True')
+   144    144.7 MiB      0.0 MiB           elif opt in ("--use_cnn"):
+   145    144.7 MiB      0.0 MiB               use_cnn = (arg == 'True')
+   146                                     else:
+   147                                         script_usage()
+   148                                         sys.exit()
+   149                             
+   150    144.7 MiB      0.0 MiB       print("\n" + "Experiment type: " + type_exp)
+   151    144.7 MiB      0.0 MiB       print("CNN used: " + str(use_cnn) + "\n")
+   152                                 
+   153    144.7 MiB      0.0 MiB       pa.compute_dependent_parameters()
+   154                             
+   155    144.7 MiB      0.0 MiB       if type_exp == 'pg_su':
+   156                                     pg_su.launch(pa, pg_resume, render, repre='image', end='all_done')
+   157    144.7 MiB      0.0 MiB       elif type_exp == 'v_su':
+   158                                     v_su.launch(pa, v_resume, render)
+   159    144.7 MiB      0.0 MiB       elif type_exp == 'pg_re':
+   160  48345.6 MiB  48201.0 MiB           pg_re.launch(pa, pg_resume, render, repre='image', end='all_done', use_cnn=use_cnn)
+   161                                 elif type_exp == 'pg_v_re':
+   162                                     pg_v_re.launch(pa, pg_resume, v_resume, render)
+   163                                 elif type_exp == 'test':
+   164                                     # quick_test.launch(pa, pg_resume, render)
+   165                                     slow_down_cdf.launch(pa, pg_resume, render, True, use_cnn=use_cnn)
+   166                                 # elif type_exp == 'q_re':
+   167                                 #     q_re.launch(pa, q_resume, render)
+   168                                 else:
+   169                                     print("Error: unkown experiment type " + str(type_exp))
+   170                                     exit(1)
+
+
+mprof: Sampling memory every 0.1s
+
+JOB STATISTICS
+==============
+Job ID: 6463623
+Cluster: snellius
+User/Group: terhard/terhard
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 02:38:59
+CPU Efficiency: 61.48% of 04:18:36 core-walltime
+Job Wall-clock time: 00:14:22
+Memory Utilized: 53.91 GB
+Memory Efficiency: 44.92% of 120.00 GB

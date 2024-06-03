@@ -6,7 +6,7 @@ anomalous_job_resources_lower: 11
 anomalous_job_resources_upper: 15
 backlog_size: 120
 backlog_width: 4
-batch_size: 10
+batch_size: 512
 delay_penalty: -1
 discount: 0.95
 dismiss_penalty: -1
@@ -43,7 +43,7 @@ network_input_height: 30
 network_input_width: 225
 network_output_dim: 16
 new_job_rate: 1
-num_epochs: 21
+num_epochs: 51
 num_ex: 5
 num_frames: 1
 num_nw: 5

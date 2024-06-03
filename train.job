@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #SBATCH --partition=gpu
-#SBATCH --gpus=1
+#SBATCH --gpus=4
 #SBATCH --job-name=train
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
-#SBATCH --time=01:00:00
+#SBATCH --time=16:00:00
 #SBATCH --output=slurm_output/slurm_output_%A.out
 
 
@@ -19,6 +19,6 @@ source activate py27
 # Run your code
 # srun python -u launcher.py --exp_type=pg_su --simu_len=50 --num_ex=100 --ofile=data/pg_su --out_freq=10 --num_epochs=101 --ba_size=32
 
-# srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=51 --use_cnn=True
+srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=101 --use_cnn=True
 
-srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=51 --use_cnn=False
+# srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=51 --use_cnn=False

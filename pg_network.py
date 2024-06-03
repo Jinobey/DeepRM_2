@@ -235,6 +235,8 @@ def build_pg_network(input_height, input_width, output_length):
         b=lasagne.init.Constant(0)
     )
 
+    print("Output layer shape: ", l_out.output_shape)
+    
     return l_out
 
 
