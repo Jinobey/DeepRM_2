@@ -1,5 +1,5 @@
 import os
-os.environ["THEANO_FLAGS"] = "device=gpu, floatX=float32"
+os.environ["THEANO_FLAGS"] = "device=cpu, floatX=float32"
 import sys
 import getopt
 import matplotlib

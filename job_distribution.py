@@ -1,5 +1,6 @@
 import numpy as np
 import parameters
+# from memory_profiler import profile
 
 class Dist:
 
@@ -13,10 +14,10 @@ class Dist:
 
         self.anomalous_resource_lower = anomalous_resource_lower
         self.anomalous_resource_upper = anomalous_resource_upper
-        self.anomalous_resource_rate = 0.05 #0.15#0.05 for RL training
+        self.anomalous_resource_rate = 0.5 #0.15#0.05 for RL training
 
         self.job_small_chance = 0.75#0.3
-        self.anomalous_job_rate =  0.05 #0.05 for RL training
+        self.anomalous_job_rate =  0.5 #0.05 for RL training
 
         self.job_len_big_lower = job_len * 2 / 3 
         self.job_len_big_upper = job_len
@@ -91,7 +92,6 @@ class Dist:
         nw_len = np.random.randint(self.job_len_big_upper, self.job_len_big_upper * 2)
         nw_size = np.random.randint(self.dominant_res_upper, self.dominant_res_upper * 2, size=self.num_res)
         return nw_len, nw_size
-
 
 def generate_sequence_work(pa, seed=42):
 

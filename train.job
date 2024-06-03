@@ -13,12 +13,18 @@ module purge
 module load 2022
 module load Anaconda3/2022.05
 
+
 # Activate your environment
 source activate py27
 
 # Run your code
 # srun python -u launcher.py --exp_type=pg_su --simu_len=50 --num_ex=100 --ofile=data/pg_su --out_freq=10 --num_epochs=101 --ba_size=32
 
-# srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=51 --use_cnn=True
+srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=101 --use_cnn=True --ba_size=8
 
-srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=51 --use_cnn=False
+# srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=50 --num_ex=15 --ofile=data/pg_re --num_epochs=101 --use_cnn=False --ba_size=16
+
+# # Memory profiling
+# export MPLBACKEND=Agg
+# mprof run --include-children --output=memory_profile.dat srun python -u launcher.py --exp_type=pg_re --pg_re=data/sjf/pg_su_net_file_100.pkl --simu_len=5 --num_ex=5 --ofile=data/pg_re --num_epochs=3 --use_cnn=True --ba_size=8
+# # mprof plot -o memory_profile.png memory_profile.dat

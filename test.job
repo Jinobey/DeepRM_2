@@ -17,6 +17,7 @@ module load Anaconda3/2022.05
 source activate py27
 
 # Run your code
-# srun python -u launcher.py --exp_type=test --simu_len=50 --num_ex=15 --pg_re=experiments/DeepRM_2/simu5,numex5,epoch51/pg_re_50.pkl --unseen=True --use_cnn=True --ofile=data/test
+srun python -u launcher.py --exp_type=test --simu_len=50 --num_ex=15 --pg_re=train/DeepRM_2/simu50,numex15,epoch31/pg_re_30.pkl --unseen=True --use_cnn=True --ofile=data/test
 
-srun python -u launcher.py --exp_type=test --simu_len=50 --num_ex=15 --pg_re=data/pg_re_50.pkl --unseen=True --use_cnn=False --ofile=data/test
+# srun python -u launcher.py --exp_type=test --simu_len=5 --num_ex=5 --pg_re=experiments/DeepRM_ECO/simu5,numex5,epoch51/pg_re_50.pkl --unseen=True --use_cnn=False --ofile=data/test
+

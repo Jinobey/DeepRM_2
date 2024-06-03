@@ -160,7 +160,7 @@ class PGLearner:
     def get_grad(self, states, actions, values):
 
         return self._get_grad(states, actions, values)
-    #that one is used
+    # that one is used
     def get_one_act_prob(self, state):
         state = state.astype(theano.config.floatX)
         states = np.zeros((1, 1, self.input_height, self.input_width), dtype=theano.config.floatX)
@@ -297,6 +297,9 @@ def build_cnn_pg_network(input_height, input_width, output_length):
     
     return l_out
     
+    
+    ##### simpler network #####
+    
     # # Input layer
     # l_in = lasagne.layers.InputLayer(
     #     shape=(None, 1, input_height, input_width),
@@ -304,22 +307,23 @@ def build_cnn_pg_network(input_height, input_width, output_length):
     # print("Input layer shape: ", l_in.output_shape)
     
     # # First convolutional layer
-    # l_conv1 = lasagne.layers.Conv2DLayer(
+    # l_conv = lasagne.layers.Conv2DLayer(
     #     l_in,
     #     num_filters=16,
     #     filter_size=(3, 3),
+    #     stride=(1, 1),
     #     nonlinearity=lasagne.nonlinearities.rectify,
     #     W=lasagne.init.GlorotUniform()
     # )
-    # print("Conv1 layer shape: ", l_conv1.output_shape)
+    # print("Conv layer shape: ", l_conv.output_shape)
     
     # # Pooling layer
-    # l_pool1 = lasagne.layers.MaxPool2DLayer(l_conv1, pool_size=(2, 2))
-    # print("Pool1 layer shape: ", l_pool1.output_shape)
+    # l_pool = lasagne.layers.MaxPool2DLayer(l_conv, pool_size=(2, 2))
+    # print("Pool layer shape: ", l_pool.output_shape)
     
     # # Fully connected layer
     # l_hid = lasagne.layers.DenseLayer(
-    #     l_pool1,
+    #     l_pool,
     #     num_units=64,
     #     nonlinearity=lasagne.nonlinearities.rectify,
     #     W=lasagne.init.GlorotUniform()
@@ -331,6 +335,39 @@ def build_cnn_pg_network(input_height, input_width, output_length):
     #     l_hid,
     #     num_units=output_length,
     #     nonlinearity=lasagne.nonlinearities.softmax
+    # )
+    # print("Output layer shape: ", l_out.output_shape)
+    
+    # return l_out
+    
+    
+    #####  even simpler network #####
+    
+    # # Input layer
+    # l_in = lasagne.layers.InputLayer(
+    #     shape=(None, 1, input_height, input_width),
+    # )
+    # print("Input layer shape: ", l_in.output_shape)
+    
+    # l_conv = lasagne.layers.Conv2DLayer(
+    #     l_in,
+    #     num_filters=16,
+    #     filter_size=(3, 3),
+    #     stride=(1, 1),
+    #     pad='same',
+    #     nonlinearity=lasagne.nonlinearities.rectify,
+    #     W=lasagne.init.GlorotUniform(),
+    #     b=lasagne.init.Constant(0),
+    #     convolution=theano.tensor.nnet.conv2d
+    # )
+    # print("Conv layer shape: ", l_conv.output_shape)
+    
+    # l_out = lasagne.layers.DenseLayer(
+    #     l_conv,
+    #     num_units=output_length,
+    #     nonlinearity=lasagne.nonlinearities.softmax,
+    #     W=lasagne.init.Normal(.01),
+    #     b=lasagne.init.Constant(0)
     # )
     # print("Output layer shape: ", l_out.output_shape)
     

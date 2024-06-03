@@ -86,7 +86,8 @@ def get_traj(agent, env, episode_max_length):
         rews.append(rew)
         entropy.append(get_entropy(act_prob))
 
-        if done: break
+        if done: 
+            break
 
     return {'reward': np.array(rews),
             'ob': np.array(obs),
@@ -316,6 +317,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
         for ex in xrange(pa.num_ex):
 
             ex_idx = ex_indices[ex]
+
             p = Process(target=get_traj_worker,
                         args=(pg_learners[ex_counter], envs[ex_idx], pa, manager_result, ))
             ps.append(p)
@@ -397,7 +399,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
         print("MeanSlowdown: \t %s" % np.mean(all_slowdown))
         print("MeanLen: \t %s +- %s" % (np.mean(eplens), np.std(eplens)))
         print("MeanEntropy \t %s" % (np.mean(all_entropy)))
-        print("Elapsed time \t %s" % (timer_end - timer_start), "seconds")
+        print("Elapsed time \t %s" % (timer_end - timer_start) + " seconds")
         print("-----------------")
 
         timer_start = time.time()
