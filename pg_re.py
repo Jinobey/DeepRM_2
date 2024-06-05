@@ -237,7 +237,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
     # ----------------------------
     print("Preparing for workers...")
     # ----------------------------
-    pg_resume=None #'data/pg_re_620.pkl'
+    pg_resume=None #'data/pg_re_620.pkl' #None
     # print("pg_resume is set to:", pg_resume)
     data_collector = data_collection.Data_collection()
     data_collector.convert_parameter_to_yaml(pa)
@@ -304,7 +304,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
     timer_start = time.time()
 
     for iteration in xrange(1, pa.num_epochs):
-
+        print "Starting iteration {}".format(iteration)
+        
         ps = []  # threads
         manager = Manager()  # managing return results
         manager_result = manager.list([])
@@ -322,8 +323,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
         ex_counter = 0
         for ex in xrange(pa.num_ex):
-
             ex_idx = ex_indices[ex]
+            print "Preparing process for ex_idx: {}".format(ex_idx)
             p = Process(target=get_traj_worker,
                         args=(pg_learners[ex_counter], envs[ex_idx], pa, manager_result, ))
             ps.append(p)
@@ -331,8 +332,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
             ex_counter += 1
 
             if ex_counter >= pa.batch_size or ex == pa.num_ex - 1:
-
-                print ex, "out of", pa.num_ex
+                print "Starting processes for batch {}".format(ex)
 
                 ex_counter = 0
 
@@ -352,7 +352,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
                 all_ob = concatenate_all_ob_across_examples([r["all_ob"] for r in result], pa)
                 all_action = np.concatenate([r["all_action"] for r in result])
                 all_adv = np.concatenate([r["all_adv"] for r in result])
-
+                print "Concatenated shapes - all_ob: {}, all_action: {}, all_adv: {}".format(all_ob.shape, all_action.shape, all_adv.shape)
+                
                 # Do policy gradient update step, using the first agent
                 # put the new parameter in the last 'worker', then propagate the update at the end
                 grads = pg_learners[pa.batch_size].get_grad(all_ob, all_action, all_adv)
@@ -375,7 +376,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
         # propagate network parameters to others
         params = pg_learners[pa.batch_size].get_params()
-
+        print "Parameter shapes: {}".format([param.shape for param in params])
+        
         rmsprop_updates_outside(grads, params, accums, pa.lr_rate, pa.rms_rho, pa.rms_eps)
 
         for i in xrange(pa.batch_size + 1):
@@ -392,8 +394,8 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
         print "MeanRew: \t %s +- %s" % (np.mean(eprews), np.std(eprews))
         print "MeanSlowdown: \t %s" % np.mean(all_slowdown)
         print "MeanLen: \t %s +- %s" % (np.mean(eplens), np.std(eplens))
-        print "MeanEntropy \t %s" % (np.mean(all_entropy))
-        print "Elapsed time\t %s" % (timer_end - timer_start), "seconds"
+        print "MeanEntropy: \t %s" % (np.mean(all_entropy))
+        print "Elapsed time: \t %s" % (timer_end - timer_start), "seconds"
         print "-----------------"
 
         timer_start = time.time()
