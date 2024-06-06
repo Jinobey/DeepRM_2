@@ -1,0 +1,78 @@
+iteration,job object,job ID,job Length,job ressource requirement,job enter time,job start time,job finish time,job waiting time,current time
+1,<environment.Job instance at 0x151a9917dbe0>,3,16,[2 7],4,5,21,1,5
+1,<environment.Job instance at 0x151a9911c050>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a99ed8550>,1,2,[ 2 10],2,7,9,5,4
+1,<environment.Job instance at 0x151a97dfa640>,2,1,[1 7],3,3,4,0,3
+1,<environment.Job instance at 0x151a998c9910>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a9534cc30>,1,2,[6 1],2,4,6,2,4
+1,<environment.Job instance at 0x151a9534c730>,2,3,[9 1],3,6,9,3,4
+1,<environment.Job instance at 0x151a93474370>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a9534cc80>,1,13,[1 5],2,3,16,1,3
+1,<environment.Job instance at 0x151a9c2b8870>,2,1,[1 7],3,16,17,13,3
+1,<environment.Job instance at 0x151a94833b90>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a94d045f0>,2,3,[9 1],3,4,7,1,4
+1,<environment.Job instance at 0x151a94b5c820>,2,3,[7 2],4,57,60,53,57
+1,<environment.Job instance at 0x151a97900d20>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a98c67d20>,2,3,[9 1],3,4,7,1,4
+1,<environment.Job instance at 0x151a93226190>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a92121870>,1,13,[1 5],2,2,15,0,2
+1,<environment.Job instance at 0x151a927689b0>,0,17,[1 7],2,2,19,0,2
+1,<environment.Job instance at 0x151a93a164b0>,1,3,[6 1],3,5,8,2,5
+1,<environment.Job instance at 0x151a977321e0>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a9504e320>,2,3,[9 1],3,4,7,1,4
+1,<environment.Job instance at 0x151a91853e10>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a9397fe10>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a919d5af0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9776e280>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a983f5be0>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a95a0cb40>,0,17,[ 1 10],3,3,20,0,3
+1,<environment.Job instance at 0x151a91f8a140>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9af25690>,2,3,[7 2],4,4,7,0,4
+1,<environment.Job instance at 0x151a9a413be0>,0,17,[1 7],2,2,19,0,2
+1,<environment.Job instance at 0x151a92963eb0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a93fa6fa0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a90f95460>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a95277410>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a929b3780>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a97cbe5a0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a935f0eb0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a95d3d280>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a91f2adc0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a921210f0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9004a5f0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a91b902d0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a919604b0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8f10c140>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9735c0f0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8fdac960>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a93f797d0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a95c6b140>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a90d271e0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a992496e0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a946f6190>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9704fe60>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8db77140>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8f23aa00>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9aa5b820>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9a622370>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8f5d3370>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8ec810a0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8f01fc30>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a99e11690>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a94385410>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a94c19c80>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a914712d0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9493aaa0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8de00fa0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a972182d0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a91c7baa0>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8c0f1280>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8cafce10>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a9a89f280>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8f855280>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8b597b90>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8b319910>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8de25e10>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8fe79960>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8e9a7e10>,3,16,[2 7],4,4,20,0,4
+1,<environment.Job instance at 0x151a8b08db40>,3,16,[2 7],4,4,20,0,4
