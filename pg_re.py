@@ -332,7 +332,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
 
             if ex_counter >= pa.batch_size or ex == pa.num_ex - 1:
 
-                print ex, "out of", pa.num_ex
+                # print ex, "out of", pa.num_ex
 
                 ex_counter = 0
 

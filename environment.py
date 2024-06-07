@@ -22,17 +22,12 @@ def append_to_csv(file, data):
 
 class Env:
     def __init__(self, pa, nw_len_seqs=None, nw_size_seqs=None,
-                 seed=54378, render=False, repre='image', end='all_done'):
+                 seed=123, render=False, repre='image', end='all_done'):
        # print('repre = ',repre)
         print('initialize the environment...')
         self.job_information = []
         self.anomalous_jobs = []
         self.job_enter_time_lst = []
-#4200
-#39486
-#92381
-#85439
-#54378
 
         self.iteration_counter = 0
         
@@ -57,7 +52,7 @@ class Env:
 
         # set up random seed
         if self.pa.unseen:
-            np.random.seed(54378)
+            np.random.seed(123)
         else:
             np.random.seed(seed)
 
@@ -68,13 +63,13 @@ class Env:
                 self.generate_sequence_work(self.pa.simu_len * self.pa.num_ex)
 
             self.workload = np.zeros(pa.num_res)
-            print('workload', self.workload)
+            # print('workload', self.workload)
             for i in xrange(pa.num_res):
                 self.workload[i] = \
                     np.sum(self.nw_size_seqs[:, i] * self.nw_len_seqs) / \
                     float(pa.res_slot1) / \
                     float(len(self.nw_len_seqs))
-                print("Load on # " + str(i) + " resource dimension is " + str(self.workload[i])) #change res slot here as well.
+                # print("Load on # " + str(i) + " resource dimension is " + str(self.workload[i])) #change res slot here as well.
               #  print('workload2', self.workload)
             self.nw_len_seqs = np.reshape(self.nw_len_seqs,
                                            [self.pa.num_ex, self.pa.simu_len])
@@ -341,7 +336,7 @@ class Env:
                 
                 else:
                     if(test_type == "PG"):
-                        print('the test type: ', test_type)
+                        # print('the test type: ', test_type)
                         self.job_info = [self.iteration,self.job_slot1.slot[a], self.job_slot1.slot[a].id, self.job_slot1.slot[a].len, self.job_slot1.slot[a].res_vec,self.job_slot1.slot[a].enter_time,self.job_slot1.slot[a].start_time, self.job_slot1.slot[a].finish_time, self.job_slot1.slot[a].waiting_time,  self.curr_time]
                         self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile2,self.allocatedJobsHeaders,self.job_info)
                     status = 'Allocate2'
@@ -389,7 +384,7 @@ class Env:
                 if self.seq_idx >= self.pa.simu_len:
                     #print('idx ting', self.seq_idx)
                     done = True
-                    print('no new jobss')
+                    print('no new jobs')
             elif self.end == "all_done":  # everything has to be finished
                 if self.seq_idx >= self.pa.simu_len and \
                    len(self.machine.running_job) == 0 and \
@@ -397,7 +392,6 @@ class Env:
                    len(self.machine.running_job3) == 0 and \
                    all(s is None for s in self.job_slot1.slot) and \
                    all(s is None for s in self.job_backlog.backlog):
-                    print('nice')
                     done = True
                 elif self.curr_time > self.pa.episode_max_length:  # run too long, force termination
                     print('It ran for too long: ', 'job slots: ', self.job_slot1.slot, 'backlog: ', self.job_backlog.curr_size)
@@ -469,11 +463,11 @@ class Env:
         info = self.job_record
         #print('the info about records: ', self.job_record.record, 'and record id', self.job_record)
         if done:
-            print('final reward', reward)
+            # print('final reward', reward)
             self.iteration_counter += 1
             #print("job records: ", self.job_record.record)
-            print('finished!!!!')
-            print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
+            # print('finished!')
+            # print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
             final_list = map(lambda x: [self.iteration_counter] + list(x), self.machine.job_information)
             #print('the test list: ', self.machine.test_list)
             if not os.path.isfile('./output_re.csv') or os.path.getsize('./output_re.csv') == 0:
@@ -486,7 +480,7 @@ class Env:
 
             if not repeat:
                 self.seq_no = (self.seq_no + 1) % self.pa.num_ex
-                print(' not finished!!!!')
+                print(' not finished!')
             #print('reset the environment...')
             self.reset()
         
@@ -571,9 +565,9 @@ class Machine:
         self.res_slot2 = pa.res_slot2
         self.res_slot3 = pa.res_slot3
 
-        self.avbl_slot1 = np.ones((self.time_horizon, self.num_res)) * self.res_slot1 #change res slot to anomalous.
-        self.avbl_slot2 = np.ones((self.time_horizon, self.num_res)) * self.res_slot2 #change res slot to anomalous.
-        self.avbl_slot3 = np.ones((self.time_horizon, self.num_res)) * self.res_slot3 #change res slot to anomalous.
+        self.avbl_slot1 = np.ones((self.time_horizon, self.num_res)) * self.res_slot1
+        self.avbl_slot2 = np.ones((self.time_horizon, self.num_res)) * self.res_slot2
+        self.avbl_slot3 = np.ones((self.time_horizon, self.num_res)) * self.res_slot3
        
         self.running_job = []
         self.running_job2 = []
