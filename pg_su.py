@@ -56,6 +56,10 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='no_new_job', us
         evaluate_policy = other_agents.get_sjf_action
     elif pa.evaluate_policy_name == "PACKER":
         evaluate_policy = other_agents.get_packer_action
+    elif pa.evaluate_policy_name == "FCFS":
+        evaluate_policy = other_agents.get_fcfs_action
+    elif pa.evaluate_policy_name == "WRR":
+        evaluate_policy = other_agents.get_wrr_action
     else:
         print("Panic: no policy known to evaluate.")
         exit(1)

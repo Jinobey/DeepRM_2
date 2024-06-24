@@ -67,6 +67,14 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=Tru
         elif test_type == 'SJF':
          #   append = False
             a = other_agents.get_sjf_action(env.machine, env.job_slot1, pa)
+            
+        elif test_type == 'FCFS':
+         #   append = False
+            a = other_agents.get_fcfs_action(env.machine, env.job_slot1, pa)
+            
+        elif test_type == 'WRR':
+         #   append = False
+            a = other_agents.get_wrr_action(env.machine, env.job_slot1, pa)
 
         elif test_type == 'Random':
           #  append = False
@@ -123,8 +131,8 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
         job_remain_delay[test_type] = []
 
     for seq_idx in xrange(pa.num_ex):
-        print('\n\n')
-        print("=============== " + str(seq_idx) + " ===============")
+        # print('\n\n')
+        # print("=============== " + str(seq_idx) + " ===============")
         
         for test_type in test_types:
             if test_type is not 'PG':
@@ -135,9 +143,9 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
             with open('./test_type.csv', 'a') as f:
                 writer = csv.writer(f)
                 writer.writerow([seq_idx, test_type])
-            print "---------- " + test_type + " -----------"
+            # print "---------- " + test_type + " -----------"
 
-            print "total discount reward : \t %s" % (discount(rews, pa.discount)[0])
+            # print "total discount reward : \t %s" % (discount(rews, pa.discount)[0])
 
             all_discount_rews[test_type].append(
                 discount(rews, pa.discount)[0]
@@ -188,13 +196,13 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
                 test_type_name = test_type
             run_info = [test_type_name, mean_slowdown, total_slowdown,pa.simu_len,pa.new_job_rate,pa.anomalous_job_rate]
             data_collection_instances.append_job_to_csv(test_file,csv_header,run_info)
-            print(finish_time[finished_idx].shape)
-            print(enter_time[finished_idx].shape)
-            print(job_len[finished_idx].shape)
-            print('job slowdown: ', np.mean(np.concatenate(jobs_slow_down[test_type])))
-            print("job length array", work_complete[test_type])
-            print('job total size:',job_total_size[finished_idx])
-            print('job total size:',job_len[finished_idx])
+            # print(finish_time[finished_idx].shape)
+            # print(enter_time[finished_idx].shape)
+            # print(job_len[finished_idx].shape)
+            # print('job slowdown: ', np.mean(np.concatenate(jobs_slow_down[test_type])))
+            # print("job length array", work_complete[test_type])
+            # print('job total size:',job_total_size[finished_idx])
+            # print('job total size:',job_len[finished_idx])
         env.seq_no = (env.seq_no + 1) % env.pa.num_ex
 
     # -- matplotlib colormap no overlap --
@@ -226,8 +234,8 @@ def launch(pa, pg_resume=None, render=False, plot=True, repre='image', end='all_
 def main():
     pa = parameters.Parameters()
 
-    pa.simu_len = 200  # 5000  # 1000
-    pa.num_ex = 10  # 100
+    pa.simu_len = 200
+    pa.num_ex = 10
     pa.num_nw = 10
     pa.num_seq_per_batch = 20
     # pa.max_nw_size = 5
@@ -235,7 +243,7 @@ def main():
     pa.new_job_rate = 0.3
     pa.discount = 1
 
-    pa.episode_max_length = 20000  # 2000
+    pa.episode_max_length = 20000 
 
     pa.compute_dependent_parameters()
 

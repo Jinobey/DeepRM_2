@@ -14,10 +14,10 @@ class Dist:
 
         self.anomalous_resource_lower = anomalous_resource_lower
         self.anomalous_resource_upper = anomalous_resource_upper
-        self.anomalous_resource_rate = 0.5 #0.15#0.05 for RL training
+        self.anomalous_resource_rate = 0.05
 
-        self.job_small_chance = 0.75#0.3
-        self.anomalous_job_rate =  0.5 #0.05 for RL training
+        self.job_small_chance = 0.75
+        self.anomalous_job_rate =  0.05
 
         self.job_len_big_lower = job_len * 2 / 3 
         self.job_len_big_upper = job_len
@@ -29,7 +29,7 @@ class Dist:
         self.dominant_res_upper = max_nw_size
 
         self.other_res_lower = 1
-        self.other_res_upper = max_nw_size / 5#2
+        self.other_res_upper = max_nw_size / 5
 
     def normal_dist(self):
 
@@ -48,21 +48,20 @@ class Dist:
 
         # -- job length --
         if random_val < self.job_small_chance and random_val > self.anomalous_job_rate:  # small job
-            print('rand val', random_val)
+            # print('rand val', random_val)
             nw_len = np.random.randint(self.job_len_small_lower,
                                        self.job_len_small_upper + 1)
-            print('small job', nw_len)
+            # print('small job', nw_len)
         elif random_val < self.anomalous_job_rate:
-            print('rand valx', random_val)
+            # print('rand valx', random_val)
             nw_len = np.random.randint(self.anomalous_job_len_lower, self.anomalous_job_len_upper) 
             #nw_len = max(nw_len, self.time_horizon)
-            print('anomalous job', nw_len)
+            # print('anomalous job', nw_len)
         else:  # big job
-            print('rand val', random_val)
-            print('test2')
+            # print('rand val', random_val)
             nw_len = np.random.randint(self.job_len_big_lower,
                                        self.job_len_big_upper + 1)
-            print('big job', nw_len)
+            # print('big job', nw_len)
 
         nw_size = np.zeros(self.num_res)
         
@@ -71,7 +70,7 @@ class Dist:
         # -- job resource request --
         dominant_res = np.random.randint(0, self.num_res)
         random_res = np.random.rand()
-        print('the random val for res', random_res)
+        # print('the random val for res', random_res)
         for i in range(self.num_res):
             if i == dominant_res:
                 if random_res > self.anomalous_job_rate:    
@@ -84,7 +83,7 @@ class Dist:
             else:
                 nw_size[i] = np.random.randint(self.other_res_lower,
                                                self.other_res_upper + 1)
-        print('the resource vector req: ', nw_size)
+        # print('the resource vector req: ', nw_size)
         #print('size of nw', nw_size)
         return nw_len, nw_size
 
@@ -104,7 +103,9 @@ def generate_sequence_work(pa, seed=42):
     nw_anomalous_dist = pa.dist
 
     nw_len_seq = np.zeros(simu_len, dtype=int)
+    # print("nw_len_seq shape:", nw_len_seq.shape)
     nw_size_seq = np.zeros((simu_len, pa.num_res), dtype=int)
+    # print("nw_size_seq shape:", nw_size_seq.shape)
 
     for i in range(simu_len):
 
@@ -115,7 +116,8 @@ def generate_sequence_work(pa, seed=42):
 
     nw_len_seq = np.reshape(nw_len_seq,
                             [pa.num_ex, pa.simu_len])
+    # print("nw_len_seq reshape:", nw_len_seq.shape)
     nw_size_seq = np.reshape(nw_size_seq,
                              [pa.num_ex, pa.simu_len, pa.num_res])
-
+    # print("nw_size_seq reshape:", nw_size_seq.shape)
     return nw_len_seq, nw_size_seq

@@ -1,0 +1,2668 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/signal/downsample.py:6: UserWarning: downsample module has been moved to the theano.tensor.signal.pool module.
+  "downsample module has been moved to the theano.tensor.signal.pool module.")
+
+Experiment type: pg_re
+CNN used: True
+
+Preparing for workers...
+-prepare for env- 0
+initialize the environment...
+-prepare for env- 1
+initialize the environment...
+-prepare for env- 2
+initialize the environment...
+-prepare for env- 3
+initialize the environment...
+-prepare for env- 4
+initialize the environment...
+-prepare for worker- 0
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/lasagne/layers/conv.py:489: UserWarning: The `image_shape` keyword argument to `tensor.nnet.conv2d` is deprecated, it has been renamed to `input_shape`.
+  border_mode=border_mode)
+-prepare for worker- 1
+-prepare for worker- 2
+-prepare for worker- 3
+-prepare for worker- 4
+-prepare for worker- 5
+-prepare for worker- 6
+-prepare for worker- 7
+-prepare for worker- 8
+-prepare for worker- 9
+-prepare for worker- 10
+Preparing for reference data...
+initialize the environment...
+Start training...
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/subtensor.py:2166: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0] = inputs[0].__getitem__(inputs[1:])
+-----------------
+Epoch: 	 1
+NumTrajs: 	 50
+NumTimesteps: 	 1936
+MaxRew: 	 -5.571540378572138
+MeanRew: 	 -19.04893505541527 +- 11.43967343735547
+MeanSlowdown: 	 3.709375
+MeanLen: 	 38.72 +- 7.496772638942707
+MeanEntropy 	 2.7717986
+Elapsed time	 5.12123799324 seconds
+-----------------
+-----------------
+Epoch: 	 2
+NumTrajs: 	 50
+NumTimesteps: 	 1879
+MaxRew: 	 -2.7217224350292257
+MeanRew: 	 -15.330714368023095 +- 9.974994832808346
+MeanSlowdown: 	 3.365625
+MeanLen: 	 37.58 +- 7.283103733985945
+MeanEntropy 	 2.750896
+Elapsed time	 5.15297007561 seconds
+-----------------
+-----------------
+Epoch: 	 3
+NumTrajs: 	 50
+NumTimesteps: 	 1972
+MaxRew: 	 -3.035748610233162
+MeanRew: 	 -19.001526811991997 +- 11.9127102432734
+MeanSlowdown: 	 3.65
+MeanLen: 	 39.44 +- 7.491755468513371
+MeanEntropy 	 2.7360907
+Elapsed time	 5.3887720108 seconds
+-----------------
+-----------------
+Epoch: 	 4
+NumTrajs: 	 50
+NumTimesteps: 	 1965
+MaxRew: 	 -3.970914033026079
+MeanRew: 	 -13.694431596333855 +- 9.268088703245908
+MeanSlowdown: 	 3.465625
+MeanLen: 	 39.3 +- 8.814193099768124
+MeanEntropy 	 2.654593
+Elapsed time	 5.4776699543 seconds
+-----------------
+-----------------
+Epoch: 	 5
+NumTrajs: 	 50
+NumTimesteps: 	 2022
+MaxRew: 	 -5.021646621624233
+MeanRew: 	 -15.037494771226436 +- 8.740076669166116
+MeanSlowdown: 	 3.09375
+MeanLen: 	 40.44 +- 10.235545906301237
+MeanEntropy 	 2.6668766
+Elapsed time	 5.625882864 seconds
+-----------------
+-----------------
+Epoch: 	 6
+NumTrajs: 	 50
+NumTimesteps: 	 2174
+MaxRew: 	 -6.002466433317733
+MeanRew: 	 -12.372298251996405 +- 6.185239995907778
+MeanSlowdown: 	 3.446875
+MeanLen: 	 43.48 +- 14.234099901293373
+MeanEntropy 	 2.4634342
+Elapsed time	 5.97364377975 seconds
+-----------------
+-----------------
+Epoch: 	 7
+NumTrajs: 	 50
+NumTimesteps: 	 2066
+MaxRew: 	 -1.2693771734428494
+MeanRew: 	 -11.046144303549413 +- 8.881632074500114
+MeanSlowdown: 	 3.7375
+MeanLen: 	 41.32 +- 12.134974248015526
+MeanEntropy 	 2.5487154
+Elapsed time	 5.67903399467 seconds
+-----------------
+-----------------
+Epoch: 	 8
+NumTrajs: 	 50
+NumTimesteps: 	 2054
+MaxRew: 	 -0.6778249930434507
+MeanRew: 	 -11.16307632256098 +- 9.111350600847517
+MeanSlowdown: 	 3.65
+MeanLen: 	 41.08 +- 12.02969658802748
+MeanEntropy 	 2.5566905
+Elapsed time	 5.65536499023 seconds
+-----------------
+-----------------
+Epoch: 	 9
+NumTrajs: 	 50
+NumTimesteps: 	 2063
+MaxRew: 	 -0.5856269906329263
+MeanRew: 	 -10.689131702014835 +- 6.442840785298783
+MeanSlowdown: 	 2.875
+MeanLen: 	 41.26 +- 9.836279784552694
+MeanEntropy 	 2.6036177
+Elapsed time	 5.712444067 seconds
+-----------------
+-----------------
+Epoch: 	 10
+NumTrajs: 	 50
+NumTimesteps: 	 1957
+MaxRew: 	 0.1996744403976276
+MeanRew: 	 -11.076436650323638 +- 8.684694240585628
+MeanSlowdown: 	 3.309375
+MeanLen: 	 39.14 +- 9.123617703520901
+MeanEntropy 	 2.5880837
+Elapsed time	 5.30867886543 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 11
+NumTrajs: 	 50
+NumTimesteps: 	 2086
+MaxRew: 	 -0.44282433771556295
+MeanRew: 	 -7.977818268802526 +- 7.790591772356104
+MeanSlowdown: 	 3.090625
+MeanLen: 	 41.72 +- 9.310295376624738
+MeanEntropy 	 2.5534306
+Elapsed time	 17.3190839291 seconds
+-----------------
+-----------------
+Epoch: 	 12
+NumTrajs: 	 50
+NumTimesteps: 	 2132
+MaxRew: 	 -1.7945877924545228
+MeanRew: 	 -10.789449950405208 +- 6.867678122315921
+MeanSlowdown: 	 3.278125
+MeanLen: 	 42.64 +- 12.743249193200295
+MeanEntropy 	 2.4946294
+Elapsed time	 5.82837700844 seconds
+-----------------
+-----------------
+Epoch: 	 13
+NumTrajs: 	 50
+NumTimesteps: 	 2140
+MaxRew: 	 -0.1294283405851253
+MeanRew: 	 -9.152503657824779 +- 7.255652487679656
+MeanSlowdown: 	 3.084375
+MeanLen: 	 42.8 +- 14.259032225224823
+MeanEntropy 	 2.3947992
+Elapsed time	 5.91552901268 seconds
+-----------------
+-----------------
+Epoch: 	 14
+NumTrajs: 	 50
+NumTimesteps: 	 2148
+MaxRew: 	 0.31071620998221705
+MeanRew: 	 -7.781128294677707 +- 7.948826694152362
+MeanSlowdown: 	 3.08125
+MeanLen: 	 42.96 +- 18.216432142436673
+MeanEntropy 	 2.4442368
+Elapsed time	 5.87610602379 seconds
+-----------------
+-----------------
+Epoch: 	 15
+NumTrajs: 	 50
+NumTimesteps: 	 2448
+MaxRew: 	 -0.3566179023822144
+MeanRew: 	 -7.245856713889768 +- 8.757526787398366
+MeanSlowdown: 	 3.6375
+MeanLen: 	 48.96 +- 26.0468500974686
+MeanEntropy 	 2.2174633
+Elapsed time	 6.75187897682 seconds
+-----------------
+-----------------
+Epoch: 	 16
+NumTrajs: 	 50
+NumTimesteps: 	 2202
+MaxRew: 	 -0.49219205807606736
+MeanRew: 	 -7.9764491459651845 +- 6.487004915479113
+MeanSlowdown: 	 3.15625
+MeanLen: 	 44.04 +- 20.880574704734546
+MeanEntropy 	 2.1338263
+Elapsed time	 6.01971101761 seconds
+-----------------
+-----------------
+Epoch: 	 17
+NumTrajs: 	 50
+NumTimesteps: 	 2344
+MaxRew: 	 0.41375262696577125
+MeanRew: 	 -6.690363877104909 +- 7.585561672962458
+MeanSlowdown: 	 3.390625
+MeanLen: 	 46.88 +- 27.371254994976027
+MeanEntropy 	 2.1435695
+Elapsed time	 6.40093302727 seconds
+-----------------
+-----------------
+Epoch: 	 18
+NumTrajs: 	 50
+NumTimesteps: 	 2049
+MaxRew: 	 0.9511849042140733
+MeanRew: 	 -6.7178365029357625 +- 6.695569785872609
+MeanSlowdown: 	 3.140625
+MeanLen: 	 40.98 +- 19.889182989756012
+MeanEntropy 	 2.2685328
+Elapsed time	 5.62638998032 seconds
+-----------------
+-----------------
+Epoch: 	 19
+NumTrajs: 	 50
+NumTimesteps: 	 2609
+MaxRew: 	 0.9081801856331589
+MeanRew: 	 -8.00901307181141 +- 7.578990532316308
+MeanSlowdown: 	 3.74375
+MeanLen: 	 52.18 +- 38.551103745547934
+MeanEntropy 	 1.9289589
+Elapsed time	 7.07671308517 seconds
+-----------------
+-----------------
+Epoch: 	 20
+NumTrajs: 	 50
+NumTimesteps: 	 2285
+MaxRew: 	 0.9456955764334986
+MeanRew: 	 -8.071830230618314 +- 6.987193793480144
+MeanSlowdown: 	 3.40625
+MeanLen: 	 45.7 +- 25.459968578142433
+MeanEntropy 	 2.0327146
+Elapsed time	 6.18868088722 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 21
+NumTrajs: 	 50
+NumTimesteps: 	 2341
+MaxRew: 	 2.202035278896496
+MeanRew: 	 -5.648922840056961 +- 7.072774807455536
+MeanSlowdown: 	 3.15
+MeanLen: 	 46.82 +- 21.298535160897803
+MeanEntropy 	 2.1417851
+Elapsed time	 17.7867810726 seconds
+-----------------
+-----------------
+Epoch: 	 22
+NumTrajs: 	 50
+NumTimesteps: 	 2191
+MaxRew: 	 2.235270614590383
+MeanRew: 	 -5.824761267033081 +- 8.599640440736453
+MeanSlowdown: 	 3.165625
+MeanLen: 	 43.82 +- 20.04563792948481
+MeanEntropy 	 2.105413
+Elapsed time	 5.92561912537 seconds
+-----------------
+-----------------
+Epoch: 	 23
+NumTrajs: 	 50
+NumTimesteps: 	 2338
+MaxRew: 	 -0.6207032403344117
+MeanRew: 	 -7.424889391610663 +- 6.106015136369251
+MeanSlowdown: 	 3.596875
+MeanLen: 	 46.76 +- 22.074020929590514
+MeanEntropy 	 2.119836
+Elapsed time	 6.45698785782 seconds
+-----------------
+-----------------
+Epoch: 	 24
+NumTrajs: 	 50
+NumTimesteps: 	 2294
+MaxRew: 	 1.3996845841491552
+MeanRew: 	 -7.53664519944208 +- 7.159040287940151
+MeanSlowdown: 	 3.00625
+MeanLen: 	 45.88 +- 23.342356350634358
+MeanEntropy 	 2.1132367
+Elapsed time	 6.37183403969 seconds
+-----------------
+-----------------
+Epoch: 	 25
+NumTrajs: 	 50
+NumTimesteps: 	 2274
+MaxRew: 	 0.9376185914888481
+MeanRew: 	 -7.6957399329320575 +- 8.31549614490836
+MeanSlowdown: 	 3.2
+MeanLen: 	 45.48 +- 17.50798674890977
+MeanEntropy 	 1.9328804
+Elapsed time	 6.27228593826 seconds
+-----------------
+-----------------
+Epoch: 	 26
+NumTrajs: 	 50
+NumTimesteps: 	 2112
+MaxRew: 	 1.529169181720709
+MeanRew: 	 -6.928680391316236 +- 7.5674267430398245
+MeanSlowdown: 	 3.46875
+MeanLen: 	 42.24 +- 14.176826161027721
+MeanEntropy 	 2.0726235
+Elapsed time	 5.91986703873 seconds
+-----------------
+-----------------
+Epoch: 	 27
+NumTrajs: 	 50
+NumTimesteps: 	 2192
+MaxRew: 	 1.1628420546788252
+MeanRew: 	 -4.372801698942754 +- 7.795362339131051
+MeanSlowdown: 	 3.284375
+MeanLen: 	 43.84 +- 17.510408333331352
+MeanEntropy 	 1.9236227
+Elapsed time	 6.13057208061 seconds
+-----------------
+-----------------
+Epoch: 	 28
+NumTrajs: 	 50
+NumTimesteps: 	 2573
+MaxRew: 	 1.8869502579193749
+MeanRew: 	 -6.076953636487604 +- 7.201501838329913
+MeanSlowdown: 	 3.134375
+MeanLen: 	 51.46 +- 34.39081854216325
+MeanEntropy 	 1.7136116
+Elapsed time	 6.95404791832 seconds
+-----------------
+-----------------
+Epoch: 	 29
+NumTrajs: 	 50
+NumTimesteps: 	 2452
+MaxRew: 	 2.2202403203386862
+MeanRew: 	 -4.8637357659260125 +- 8.46846780395867
+MeanSlowdown: 	 2.896875
+MeanLen: 	 49.04 +- 34.626556282714574
+MeanEntropy 	 1.7232772
+Elapsed time	 6.68033599854 seconds
+-----------------
+-----------------
+Epoch: 	 30
+NumTrajs: 	 50
+NumTimesteps: 	 4547
+MaxRew: 	 0.1455647407936093
+MeanRew: 	 -5.469346779756327 +- 7.24169405585824
+MeanSlowdown: 	 4.003125
+MeanLen: 	 90.94 +- 205.20491319654116
+MeanEntropy 	 1.0058873
+Elapsed time	 11.4273989201 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 31
+NumTrajs: 	 50
+NumTimesteps: 	 2842
+MaxRew: 	 0.9108580652078866
+MeanRew: 	 -4.718208903590147 +- 9.412932089009372
+MeanSlowdown: 	 3.715625
+MeanLen: 	 56.84 +- 57.49760342831691
+MeanEntropy 	 1.4753911
+Elapsed time	 19.964979887 seconds
+-----------------
+-----------------
+Epoch: 	 32
+NumTrajs: 	 50
+NumTimesteps: 	 2402
+MaxRew: 	 2.1070842678878146
+MeanRew: 	 -4.15938866901487 +- 8.156530486980795
+MeanSlowdown: 	 2.9625
+MeanLen: 	 48.04 +- 29.971960229521194
+MeanEntropy 	 1.897902
+Elapsed time	 6.5471060276 seconds
+-----------------
+-----------------
+Epoch: 	 33
+NumTrajs: 	 50
+NumTimesteps: 	 2401
+MaxRew: 	 2.0894236693121404
+MeanRew: 	 -4.684158308374485 +- 8.212586472429718
+MeanSlowdown: 	 2.903125
+MeanLen: 	 48.02 +- 35.863903858894105
+MeanEntropy 	 1.7672546
+Elapsed time	 6.61089301109 seconds
+-----------------
+-----------------
+Epoch: 	 34
+NumTrajs: 	 50
+NumTimesteps: 	 2322
+MaxRew: 	 2.0504827564780115
+MeanRew: 	 -4.083931197787408 +- 8.185339279638253
+MeanSlowdown: 	 2.690625
+MeanLen: 	 46.44 +- 23.47437752103344
+MeanEntropy 	 1.781822
+Elapsed time	 6.66415810585 seconds
+-----------------
+-----------------
+Epoch: 	 35
+NumTrajs: 	 50
+NumTimesteps: 	 2379
+MaxRew: 	 1.593848671215238
+MeanRew: 	 -5.104837139015129 +- 6.318632210158379
+MeanSlowdown: 	 3.1125
+MeanLen: 	 47.58 +- 22.863149389355787
+MeanEntropy 	 1.5605814
+Elapsed time	 6.54748702049 seconds
+-----------------
+-----------------
+Epoch: 	 36
+NumTrajs: 	 50
+NumTimesteps: 	 2502
+MaxRew: 	 2.1427246169837515
+MeanRew: 	 -3.2450254980121667 +- 8.224264420201118
+MeanSlowdown: 	 3.396875
+MeanLen: 	 50.04 +- 30.04061251039999
+MeanEntropy 	 1.4384322
+Elapsed time	 6.919962883 seconds
+-----------------
+-----------------
+Epoch: 	 37
+NumTrajs: 	 50
+NumTimesteps: 	 2446
+MaxRew: 	 2.310756180787559
+MeanRew: 	 -3.729270404283631 +- 7.543058808752393
+MeanSlowdown: 	 3.3
+MeanLen: 	 48.92 +- 37.54988149115786
+MeanEntropy 	 1.5061035
+Elapsed time	 6.7843580246 seconds
+-----------------
+-----------------
+Epoch: 	 38
+NumTrajs: 	 50
+NumTimesteps: 	 2324
+MaxRew: 	 1.6395120090238358
+MeanRew: 	 -5.732998580661919 +- 8.257043924882726
+MeanSlowdown: 	 3.09375
+MeanLen: 	 46.48 +- 29.754488736995633
+MeanEntropy 	 1.629951
+Elapsed time	 6.53185892105 seconds
+-----------------
+-----------------
+Epoch: 	 39
+NumTrajs: 	 50
+NumTimesteps: 	 2401
+MaxRew: 	 1.0533290180741797
+MeanRew: 	 -4.449367285384392 +- 8.446558802058602
+MeanSlowdown: 	 3.371875
+MeanLen: 	 48.02 +- 24.445441292805494
+MeanEntropy 	 1.5105572
+Elapsed time	 6.58074092865 seconds
+-----------------
+-----------------
+Epoch: 	 40
+NumTrajs: 	 50
+NumTimesteps: 	 3612
+MaxRew: 	 2.5430855974524382
+MeanRew: 	 -2.953546284223423 +- 8.284139872810174
+MeanSlowdown: 	 3.559375
+MeanLen: 	 72.24 +- 106.31416838784942
+MeanEntropy 	 1.1274629
+Elapsed time	 9.33107805252 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 41
+NumTrajs: 	 50
+NumTimesteps: 	 3446
+MaxRew: 	 2.645400562266122
+MeanRew: 	 -2.1944840771279344 +- 8.17887204617906
+MeanSlowdown: 	 3.35
+MeanLen: 	 68.92 +- 96.24049875182486
+MeanEntropy 	 1.1544577
+Elapsed time	 20.7230279446 seconds
+-----------------
+-----------------
+Epoch: 	 42
+NumTrajs: 	 50
+NumTimesteps: 	 2876
+MaxRew: 	 2.2744022429493156
+MeanRew: 	 -3.8139947316606087 +- 7.245535439736044
+MeanSlowdown: 	 3.5875
+MeanLen: 	 57.52 +- 52.34853961668844
+MeanEntropy 	 1.3438065
+Elapsed time	 7.60125994682 seconds
+-----------------
+-----------------
+Epoch: 	 43
+NumTrajs: 	 50
+NumTimesteps: 	 3389
+MaxRew: 	 2.671343743897647
+MeanRew: 	 -4.204537015397506 +- 8.166690489364434
+MeanSlowdown: 	 3.6375
+MeanLen: 	 67.78 +- 85.38297019898056
+MeanEntropy 	 1.1614206
+Elapsed time	 8.80312395096 seconds
+-----------------
+-----------------
+Epoch: 	 44
+NumTrajs: 	 50
+NumTimesteps: 	 3394
+MaxRew: 	 1.4772764845778739
+MeanRew: 	 -3.9791761788075637 +- 7.593282496220024
+MeanSlowdown: 	 3.625
+MeanLen: 	 67.88 +- 79.75578725083214
+MeanEntropy 	 1.1430986
+Elapsed time	 8.83838701248 seconds
+-----------------
+-----------------
+Epoch: 	 45
+NumTrajs: 	 50
+NumTimesteps: 	 2748
+MaxRew: 	 2.1866039722677235
+MeanRew: 	 -3.928363849895839 +- 7.607355868201437
+MeanSlowdown: 	 3.246875
+MeanLen: 	 54.96 +- 62.98030168235145
+MeanEntropy 	 1.3227332
+Elapsed time	 7.36764097214 seconds
+-----------------
+-----------------
+Epoch: 	 46
+NumTrajs: 	 50
+NumTimesteps: 	 2561
+MaxRew: 	 2.5106410485221025
+MeanRew: 	 -4.312611372836054 +- 9.002827414872424
+MeanSlowdown: 	 2.5
+MeanLen: 	 51.22 +- 29.732332569107324
+MeanEntropy 	 1.5834411
+Elapsed time	 6.98992300034 seconds
+-----------------
+-----------------
+Epoch: 	 47
+NumTrajs: 	 50
+NumTimesteps: 	 2723
+MaxRew: 	 2.3728759126119967
+MeanRew: 	 -2.5676940459985396 +- 8.214408429829744
+MeanSlowdown: 	 2.834375
+MeanLen: 	 54.46 +- 49.226094705958545
+MeanEntropy 	 1.3717747
+Elapsed time	 7.38370800018 seconds
+-----------------
+-----------------
+Epoch: 	 48
+NumTrajs: 	 50
+NumTimesteps: 	 2584
+MaxRew: 	 2.079869448641289
+MeanRew: 	 -3.105451643465871 +- 8.495064657639247
+MeanSlowdown: 	 2.64375
+MeanLen: 	 51.68 +- 47.95391120649076
+MeanEntropy 	 1.398107
+Elapsed time	 7.0982708931 seconds
+-----------------
+-----------------
+Epoch: 	 49
+NumTrajs: 	 50
+NumTimesteps: 	 4768
+MaxRew: 	 2.0719222392477823
+MeanRew: 	 -2.6213699379378057 +- 8.546464065985626
+MeanSlowdown: 	 4.2125
+MeanLen: 	 95.36 +- 157.72466642855835
+MeanEntropy 	 0.8521451
+Elapsed time	 11.9711520672 seconds
+-----------------
+-----------------
+Epoch: 	 50
+NumTrajs: 	 50
+NumTimesteps: 	 4828
+MaxRew: 	 3.0355264693128428
+MeanRew: 	 -1.8579996585482135 +- 7.614489683009777
+MeanSlowdown: 	 3.503125
+MeanLen: 	 96.56 +- 195.13637897634567
+MeanEntropy 	 0.87517726
+Elapsed time	 12.2141289711 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 51
+NumTrajs: 	 50
+NumTimesteps: 	 3757
+MaxRew: 	 3.0415038416059965
+MeanRew: 	 -2.0811337224171482 +- 9.161546278482877
+MeanSlowdown: 	 2.959375
+MeanLen: 	 75.14 +- 120.71122731544072
+MeanEntropy 	 1.0687094
+Elapsed time	 22.4315099716 seconds
+-----------------
+-----------------
+Epoch: 	 52
+NumTrajs: 	 50
+NumTimesteps: 	 2624
+MaxRew: 	 2.9765157390291663
+MeanRew: 	 -1.8384824215311766 +- 8.011996611199844
+MeanSlowdown: 	 2.503125
+MeanLen: 	 52.48 +- 42.9288900392265
+MeanEntropy 	 1.5065714
+Elapsed time	 7.35438704491 seconds
+-----------------
+-----------------
+Epoch: 	 53
+NumTrajs: 	 50
+NumTimesteps: 	 2255
+MaxRew: 	 2.8385046324144865
+MeanRew: 	 -1.815329054111207 +- 8.573461780209822
+MeanSlowdown: 	 2.478125
+MeanLen: 	 45.1 +- 25.1342395946247
+MeanEntropy 	 1.6721985
+Elapsed time	 6.53420782089 seconds
+-----------------
+-----------------
+Epoch: 	 54
+NumTrajs: 	 50
+NumTimesteps: 	 3065
+MaxRew: 	 2.497851213171521
+MeanRew: 	 -1.905397153120065 +- 7.911409504699852
+MeanSlowdown: 	 3.2125
+MeanLen: 	 61.3 +- 54.71133337801228
+MeanEntropy 	 1.343525
+Elapsed time	 8.33270406723 seconds
+-----------------
+-----------------
+Epoch: 	 55
+NumTrajs: 	 50
+NumTimesteps: 	 2664
+MaxRew: 	 2.5466312696355566
+MeanRew: 	 -1.9510048005474092 +- 8.945915693692223
+MeanSlowdown: 	 2.9625
+MeanLen: 	 53.28 +- 61.40294455480128
+MeanEntropy 	 1.4250124
+Elapsed time	 7.38641810417 seconds
+-----------------
+-----------------
+Epoch: 	 56
+NumTrajs: 	 50
+NumTimesteps: 	 3875
+MaxRew: 	 2.9532143426525828
+MeanRew: 	 -1.8338483671185992 +- 9.231501328160721
+MeanSlowdown: 	 3.246875
+MeanLen: 	 77.5 +- 111.62566909093984
+MeanEntropy 	 0.90954745
+Elapsed time	 10.1824939251 seconds
+-----------------
+-----------------
+Epoch: 	 57
+NumTrajs: 	 50
+NumTimesteps: 	 2539
+MaxRew: 	 2.4660269818938603
+MeanRew: 	 -2.135883223317778 +- 8.600788216442416
+MeanSlowdown: 	 2.634375
+MeanLen: 	 50.78 +- 45.316791589873176
+MeanEntropy 	 1.2835181
+Elapsed time	 7.17746591568 seconds
+-----------------
+-----------------
+Epoch: 	 58
+NumTrajs: 	 50
+NumTimesteps: 	 5971
+MaxRew: 	 2.6809135075189987
+MeanRew: 	 -0.9279869424028542 +- 8.315305155671977
+MeanSlowdown: 	 4.2125
+MeanLen: 	 119.42 +- 262.5093590712529
+MeanEntropy 	 0.7207744
+Elapsed time	 14.9261639118 seconds
+-----------------
+-----------------
+Epoch: 	 59
+NumTrajs: 	 50
+NumTimesteps: 	 3616
+MaxRew: 	 3.0566879652851755
+MeanRew: 	 -0.4854173233110556 +- 8.976173185532582
+MeanSlowdown: 	 2.475
+MeanLen: 	 72.32 +- 110.04189020550311
+MeanEntropy 	 1.0299386
+Elapsed time	 9.41904592514 seconds
+-----------------
+-----------------
+Epoch: 	 60
+NumTrajs: 	 50
+NumTimesteps: 	 3366
+MaxRew: 	 2.821966365373636
+MeanRew: 	 -1.6384780161729402 +- 9.010753611054763
+MeanSlowdown: 	 3.0875
+MeanLen: 	 67.32 +- 76.51338183612067
+MeanEntropy 	 1.180993
+Elapsed time	 8.90660190582 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 61
+NumTrajs: 	 50
+NumTimesteps: 	 2202
+MaxRew: 	 2.5286877487161403
+MeanRew: 	 -2.1152932187659808 +- 8.106976858438369
+MeanSlowdown: 	 2.825
+MeanLen: 	 44.04 +- 18.285469641220594
+MeanEntropy 	 1.6748016
+Elapsed time	 17.9364361763 seconds
+-----------------
+-----------------
+Epoch: 	 62
+NumTrajs: 	 50
+NumTimesteps: 	 2352
+MaxRew: 	 2.762836252596356
+MeanRew: 	 -1.3302588256529781 +- 8.201929059527755
+MeanSlowdown: 	 2.6875
+MeanLen: 	 47.04 +- 34.259573844401515
+MeanEntropy 	 1.4401959
+Elapsed time	 6.71094322205 seconds
+-----------------
+-----------------
+Epoch: 	 63
+NumTrajs: 	 50
+NumTimesteps: 	 3164
+MaxRew: 	 2.7731743577900083
+MeanRew: 	 -0.9685787068034512 +- 8.837490384591392
+MeanSlowdown: 	 3.359375
+MeanLen: 	 63.28 +- 115.90928176811381
+MeanEntropy 	 1.0888087
+Elapsed time	 8.43606209755 seconds
+-----------------
+-----------------
+Epoch: 	 64
+NumTrajs: 	 50
+NumTimesteps: 	 2057
+MaxRew: 	 2.578941451458695
+MeanRew: 	 -0.5949065340015014 +- 7.940163391673351
+MeanSlowdown: 	 2.446875
+MeanLen: 	 41.14 +- 12.726366331361046
+MeanEntropy 	 1.6267473
+Elapsed time	 5.91436314583 seconds
+-----------------
+-----------------
+Epoch: 	 65
+NumTrajs: 	 50
+NumTimesteps: 	 2318
+MaxRew: 	 3.317294963601719
+MeanRew: 	 -0.49717909310376046 +- 8.383925117500768
+MeanSlowdown: 	 3.159375
+MeanLen: 	 46.36 +- 25.9982768659771
+MeanEntropy 	 1.4742608
+Elapsed time	 6.47749495506 seconds
+-----------------
+-----------------
+Epoch: 	 66
+NumTrajs: 	 50
+NumTimesteps: 	 2061
+MaxRew: 	 2.674705444337011
+MeanRew: 	 -0.7479024564608683 +- 8.896628006995776
+MeanSlowdown: 	 2.04375
+MeanLen: 	 41.22 +- 14.599027364862359
+MeanEntropy 	 1.5250401
+Elapsed time	 5.83174991608 seconds
+-----------------
+-----------------
+Epoch: 	 67
+NumTrajs: 	 50
+NumTimesteps: 	 2063
+MaxRew: 	 3.1765700859870245
+MeanRew: 	 -0.6155471243540602 +- 9.030705037251002
+MeanSlowdown: 	 2.465625
+MeanLen: 	 41.26 +- 16.444828974483134
+MeanEntropy 	 1.3820304
+Elapsed time	 5.85048103333 seconds
+-----------------
+-----------------
+Epoch: 	 68
+NumTrajs: 	 50
+NumTimesteps: 	 1963
+MaxRew: 	 2.8579403844792144
+MeanRew: 	 -0.8203404539115821 +- 10.252062151520633
+MeanSlowdown: 	 2.55625
+MeanLen: 	 39.26 +- 11.443443537676936
+MeanEntropy 	 1.5259775
+Elapsed time	 5.69815087318 seconds
+-----------------
+-----------------
+Epoch: 	 69
+NumTrajs: 	 50
+NumTimesteps: 	 2398
+MaxRew: 	 2.8082263143743207
+MeanRew: 	 -0.9333758622940713 +- 8.577529466557822
+MeanSlowdown: 	 3.05
+MeanLen: 	 47.96 +- 27.568068485115166
+MeanEntropy 	 1.2613326
+Elapsed time	 6.83696818352 seconds
+-----------------
+-----------------
+Epoch: 	 70
+NumTrajs: 	 50
+NumTimesteps: 	 2350
+MaxRew: 	 2.5189158917180894
+MeanRew: 	 -1.0171040086202603 +- 8.769936629690646
+MeanSlowdown: 	 2.225
+MeanLen: 	 47.0 +- 19.54175017750457
+MeanEntropy 	 1.4004301
+Elapsed time	 6.64869999886 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 71
+NumTrajs: 	 50
+NumTimesteps: 	 2479
+MaxRew: 	 2.8136171636773097
+MeanRew: 	 -0.3732178549197057 +- 8.179190111183225
+MeanSlowdown: 	 2.246875
+MeanLen: 	 49.58 +- 41.77659153162211
+MeanEntropy 	 1.1769698
+Elapsed time	 19.6600809097 seconds
+-----------------
+-----------------
+Epoch: 	 72
+NumTrajs: 	 50
+NumTimesteps: 	 2610
+MaxRew: 	 3.379541275819515
+MeanRew: 	 -2.479315125509376 +- 9.435436342501973
+MeanSlowdown: 	 3.01875
+MeanLen: 	 52.2 +- 33.699851631720875
+MeanEntropy 	 1.2213205
+Elapsed time	 7.39721703529 seconds
+-----------------
+-----------------
+Epoch: 	 73
+NumTrajs: 	 50
+NumTimesteps: 	 2270
+MaxRew: 	 3.1733683543222693
+MeanRew: 	 -0.8137272282607054 +- 8.39457497757248
+MeanSlowdown: 	 3.3
+MeanLen: 	 45.4 +- 25.079872407968903
+MeanEntropy 	 1.3255424
+Elapsed time	 6.59371614456 seconds
+-----------------
+-----------------
+Epoch: 	 74
+NumTrajs: 	 50
+NumTimesteps: 	 2555
+MaxRew: 	 3.205825890007951
+MeanRew: 	 0.03170658214157607 +- 8.936359213247943
+MeanSlowdown: 	 2.271875
+MeanLen: 	 51.1 +- 35.090882006583996
+MeanEntropy 	 1.0360183
+Elapsed time	 7.30003595352 seconds
+-----------------
+-----------------
+Epoch: 	 75
+NumTrajs: 	 50
+NumTimesteps: 	 3562
+MaxRew: 	 2.67354685087886
+MeanRew: 	 -2.1867218983969257 +- 10.052782917238941
+MeanSlowdown: 	 2.95625
+MeanLen: 	 71.24 +- 95.9006902999139
+MeanEntropy 	 0.6526201
+Elapsed time	 9.49821305275 seconds
+-----------------
+-----------------
+Epoch: 	 76
+NumTrajs: 	 50
+NumTimesteps: 	 6647
+MaxRew: 	 3.57677712953281
+MeanRew: 	 -0.6565244737404534 +- 10.850699541846845
+MeanSlowdown: 	 3.815625
+MeanLen: 	 132.94 +- 319.44053656353634
+MeanEntropy 	 0.39022067
+Elapsed time	 16.4022810459 seconds
+-----------------
+-----------------
+Epoch: 	 77
+NumTrajs: 	 50
+NumTimesteps: 	 7246
+MaxRew: 	 2.790214013321456
+MeanRew: 	 -1.6595806636540338 +- 9.341946076508597
+MeanSlowdown: 	 4.10625
+MeanLen: 	 144.92 +- 423.0421652743376
+MeanEntropy 	 0.38943353
+Elapsed time	 17.9896481037 seconds
+-----------------
+-----------------
+Epoch: 	 78
+NumTrajs: 	 50
+NumTimesteps: 	 6180
+MaxRew: 	 3.078773548790555
+MeanRew: 	 -0.24363118741868667 +- 8.666992942063361
+MeanSlowdown: 	 3.265625
+MeanLen: 	 123.6 +- 242.83615875729876
+MeanEntropy 	 0.43790358
+Elapsed time	 15.3178300858 seconds
+-----------------
+-----------------
+Epoch: 	 79
+NumTrajs: 	 50
+NumTimesteps: 	 6609
+MaxRew: 	 2.7329140170981274
+MeanRew: 	 -0.6840635902033556 +- 9.609212218892747
+MeanSlowdown: 	 3.234375
+MeanLen: 	 132.18 +- 288.6876990798188
+MeanEntropy 	 0.3876568
+Elapsed time	 16.287719965 seconds
+-----------------
+-----------------
+Epoch: 	 80
+NumTrajs: 	 50
+NumTimesteps: 	 6169
+MaxRew: 	 3.5151255937141883
+MeanRew: 	 -0.5880083557445545 +- 8.523209927442787
+MeanSlowdown: 	 3.38125
+MeanLen: 	 123.38 +- 304.90574871589416
+MeanEntropy 	 0.4443334
+Elapsed time	 15.4237279892 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 81
+NumTrajs: 	 50
+NumTimesteps: 	 11415
+MaxRew: 	 3.4359397791050497
+MeanRew: 	 -0.3543188221132859 +- 9.480720611408621
+MeanSlowdown: 	 4.64576802507837
+MeanLen: 	 228.3 +- 498.3319476011948
+MeanEntropy 	 0.25347573
+Elapsed time	 39.2828660011 seconds
+-----------------
+-----------------
+Epoch: 	 82
+NumTrajs: 	 50
+NumTimesteps: 	 7622
+MaxRew: 	 2.560279819670556
+MeanRew: 	 -1.0541835013004508 +- 10.11663203185229
+MeanSlowdown: 	 4.025
+MeanLen: 	 152.44 +- 374.377785665763
+MeanEntropy 	 0.34680244
+Elapsed time	 18.7623271942 seconds
+-----------------
+-----------------
+Epoch: 	 83
+NumTrajs: 	 50
+NumTimesteps: 	 6864
+MaxRew: 	 2.662279247511047
+MeanRew: 	 -1.6677434594113654 +- 9.15145132803723
+MeanSlowdown: 	 2.8375
+MeanLen: 	 137.28 +- 292.1624233196323
+MeanEntropy 	 0.43858165
+Elapsed time	 16.7453958988 seconds
+-----------------
+-----------------
+Epoch: 	 84
+NumTrajs: 	 50
+NumTimesteps: 	 6398
+MaxRew: 	 3.5992123081655114
+MeanRew: 	 0.38152245507088595 +- 8.839530893508023
+MeanSlowdown: 	 2.79375
+MeanLen: 	 127.96 +- 318.9731625074436
+MeanEntropy 	 0.4630153
+Elapsed time	 15.9372279644 seconds
+-----------------
+-----------------
+Epoch: 	 85
+NumTrajs: 	 50
+NumTimesteps: 	 4514
+MaxRew: 	 2.838932533173401
+MeanRew: 	 0.38635787514234876 +- 8.797050555406203
+MeanSlowdown: 	 2.54375
+MeanLen: 	 90.28 +- 222.16795808576896
+MeanEntropy 	 0.60466003
+Elapsed time	 11.5347709656 seconds
+-----------------
+-----------------
+Epoch: 	 86
+NumTrajs: 	 50
+NumTimesteps: 	 2779
+MaxRew: 	 3.7774272377328115
+MeanRew: 	 0.7397623228299546 +- 9.529641779516936
+MeanSlowdown: 	 1.9375
+MeanLen: 	 55.58 +- 69.881353736172
+MeanEntropy 	 0.9255579
+Elapsed time	 7.52722287178 seconds
+-----------------
+-----------------
+Epoch: 	 87
+NumTrajs: 	 50
+NumTimesteps: 	 2593
+MaxRew: 	 3.5969596096823695
+MeanRew: 	 1.056741987806628 +- 9.399732917678435
+MeanSlowdown: 	 2.246875
+MeanLen: 	 51.86 +- 51.477377555582606
+MeanEntropy 	 1.1608478
+Elapsed time	 7.25300908089 seconds
+-----------------
+-----------------
+Epoch: 	 88
+NumTrajs: 	 50
+NumTimesteps: 	 2381
+MaxRew: 	 3.380247673417499
+MeanRew: 	 0.1229012803929176 +- 9.582666301195717
+MeanSlowdown: 	 1.7875
+MeanLen: 	 47.62 +- 43.50259302616339
+MeanEntropy 	 1.3270639
+Elapsed time	 6.61594796181 seconds
+-----------------
+-----------------
+Epoch: 	 89
+NumTrajs: 	 50
+NumTimesteps: 	 2570
+MaxRew: 	 4.202342894102428
+MeanRew: 	 1.1957065851768272 +- 9.29210883257627
+MeanSlowdown: 	 2.534375
+MeanLen: 	 51.4 +- 41.039493174258375
+MeanEntropy 	 1.4629349
+Elapsed time	 7.04545307159 seconds
+-----------------
+-----------------
+Epoch: 	 90
+NumTrajs: 	 50
+NumTimesteps: 	 1988
+MaxRew: 	 3.533018680136646
+MeanRew: 	 0.9568619301246722 +- 9.272428961508549
+MeanSlowdown: 	 1.84375
+MeanLen: 	 39.76 +- 15.727123068126605
+MeanEntropy 	 1.5515448
+Elapsed time	 5.65683412552 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 91
+NumTrajs: 	 50
+NumTimesteps: 	 1999
+MaxRew: 	 3.3207992487955935
+MeanRew: 	 0.23031370632475354 +- 9.33953627911765
+MeanSlowdown: 	 2.54375
+MeanLen: 	 39.98 +- 12.384651791633061
+MeanEntropy 	 1.4466169
+Elapsed time	 18.3989658356 seconds
+-----------------
+-----------------
+Epoch: 	 92
+NumTrajs: 	 50
+NumTimesteps: 	 2112
+MaxRew: 	 3.3958524634026985
+MeanRew: 	 0.6024301695627483 +- 9.30707381967658
+MeanSlowdown: 	 2.40625
+MeanLen: 	 42.24 +- 18.082654672364896
+MeanEntropy 	 1.3715004
+Elapsed time	 6.14853596687 seconds
+-----------------
+-----------------
+Epoch: 	 93
+NumTrajs: 	 50
+NumTimesteps: 	 1987
+MaxRew: 	 3.361374491091347
+MeanRew: 	 0.5933013670811017 +- 10.010177229855104
+MeanSlowdown: 	 2.115625
+MeanLen: 	 39.74 +- 15.165500321453296
+MeanEntropy 	 1.5826436
+Elapsed time	 5.77660298347 seconds
+-----------------
+-----------------
+Epoch: 	 94
+NumTrajs: 	 50
+NumTimesteps: 	 1971
+MaxRew: 	 3.2605449066448444
+MeanRew: 	 1.2449080262494006 +- 9.033839719741248
+MeanSlowdown: 	 1.7625
+MeanLen: 	 39.42 +- 13.134823942482061
+MeanEntropy 	 1.4603615
+Elapsed time	 5.75062799454 seconds
+-----------------
+-----------------
+Epoch: 	 95
+NumTrajs: 	 50
+NumTimesteps: 	 1984
+MaxRew: 	 3.4502620463352818
+MeanRew: 	 0.8398944822673274 +- 9.62784841957036
+MeanSlowdown: 	 1.915625
+MeanLen: 	 39.68 +- 14.629340381575648
+MeanEntropy 	 1.3534108
+Elapsed time	 5.77756214142 seconds
+-----------------
+-----------------
+Epoch: 	 96
+NumTrajs: 	 50
+NumTimesteps: 	 1870
+MaxRew: 	 2.906567401106546
+MeanRew: 	 0.970135936446017 +- 9.273724624427892
+MeanSlowdown: 	 1.875
+MeanLen: 	 37.4 +- 11.001818031580054
+MeanEntropy 	 1.5375016
+Elapsed time	 5.45417118073 seconds
+-----------------
+-----------------
+Epoch: 	 97
+NumTrajs: 	 50
+NumTimesteps: 	 1934
+MaxRew: 	 2.9727409494645505
+MeanRew: 	 0.160422292455066 +- 8.93141606403202
+MeanSlowdown: 	 2.23125
+MeanLen: 	 38.68 +- 11.34273335664733
+MeanEntropy 	 1.5980014
+Elapsed time	 5.65547800064 seconds
+-----------------
+-----------------
+Epoch: 	 98
+NumTrajs: 	 50
+NumTimesteps: 	 2068
+MaxRew: 	 3.425244462826251
+MeanRew: 	 1.0093416039984109 +- 8.850219856150032
+MeanSlowdown: 	 2.075
+MeanLen: 	 41.36 +- 14.107813437949908
+MeanEntropy 	 1.3976055
+Elapsed time	 6.01951098442 seconds
+-----------------
+-----------------
+Epoch: 	 99
+NumTrajs: 	 50
+NumTimesteps: 	 1978
+MaxRew: 	 3.41438225624834
+MeanRew: 	 1.2506038676044333 +- 9.969298968753108
+MeanSlowdown: 	 1.928125
+MeanLen: 	 39.56 +- 14.183314140214197
+MeanEntropy 	 1.4884285
+Elapsed time	 5.72591590881 seconds
+-----------------
+-----------------
+Epoch: 	 100
+NumTrajs: 	 50
+NumTimesteps: 	 2096
+MaxRew: 	 3.420294706227941
+MeanRew: 	 0.6675451993708154 +- 8.75785896231978
+MeanSlowdown: 	 2.303125
+MeanLen: 	 41.92 +- 18.219593848382022
+MeanEntropy 	 1.4332814
+Elapsed time	 6.13063907623 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 101
+NumTrajs: 	 50
+NumTimesteps: 	 2494
+MaxRew: 	 3.5623440226222685
+MeanRew: 	 0.5204301203297668 +- 9.289039316058126
+MeanSlowdown: 	 1.7
+MeanLen: 	 49.88 +- 33.16
+MeanEntropy 	 1.2221923
+Elapsed time	 18.8166091442 seconds
+-----------------
+-----------------
+Epoch: 	 102
+NumTrajs: 	 50
+NumTimesteps: 	 2442
+MaxRew: 	 3.457876339561234
+MeanRew: 	 1.159512070460053 +- 8.624995511450384
+MeanSlowdown: 	 2.25625
+MeanLen: 	 48.84 +- 38.81100874751905
+MeanEntropy 	 1.1649747
+Elapsed time	 6.79355502129 seconds
+-----------------
+-----------------
+Epoch: 	 103
+NumTrajs: 	 50
+NumTimesteps: 	 2042
+MaxRew: 	 3.55680831913014
+MeanRew: 	 1.4618218899394462 +- 9.511333659381656
+MeanSlowdown: 	 1.725
+MeanLen: 	 40.84 +- 20.44246560471608
+MeanEntropy 	 1.1855825
+Elapsed time	 5.83294701576 seconds
+-----------------
+-----------------
+Epoch: 	 104
+NumTrajs: 	 50
+NumTimesteps: 	 2371
+MaxRew: 	 3.2184996114804276
+MeanRew: 	 0.5995856486039196 +- 9.478373880077488
+MeanSlowdown: 	 1.99375
+MeanLen: 	 47.42 +- 27.965757633219955
+MeanEntropy 	 1.3978204
+Elapsed time	 6.68517112732 seconds
+-----------------
+-----------------
+Epoch: 	 105
+NumTrajs: 	 50
+NumTimesteps: 	 2088
+MaxRew: 	 3.531115875612116
+MeanRew: 	 1.3689034669989697 +- 9.438261847665585
+MeanSlowdown: 	 1.775
+MeanLen: 	 41.76 +- 20.975757435668445
+MeanEntropy 	 1.3577591
+Elapsed time	 5.9695289135 seconds
+-----------------
+-----------------
+Epoch: 	 106
+NumTrajs: 	 50
+NumTimesteps: 	 1893
+MaxRew: 	 3.675016534496426
+MeanRew: 	 0.7112288419540298 +- 9.867697630622633
+MeanSlowdown: 	 1.675
+MeanLen: 	 37.86 +- 10.432660255179405
+MeanEntropy 	 1.4266242
+Elapsed time	 5.49804806709 seconds
+-----------------
+-----------------
+Epoch: 	 107
+NumTrajs: 	 50
+NumTimesteps: 	 1890
+MaxRew: 	 3.667866211561769
+MeanRew: 	 0.17074855022433139 +- 8.83748415681771
+MeanSlowdown: 	 1.940625
+MeanLen: 	 37.8 +- 11.063453348751466
+MeanEntropy 	 1.4015254
+Elapsed time	 5.54539299011 seconds
+-----------------
+-----------------
+Epoch: 	 108
+NumTrajs: 	 50
+NumTimesteps: 	 1899
+MaxRew: 	 3.404002177115598
+MeanRew: 	 1.276293989678467 +- 9.272129304410402
+MeanSlowdown: 	 1.778125
+MeanLen: 	 37.98 +- 10.155766834660984
+MeanEntropy 	 1.3896841
+Elapsed time	 5.39362406731 seconds
+-----------------
+-----------------
+Epoch: 	 109
+NumTrajs: 	 50
+NumTimesteps: 	 1914
+MaxRew: 	 3.476821644487804
+MeanRew: 	 -0.040534935842887164 +- 9.679395502091635
+MeanSlowdown: 	 1.73125
+MeanLen: 	 38.28 +- 10.80562816313795
+MeanEntropy 	 1.3826885
+Elapsed time	 5.3885819912 seconds
+-----------------
+-----------------
+Epoch: 	 110
+NumTrajs: 	 50
+NumTimesteps: 	 2322
+MaxRew: 	 3.672842625637508
+MeanRew: 	 1.3860946347485545 +- 9.306528635539802
+MeanSlowdown: 	 2.034375
+MeanLen: 	 46.44 +- 37.809078274932865
+MeanEntropy 	 1.305894
+Elapsed time	 6.33387589455 seconds
+-----------------
+initialize the environment...
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/matplotlib/pyplot.py:522: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  max_open_warning, RuntimeWarning)
+None
+-----------------
+Epoch: 	 111
+NumTrajs: 	 50
+NumTimesteps: 	 2034
+MaxRew: 	 3.6719420236632105
+MeanRew: 	 1.1359333526115285 +- 9.231123752222366
+MeanSlowdown: 	 1.95
+MeanLen: 	 40.68 +- 12.113529626000838
+MeanEntropy 	 1.373234
+Elapsed time	 18.4193270206 seconds
+-----------------
+-----------------
+Epoch: 	 112
+NumTrajs: 	 50
+NumTimesteps: 	 2321
+MaxRew: 	 3.561108437793621
+MeanRew: 	 1.3552790822908025 +- 9.416215895220427
+MeanSlowdown: 	 1.90625
+MeanLen: 	 46.42 +- 47.48814167768623
+MeanEntropy 	 1.3431079
+Elapsed time	 6.86048102379 seconds
+-----------------
+-----------------
+Epoch: 	 113
+NumTrajs: 	 50
+NumTimesteps: 	 1996
+MaxRew: 	 3.776042172879646
+MeanRew: 	 1.5981943347799739 +- 9.409454878934719
+MeanSlowdown: 	 1.70625
+MeanLen: 	 39.92 +- 12.207931847778312
+MeanEntropy 	 1.2510848
+Elapsed time	 5.83377313614 seconds
+-----------------
+-----------------
+Epoch: 	 114
+NumTrajs: 	 50
+NumTimesteps: 	 2074
+MaxRew: 	 3.7739702493112
+MeanRew: 	 1.6388667431456572 +- 9.33649436442208
+MeanSlowdown: 	 1.840625
+MeanLen: 	 41.48 +- 14.635901065530609
+MeanEntropy 	 1.2706641
+Elapsed time	 5.97440099716 seconds
+-----------------
+-----------------
+Epoch: 	 115
+NumTrajs: 	 50
+NumTimesteps: 	 2177
+MaxRew: 	 3.776042172879646
+MeanRew: 	 1.4402708550151917 +- 9.401054295749832
+MeanSlowdown: 	 1.965625
+MeanLen: 	 43.54 +- 19.969186262840058
+MeanEntropy 	 1.2418877
+Elapsed time	 6.37392902374 seconds
+-----------------
+-----------------
+Epoch: 	 116
+NumTrajs: 	 50
+NumTimesteps: 	 2056
+MaxRew: 	 3.529469632489237
+MeanRew: 	 1.3846404494593898 +- 9.022276788376672
+MeanSlowdown: 	 1.959375
+MeanLen: 	 41.12 +- 14.931362965248685
+MeanEntropy 	 1.210942
+Elapsed time	 6.0325729847 seconds
+-----------------
+-----------------
+Epoch: 	 117
+NumTrajs: 	 50
+NumTimesteps: 	 2384
+MaxRew: 	 3.7765293002890923
+MeanRew: 	 1.5391329442019595 +- 9.169227857144689
+MeanSlowdown: 	 2.340625
+MeanLen: 	 47.68 +- 29.217419461684155
+MeanEntropy 	 1.1076024
+Elapsed time	 6.86798810959 seconds
+-----------------
+-----------------
+Epoch: 	 118
+NumTrajs: 	 50
+NumTimesteps: 	 2108
+MaxRew: 	 3.7543256929596884
+MeanRew: 	 1.8274571476687986 +- 9.247881724782987
+MeanSlowdown: 	 1.859375
+MeanLen: 	 42.16 +- 18.235525767029586
+MeanEntropy 	 1.1247296
+Elapsed time	 6.11735701561 seconds
+-----------------
+-----------------
+Epoch: 	 119
+NumTrajs: 	 50
+NumTimesteps: 	 2002
+MaxRew: 	 3.776279491361172
+MeanRew: 	 1.1381399093027387 +- 9.336878547895763
+MeanSlowdown: 	 1.5375
+MeanLen: 	 40.04 +- 11.689242918170534
+MeanEntropy 	 1.0923103
+Elapsed time	 5.81542181969 seconds
+-----------------
+-----------------
+Epoch: 	 120
+NumTrajs: 	 50
+NumTimesteps: 	 2170
+MaxRew: 	 2.9462787490562166
+MeanRew: 	 0.048122139209430516 +- 9.004633291659658
+MeanSlowdown: 	 2.35625
+MeanLen: 	 43.4 +- 13.5705563629499
+MeanEntropy 	 1.107979
+Elapsed time	 6.32433319092 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 121
+NumTrajs: 	 50
+NumTimesteps: 	 2311
+MaxRew: 	 3.0383210826117923
+MeanRew: 	 1.4707663352118296 +- 9.031392456571327
+MeanSlowdown: 	 2.153125
+MeanLen: 	 46.22 +- 25.58381519633067
+MeanEntropy 	 1.1011475
+Elapsed time	 20.5380461216 seconds
+-----------------
+-----------------
+Epoch: 	 122
+NumTrajs: 	 50
+NumTimesteps: 	 2543
+MaxRew: 	 3.0914652138722376
+MeanRew: 	 1.6600167600421998 +- 8.93137808403332
+MeanSlowdown: 	 2.003125
+MeanLen: 	 50.86 +- 47.33117788519529
+MeanEntropy 	 1.048494
+Elapsed time	 7.08641600609 seconds
+-----------------
+-----------------
+Epoch: 	 123
+NumTrajs: 	 50
+NumTimesteps: 	 1970
+MaxRew: 	 3.1231446660146522
+MeanRew: 	 1.3473865427901262 +- 8.846593913887626
+MeanSlowdown: 	 2.053125
+MeanLen: 	 39.4 +- 10.579224924350553
+MeanEntropy 	 1.1826481
+Elapsed time	 5.70347309113 seconds
+-----------------
+-----------------
+Epoch: 	 124
+NumTrajs: 	 50
+NumTimesteps: 	 2064
+MaxRew: 	 3.7778453243261203
+MeanRew: 	 0.6540601210989975 +- 9.327250976348036
+MeanSlowdown: 	 2.315625
+MeanLen: 	 41.28 +- 14.748613494155984
+MeanEntropy 	 1.3179234
+Elapsed time	 5.835490942 seconds
+-----------------
+-----------------
+Epoch: 	 125
+NumTrajs: 	 50
+NumTimesteps: 	 2145
+MaxRew: 	 3.754941720762494
+MeanRew: 	 1.5174482876777842 +- 9.587339529180582
+MeanSlowdown: 	 1.959375
+MeanLen: 	 42.9 +- 18.5
+MeanEntropy 	 1.1673719
+Elapsed time	 6.00131893158 seconds
+-----------------
+-----------------
+Epoch: 	 126
+NumTrajs: 	 50
+NumTimesteps: 	 1857
+MaxRew: 	 3.7815339328302406
+MeanRew: 	 1.3360225305837392 +- 9.09631566744138
+MeanSlowdown: 	 1.69375
+MeanLen: 	 37.14 +- 8.667202547535162
+MeanEntropy 	 1.1621315
+Elapsed time	 5.35846996307 seconds
+-----------------
+-----------------
+Epoch: 	 127
+NumTrajs: 	 50
+NumTimesteps: 	 2014
+MaxRew: 	 3.6903900484182834
+MeanRew: 	 2.107476511286179 +- 9.284080201215813
+MeanSlowdown: 	 1.675
+MeanLen: 	 40.28 +- 12.938377023413718
+MeanEntropy 	 1.315368
+Elapsed time	 5.76670098305 seconds
+-----------------
+-----------------
+Epoch: 	 128
+NumTrajs: 	 50
+NumTimesteps: 	 1878
+MaxRew: 	 3.7775955153982004
+MeanRew: 	 1.669431438440305 +- 9.66952701866188
+MeanSlowdown: 	 1.765625
+MeanLen: 	 37.56 +- 8.782163742495355
+MeanEntropy 	 1.2625253
+Elapsed time	 5.41549015045 seconds
+-----------------
+-----------------
+Epoch: 	 129
+NumTrajs: 	 50
+NumTimesteps: 	 2015
+MaxRew: 	 3.7227300715077867
+MeanRew: 	 1.8048250510698391 +- 9.615830788240137
+MeanSlowdown: 	 1.44375
+MeanLen: 	 40.3 +- 10.530432089900206
+MeanEntropy 	 1.2144638
+Elapsed time	 5.63430190086 seconds
+-----------------
+-----------------
+Epoch: 	 130
+NumTrajs: 	 50
+NumTimesteps: 	 2039
+MaxRew: 	 3.5431053420591825
+MeanRew: 	 1.528806229187425 +- 9.420945325515353
+MeanSlowdown: 	 1.88125
+MeanLen: 	 40.78 +- 11.90678797997176
+MeanEntropy 	 1.2771382
+Elapsed time	 5.78484487534 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 131
+NumTrajs: 	 50
+NumTimesteps: 	 1997
+MaxRew: 	 3.737894813409065
+MeanRew: 	 2.1386029746715165 +- 9.381770130854656
+MeanSlowdown: 	 1.5625
+MeanLen: 	 39.94 +- 9.839532509220142
+MeanEntropy 	 1.21016
+Elapsed time	 19.459733963 seconds
+-----------------
+-----------------
+Epoch: 	 132
+NumTrajs: 	 50
+NumTimesteps: 	 2040
+MaxRew: 	 3.775811646874594
+MeanRew: 	 2.4206800648842015 +- 9.658251021573125
+MeanSlowdown: 	 1.565625
+MeanLen: 	 40.8 +- 11.452510641776326
+MeanEntropy 	 1.2139215
+Elapsed time	 5.56546211243 seconds
+-----------------
+-----------------
+Epoch: 	 133
+NumTrajs: 	 50
+NumTimesteps: 	 2499
+MaxRew: 	 3.766009491254279
+MeanRew: 	 2.1903951748897312 +- 9.991938240309166
+MeanSlowdown: 	 1.58125
+MeanLen: 	 49.98 +- 35.632283115175206
+MeanEntropy 	 1.1504835
+Elapsed time	 6.78810596466 seconds
+-----------------
+-----------------
+Epoch: 	 134
+NumTrajs: 	 50
+NumTimesteps: 	 2046
+MaxRew: 	 3.7761055949113116
+MeanRew: 	 2.0524623595481946 +- 9.96373256274196
+MeanSlowdown: 	 1.6625
+MeanLen: 	 40.92 +- 9.367689149411396
+MeanEntropy 	 1.3004785
+Elapsed time	 5.78468990326 seconds
+-----------------
+-----------------
+Epoch: 	 135
+NumTrajs: 	 50
+NumTimesteps: 	 2023
+MaxRew: 	 3.760361223546654
+MeanRew: 	 2.2437089931638172 +- 9.55971028906562
+MeanSlowdown: 	 1.590625
+MeanLen: 	 40.46 +- 19.091579295595217
+MeanEntropy 	 1.2474204
+Elapsed time	 5.58817815781 seconds
+-----------------
+-----------------
+Epoch: 	 136
+NumTrajs: 	 50
+NumTimesteps: 	 2056
+MaxRew: 	 3.775811646874594
+MeanRew: 	 2.0743630280221583 +- 9.46230699461967
+MeanSlowdown: 	 1.871875
+MeanLen: 	 41.12 +- 12.350935187264163
+MeanEntropy 	 1.3503916
+Elapsed time	 5.81663203239 seconds
+-----------------
+-----------------
+Epoch: 	 137
+NumTrajs: 	 50
+NumTimesteps: 	 1961
+MaxRew: 	 3.7605468913663698
+MeanRew: 	 1.3163848759131087 +- 9.716857736105224
+MeanSlowdown: 	 1.61875
+MeanLen: 	 39.22 +- 11.7205631264031
+MeanEntropy 	 1.2957937
+Elapsed time	 5.58999085426 seconds
+-----------------
+-----------------
+Epoch: 	 138
+NumTrajs: 	 50
+NumTimesteps: 	 2148
+MaxRew: 	 3.7170740415908456
+MeanRew: 	 2.1297696659972507 +- 9.664458348432268
+MeanSlowdown: 	 1.853125
+MeanLen: 	 42.96 +- 19.374168369248782
+MeanEntropy 	 1.2215599
+Elapsed time	 6.01297593117 seconds
+-----------------
+-----------------
+Epoch: 	 139
+NumTrajs: 	 50
+NumTimesteps: 	 2253
+MaxRew: 	 3.4088361944106658
+MeanRew: 	 2.342825174527762 +- 9.418409836380324
+MeanSlowdown: 	 1.51875
+MeanLen: 	 45.06 +- 26.382122734912745
+MeanEntropy 	 1.2787111
+Elapsed time	 6.255245924 seconds
+-----------------
+-----------------
+Epoch: 	 140
+NumTrajs: 	 50
+NumTimesteps: 	 2119
+MaxRew: 	 3.741583421913185
+MeanRew: 	 1.761823031188999 +- 9.381515793907129
+MeanSlowdown: 	 1.759375
+MeanLen: 	 42.38 +- 15.261572658150273
+MeanEntropy 	 1.3762293
+Elapsed time	 5.92521810532 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 141
+NumTrajs: 	 50
+NumTimesteps: 	 2038
+MaxRew: 	 3.7726163460653233
+MeanRew: 	 2.2142749803173554 +- 9.531009807787209
+MeanSlowdown: 	 1.51875
+MeanLen: 	 40.76 +- 11.707365203153099
+MeanEntropy 	 1.2856042
+Elapsed time	 18.4873161316 seconds
+-----------------
+-----------------
+Epoch: 	 142
+NumTrajs: 	 50
+NumTimesteps: 	 2256
+MaxRew: 	 3.7775643554672214
+MeanRew: 	 2.487086272029927 +- 9.746209353151313
+MeanSlowdown: 	 1.609375
+MeanLen: 	 45.12 +- 18.279649887237994
+MeanEntropy 	 1.1592331
+Elapsed time	 6.3969848156 seconds
+-----------------
+-----------------
+Epoch: 	 143
+NumTrajs: 	 50
+NumTimesteps: 	 4606
+MaxRew: 	 3.551283101281231
+MeanRew: 	 2.4219690983375695 +- 9.99842416078335
+MeanSlowdown: 	 2.05
+MeanLen: 	 92.12 +- 182.7478744062431
+MeanEntropy 	 0.5469341
+Elapsed time	 11.7793359756 seconds
+-----------------
+-----------------
+Epoch: 	 144
+NumTrajs: 	 50
+NumTimesteps: 	 3801
+MaxRew: 	 3.6666336006005147
+MeanRew: 	 1.6226782431340725 +- 9.598013351360219
+MeanSlowdown: 	 1.93125
+MeanLen: 	 76.02 +- 108.7037239472503
+MeanEntropy 	 0.8323782
+Elapsed time	 10.0869219303 seconds
+-----------------
+-----------------
+Epoch: 	 145
+NumTrajs: 	 50
+NumTimesteps: 	 2208
+MaxRew: 	 3.777358196916674
+MeanRew: 	 2.315281375603829 +- 9.393102290619579
+MeanSlowdown: 	 1.5375
+MeanLen: 	 44.16 +- 33.616876713936406
+MeanEntropy 	 1.053018
+Elapsed time	 6.1555519104 seconds
+-----------------
+-----------------
+Epoch: 	 146
+NumTrajs: 	 50
+NumTimesteps: 	 3771
+MaxRew: 	 3.4421990162239537
+MeanRew: 	 1.3120447743536352 +- 9.726939434891175
+MeanSlowdown: 	 1.84375
+MeanLen: 	 75.42 +- 165.07054128462775
+MeanEntropy 	 0.6514539
+Elapsed time	 9.90878486633 seconds
+-----------------
+-----------------
+Epoch: 	 147
+NumTrajs: 	 50
+NumTimesteps: 	 2161
+MaxRew: 	 3.6467655819089644
+MeanRew: 	 2.4906508951024855 +- 9.803291283636328
+MeanSlowdown: 	 1.446875
+MeanLen: 	 43.22 +- 23.97689721377643
+MeanEntropy 	 1.0749139
+Elapsed time	 6.2196829319 seconds
+-----------------
+-----------------
+Epoch: 	 148
+NumTrajs: 	 50
+NumTimesteps: 	 2273
+MaxRew: 	 3.7359916717541024
+MeanRew: 	 2.748471069062108 +- 9.789230265896325
+MeanSlowdown: 	 1.409375
+MeanLen: 	 45.46 +- 23.861441699947637
+MeanEntropy 	 1.0136561
+Elapsed time	 6.44536590576 seconds
+-----------------
+-----------------
+Epoch: 	 149
+NumTrajs: 	 50
+NumTimesteps: 	 2338
+MaxRew: 	 3.71219252853142
+MeanRew: 	 1.9788133700280854 +- 9.984047176936004
+MeanSlowdown: 	 1.5875
+MeanLen: 	 46.76 +- 51.34922005249934
+MeanEntropy 	 0.9925033
+Elapsed time	 6.67067909241 seconds
+-----------------
+-----------------
+Epoch: 	 150
+NumTrajs: 	 50
+NumTimesteps: 	 2025
+MaxRew: 	 3.72272325492107
+MeanRew: 	 2.5851629921876893 +- 9.706605889395444
+MeanSlowdown: 	 1.459375
+MeanLen: 	 40.5 +- 14.527560015363902
+MeanEntropy 	 1.0648135
+Elapsed time	 5.83496904373 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 151
+NumTrajs: 	 50
+NumTimesteps: 	 2005
+MaxRew: 	 3.6828706221433714
+MeanRew: 	 3.015731686718354 +- 10.105520034350235
+MeanSlowdown: 	 1.384375
+MeanLen: 	 40.1 +- 12.123118410706052
+MeanEntropy 	 1.1181923
+Elapsed time	 17.6819489002 seconds
+-----------------
+-----------------
+Epoch: 	 152
+NumTrajs: 	 50
+NumTimesteps: 	 2103
+MaxRew: 	 3.7778453243261203
+MeanRew: 	 2.453201847296169 +- 10.0795263121859
+MeanSlowdown: 	 1.528125
+MeanLen: 	 42.06 +- 22.88528785049469
+MeanEntropy 	 1.0285797
+Elapsed time	 6.04737615585 seconds
+-----------------
+-----------------
+Epoch: 	 153
+NumTrajs: 	 50
+NumTimesteps: 	 2870
+MaxRew: 	 3.6218738687831795
+MeanRew: 	 2.287253347344573 +- 9.82060558458512
+MeanSlowdown: 	 1.6625
+MeanLen: 	 57.4 +- 92.74567375355036
+MeanEntropy 	 0.99364775
+Elapsed time	 7.84432005882 seconds
+-----------------
+-----------------
+Epoch: 	 154
+NumTrajs: 	 50
+NumTimesteps: 	 10835
+MaxRew: 	 3.6597420993309533
+MeanRew: 	 2.217645141580905 +- 9.163914562711673
+MeanSlowdown: 	 2.7586206896551726
+MeanLen: 	 216.7 +- 575.8490861328165
+MeanEntropy 	 0.241431
+Elapsed time	 25.6701109409 seconds
+-----------------
+-----------------
+Epoch: 	 155
+NumTrajs: 	 50
+NumTimesteps: 	 16933
+MaxRew: 	 3.747817877877748
+MeanRew: 	 2.5272440610081746 +- 9.494589601751045
+MeanSlowdown: 	 2.6529968454258674
+MeanLen: 	 338.66 +- 828.521734416183
+MeanEntropy 	 0.26297814
+Elapsed time	 39.2633118629 seconds
+-----------------
+-----------------
+Epoch: 	 156
+NumTrajs: 	 50
+NumTimesteps: 	 5348
+MaxRew: 	 3.748651826471405
+MeanRew: 	 2.477521671780941 +- 9.421182218553039
+MeanSlowdown: 	 1.774294670846395
+MeanLen: 	 106.96 +- 415.2179649292646
+MeanEntropy 	 0.5137443
+Elapsed time	 13.5602169037 seconds
+-----------------
+-----------------
+Epoch: 	 157
+NumTrajs: 	 50
+NumTimesteps: 	 2262
+MaxRew: 	 3.7466528043780487
+MeanRew: 	 1.4952083684359272 +- 8.598194281014395
+MeanSlowdown: 	 1.91875
+MeanLen: 	 45.24 +- 32.6714309450933
+MeanEntropy 	 0.89395183
+Elapsed time	 6.49919104576 seconds
+-----------------
+-----------------
+Epoch: 	 158
+NumTrajs: 	 50
+NumTimesteps: 	 4076
+MaxRew: 	 3.7218837098455553
+MeanRew: 	 2.145308917233651 +- 9.221734911785889
+MeanSlowdown: 	 1.940625
+MeanLen: 	 81.52 +- 243.02594429401978
+MeanEntropy 	 0.58737963
+Elapsed time	 10.4597001076 seconds
+-----------------
+-----------------
+Epoch: 	 159
+NumTrajs: 	 50
+NumTimesteps: 	 3865
+MaxRew: 	 3.768961009901587
+MeanRew: 	 2.093130127590749 +- 9.618550057277934
+MeanSlowdown: 	 1.80625
+MeanLen: 	 77.3 +- 270.1070343400927
+MeanEntropy 	 0.5700313
+Elapsed time	 10.0208308697 seconds
+-----------------
+-----------------
+Epoch: 	 160
+NumTrajs: 	 50
+NumTimesteps: 	 5026
+MaxRew: 	 3.664378529456761
+MeanRew: 	 2.3845819512755044 +- 9.646778716449836
+MeanSlowdown: 	 1.7648902821316614
+MeanLen: 	 100.52 +- 414.36033787031306
+MeanEntropy 	 0.48567304
+Elapsed time	 12.802549839 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 161
+NumTrajs: 	 50
+NumTimesteps: 	 7796
+MaxRew: 	 3.769532423926364
+MeanRew: 	 2.672761952910189 +- 9.659573116874629
+MeanSlowdown: 	 1.993730407523511
+MeanLen: 	 155.92 +- 550.9303346159113
+MeanEntropy 	 0.30060735
+Elapsed time	 32.051846981 seconds
+-----------------
+-----------------
+Epoch: 	 162
+NumTrajs: 	 50
+NumTimesteps: 	 4238
+MaxRew: 	 3.769532423926364
+MeanRew: 	 2.7161738415634034 +- 9.735716659577978
+MeanSlowdown: 	 1.85625
+MeanLen: 	 84.76 +- 296.4799865083645
+MeanEntropy 	 0.5332109
+Elapsed time	 10.9216570854 seconds
+-----------------
+-----------------
+Epoch: 	 163
+NumTrajs: 	 50
+NumTimesteps: 	 4964
+MaxRew: 	 3.761983314453105
+MeanRew: 	 2.069416129090555 +- 9.666295728274628
+MeanSlowdown: 	 1.6896551724137931
+MeanLen: 	 99.28 +- 414.77758087919835
+MeanEntropy 	 0.45607194
+Elapsed time	 12.3919110298 seconds
+-----------------
+-----------------
+Epoch: 	 164
+NumTrajs: 	 50
+NumTimesteps: 	 2763
+MaxRew: 	 3.7498323915362173
+MeanRew: 	 1.7640223671750055 +- 9.21859109480749
+MeanSlowdown: 	 1.678125
+MeanLen: 	 55.26 +- 114.41762276852285
+MeanEntropy 	 0.77205163
+Elapsed time	 7.40985703468 seconds
+-----------------
+-----------------
+Epoch: 	 165
+NumTrajs: 	 50
+NumTimesteps: 	 5347
+MaxRew: 	 3.040427928130581
+MeanRew: 	 0.96861055014425 +- 8.663208788377876
+MeanSlowdown: 	 3.29375
+MeanLen: 	 106.94 +- 414.84644918330923
+MeanEntropy 	 0.5457039
+Elapsed time	 13.4306218624 seconds
+-----------------
+-----------------
+Epoch: 	 166
+NumTrajs: 	 50
+NumTimesteps: 	 2513
+MaxRew: 	 3.7251714514759398
+MeanRew: 	 1.9498811246190986 +- 9.47682461925666
+MeanSlowdown: 	 2.040625
+MeanLen: 	 50.26 +- 40.651597754577864
+MeanEntropy 	 0.92857087
+Elapsed time	 6.96711993217 seconds
+-----------------
+-----------------
+Epoch: 	 167
+NumTrajs: 	 50
+NumTimesteps: 	 2147
+MaxRew: 	 2.9729906509850514
+MeanRew: 	 0.06730672561491949 +- 8.61875637029907
+MeanSlowdown: 	 2.996875
+MeanLen: 	 42.94 +- 19.515542523844935
+MeanEntropy 	 0.946597
+Elapsed time	 6.02431988716 seconds
+-----------------
+-----------------
+Epoch: 	 168
+NumTrajs: 	 50
+NumTimesteps: 	 2148
+MaxRew: 	 3.7511826805363575
+MeanRew: 	 2.7291328835123285 +- 9.710933353324668
+MeanSlowdown: 	 1.625
+MeanLen: 	 42.96 +- 15.654980038313685
+MeanEntropy 	 1.0493541
+Elapsed time	 6.00520086288 seconds
+-----------------
+-----------------
+Epoch: 	 169
+NumTrajs: 	 50
+NumTimesteps: 	 2202
+MaxRew: 	 3.752285235745318
+MeanRew: 	 2.452184076237809 +- 9.450194126648052
+MeanSlowdown: 	 1.640625
+MeanLen: 	 44.04 +- 25.35820182899411
+MeanEntropy 	 1.0482806
+Elapsed time	 6.17055511475 seconds
+-----------------
+-----------------
+Epoch: 	 170
+NumTrajs: 	 50
+NumTimesteps: 	 2035
+MaxRew: 	 3.7528901880176377
+MeanRew: 	 2.443547404687555 +- 9.362515256291902
+MeanSlowdown: 	 1.65625
+MeanLen: 	 40.7 +- 10.47329938462565
+MeanEntropy 	 1.1038606
+Elapsed time	 5.70657706261 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 171
+NumTrajs: 	 50
+NumTimesteps: 	 9557
+MaxRew: 	 3.645357901046259
+MeanRew: 	 1.8122785863997124 +- 9.255662074745828
+MeanSlowdown: 	 1.8930817610062893
+MeanLen: 	 191.14 +- 617.2256316777521
+MeanEntropy 	 0.23827156
+Elapsed time	 37.5279140472 seconds
+-----------------
+-----------------
+Epoch: 	 172
+NumTrajs: 	 50
+NumTimesteps: 	 1850
+MaxRew: 	 3.709827105421838
+MeanRew: 	 1.6150577016702021 +- 9.969736640630682
+MeanSlowdown: 	 1.54375
+MeanLen: 	 37.0 +- 8.024961059095553
+MeanEntropy 	 1.0860229
+Elapsed time	 5.42715382576 seconds
+-----------------
+-----------------
+Epoch: 	 173
+NumTrajs: 	 50
+NumTimesteps: 	 5141
+MaxRew: 	 3.5924054247783497
+MeanRew: 	 1.9936133083321967 +- 9.573933784902591
+MeanSlowdown: 	 1.5799373040752351
+MeanLen: 	 102.82 +- 414.13754671606387
+MeanEntropy 	 0.4800225
+Elapsed time	 13.0701420307 seconds
+-----------------
+-----------------
+Epoch: 	 174
+NumTrajs: 	 50
+NumTimesteps: 	 2080
+MaxRew: 	 3.7670249599776837
+MeanRew: 	 1.8117969202215989 +- 9.764208659859635
+MeanSlowdown: 	 1.471875
+MeanLen: 	 41.6 +- 14.489996549343966
+MeanEntropy 	 1.0595782
+Elapsed time	 6.00690698624 seconds
+-----------------
+-----------------
+Epoch: 	 175
+NumTrajs: 	 50
+NumTimesteps: 	 1977
+MaxRew: 	 3.7466020171283496
+MeanRew: 	 1.971645631670851 +- 9.34454749399644
+MeanSlowdown: 	 1.478125
+MeanLen: 	 39.54 +- 9.562865679282545
+MeanEntropy 	 1.1588347
+Elapsed time	 5.71427083015 seconds
+-----------------
+-----------------
+Epoch: 	 176
+NumTrajs: 	 50
+NumTimesteps: 	 1991
+MaxRew: 	 3.6122367199336147
+MeanRew: 	 2.5401647248008934 +- 9.606109762266088
+MeanSlowdown: 	 1.415625
+MeanLen: 	 39.82 +- 8.891996401258831
+MeanEntropy 	 1.0830438
+Elapsed time	 5.77432513237 seconds
+-----------------
+-----------------
+Epoch: 	 177
+NumTrajs: 	 50
+NumTimesteps: 	 5871
+MaxRew: 	 3.6493972242446446
+MeanRew: 	 1.9794321301867126 +- 9.387090789456979
+MeanSlowdown: 	 1.9247648902821317
+MeanLen: 	 117.42 +- 423.4453962437188
+MeanEntropy 	 0.57748586
+Elapsed time	 14.7931790352 seconds
+-----------------
+-----------------
+Epoch: 	 178
+NumTrajs: 	 50
+NumTimesteps: 	 2171
+MaxRew: 	 3.5484822001893894
+MeanRew: 	 2.4855073582917124 +- 9.667966219788992
+MeanSlowdown: 	 1.471875
+MeanLen: 	 43.42 +- 15.674297432421012
+MeanEntropy 	 1.0838237
+Elapsed time	 6.22662687302 seconds
+-----------------
+-----------------
+Epoch: 	 179
+NumTrajs: 	 50
+NumTimesteps: 	 1907
+MaxRew: 	 3.659278553135644
+MeanRew: 	 2.4097035334171757 +- 9.738080864688275
+MeanSlowdown: 	 1.475
+MeanLen: 	 38.14 +- 11.864248817350385
+MeanEntropy 	 1.2062929
+Elapsed time	 5.56594705582 seconds
+-----------------
+-----------------
+Epoch: 	 180
+NumTrajs: 	 50
+NumTimesteps: 	 3263
+MaxRew: 	 3.6603656984417796
+MeanRew: 	 2.547369339989454 +- 9.621342867994896
+MeanSlowdown: 	 1.7375
+MeanLen: 	 65.26 +- 115.85315015138778
+MeanEntropy 	 0.7111394
+Elapsed time	 8.72690105438 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 181
+NumTrajs: 	 50
+NumTimesteps: 	 2556
+MaxRew: 	 3.5746647051680207
+MeanRew: 	 2.1792821607504123 +- 9.532171376461546
+MeanSlowdown: 	 1.634375
+MeanLen: 	 51.12 +- 51.915562214041366
+MeanEntropy 	 0.91044223
+Elapsed time	 21.2767159939 seconds
+-----------------
+-----------------
+Epoch: 	 182
+NumTrajs: 	 50
+NumTimesteps: 	 2132
+MaxRew: 	 3.5589384724407
+MeanRew: 	 1.2825588114283062 +- 9.588866329532038
+MeanSlowdown: 	 1.73125
+MeanLen: 	 42.64 +- 19.87939636910538
+MeanEntropy 	 1.1480848
+Elapsed time	 6.12283182144 seconds
+-----------------
+-----------------
+Epoch: 	 183
+NumTrajs: 	 50
+NumTimesteps: 	 2320
+MaxRew: 	 3.6558715989393207
+MeanRew: 	 1.776369012248563 +- 9.507911564307387
+MeanSlowdown: 	 1.496875
+MeanLen: 	 46.4 +- 26.932508238186802
+MeanEntropy 	 1.0246208
+Elapsed time	 6.55402994156 seconds
+-----------------
+-----------------
+Epoch: 	 184
+NumTrajs: 	 50
+NumTimesteps: 	 1897
+MaxRew: 	 3.551728016857573
+MeanRew: 	 2.275832267563698 +- 10.119776382951175
+MeanSlowdown: 	 1.4875
+MeanLen: 	 37.94 +- 9.477151470774329
+MeanEntropy 	 1.2595924
+Elapsed time	 5.41898298264 seconds
+-----------------
+-----------------
+Epoch: 	 185
+NumTrajs: 	 50
+NumTimesteps: 	 1884
+MaxRew: 	 3.77060690013163
+MeanRew: 	 1.7958695185796933 +- 9.680964865605972
+MeanSlowdown: 	 1.6125
+MeanLen: 	 37.68 +- 8.800999943188273
+MeanEntropy 	 1.2413001
+Elapsed time	 5.47118902206 seconds
+-----------------
+-----------------
+Epoch: 	 186
+NumTrajs: 	 50
+NumTimesteps: 	 8613
+MaxRew: 	 3.7035860915662013
+MeanRew: 	 1.4322345953772788 +- 9.422685069762672
+MeanSlowdown: 	 1.7106918238993711
+MeanLen: 	 172.26 +- 580.2111963759403
+MeanEntropy 	 0.27933893
+Elapsed time	 20.769548893 seconds
+-----------------
+-----------------
+Epoch: 	 187
+NumTrajs: 	 50
+NumTimesteps: 	 3512
+MaxRew: 	 3.6891306065702203
+MeanRew: 	 2.076165773970283 +- 9.419063800940913
+MeanSlowdown: 	 1.8875
+MeanLen: 	 70.24 +- 109.35566926318909
+MeanEntropy 	 0.7078495
+Elapsed time	 9.25355291367 seconds
+-----------------
+-----------------
+Epoch: 	 188
+NumTrajs: 	 50
+NumTimesteps: 	 5022
+MaxRew: 	 3.051511428249609
+MeanRew: 	 1.3301728290400383 +- 9.438597288143262
+MeanSlowdown: 	 1.761755485893417
+MeanLen: 	 100.44 +- 414.4985481277347
+MeanEntropy 	 0.47415084
+Elapsed time	 12.6286058426 seconds
+-----------------
+-----------------
+Epoch: 	 189
+NumTrajs: 	 50
+NumTimesteps: 	 3167
+MaxRew: 	 3.7638313841866706
+MeanRew: 	 2.3158944778511317 +- 9.46811186676809
+MeanSlowdown: 	 1.803125
+MeanLen: 	 63.34 +- 117.07495206063507
+MeanEntropy 	 0.7048358
+Elapsed time	 8.33758997917 seconds
+-----------------
+-----------------
+Epoch: 	 190
+NumTrajs: 	 50
+NumTimesteps: 	 11085
+MaxRew: 	 3.6728029204734134
+MeanRew: 	 1.6539758045751676 +- 8.986698264783044
+MeanSlowdown: 	 1.750788643533123
+MeanLen: 	 221.7 +- 702.581532635181
+MeanEntropy 	 0.2327755
+Elapsed time	 26.0374140739 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 191
+NumTrajs: 	 50
+NumTimesteps: 	 2452
+MaxRew: 	 3.749602056012369
+MeanRew: 	 2.132610726821824 +- 10.135584029896652
+MeanSlowdown: 	 1.465625
+MeanLen: 	 49.04 +- 48.93218163948957
+MeanEntropy 	 0.91478777
+Elapsed time	 21.3887081146 seconds
+-----------------
+-----------------
+Epoch: 	 192
+NumTrajs: 	 50
+NumTimesteps: 	 6024
+MaxRew: 	 3.7406304576615432
+MeanRew: 	 2.2109965727487024 +- 9.774656226942957
+MeanSlowdown: 	 1.8934169278996866
+MeanLen: 	 120.48 +- 419.8878535990295
+MeanEntropy 	 0.40159926
+Elapsed time	 15.4023690224 seconds
+-----------------
+-----------------
+Epoch: 	 193
+NumTrajs: 	 50
+NumTimesteps: 	 2312
+MaxRew: 	 3.770638862283723
+MeanRew: 	 2.1110534287739138 +- 9.95923579034812
+MeanSlowdown: 	 1.83125
+MeanLen: 	 46.24 +- 33.65029568963696
+MeanEntropy 	 0.98935294
+Elapsed time	 6.71866893768 seconds
+-----------------
+-----------------
+Epoch: 	 194
+NumTrajs: 	 50
+NumTimesteps: 	 2266
+MaxRew: 	 3.6340035530380677
+MeanRew: 	 2.1319891979806145 +- 9.468862692791138
+MeanSlowdown: 	 1.759375
+MeanLen: 	 45.32 +- 22.172451375524542
+MeanEntropy 	 1.1127838
+Elapsed time	 6.5695772171 seconds
+-----------------
+-----------------
+Epoch: 	 195
+NumTrajs: 	 50
+NumTimesteps: 	 2025
+MaxRew: 	 3.898371409637304
+MeanRew: 	 2.524586741410822 +- 9.558837296124603
+MeanSlowdown: 	 1.51875
+MeanLen: 	 40.5 +- 13.48814294111684
+MeanEntropy 	 1.081708
+Elapsed time	 5.94207787514 seconds
+-----------------
+-----------------
+Epoch: 	 196
+NumTrajs: 	 50
+NumTimesteps: 	 1937
+MaxRew: 	 3.767875477315876
+MeanRew: 	 2.1735294540854495 +- 9.604041514089383
+MeanSlowdown: 	 1.528125
+MeanLen: 	 38.74 +- 11.452178831995246
+MeanEntropy 	 1.1813021
+Elapsed time	 5.67734599113 seconds
+-----------------
+-----------------
+Epoch: 	 197
+NumTrajs: 	 50
+NumTimesteps: 	 1971
+MaxRew: 	 3.773267252350037
+MeanRew: 	 2.2600416449669716 +- 9.876384715691035
+MeanSlowdown: 	 1.553125
+MeanLen: 	 39.42 +- 9.044534261088295
+MeanEntropy 	 1.2363933
+Elapsed time	 5.78666496277 seconds
+-----------------
+-----------------
+Epoch: 	 198
+NumTrajs: 	 50
+NumTimesteps: 	 2184
+MaxRew: 	 3.6946606960312374
+MeanRew: 	 1.268025390416611 +- 8.67688529454378
+MeanSlowdown: 	 2.065625
+MeanLen: 	 43.68 +- 20.381795799192965
+MeanEntropy 	 1.247831
+Elapsed time	 6.36500000954 seconds
+-----------------
+-----------------
+Epoch: 	 199
+NumTrajs: 	 50
+NumTimesteps: 	 2030
+MaxRew: 	 3.306922862864682
+MeanRew: 	 2.042454942981428 +- 9.06653080605353
+MeanSlowdown: 	 1.865625
+MeanLen: 	 40.6 +- 17.54536975956905
+MeanEntropy 	 1.267716
+Elapsed time	 5.93789100647 seconds
+-----------------
+-----------------
+Epoch: 	 200
+NumTrajs: 	 50
+NumTimesteps: 	 1913
+MaxRew: 	 3.5825625282688045
+MeanRew: 	 2.699334550508937 +- 10.162190969849336
+MeanSlowdown: 	 1.496875
+MeanLen: 	 38.26 +- 9.553658984912536
+MeanEntropy 	 1.0796391
+Elapsed time	 5.54132699966 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 201
+NumTrajs: 	 50
+NumTimesteps: 	 1912
+MaxRew: 	 3.835529627597574
+MeanRew: 	 2.832713395080554 +- 10.144079002531253
+MeanSlowdown: 	 1.33125
+MeanLen: 	 38.24 +- 10.228509177783437
+MeanEntropy 	 1.0693424
+Elapsed time	 19.1843209267 seconds
+-----------------
+-----------------
+Epoch: 	 202
+NumTrajs: 	 50
+NumTimesteps: 	 1881
+MaxRew: 	 3.587969204094679
+MeanRew: 	 2.506607646798832 +- 9.600546043551693
+MeanSlowdown: 	 1.509375
+MeanLen: 	 37.62 +- 9.752722696765249
+MeanEntropy 	 1.1191021
+Elapsed time	 5.40621209145 seconds
+-----------------
+-----------------
+Epoch: 	 203
+NumTrajs: 	 50
+NumTimesteps: 	 1864
+MaxRew: 	 3.7170740415908456
+MeanRew: 	 2.4897859065080583 +- 10.180883159326033
+MeanSlowdown: 	 1.434375
+MeanLen: 	 37.28 +- 9.947944511304836
+MeanEntropy 	 1.1279302
+Elapsed time	 5.39096498489 seconds
+-----------------
+-----------------
+Epoch: 	 204
+NumTrajs: 	 50
+NumTimesteps: 	 1933
+MaxRew: 	 3.776657612632703
+MeanRew: 	 2.849169723304163 +- 10.09354491019548
+MeanSlowdown: 	 1.43125
+MeanLen: 	 38.66 +- 10.037150990196372
+MeanEntropy 	 1.1222214
+Elapsed time	 5.66577601433 seconds
+-----------------
+-----------------
+Epoch: 	 205
+NumTrajs: 	 50
+NumTimesteps: 	 1849
+MaxRew: 	 3.6789756373801468
+MeanRew: 	 2.4250830779774595 +- 10.34618809608526
+MeanSlowdown: 	 1.375
+MeanLen: 	 36.98 +- 8.974385772853761
+MeanEntropy 	 1.189826
+Elapsed time	 5.44644880295 seconds
+-----------------
+-----------------
+Epoch: 	 206
+NumTrajs: 	 50
+NumTimesteps: 	 2038
+MaxRew: 	 3.7778453243261203
+MeanRew: 	 1.9846113373338254 +- 10.245248560301684
+MeanSlowdown: 	 1.703125
+MeanLen: 	 40.76 +- 22.55886521968692
+MeanEntropy 	 1.2305685
+Elapsed time	 5.9188079834 seconds
+-----------------
+-----------------
+Epoch: 	 207
+NumTrajs: 	 50
+NumTimesteps: 	 1841
+MaxRew: 	 3.698043446079903
+MeanRew: 	 2.9600220285205636 +- 10.027613625875759
+MeanSlowdown: 	 1.2625
+MeanLen: 	 36.82 +- 8.812922330305652
+MeanEntropy 	 1.136261
+Elapsed time	 5.2788438797 seconds
+-----------------
+-----------------
+Epoch: 	 208
+NumTrajs: 	 50
+NumTimesteps: 	 1866
+MaxRew: 	 3.767875477315876
+MeanRew: 	 3.0535676637275038 +- 10.002289560182406
+MeanSlowdown: 	 1.29375
+MeanLen: 	 37.32 +- 8.42482047286469
+MeanEntropy 	 1.0864973
+Elapsed time	 5.40555787086 seconds
+-----------------
+-----------------
+Epoch: 	 209
+NumTrajs: 	 50
+NumTimesteps: 	 1919
+MaxRew: 	 3.767875477315876
+MeanRew: 	 2.384081433895508 +- 10.457897090964341
+MeanSlowdown: 	 1.6625
+MeanLen: 	 38.38 +- 10.758977646598213
+MeanEntropy 	 1.2117052
+Elapsed time	 5.63432312012 seconds
+-----------------
+-----------------
+Epoch: 	 210
+NumTrajs: 	 50
+NumTimesteps: 	 1829
+MaxRew: 	 3.7764078037047826
+MeanRew: 	 2.932923182616012 +- 9.874105876319751
+MeanSlowdown: 	 1.4
+MeanLen: 	 36.58 +- 8.88164399196455
+MeanEntropy 	 1.0735444
+Elapsed time	 5.30664300919 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 211
+NumTrajs: 	 50
+NumTimesteps: 	 1918
+MaxRew: 	 3.5836959470507885
+MeanRew: 	 1.9224845941933304 +- 9.56028550822461
+MeanSlowdown: 	 1.63125
+MeanLen: 	 38.36 +- 14.194026912754532
+MeanEntropy 	 1.1462563
+Elapsed time	 18.8967628479 seconds
+-----------------
+-----------------
+Epoch: 	 212
+NumTrajs: 	 50
+NumTimesteps: 	 1910
+MaxRew: 	 3.7636369067871867
+MeanRew: 	 2.66917338532177 +- 9.996003599469438
+MeanSlowdown: 	 1.4875
+MeanLen: 	 38.2 +- 13.398507379555381
+MeanEntropy 	 1.1955111
+Elapsed time	 5.52599191666 seconds
+-----------------
+-----------------
+Epoch: 	 213
+NumTrajs: 	 50
+NumTimesteps: 	 1941
+MaxRew: 	 3.715824663393165
+MeanRew: 	 2.0058736353790914 +- 9.823326017059125
+MeanSlowdown: 	 1.575
+MeanLen: 	 38.82 +- 13.56862557520105
+MeanEntropy 	 1.205773
+Elapsed time	 5.47509813309 seconds
+-----------------
+-----------------
+Epoch: 	 214
+NumTrajs: 	 50
+NumTimesteps: 	 1952
+MaxRew: 	 3.725213009242993
+MeanRew: 	 1.5944980699957256 +- 9.732813105196302
+MeanSlowdown: 	 1.428125
+MeanLen: 	 39.04 +- 10.624424690306766
+MeanEntropy 	 1.0584278
+Elapsed time	 5.54440402985 seconds
+-----------------
+-----------------
+Epoch: 	 215
+NumTrajs: 	 50
+NumTimesteps: 	 1942
+MaxRew: 	 3.6227845133262866
+MeanRew: 	 2.231505211279984 +- 10.030724465792282
+MeanSlowdown: 	 1.675
+MeanLen: 	 38.84 +- 10.905704929072673
+MeanEntropy 	 0.9552071
+Elapsed time	 5.56745290756 seconds
+-----------------
+-----------------
+Epoch: 	 216
+NumTrajs: 	 50
+NumTimesteps: 	 1831
+MaxRew: 	 3.5882190130225995
+MeanRew: 	 2.449458902903927 +- 9.901006069197594
+MeanSlowdown: 	 1.428125
+MeanLen: 	 36.62 +- 9.140875231617594
+MeanEntropy 	 1.0214988
+Elapsed time	 5.27284908295 seconds
+-----------------
+-----------------
+Epoch: 	 217
+NumTrajs: 	 50
+NumTimesteps: 	 1962
+MaxRew: 	 3.711179924558082
+MeanRew: 	 1.729639134768799 +- 10.05807584592502
+MeanSlowdown: 	 1.553125
+MeanLen: 	 39.24 +- 13.10047327389358
+MeanEntropy 	 1.0854582
+Elapsed time	 5.65002083778 seconds
+-----------------
+-----------------
+Epoch: 	 218
+NumTrajs: 	 50
+NumTimesteps: 	 1924
+MaxRew: 	 3.738744030396444
+MeanRew: 	 2.624243808408248 +- 10.719382703640344
+MeanSlowdown: 	 1.4375
+MeanLen: 	 38.48 +- 11.496503816378265
+MeanEntropy 	 1.1054143
+Elapsed time	 5.52868485451 seconds
+-----------------
+-----------------
+Epoch: 	 219
+NumTrajs: 	 50
+NumTimesteps: 	 2072
+MaxRew: 	 3.6466602622830075
+MeanRew: 	 1.686232154467391 +- 9.745372299195287
+MeanSlowdown: 	 1.484375
+MeanLen: 	 41.44 +- 16.363569292791837
+MeanEntropy 	 1.0434257
+Elapsed time	 5.81786584854 seconds
+-----------------
+-----------------
+Epoch: 	 220
+NumTrajs: 	 50
+NumTimesteps: 	 2189
+MaxRew: 	 3.703020111226592
+MeanRew: 	 2.281395981724339 +- 10.429104464889965
+MeanSlowdown: 	 1.41875
+MeanLen: 	 43.78 +- 30.62828104873011
+MeanEntropy 	 0.89799035
+Elapsed time	 6.18683099747 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 221
+NumTrajs: 	 50
+NumTimesteps: 	 2278
+MaxRew: 	 3.642540394887619
+MeanRew: 	 2.698271373864472 +- 10.851064526160968
+MeanSlowdown: 	 1.525
+MeanLen: 	 45.56 +- 44.39691881200766
+MeanEntropy 	 0.85909605
+Elapsed time	 21.9235630035 seconds
+-----------------
+-----------------
+Epoch: 	 222
+NumTrajs: 	 50
+NumTimesteps: 	 1949
+MaxRew: 	 3.6228843957415124
+MeanRew: 	 3.0356159612294045 +- 10.465035822409599
+MeanSlowdown: 	 1.334375
+MeanLen: 	 38.98 +- 9.319849784197169
+MeanEntropy 	 0.9391502
+Elapsed time	 5.63872003555 seconds
+-----------------
+-----------------
+Epoch: 	 223
+NumTrajs: 	 50
+NumTimesteps: 	 2126
+MaxRew: 	 3.6473941894293036
+MeanRew: 	 2.3030364525098923 +- 10.258011884750498
+MeanSlowdown: 	 1.640625
+MeanLen: 	 42.52 +- 17.067208324737823
+MeanEntropy 	 0.8868776
+Elapsed time	 6.17784976959 seconds
+-----------------
+-----------------
+Epoch: 	 224
+NumTrajs: 	 50
+NumTimesteps: 	 2037
+MaxRew: 	 3.637099836246432
+MeanRew: 	 2.2410586781098822 +- 10.403439776571322
+MeanSlowdown: 	 1.646875
+MeanLen: 	 40.74 +- 15.686694999266097
+MeanEntropy 	 0.7717942
+Elapsed time	 5.92791295052 seconds
+-----------------
+-----------------
+Epoch: 	 225
+NumTrajs: 	 50
+NumTimesteps: 	 3761
+MaxRew: 	 3.4492013885317063
+MeanRew: 	 2.1199950228017848 +- 10.101325063444698
+MeanSlowdown: 	 1.89375
+MeanLen: 	 75.22 +- 157.35670179563374
+MeanEntropy 	 0.47337297
+Elapsed time	 10.0951089859 seconds
+-----------------
+-----------------
+Epoch: 	 226
+NumTrajs: 	 50
+NumTimesteps: 	 2400
+MaxRew: 	 3.5789096407862977
+MeanRew: 	 2.7285601466858322 +- 10.219248685303393
+MeanSlowdown: 	 1.578125
+MeanLen: 	 48.0 +- 29.1300532097008
+MeanEntropy 	 0.7258409
+Elapsed time	 6.92875003815 seconds
+-----------------
+-----------------
+Epoch: 	 227
+NumTrajs: 	 50
+NumTimesteps: 	 2188
+MaxRew: 	 3.703020111226592
+MeanRew: 	 2.753967174275628 +- 10.646541842472097
+MeanSlowdown: 	 1.559375
+MeanLen: 	 43.76 +- 19.761133570724127
+MeanEntropy 	 0.8006363
+Elapsed time	 6.29372406006 seconds
+-----------------
+-----------------
+Epoch: 	 228
+NumTrajs: 	 50
+NumTimesteps: 	 2937
+MaxRew: 	 3.4718487769299307
+MeanRew: 	 2.126683122650336 +- 9.682537977072137
+MeanSlowdown: 	 1.76875
+MeanLen: 	 58.74 +- 75.90067456880736
+MeanEntropy 	 0.6766349
+Elapsed time	 8.00614404678 seconds
+-----------------
+-----------------
+Epoch: 	 229
+NumTrajs: 	 50
+NumTimesteps: 	 2534
+MaxRew: 	 3.6422905859596986
+MeanRew: 	 2.478527826182479 +- 10.379164272741795
+MeanSlowdown: 	 1.746875
+MeanLen: 	 50.68 +- 45.82551254486958
+MeanEntropy 	 0.93934226
+Elapsed time	 7.23782706261 seconds
+-----------------
+-----------------
+Epoch: 	 230
+NumTrajs: 	 50
+NumTimesteps: 	 3086
+MaxRew: 	 3.6550338921661463
+MeanRew: 	 2.649667916862589 +- 10.249421542316917
+MeanSlowdown: 	 1.60625
+MeanLen: 	 61.72 +- 124.19050527314882
+MeanEntropy 	 0.5940296
+Elapsed time	 8.39810013771 seconds
+-----------------
+initialize the environment...
+None
+-----------------
+Epoch: 	 231
+NumTrajs: 	 50
+NumTimesteps: 	 8518
+MaxRew: 	 3.6165377276050306
+MeanRew: 	 2.1520495471299506 +- 9.873296339809738
+MeanSlowdown: 	 3.296875
+MeanLen: 	 170.36 +- 498.4344594828893
+MeanEntropy 	 0.24436648
+Elapsed time	 34.8263790607 seconds
+-----------------
+-----------------
+Epoch: 	 232
+NumTrajs: 	 50
+NumTimesteps: 	 3627
+MaxRew: 	 3.679238560304179
+MeanRew: 	 2.1697870370740278 +- 9.868029937818998
+MeanSlowdown: 	 1.825
+MeanLen: 	 72.54 +- 199.5386889803579
+MeanEntropy 	 0.5374498
+Elapsed time	 9.5562479496 seconds
+-----------------
+srun: error: gcn66: task 0: Segmentation fault
+srun: Terminating StepId=6532636.0
+
+JOB STATISTICS
+==============
+Job ID: 6532636
+Cluster: snellius
+User/Group: terhard/terhard
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 10:58:30 core-walltime
+Job Wall-clock time: 00:36:35
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

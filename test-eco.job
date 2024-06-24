@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=test2-eco
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=01:00:00
+#SBATCH --output=slurm_output/slurm_output_%A.out
+
+
+module purge
+module load 2022
+module load Anaconda3/2022.05
+
+# Activate your environment
+source activate py27
+
+# Run your code
+# srun python -u launcher.py --exp_type=test --simu_len=10 --num_ex=1000 --pg_re=experiments/DeepRM_ECO/simu10,numex5,epoch3000/pg_re_3000.pkl --unseen=True --use_cnn=False --ofile=data/test
+
+# simu_len
+start_len=10
+end_len=200
+increment=10
+
+for (( simu_len=$start_len; simu_len<=$end_len; simu_len+=$increment ))
+do
+    srun python -u launcher.py --exp_type=test --simu_len=$simu_len --num_ex=20 --pg_re=experiments/DeepRM_ECO/simu10,numex5,epoch100,wrr/pg_re_100.pkl --unseen=True --use_cnn=False --ofile=data/test
+done
