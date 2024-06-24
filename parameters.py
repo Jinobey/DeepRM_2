@@ -17,7 +17,7 @@ class Parameters:
         self.simu_len = 50                  # length of the busy cycle that repeats itself
         self.num_ex = 15                    # number of sequences
 
-        self.anomalous_job_rate = 0.25
+        self.anomalous_job_rate = 0.1      
 
         self.output_freq = 10               # interval for output and store parameters
 
@@ -93,7 +93,7 @@ class Parameters:
 
         # supervised learning mimic policy
         self.batch_size = 10
-        self.evaluate_policy_name = "SJF"
+        self.evaluate_policy_name = "WRR"
 
     def compute_dependent_parameters(self):
         assert self.backlog_size % self.time_horizon == 0  # such that it can be converted into an image

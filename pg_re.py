@@ -421,6 +421,7 @@ def launch(pa, pg_resume=None, render=False, repre='image', end='all_done', use_
             if os.stat('./metrics-heuristics.csv').st_size == 0:
                 writer.writerow(['Heuristic', 'Metric', 'Value', 'Epoch'])
             for k in ref_slow_down:
+                print("Writing to CSV: Heuristic={}, Metric=MeanSlowdown, Value={}, Epoch={}".format(k, np.average(np.concatenate(ref_slow_down[k])), iteration))
                 writer.writerow([k, 'MeanSlowdown', np.average(np.concatenate(ref_slow_down[k])), iteration])
             for k in ref_discount_rews:
                 writer.writerow([k, 'MaxRew', np.max(ref_discount_rews[k]), iteration])

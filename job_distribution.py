@@ -13,7 +13,7 @@ class Dist:
 
         self.anomalous_resource_lower = anomalous_resource_lower
         self.anomalous_resource_upper = anomalous_resource_upper
-        self.anomalous_resource_rate = 0.05 #0.15#0.05 for RL training
+        self.anomalous_resource_rate = 0.05
 
         self.job_small_chance = 0.75
         self.anomalous_job_rate =  0.05

@@ -69,6 +69,14 @@ def get_traj(test_type, pa, env, episode_max_length, pg_resume=None, use_cnn=Tru
         elif test_type == 'SJF':
          #   append = False
             a = other_agents.get_sjf_action(env.machine, env.job_slot1, pa)
+            
+        elif test_type == 'FCFS':
+         #   append = False
+            a = other_agents.get_fcfs_action(env.machine, env.job_slot1, pa)
+            
+        elif test_type == 'WRR':
+         #   append = False
+            a = other_agents.get_wrr_action(env.machine, env.job_slot1, pa)
 
         elif test_type == 'Random':
           #  append = False

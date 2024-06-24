@@ -309,11 +309,14 @@ def build_cnn_pg_network(input_height, input_width, output_length):
     
     # return l_out
     
+    
+    ### Simpler CNN architecture
+    
     # Input layer
     l_in = lasagne.layers.InputLayer(
         shape=(None, 1, input_height, input_width),
     )
-    # print("Input layer shape: ", l_in.output_shape)
+    print("Input layer shape: ", l_in.output_shape)
     
     # First convolutional layer
     l_conv1 = lasagne.layers.Conv2DLayer(
@@ -323,11 +326,11 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         nonlinearity=lasagne.nonlinearities.rectify,
         W=lasagne.init.GlorotUniform()
     )
-    # print("Conv1 layer shape: ", l_conv1.output_shape)
+    print("Conv1 layer shape: ", l_conv1.output_shape)
     
     # Pooling layer
     l_pool1 = lasagne.layers.MaxPool2DLayer(l_conv1, pool_size=(2, 2))
-    # print("Pool1 layer shape: ", l_pool1.output_shape)
+    print("Pool1 layer shape: ", l_pool1.output_shape)
     
     # Fully connected layer
     l_hid = lasagne.layers.DenseLayer(
@@ -336,15 +339,19 @@ def build_cnn_pg_network(input_height, input_width, output_length):
         nonlinearity=lasagne.nonlinearities.rectify,
         W=lasagne.init.GlorotUniform()
     )
-    # print("Hidden layer shape: ", l_hid.output_shape)
+    print("Hidden layer shape: ", l_hid.output_shape)
     
+    # Dropout layer
+    l_dropout = lasagne.layers.DropoutLayer(l_hid, p=0.5)
+    print("Dropout layer shape: ", l_dropout.output_shape)
+
     # Output layer 
     l_out = lasagne.layers.DenseLayer(
-        l_hid,
+        l_dropout,
         num_units=output_length,
         nonlinearity=lasagne.nonlinearities.softmax
     )
-    # print("Output layer shape: ", l_out.output_shape)
+    print("Output layer shape: ", l_out.output_shape)
     
     return l_out
 

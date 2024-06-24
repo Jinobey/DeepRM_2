@@ -2,7 +2,7 @@
 
 #SBATCH --partition=gpu
 #SBATCH --gpus=1
-#SBATCH --job-name=test
+#SBATCH --job-name=test2-eco
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
 #SBATCH --time=01:00:00
@@ -16,16 +16,15 @@ module load Anaconda3/2022.05
 # Activate your environment
 source activate py27
 
-# start simu_len
-start_len=50
+# Run your code
+# srun python -u launcher.py --exp_type=test --simu_len=10 --num_ex=1000 --pg_re=experiments/DeepRM_ECO/simu10,numex5,epoch3000/pg_re_3000.pkl --unseen=True --use_cnn=False --ofile=data/test
 
-# end simu_len
-end_len=190
-
-# increment step
+# simu_len
+start_len=10
+end_len=200
 increment=10
 
 for (( simu_len=$start_len; simu_len<=$end_len; simu_len+=$increment ))
 do
-    python launcher.py --exp_type=test --simu_len=$simu_len --num_ex=20 --pg_re=train/DeepRM_ECO/simu30,numex15,epoch101/pg_re_100.pkl --unseen=True --use_cnn=False
+    srun python -u launcher.py --exp_type=test --simu_len=$simu_len --num_ex=20 --pg_re=experiments/DeepRM_ECO/simu10,numex5,epoch100,wrr/pg_re_100.pkl --unseen=True --use_cnn=False --ofile=data/test
 done

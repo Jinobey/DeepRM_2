@@ -1,0 +1,1284 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/signal/downsample.py:6: UserWarning: downsample module has been moved to the theano.tensor.signal.pool module.
+  "downsample module has been moved to the theano.tensor.signal.pool module.")
+
+Experiment type: pg_re
+CNN used: False
+
+Preparing for workers...
+-prepare for env- 0
+initialize the environment...
+-prepare for env- 1
+initialize the environment...
+-prepare for env- 2
+initialize the environment...
+-prepare for env- 3
+initialize the environment...
+-prepare for env- 4
+initialize the environment...
+-prepare for worker- 0
+-prepare for worker- 1
+-prepare for worker- 2
+-prepare for worker- 3
+-prepare for worker- 4
+-prepare for worker- 5
+-prepare for worker- 6
+-prepare for worker- 7
+-prepare for worker- 8
+-prepare for worker- 9
+-prepare for worker- 10
+Preparing for reference data...
+initialize the environment...
+Start training...
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/subtensor.py:2166: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0] = inputs[0].__getitem__(inputs[1:])
+-----------------
+Epoch: 	 1
+NumTrajs: 	 50
+NumTimesteps: 	 1887
+MaxRew: 	 -6.884207487823582
+MeanRew: 	 -20.040713538908264 +- 12.162262515419835
+MeanSlowdown: 	 3.509375
+MeanLen: 	 37.74 +- 6.953589001371882
+MeanEntropy 	 2.772583
+Elapsed time	 1.34313392639 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=1
+-----------------
+Epoch: 	 2
+NumTrajs: 	 50
+NumTimesteps: 	 1960
+MaxRew: 	 -4.624288702794952
+MeanRew: 	 -18.29949121665054 +- 10.645049999149716
+MeanSlowdown: 	 3.534375
+MeanLen: 	 39.2 +- 8.19512049941915
+MeanEntropy 	 2.7724826
+Elapsed time	 1.38915705681 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=2
+-----------------
+Epoch: 	 3
+NumTrajs: 	 50
+NumTimesteps: 	 1979
+MaxRew: 	 -6.805186259817617
+MeanRew: 	 -20.722242550544774 +- 11.767646271838823
+MeanSlowdown: 	 3.94375
+MeanLen: 	 39.58 +- 8.326079509589132
+MeanEntropy 	 2.7723591
+Elapsed time	 1.51436305046 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=3
+-----------------
+Epoch: 	 4
+NumTrajs: 	 50
+NumTimesteps: 	 2048
+MaxRew: 	 -4.296993055060915
+MeanRew: 	 -17.795115158443167 +- 10.307485635420841
+MeanSlowdown: 	 3.79375
+MeanLen: 	 40.96 +- 9.068539022356358
+MeanEntropy 	 2.772071
+Elapsed time	 1.47728300095 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=4
+-----------------
+Epoch: 	 5
+NumTrajs: 	 50
+NumTimesteps: 	 1961
+MaxRew: 	 -4.732757070518342
+MeanRew: 	 -18.562480979756234 +- 11.365304053834523
+MeanSlowdown: 	 3.634375
+MeanLen: 	 39.22 +- 8.895594415214758
+MeanEntropy 	 2.7717824
+Elapsed time	 1.54929208755 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=5
+-----------------
+Epoch: 	 6
+NumTrajs: 	 50
+NumTimesteps: 	 1974
+MaxRew: 	 -3.230412527252716
+MeanRew: 	 -17.623882345441956 +- 12.429710634470911
+MeanSlowdown: 	 3.44375
+MeanLen: 	 39.48 +- 7.861908165324752
+MeanEntropy 	 2.7715313
+Elapsed time	 1.49126505852 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=6
+-----------------
+Epoch: 	 7
+NumTrajs: 	 50
+NumTimesteps: 	 1989
+MaxRew: 	 -2.4084837162316837
+MeanRew: 	 -20.072346130896094 +- 14.22163609603304
+MeanSlowdown: 	 3.85625
+MeanLen: 	 39.78 +- 8.511850562598006
+MeanEntropy 	 2.7710266
+Elapsed time	 1.5500228405 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=7
+-----------------
+Epoch: 	 8
+NumTrajs: 	 50
+NumTimesteps: 	 1991
+MaxRew: 	 -2.738819964407613
+MeanRew: 	 -18.43767744999459 +- 14.867526004050132
+MeanSlowdown: 	 3.9375
+MeanLen: 	 39.82 +- 8.086259951300107
+MeanEntropy 	 2.770294
+Elapsed time	 1.47354006767 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=8
+-----------------
+Epoch: 	 9
+NumTrajs: 	 50
+NumTimesteps: 	 2020
+MaxRew: 	 -3.10722717643288
+MeanRew: 	 -17.379862556592695 +- 11.715617503799905
+MeanSlowdown: 	 4.05
+MeanLen: 	 40.4 +- 8.867919710958146
+MeanEntropy 	 2.768129
+Elapsed time	 1.48692202568 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=9
+-----------------
+Epoch: 	 10
+NumTrajs: 	 50
+NumTimesteps: 	 2053
+MaxRew: 	 -3.097699338424871
+MeanRew: 	 -19.460589569093486 +- 11.409973324896608
+MeanSlowdown: 	 3.66875
+MeanLen: 	 41.06 +- 10.074542173220578
+MeanEntropy 	 2.7660565
+Elapsed time	 1.58051586151 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=10
+initialize the environment...
+None
+-----------------
+Epoch: 	 11
+NumTrajs: 	 50
+NumTimesteps: 	 1993
+MaxRew: 	 -2.642973248948195
+MeanRew: 	 -19.07188367319494 +- 12.412906689335093
+MeanSlowdown: 	 3.78125
+MeanLen: 	 39.86 +- 10.373061264641215
+MeanEntropy 	 2.7638836
+Elapsed time	 9.08300590515 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=11
+-----------------
+Epoch: 	 12
+NumTrajs: 	 50
+NumTimesteps: 	 2019
+MaxRew: 	 -5.476355349206841
+MeanRew: 	 -16.86768355259843 +- 9.8327901134896
+MeanSlowdown: 	 4.16875
+MeanLen: 	 40.38 +- 10.941462425105703
+MeanEntropy 	 2.7606504
+Elapsed time	 1.54489398003 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=12
+-----------------
+Epoch: 	 13
+NumTrajs: 	 50
+NumTimesteps: 	 2072
+MaxRew: 	 -4.448712776778391
+MeanRew: 	 -16.218327170269873 +- 10.593381723210518
+MeanSlowdown: 	 4.046875
+MeanLen: 	 41.44 +- 11.995265732779744
+MeanEntropy 	 2.7546303
+Elapsed time	 1.63147497177 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=13
+-----------------
+Epoch: 	 14
+NumTrajs: 	 50
+NumTimesteps: 	 2022
+MaxRew: 	 -5.539006923376637
+MeanRew: 	 -16.90456627005362 +- 10.717778380078563
+MeanSlowdown: 	 3.8875
+MeanLen: 	 40.44 +- 11.830739621849514
+MeanEntropy 	 2.7495973
+Elapsed time	 1.60217285156 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=14
+-----------------
+Epoch: 	 15
+NumTrajs: 	 50
+NumTimesteps: 	 1986
+MaxRew: 	 -4.698178391642057
+MeanRew: 	 -15.980092844790445 +- 9.743638943286951
+MeanSlowdown: 	 4.034375
+MeanLen: 	 39.72 +- 11.407085517344035
+MeanEntropy 	 2.7478867
+Elapsed time	 1.59177994728 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=15
+-----------------
+Epoch: 	 16
+NumTrajs: 	 50
+NumTimesteps: 	 2040
+MaxRew: 	 -5.1277137807610815
+MeanRew: 	 -15.5874537816592 +- 9.307731709334728
+MeanSlowdown: 	 3.94375
+MeanLen: 	 40.8 +- 10.914210919713803
+MeanEntropy 	 2.743707
+Elapsed time	 1.60795903206 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=16
+-----------------
+Epoch: 	 17
+NumTrajs: 	 50
+NumTimesteps: 	 2016
+MaxRew: 	 -2.510253739306708
+MeanRew: 	 -16.215436088439045 +- 8.594321251790078
+MeanSlowdown: 	 4.171875
+MeanLen: 	 40.32 +- 12.143212095652451
+MeanEntropy 	 2.736564
+Elapsed time	 1.54580497742 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=17
+-----------------
+Epoch: 	 18
+NumTrajs: 	 50
+NumTimesteps: 	 2032
+MaxRew: 	 -7.483637942013042
+MeanRew: 	 -15.446662929009138 +- 5.9777858161596535
+MeanSlowdown: 	 3.921875
+MeanLen: 	 40.64 +- 10.108926748176584
+MeanEntropy 	 2.7284877
+Elapsed time	 1.61710095406 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=18
+-----------------
+Epoch: 	 19
+NumTrajs: 	 50
+NumTimesteps: 	 2004
+MaxRew: 	 -0.49850055741682875
+MeanRew: 	 -15.228350874358728 +- 8.797664871600121
+MeanSlowdown: 	 3.525
+MeanLen: 	 40.08 +- 9.643318930741636
+MeanEntropy 	 2.729755
+Elapsed time	 1.59484815598 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=19
+-----------------
+Epoch: 	 20
+NumTrajs: 	 50
+NumTimesteps: 	 2013
+MaxRew: 	 -3.8988983952565497
+MeanRew: 	 -13.993455656990406 +- 7.676119867322034
+MeanSlowdown: 	 4.021875
+MeanLen: 	 40.26 +- 10.013610737391383
+MeanEntropy 	 2.727302
+Elapsed time	 1.62423419952 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=20
+initialize the environment...
+None
+-----------------
+Epoch: 	 21
+NumTrajs: 	 50
+NumTimesteps: 	 2009
+MaxRew: 	 -5.881749881957395
+MeanRew: 	 -15.743588350349098 +- 6.517997183573384
+MeanSlowdown: 	 4.140625
+MeanLen: 	 40.18 +- 10.104830528019754
+MeanEntropy 	 2.715938
+Elapsed time	 8.95292711258 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=21
+-----------------
+Epoch: 	 22
+NumTrajs: 	 50
+NumTimesteps: 	 2015
+MaxRew: 	 -3.501943923901498
+MeanRew: 	 -15.08717012105951 +- 8.620934977963524
+MeanSlowdown: 	 3.71875
+MeanLen: 	 40.3 +- 8.888756943465156
+MeanEntropy 	 2.7082875
+Elapsed time	 1.61365795135 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=22
+-----------------
+Epoch: 	 23
+NumTrajs: 	 50
+NumTimesteps: 	 1985
+MaxRew: 	 -5.947800950400345
+MeanRew: 	 -16.99617674892607 +- 8.037668370988548
+MeanSlowdown: 	 4.346875
+MeanLen: 	 39.7 +- 8.464632301523794
+MeanEntropy 	 2.705419
+Elapsed time	 1.58867001534 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=23
+-----------------
+Epoch: 	 24
+NumTrajs: 	 50
+NumTimesteps: 	 2043
+MaxRew: 	 -5.7798465964268875
+MeanRew: 	 -17.577090272682128 +- 8.075848774127252
+MeanSlowdown: 	 4.5625
+MeanLen: 	 40.86 +- 10.624518812633353
+MeanEntropy 	 2.704366
+Elapsed time	 1.63270306587 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=24
+-----------------
+Epoch: 	 25
+NumTrajs: 	 50
+NumTimesteps: 	 2027
+MaxRew: 	 -4.346946655044969
+MeanRew: 	 -14.419699778277893 +- 7.787773246147809
+MeanSlowdown: 	 4.290625
+MeanLen: 	 40.54 +- 8.881914208097262
+MeanEntropy 	 2.6835196
+Elapsed time	 1.65230488777 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=25
+-----------------
+Epoch: 	 26
+NumTrajs: 	 50
+NumTimesteps: 	 2034
+MaxRew: 	 -1.6174983238148246
+MeanRew: 	 -14.981642452043323 +- 9.563118955801258
+MeanSlowdown: 	 3.990625
+MeanLen: 	 40.68 +- 9.821283011908372
+MeanEntropy 	 2.6875815
+Elapsed time	 1.59968304634 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=26
+-----------------
+Epoch: 	 27
+NumTrajs: 	 50
+NumTimesteps: 	 2206
+MaxRew: 	 -3.3988277597090883
+MeanRew: 	 -12.845609181917034 +- 7.955919309843823
+MeanSlowdown: 	 4.5
+MeanLen: 	 44.12 +- 15.023501589176872
+MeanEntropy 	 2.68131
+Elapsed time	 1.74775910378 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=27
+-----------------
+Epoch: 	 28
+NumTrajs: 	 50
+NumTimesteps: 	 2140
+MaxRew: 	 -2.775621344926664
+MeanRew: 	 -14.74635534459888 +- 8.96822016336542
+MeanSlowdown: 	 4.63125
+MeanLen: 	 42.8 +- 12.25724275683565
+MeanEntropy 	 2.6772702
+Elapsed time	 1.65623211861 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=28
+-----------------
+Epoch: 	 29
+NumTrajs: 	 50
+NumTimesteps: 	 2053
+MaxRew: 	 -0.9962349072789192
+MeanRew: 	 -13.959611064302287 +- 9.118278500107163
+MeanSlowdown: 	 4.4625
+MeanLen: 	 41.06 +- 12.184268545957119
+MeanEntropy 	 2.669345
+Elapsed time	 1.6917309761 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=29
+-----------------
+Epoch: 	 30
+NumTrajs: 	 50
+NumTimesteps: 	 2125
+MaxRew: 	 -3.0930201792614094
+MeanRew: 	 -15.31866081992222 +- 8.494091413930624
+MeanSlowdown: 	 4.828125
+MeanLen: 	 42.5 +- 12.836276718737409
+MeanEntropy 	 2.660834
+Elapsed time	 1.67389988899 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=30
+initialize the environment...
+None
+-----------------
+Epoch: 	 31
+NumTrajs: 	 50
+NumTimesteps: 	 2118
+MaxRew: 	 -3.482186799927205
+MeanRew: 	 -12.178183470068001 +- 7.803992652528235
+MeanSlowdown: 	 4.73125
+MeanLen: 	 42.36 +- 13.462184072430446
+MeanEntropy 	 2.655291
+Elapsed time	 9.90635299683 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=31
+-----------------
+Epoch: 	 32
+NumTrajs: 	 50
+NumTimesteps: 	 2161
+MaxRew: 	 -2.7994597121604903
+MeanRew: 	 -14.672920501282427 +- 8.756219962145881
+MeanSlowdown: 	 4.55625
+MeanLen: 	 43.22 +- 13.132082850789512
+MeanEntropy 	 2.6745028
+Elapsed time	 1.75413203239 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=32
+-----------------
+Epoch: 	 33
+NumTrajs: 	 50
+NumTimesteps: 	 2100
+MaxRew: 	 -3.327339618790682
+MeanRew: 	 -15.00857823195078 +- 7.205736154387457
+MeanSlowdown: 	 4.35625
+MeanLen: 	 42.0 +- 12.88720295486961
+MeanEntropy 	 2.6594787
+Elapsed time	 1.71161794662 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=33
+-----------------
+Epoch: 	 34
+NumTrajs: 	 50
+NumTimesteps: 	 1988
+MaxRew: 	 -2.2811618315172253
+MeanRew: 	 -13.094057022204044 +- 8.073715204054269
+MeanSlowdown: 	 4.25
+MeanLen: 	 39.76 +- 9.862170146575245
+MeanEntropy 	 2.6541278
+Elapsed time	 1.65559911728 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=34
+-----------------
+Epoch: 	 35
+NumTrajs: 	 50
+NumTimesteps: 	 2130
+MaxRew: 	 -6.670565024436991
+MeanRew: 	 -15.096826609586659 +- 6.259789105508066
+MeanSlowdown: 	 4.684375
+MeanLen: 	 42.6 +- 14.223923509355638
+MeanEntropy 	 2.657585
+Elapsed time	 1.72666406631 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=35
+-----------------
+Epoch: 	 36
+NumTrajs: 	 50
+NumTimesteps: 	 2043
+MaxRew: 	 -4.799814771061473
+MeanRew: 	 -13.877065153674714 +- 7.050995031364966
+MeanSlowdown: 	 4.2
+MeanLen: 	 40.86 +- 12.835902773081449
+MeanEntropy 	 2.6628768
+Elapsed time	 1.7056210041 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=36
+-----------------
+Epoch: 	 37
+NumTrajs: 	 50
+NumTimesteps: 	 2167
+MaxRew: 	 -3.2179753544459375
+MeanRew: 	 -15.119853484691395 +- 8.748749474776965
+MeanSlowdown: 	 5.071875
+MeanLen: 	 43.34 +- 13.13257019779449
+MeanEntropy 	 2.641492
+Elapsed time	 1.71325421333 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=37
+-----------------
+Epoch: 	 38
+NumTrajs: 	 50
+NumTimesteps: 	 2014
+MaxRew: 	 -4.441375947925139
+MeanRew: 	 -13.889042334816736 +- 7.754565456690472
+MeanSlowdown: 	 4.621875
+MeanLen: 	 40.28 +- 11.10682672953891
+MeanEntropy 	 2.6533265
+Elapsed time	 1.66489481926 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=38
+-----------------
+Epoch: 	 39
+NumTrajs: 	 50
+NumTimesteps: 	 2148
+MaxRew: 	 -1.7391983038848902
+MeanRew: 	 -12.425884810207167 +- 7.094462283115784
+MeanSlowdown: 	 3.875
+MeanLen: 	 42.96 +- 13.368560131891542
+MeanEntropy 	 2.6238666
+Elapsed time	 1.6910738945 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=39
+-----------------
+Epoch: 	 40
+NumTrajs: 	 50
+NumTimesteps: 	 2110
+MaxRew: 	 -1.5744060353233817
+MeanRew: 	 -12.604957703452806 +- 7.94970697046772
+MeanSlowdown: 	 4.10625
+MeanLen: 	 42.2 +- 12.922847983320086
+MeanEntropy 	 2.6377108
+Elapsed time	 1.72424507141 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=40
+initialize the environment...
+None
+-----------------
+Epoch: 	 41
+NumTrajs: 	 50
+NumTimesteps: 	 2018
+MaxRew: 	 -3.480004129718375
+MeanRew: 	 -12.221580017770913 +- 7.553744942337073
+MeanSlowdown: 	 4.928125
+MeanLen: 	 40.36 +- 11.690611617875259
+MeanEntropy 	 2.6455464
+Elapsed time	 9.37928795815 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=41
+-----------------
+Epoch: 	 42
+NumTrajs: 	 50
+NumTimesteps: 	 1946
+MaxRew: 	 -1.3892388171585857
+MeanRew: 	 -13.116540410143815 +- 6.996801433157623
+MeanSlowdown: 	 4.071875
+MeanLen: 	 38.92 +- 9.564183185196738
+MeanEntropy 	 2.6480742
+Elapsed time	 1.55694103241 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=42
+-----------------
+Epoch: 	 43
+NumTrajs: 	 50
+NumTimesteps: 	 1968
+MaxRew: 	 -3.934680807010115
+MeanRew: 	 -12.85843306785039 +- 7.196327170977238
+MeanSlowdown: 	 4.034375
+MeanLen: 	 39.36 +- 10.399538451296769
+MeanEntropy 	 2.6423073
+Elapsed time	 1.54639101028 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=43
+-----------------
+Epoch: 	 44
+NumTrajs: 	 50
+NumTimesteps: 	 1923
+MaxRew: 	 -2.6455974077076965
+MeanRew: 	 -13.6044892737647 +- 7.69865394472271
+MeanSlowdown: 	 4.2
+MeanLen: 	 38.46 +- 8.49990588183187
+MeanEntropy 	 2.6370513
+Elapsed time	 1.55750107765 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=44
+-----------------
+Epoch: 	 45
+NumTrajs: 	 50
+NumTimesteps: 	 2013
+MaxRew: 	 -1.9232557236206436
+MeanRew: 	 -12.00201037992022 +- 6.214721978485145
+MeanSlowdown: 	 4.346875
+MeanLen: 	 40.26 +- 9.103427925787077
+MeanEntropy 	 2.6173277
+Elapsed time	 1.61544895172 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=45
+-----------------
+Epoch: 	 46
+NumTrajs: 	 50
+NumTimesteps: 	 2053
+MaxRew: 	 -2.9133852995195526
+MeanRew: 	 -12.236524421468026 +- 7.894087463590961
+MeanSlowdown: 	 4.428125
+MeanLen: 	 41.06 +- 11.71223292118117
+MeanEntropy 	 2.6108873
+Elapsed time	 1.67325687408 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=46
+-----------------
+Epoch: 	 47
+NumTrajs: 	 50
+NumTimesteps: 	 2062
+MaxRew: 	 -3.196223842461439
+MeanRew: 	 -11.107616207753878 +- 7.644263369265232
+MeanSlowdown: 	 4.28125
+MeanLen: 	 41.24 +- 12.999323059298124
+MeanEntropy 	 2.6169696
+Elapsed time	 1.69906401634 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=47
+-----------------
+Epoch: 	 48
+NumTrajs: 	 50
+NumTimesteps: 	 2071
+MaxRew: 	 -0.6589723683374382
+MeanRew: 	 -11.180672280757653 +- 8.642882435829186
+MeanSlowdown: 	 4.159375
+MeanLen: 	 41.42 +- 10.31715076947119
+MeanEntropy 	 2.6110697
+Elapsed time	 1.64968895912 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=48
+-----------------
+Epoch: 	 49
+NumTrajs: 	 50
+NumTimesteps: 	 2076
+MaxRew: 	 -0.5523384832082627
+MeanRew: 	 -11.45199419976439 +- 8.12555657090929
+MeanSlowdown: 	 4.01875
+MeanLen: 	 41.52 +- 9.829018262268107
+MeanEntropy 	 2.6014514
+Elapsed time	 1.6644320488 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=49
+-----------------
+Epoch: 	 50
+NumTrajs: 	 50
+NumTimesteps: 	 2183
+MaxRew: 	 -0.28845360524789854
+MeanRew: 	 -12.573599117440754 +- 7.820880553943948
+MeanSlowdown: 	 4.265625
+MeanLen: 	 43.66 +- 15.158641100045875
+MeanEntropy 	 2.606216
+Elapsed time	 1.72625494003 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=50
+initialize the environment...
+None
+-----------------
+Epoch: 	 51
+NumTrajs: 	 50
+NumTimesteps: 	 2045
+MaxRew: 	 -0.19068019831059962
+MeanRew: 	 -12.263086234048565 +- 8.543041647396674
+MeanSlowdown: 	 4.23125
+MeanLen: 	 40.9 +- 14.379499295872577
+MeanEntropy 	 2.6095788
+Elapsed time	 9.21368908882 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=51
+-----------------
+Epoch: 	 52
+NumTrajs: 	 50
+NumTimesteps: 	 2047
+MaxRew: 	 -2.800785886967065
+MeanRew: 	 -12.347033936527232 +- 8.317368252280422
+MeanSlowdown: 	 3.98125
+MeanLen: 	 40.94 +- 9.841564916211242
+MeanEntropy 	 2.602522
+Elapsed time	 1.56247711182 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=52
+-----------------
+Epoch: 	 53
+NumTrajs: 	 50
+NumTimesteps: 	 2017
+MaxRew: 	 -3.703228877833716
+MeanRew: 	 -12.836429602223086 +- 6.011196968707768
+MeanSlowdown: 	 4.246875
+MeanLen: 	 40.34 +- 8.62695774882432
+MeanEntropy 	 2.608476
+Elapsed time	 1.59200978279 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=53
+-----------------
+Epoch: 	 54
+NumTrajs: 	 50
+NumTimesteps: 	 1983
+MaxRew: 	 -2.9747948853762205
+MeanRew: 	 -12.768634730440882 +- 6.354895480590283
+MeanSlowdown: 	 4.03125
+MeanLen: 	 39.66 +- 8.384771911030139
+MeanEntropy 	 2.5944479
+Elapsed time	 1.59195804596 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=54
+-----------------
+Epoch: 	 55
+NumTrajs: 	 50
+NumTimesteps: 	 1963
+MaxRew: 	 -2.745427562239636
+MeanRew: 	 -12.341011026894137 +- 7.797752277597526
+MeanSlowdown: 	 3.865625
+MeanLen: 	 39.26 +- 8.35657824710569
+MeanEntropy 	 2.613266
+Elapsed time	 1.58093500137 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=55
+-----------------
+Epoch: 	 56
+NumTrajs: 	 50
+NumTimesteps: 	 1988
+MaxRew: 	 -1.3532778031997907
+MeanRew: 	 -11.201678796080222 +- 7.202463486890793
+MeanSlowdown: 	 4.209375
+MeanLen: 	 39.76 +- 8.436966279415842
+MeanEntropy 	 2.5926359
+Elapsed time	 1.53094887733 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=56
+-----------------
+Epoch: 	 57
+NumTrajs: 	 50
+NumTimesteps: 	 2010
+MaxRew: 	 -0.9413287076056791
+MeanRew: 	 -10.409335248161078 +- 8.024179949876174
+MeanSlowdown: 	 3.99375
+MeanLen: 	 40.2 +- 9.765244492586962
+MeanEntropy 	 2.6051643
+Elapsed time	 1.56827402115 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=57
+-----------------
+Epoch: 	 58
+NumTrajs: 	 50
+NumTimesteps: 	 1987
+MaxRew: 	 -1.8888063214909987
+MeanRew: 	 -11.047141455204441 +- 7.650918468134941
+MeanSlowdown: 	 3.940625
+MeanLen: 	 39.74 +- 9.290446706160044
+MeanEntropy 	 2.6094122
+Elapsed time	 1.5633699894 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=58
+-----------------
+Epoch: 	 59
+NumTrajs: 	 50
+NumTimesteps: 	 2042
+MaxRew: 	 -3.383374095349461
+MeanRew: 	 -11.966577697803173 +- 6.642036236264534
+MeanSlowdown: 	 3.95625
+MeanLen: 	 40.84 +- 11.335537040652286
+MeanEntropy 	 2.5925684
+Elapsed time	 1.5976831913 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=59
+-----------------
+Epoch: 	 60
+NumTrajs: 	 50
+NumTimesteps: 	 2102
+MaxRew: 	 0.24740898855400992
+MeanRew: 	 -10.401463513410963 +- 9.323149801473638
+MeanSlowdown: 	 3.91875
+MeanLen: 	 42.04 +- 22.572514259603427
+MeanEntropy 	 2.6141427
+Elapsed time	 1.62203884125 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=60
+initialize the environment...
+None
+-----------------
+Epoch: 	 61
+NumTrajs: 	 50
+NumTimesteps: 	 2047
+MaxRew: 	 -1.4752545908493038
+MeanRew: 	 -12.041989452230977 +- 9.180397461446903
+MeanSlowdown: 	 4.3625
+MeanLen: 	 40.94 +- 11.064194502990265
+MeanEntropy 	 2.611552
+Elapsed time	 9.8558781147 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=61
+-----------------
+Epoch: 	 62
+NumTrajs: 	 50
+NumTimesteps: 	 2056
+MaxRew: 	 0.6637045442678833
+MeanRew: 	 -9.493061219015715 +- 7.179430084232553
+MeanSlowdown: 	 3.56875
+MeanLen: 	 41.12 +- 12.036012628773701
+MeanEntropy 	 2.5991802
+Elapsed time	 1.66131186485 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=62
+-----------------
+Epoch: 	 63
+NumTrajs: 	 50
+NumTimesteps: 	 2027
+MaxRew: 	 0.5362435683367093
+MeanRew: 	 -10.173073635355161 +- 7.998182723950665
+MeanSlowdown: 	 3.6375
+MeanLen: 	 40.54 +- 10.920091574707603
+MeanEntropy 	 2.5995944
+Elapsed time	 1.63715791702 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=63
+-----------------
+Epoch: 	 64
+NumTrajs: 	 50
+NumTimesteps: 	 1985
+MaxRew: 	 -0.04361917313496093
+MeanRew: 	 -10.197710285386256 +- 8.137910783368637
+MeanSlowdown: 	 4.34375
+MeanLen: 	 39.7 +- 9.726767191621272
+MeanEntropy 	 2.6079853
+Elapsed time	 1.58831787109 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=64
+-----------------
+Epoch: 	 65
+NumTrajs: 	 50
+NumTimesteps: 	 2060
+MaxRew: 	 0.24682143918671748
+MeanRew: 	 -9.091927383077856 +- 7.717154665049129
+MeanSlowdown: 	 3.88125
+MeanLen: 	 41.2 +- 10.152832117197645
+MeanEntropy 	 2.5867834
+Elapsed time	 1.63508582115 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=65
+-----------------
+Epoch: 	 66
+NumTrajs: 	 50
+NumTimesteps: 	 1994
+MaxRew: 	 0.05890362531006606
+MeanRew: 	 -10.02860632354094 +- 7.5549294454206
+MeanSlowdown: 	 3.709375
+MeanLen: 	 39.88 +- 7.999099949369303
+MeanEntropy 	 2.5807037
+Elapsed time	 1.64749288559 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=66
+-----------------
+Epoch: 	 67
+NumTrajs: 	 50
+NumTimesteps: 	 2021
+MaxRew: 	 -3.202035091637156
+MeanRew: 	 -10.588464185544844 +- 7.380616309885191
+MeanSlowdown: 	 4.078125
+MeanLen: 	 40.42 +- 8.81836719580218
+MeanEntropy 	 2.5468416
+Elapsed time	 1.61973810196 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=67
+-----------------
+Epoch: 	 68
+NumTrajs: 	 50
+NumTimesteps: 	 2121
+MaxRew: 	 -3.222922345375854
+MeanRew: 	 -12.002003997078647 +- 7.575941133961211
+MeanSlowdown: 	 4.05625
+MeanLen: 	 42.42 +- 12.183743267157265
+MeanEntropy 	 2.5841043
+Elapsed time	 1.68614602089 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=68
+-----------------
+Epoch: 	 69
+NumTrajs: 	 50
+NumTimesteps: 	 2017
+MaxRew: 	 -2.4972336051907655
+MeanRew: 	 -11.487744381338967 +- 8.294842977724588
+MeanSlowdown: 	 3.734375
+MeanLen: 	 40.34 +- 10.551985595138007
+MeanEntropy 	 2.5653625
+Elapsed time	 1.62434697151 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=69
+-----------------
+Epoch: 	 70
+NumTrajs: 	 50
+NumTimesteps: 	 2042
+MaxRew: 	 -1.7162459307295166
+MeanRew: 	 -10.745538845001414 +- 6.941985960707671
+MeanSlowdown: 	 3.690625
+MeanLen: 	 40.84 +- 10.13777095815446
+MeanEntropy 	 2.6018865
+Elapsed time	 1.57553505898 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=70
+initialize the environment...
+None
+-----------------
+Epoch: 	 71
+NumTrajs: 	 50
+NumTimesteps: 	 2093
+MaxRew: 	 -1.103093134903963
+MeanRew: 	 -11.064146752230062 +- 7.9853454473465915
+MeanSlowdown: 	 3.88125
+MeanLen: 	 41.86 +- 11.874358930064394
+MeanEntropy 	 2.5860395
+Elapsed time	 9.36887001991 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=71
+-----------------
+Epoch: 	 72
+NumTrajs: 	 50
+NumTimesteps: 	 2035
+MaxRew: 	 0.2997195458372495
+MeanRew: 	 -10.437781871581635 +- 8.52301192964121
+MeanSlowdown: 	 3.56875
+MeanLen: 	 40.7 +- 9.187491496594705
+MeanEntropy 	 2.5874603
+Elapsed time	 1.61379599571 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=72
+-----------------
+Epoch: 	 73
+NumTrajs: 	 50
+NumTimesteps: 	 2099
+MaxRew: 	 -1.2460597938470965
+MeanRew: 	 -11.558869332417835 +- 7.966922868105591
+MeanSlowdown: 	 3.721875
+MeanLen: 	 41.98 +- 11.184793247977364
+MeanEntropy 	 2.5703344
+Elapsed time	 1.62963891029 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=73
+-----------------
+Epoch: 	 74
+NumTrajs: 	 50
+NumTimesteps: 	 2162
+MaxRew: 	 -4.570416071535185
+MeanRew: 	 -11.169233406812259 +- 8.857461773970215
+MeanSlowdown: 	 4.4375
+MeanLen: 	 43.24 +- 16.35060855136591
+MeanEntropy 	 2.511905
+Elapsed time	 1.70499181747 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=74
+-----------------
+Epoch: 	 75
+NumTrajs: 	 50
+NumTimesteps: 	 2100
+MaxRew: 	 -0.20444139387182753
+MeanRew: 	 -10.014361128408595 +- 8.896710473695261
+MeanSlowdown: 	 4.34375
+MeanLen: 	 42.0 +- 12.160592090848208
+MeanEntropy 	 2.5776057
+Elapsed time	 1.63313317299 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=75
+-----------------
+Epoch: 	 76
+NumTrajs: 	 50
+NumTimesteps: 	 1971
+MaxRew: 	 -1.9887375939448695
+MeanRew: 	 -9.192951769638949 +- 6.902595042728644
+MeanSlowdown: 	 3.85625
+MeanLen: 	 39.42 +- 7.616009453775645
+MeanEntropy 	 2.5534759
+Elapsed time	 1.60517096519 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=76
+-----------------
+Epoch: 	 77
+NumTrajs: 	 50
+NumTimesteps: 	 2084
+MaxRew: 	 -1.7062640544092074
+MeanRew: 	 -9.882495636614655 +- 7.913942806207203
+MeanSlowdown: 	 3.95625
+MeanLen: 	 41.68 +- 12.26285448009557
+MeanEntropy 	 2.5401988
+Elapsed time	 1.61711907387 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=77
+-----------------
+Epoch: 	 78
+NumTrajs: 	 50
+NumTimesteps: 	 2089
+MaxRew: 	 -2.1620014575001725
+MeanRew: 	 -10.814847245402825 +- 7.5719275339876155
+MeanSlowdown: 	 4.2625
+MeanLen: 	 41.78 +- 12.731519940682652
+MeanEntropy 	 2.5316715
+Elapsed time	 1.6537759304 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=78
+-----------------
+Epoch: 	 79
+NumTrajs: 	 50
+NumTimesteps: 	 2076
+MaxRew: 	 -1.523870668819298
+MeanRew: 	 -9.895128594631572 +- 7.130968975826091
+MeanSlowdown: 	 4.196875
+MeanLen: 	 41.52 +- 11.590064710777071
+MeanEntropy 	 2.5468569
+Elapsed time	 1.6768219471 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=79
+-----------------
+Epoch: 	 80
+NumTrajs: 	 50
+NumTimesteps: 	 2082
+MaxRew: 	 0.5612286260658049
+MeanRew: 	 -7.650437525038615 +- 7.253751440008665
+MeanSlowdown: 	 3.3375
+MeanLen: 	 41.64 +- 11.385534682218488
+MeanEntropy 	 2.5459404
+Elapsed time	 1.63579106331 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=80
+initialize the environment...
+None
+-----------------
+Epoch: 	 81
+NumTrajs: 	 50
+NumTimesteps: 	 2137
+MaxRew: 	 -0.4488369718899527
+MeanRew: 	 -10.99044569609196 +- 7.490056677642328
+MeanSlowdown: 	 3.878125
+MeanLen: 	 42.74 +- 12.708752889249205
+MeanEntropy 	 2.5430582
+Elapsed time	 9.29627895355 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=81
+-----------------
+Epoch: 	 82
+NumTrajs: 	 50
+NumTimesteps: 	 2089
+MaxRew: 	 -2.0993988867353375
+MeanRew: 	 -10.532612933638859 +- 7.259615819088885
+MeanSlowdown: 	 3.671875
+MeanLen: 	 41.78 +- 12.90161230234423
+MeanEntropy 	 2.532256
+Elapsed time	 1.71463704109 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=82
+-----------------
+Epoch: 	 83
+NumTrajs: 	 50
+NumTimesteps: 	 2039
+MaxRew: 	 -0.1916489879873927
+MeanRew: 	 -10.987571470369124 +- 7.3026177963725605
+MeanSlowdown: 	 3.75
+MeanLen: 	 40.78 +- 10.274804134386212
+MeanEntropy 	 2.5713928
+Elapsed time	 1.73104190826 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=83
+-----------------
+Epoch: 	 84
+NumTrajs: 	 50
+NumTimesteps: 	 2040
+MaxRew: 	 -0.8428743019932281
+MeanRew: 	 -11.445496073362868 +- 7.01076533259533
+MeanSlowdown: 	 3.8125
+MeanLen: 	 40.8 +- 10.983624174196784
+MeanEntropy 	 2.5310628
+Elapsed time	 1.7202038765 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=84
+-----------------
+Epoch: 	 85
+NumTrajs: 	 50
+NumTimesteps: 	 2157
+MaxRew: 	 -3.2287535821006146
+MeanRew: 	 -11.218334896277577 +- 7.25151643472614
+MeanSlowdown: 	 3.534375
+MeanLen: 	 43.14 +- 13.54106347374533
+MeanEntropy 	 2.4935882
+Elapsed time	 1.8056409359 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=85
+-----------------
+Epoch: 	 86
+NumTrajs: 	 50
+NumTimesteps: 	 2242
+MaxRew: 	 -2.2500358569385828
+MeanRew: 	 -12.754826183888937 +- 8.877218915773655
+MeanSlowdown: 	 4.203125
+MeanLen: 	 44.84 +- 13.692859453014186
+MeanEntropy 	 2.478366
+Elapsed time	 1.86314320564 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=86
+-----------------
+Epoch: 	 87
+NumTrajs: 	 50
+NumTimesteps: 	 2071
+MaxRew: 	 -1.066236198744002
+MeanRew: 	 -8.78782839791477 +- 7.576413196278979
+MeanSlowdown: 	 3.465625
+MeanLen: 	 41.42 +- 10.21193419485261
+MeanEntropy 	 2.5153365
+Elapsed time	 1.67924118042 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=87
+-----------------
+Epoch: 	 88
+NumTrajs: 	 50
+NumTimesteps: 	 2053
+MaxRew: 	 -3.055008088009033
+MeanRew: 	 -11.10583701149948 +- 8.263687070090514
+MeanSlowdown: 	 3.79375
+MeanLen: 	 41.06 +- 12.584768571570953
+MeanEntropy 	 2.5127628
+Elapsed time	 1.765198946 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=88
+-----------------
+Epoch: 	 89
+NumTrajs: 	 50
+NumTimesteps: 	 2223
+MaxRew: 	 0.03194241983406041
+MeanRew: 	 -10.387385999423973 +- 8.47404000806839
+MeanSlowdown: 	 4.2125
+MeanLen: 	 44.46 +- 16.8904825271512
+MeanEntropy 	 2.4992356
+Elapsed time	 1.79956388474 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=89
+-----------------
+Epoch: 	 90
+NumTrajs: 	 50
+NumTimesteps: 	 2097
+MaxRew: 	 -0.7350552706226164
+MeanRew: 	 -9.348209512705543 +- 7.815068741126495
+MeanSlowdown: 	 3.60625
+MeanLen: 	 41.94 +- 15.345891958436304
+MeanEntropy 	 2.4687114
+Elapsed time	 1.72587299347 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=90
+initialize the environment...
+None
+-----------------
+Epoch: 	 91
+NumTrajs: 	 50
+NumTimesteps: 	 2042
+MaxRew: 	 -0.8292031536298647
+MeanRew: 	 -9.26985310611745 +- 6.9117872102921485
+MeanSlowdown: 	 3.625
+MeanLen: 	 40.84 +- 9.535953020018503
+MeanEntropy 	 2.5044296
+Elapsed time	 10.1061139107 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=91
+-----------------
+Epoch: 	 92
+NumTrajs: 	 50
+NumTimesteps: 	 1954
+MaxRew: 	 -2.029170900165899
+MeanRew: 	 -9.03453926061125 +- 6.75013419248137
+MeanSlowdown: 	 3.390625
+MeanLen: 	 39.08 +- 7.265920450982105
+MeanEntropy 	 2.520116
+Elapsed time	 1.70267701149 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=92
+-----------------
+Epoch: 	 93
+NumTrajs: 	 50
+NumTimesteps: 	 1943
+MaxRew: 	 -1.2397063866649602
+MeanRew: 	 -11.259866100849642 +- 9.12961802014252
+MeanSlowdown: 	 3.775
+MeanLen: 	 38.86 +- 8.724700567927819
+MeanEntropy 	 2.5414236
+Elapsed time	 1.62958598137 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=93
+-----------------
+Epoch: 	 94
+NumTrajs: 	 50
+NumTimesteps: 	 2124
+MaxRew: 	 -0.5376723073030434
+MeanRew: 	 -9.088370034673758 +- 6.7236296580253
+MeanSlowdown: 	 3.421875
+MeanLen: 	 42.48 +- 12.7847409046879
+MeanEntropy 	 2.4206467
+Elapsed time	 1.70175504684 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=94
+-----------------
+Epoch: 	 95
+NumTrajs: 	 50
+NumTimesteps: 	 2057
+MaxRew: 	 1.380762139767675
+MeanRew: 	 -8.481919959612567 +- 7.287264474901725
+MeanSlowdown: 	 3.134375
+MeanLen: 	 41.14 +- 10.047905254330377
+MeanEntropy 	 2.4751132
+Elapsed time	 1.66844582558 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=95
+-----------------
+Epoch: 	 96
+NumTrajs: 	 50
+NumTimesteps: 	 2150
+MaxRew: 	 -0.46695170119220214
+MeanRew: 	 -8.11569736970856 +- 8.394332839130229
+MeanSlowdown: 	 3.525
+MeanLen: 	 43.0 +- 12.081390648431166
+MeanEntropy 	 2.4694023
+Elapsed time	 1.79482579231 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=96
+-----------------
+Epoch: 	 97
+NumTrajs: 	 50
+NumTimesteps: 	 2106
+MaxRew: 	 -2.7921075736681593
+MeanRew: 	 -11.75299240307577 +- 7.497976167737664
+MeanSlowdown: 	 3.7125
+MeanLen: 	 42.12 +- 9.663622509183604
+MeanEntropy 	 2.488083
+Elapsed time	 1.72450113297 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=97
+-----------------
+Epoch: 	 98
+NumTrajs: 	 50
+NumTimesteps: 	 2076
+MaxRew: 	 -0.9264161365251343
+MeanRew: 	 -9.47359443806158 +- 7.793171221016097
+MeanSlowdown: 	 3.609375
+MeanLen: 	 41.52 +- 10.352275112263971
+MeanEntropy 	 2.4740345
+Elapsed time	 1.74965119362 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=98
+-----------------
+Epoch: 	 99
+NumTrajs: 	 50
+NumTimesteps: 	 2230
+MaxRew: 	 0.6362754263102399
+MeanRew: 	 -8.925714138204876 +- 8.312282305425269
+MeanSlowdown: 	 3.48125
+MeanLen: 	 44.6 +- 15.161794089091172
+MeanEntropy 	 2.3700047
+Elapsed time	 1.80841803551 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=99
+-----------------
+Epoch: 	 100
+NumTrajs: 	 50
+NumTimesteps: 	 2195
+MaxRew: 	 0.5247158444296675
+MeanRew: 	 -9.213222375956196 +- 9.044249858682742
+MeanSlowdown: 	 3.628125
+MeanLen: 	 43.9 +- 14.803040228277434
+MeanEntropy 	 2.3663554
+Elapsed time	 1.80283784866 seconds
+-----------------
+Writing to CSV: Heuristic=WRR, Metric=MeanSlowdown, Value=1.26470588235, Epoch=100
+initialize the environment...
+None
+
+JOB STATISTICS
+==============
+Job ID: 6705738
+Cluster: snellius
+User/Group: terhard/terhard
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 01:22:30 core-walltime
+Job Wall-clock time: 00:04:35
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

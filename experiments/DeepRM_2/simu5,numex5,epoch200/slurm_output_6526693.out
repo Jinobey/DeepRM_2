@@ -1,0 +1,3090 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+ERROR (theano.sandbox.cuda): nvcc compiler not found on $PATH. Check your nvcc installation and try again.
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/signal/downsample.py:6: UserWarning: downsample module has been moved to the theano.tensor.signal.pool module.
+  "downsample module has been moved to the theano.tensor.signal.pool module.")
+
+Experiment type: pg_re
+CNN used: True
+
+Preparing for workers...
+-prepare for env- 0
+initialize the environment...
+-prepare for env- 1
+initialize the environment...
+-prepare for env- 2
+initialize the environment...
+-prepare for env- 3
+initialize the environment...
+-prepare for env- 4
+initialize the environment...
+-prepare for worker- 0
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/lasagne/layers/conv.py:489: UserWarning: The `image_shape` keyword argument to `tensor.nnet.conv2d` is deprecated, it has been renamed to `input_shape`.
+  border_mode=border_mode)
+-prepare for worker- 1
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 2
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 3
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 4
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 5
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 6
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 7
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 8
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 9
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+-prepare for worker- 10
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+Preparing for reference data...
+initialize the environment...
+Start training...
+4 out of 5
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/theano/tensor/subtensor.py:2166: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0] = inputs[0].__getitem__(inputs[1:])
+-----------------
+Epoch: 	 1
+NumTrajs: 	 50
+NumTimesteps: 	 1289
+MaxRew: 	 5.227626411422477
+MeanRew: 	 -9.465344775654057 +- 10.375776409683152
+MeanSlowdown: 	 3.857142857142857
+MeanLen: 	 25.78 +- 10.127763820310978
+MeanEntropy 	 2.7720788
+Elapsed time	 3.58502602577 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 2
+NumTrajs: 	 50
+NumTimesteps: 	 1349
+MaxRew: 	 4.5413764680281945
+MeanRew: 	 -8.304274643057598 +- 8.671765773463564
+MeanSlowdown: 	 3.7928571428571427
+MeanLen: 	 26.98 +- 12.643559625358675
+MeanEntropy 	 2.7550406
+Elapsed time	 3.79244112968 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 3
+NumTrajs: 	 50
+NumTimesteps: 	 1387
+MaxRew: 	 4.430869230391773
+MeanRew: 	 -5.037151994355741 +- 8.67474337575519
+MeanSlowdown: 	 3.8285714285714287
+MeanLen: 	 27.74 +- 12.003016287583717
+MeanEntropy 	 2.6903505
+Elapsed time	 4.04617214203 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 4
+NumTrajs: 	 50
+NumTimesteps: 	 1322
+MaxRew: 	 5.295863394940808
+MeanRew: 	 -4.369362904392554 +- 10.031878492523868
+MeanSlowdown: 	 3.7285714285714286
+MeanLen: 	 26.44 +- 10.323100309500047
+MeanEntropy 	 2.7060192
+Elapsed time	 3.7795958519 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 5
+NumTrajs: 	 50
+NumTimesteps: 	 1379
+MaxRew: 	 3.1011187899407524
+MeanRew: 	 -5.135003743276393 +- 7.219337478457843
+MeanSlowdown: 	 3.4214285714285713
+MeanLen: 	 27.58 +- 10.88685445847422
+MeanEntropy 	 2.7161875
+Elapsed time	 4.00749206543 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 6
+NumTrajs: 	 50
+NumTimesteps: 	 1354
+MaxRew: 	 6.327289015434983
+MeanRew: 	 -3.1870412994612827 +- 9.595166186877174
+MeanSlowdown: 	 2.7714285714285714
+MeanLen: 	 27.08 +- 10.489690176549544
+MeanEntropy 	 2.6861486
+Elapsed time	 3.89325594902 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 7
+NumTrajs: 	 50
+NumTimesteps: 	 1340
+MaxRew: 	 4.75129632247126
+MeanRew: 	 -3.5922025643129736 +- 8.416055451900267
+MeanSlowdown: 	 3.5
+MeanLen: 	 26.8 +- 9.885342685005917
+MeanEntropy 	 2.6942365
+Elapsed time	 3.8802781105 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 8
+NumTrajs: 	 50
+NumTimesteps: 	 1318
+MaxRew: 	 3.1733009672547907
+MeanRew: 	 -3.744578088258836 +- 9.918978554145966
+MeanSlowdown: 	 3.5785714285714287
+MeanLen: 	 26.36 +- 9.860547652133729
+MeanEntropy 	 2.6473393
+Elapsed time	 3.87498903275 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 9
+NumTrajs: 	 50
+NumTimesteps: 	 1407
+MaxRew: 	 4.287322466911915
+MeanRew: 	 -2.598774975047805 +- 8.595031865649815
+MeanSlowdown: 	 4.0
+MeanLen: 	 28.14 +- 14.646514943835616
+MeanEntropy 	 2.6177127
+Elapsed time	 4.06223607063 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 10
+NumTrajs: 	 50
+NumTimesteps: 	 1272
+MaxRew: 	 7.369070303001672
+MeanRew: 	 2.0850370647781036 +- 10.544630043916149
+MeanSlowdown: 	 3.2071428571428573
+MeanLen: 	 25.44 +- 9.740965044593887
+MeanEntropy 	 2.550452
+Elapsed time	 3.78181600571 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 11
+NumTrajs: 	 50
+NumTimesteps: 	 1267
+MaxRew: 	 4.650077202455719
+MeanRew: 	 -1.84268020027629 +- 9.991116010034931
+MeanSlowdown: 	 3.8642857142857143
+MeanLen: 	 25.34 +- 9.799204049309312
+MeanEntropy 	 2.3888621
+Elapsed time	 15.292454958 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 12
+NumTrajs: 	 50
+NumTimesteps: 	 1704
+MaxRew: 	 5.9620571431035065
+MeanRew: 	 -0.3244497713288318 +- 9.29069172311729
+MeanSlowdown: 	 6.6
+MeanLen: 	 34.08 +- 22.812137120401495
+MeanEntropy 	 2.1114042
+Elapsed time	 4.78817892075 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 13
+NumTrajs: 	 50
+NumTimesteps: 	 1698
+MaxRew: 	 6.455436157273022
+MeanRew: 	 -0.45225207167889786 +- 10.517257161381707
+MeanSlowdown: 	 4.9071428571428575
+MeanLen: 	 33.96 +- 22.796455864892682
+MeanEntropy 	 2.213149
+Elapsed time	 4.76134514809 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 14
+NumTrajs: 	 50
+NumTimesteps: 	 1415
+MaxRew: 	 6.64039362432694
+MeanRew: 	 1.1095357996560533 +- 10.175731006331116
+MeanSlowdown: 	 3.835714285714286
+MeanLen: 	 28.3 +- 14.31817027416562
+MeanEntropy 	 2.4031126
+Elapsed time	 4.1342689991 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 15
+NumTrajs: 	 50
+NumTimesteps: 	 1390
+MaxRew: 	 7.01917549148404
+MeanRew: 	 0.5224947585330993 +- 10.737857822413444
+MeanSlowdown: 	 4.2785714285714285
+MeanLen: 	 27.8 +- 12.918204209564115
+MeanEntropy 	 2.500769
+Elapsed time	 4.09313988686 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 16
+NumTrajs: 	 50
+NumTimesteps: 	 1508
+MaxRew: 	 6.7311238424410345
+MeanRew: 	 1.213294953079124 +- 10.677312858872542
+MeanSlowdown: 	 5.507142857142857
+MeanLen: 	 30.16 +- 24.425691392466256
+MeanEntropy 	 2.2375276
+Elapsed time	 4.35065293312 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 17
+NumTrajs: 	 50
+NumTimesteps: 	 1525
+MaxRew: 	 6.168756146063389
+MeanRew: 	 0.9358918126798799 +- 9.21220269661513
+MeanSlowdown: 	 5.0285714285714285
+MeanLen: 	 30.5 +- 18.407878747970937
+MeanEntropy 	 2.2739885
+Elapsed time	 4.44420289993 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 18
+NumTrajs: 	 50
+NumTimesteps: 	 1404
+MaxRew: 	 7.923798474569216
+MeanRew: 	 0.9323576561571169 +- 9.469537780491995
+MeanSlowdown: 	 4.607142857142857
+MeanLen: 	 28.08 +- 14.405332346044643
+MeanEntropy 	 2.3549716
+Elapsed time	 4.12935113907 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 19
+NumTrajs: 	 50
+NumTimesteps: 	 1426
+MaxRew: 	 7.4947567771173995
+MeanRew: 	 2.64830146021296 +- 10.531071592749377
+MeanSlowdown: 	 3.85
+MeanLen: 	 28.52 +- 13.36
+MeanEntropy 	 2.5368807
+Elapsed time	 4.12644815445 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 20
+NumTrajs: 	 50
+NumTimesteps: 	 1280
+MaxRew: 	 6.978610535952174
+MeanRew: 	 0.9375602041446431 +- 10.74274598449332
+MeanSlowdown: 	 3.3214285714285716
+MeanLen: 	 25.6 +- 9.006664199358163
+MeanEntropy 	 2.4675689
+Elapsed time	 3.86010909081 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 21
+NumTrajs: 	 50
+NumTimesteps: 	 1264
+MaxRew: 	 6.984931315329463
+MeanRew: 	 2.9724021383869053 +- 10.265702507841434
+MeanSlowdown: 	 3.3
+MeanLen: 	 25.28 +- 10.105523242267072
+MeanEntropy 	 2.529733
+Elapsed time	 14.88793993 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 22
+NumTrajs: 	 50
+NumTimesteps: 	 1270
+MaxRew: 	 8.474486873930655
+MeanRew: 	 3.033068603534028 +- 11.000546110285082
+MeanSlowdown: 	 3.742857142857143
+MeanLen: 	 25.4 +- 10.51284928076114
+MeanEntropy 	 2.5486042
+Elapsed time	 3.68936491013 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 23
+NumTrajs: 	 50
+NumTimesteps: 	 1245
+MaxRew: 	 7.2215188803540995
+MeanRew: 	 2.8015667196068303 +- 11.494963703075054
+MeanSlowdown: 	 3.507142857142857
+MeanLen: 	 24.9 +- 9.623408959407264
+MeanEntropy 	 2.5111713
+Elapsed time	 3.74394798279 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 24
+NumTrajs: 	 50
+NumTimesteps: 	 1336
+MaxRew: 	 7.699640879736515
+MeanRew: 	 3.816585966895153 +- 10.593303697250748
+MeanSlowdown: 	 3.65
+MeanLen: 	 26.72 +- 14.065617654408213
+MeanEntropy 	 2.5326571
+Elapsed time	 3.99467611313 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 25
+NumTrajs: 	 50
+NumTimesteps: 	 1355
+MaxRew: 	 6.1798667639073965
+MeanRew: 	 3.256020249126664 +- 11.07593789708138
+MeanSlowdown: 	 4.078571428571428
+MeanLen: 	 27.1 +- 14.197534997315556
+MeanEntropy 	 2.5807452
+Elapsed time	 3.97708702087 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 26
+NumTrajs: 	 50
+NumTimesteps: 	 1242
+MaxRew: 	 7.859519611503839
+MeanRew: 	 2.8715191429962306 +- 11.605946891382386
+MeanSlowdown: 	 3.9857142857142858
+MeanLen: 	 24.84 +- 10.106156539456531
+MeanEntropy 	 2.5118961
+Elapsed time	 3.74898886681 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 27
+NumTrajs: 	 50
+NumTimesteps: 	 1296
+MaxRew: 	 7.583541358650756
+MeanRew: 	 3.5548926365882005 +- 10.765185867516223
+MeanSlowdown: 	 3.2785714285714285
+MeanLen: 	 25.92 +- 10.934056886627214
+MeanEntropy 	 2.4569724
+Elapsed time	 3.91990399361 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 28
+NumTrajs: 	 50
+NumTimesteps: 	 1301
+MaxRew: 	 5.533399840189007
+MeanRew: 	 2.4487690619134415 +- 10.869129443529184
+MeanSlowdown: 	 3.835714285714286
+MeanLen: 	 26.02 +- 10.979052782458057
+MeanEntropy 	 2.5411377
+Elapsed time	 3.89806199074 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 29
+NumTrajs: 	 50
+NumTimesteps: 	 1285
+MaxRew: 	 5.8692126879592745
+MeanRew: 	 1.7639456407878564 +- 10.693609085926216
+MeanSlowdown: 	 3.9285714285714284
+MeanLen: 	 25.7 +- 10.703737664946763
+MeanEntropy 	 2.4518821
+Elapsed time	 3.84501004219 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 30
+NumTrajs: 	 50
+NumTimesteps: 	 1290
+MaxRew: 	 6.282349847127906
+MeanRew: 	 3.1384716028252164 +- 11.119703422251533
+MeanSlowdown: 	 3.9571428571428573
+MeanLen: 	 25.8 +- 10.976338187209796
+MeanEntropy 	 2.439019
+Elapsed time	 3.9225230217 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 31
+NumTrajs: 	 50
+NumTimesteps: 	 1313
+MaxRew: 	 7.065538037359476
+MeanRew: 	 3.601684676233097 +- 10.6409223734474
+MeanSlowdown: 	 3.7785714285714285
+MeanLen: 	 26.26 +- 13.062633731372857
+MeanEntropy 	 2.4736855
+Elapsed time	 16.2836661339 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 32
+NumTrajs: 	 50
+NumTimesteps: 	 1297
+MaxRew: 	 7.474319689975249
+MeanRew: 	 3.4622501103789616 +- 10.935000504666606
+MeanSlowdown: 	 3.85
+MeanLen: 	 25.94 +- 11.84636653155726
+MeanEntropy 	 2.4514747
+Elapsed time	 3.97590112686 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 33
+NumTrajs: 	 50
+NumTimesteps: 	 1326
+MaxRew: 	 7.581517188492413
+MeanRew: 	 4.062087413132133 +- 11.780557275373448
+MeanSlowdown: 	 3.7142857142857144
+MeanLen: 	 26.52 +- 13.991769008956659
+MeanEntropy 	 2.5064254
+Elapsed time	 4.01608204842 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 34
+NumTrajs: 	 50
+NumTimesteps: 	 1309
+MaxRew: 	 7.506334380032183
+MeanRew: 	 4.597157493005224 +- 11.211747518379061
+MeanSlowdown: 	 3.414285714285714
+MeanLen: 	 26.18 +- 14.720991814412505
+MeanEntropy 	 2.4672024
+Elapsed time	 4.01487016678 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 35
+NumTrajs: 	 50
+NumTimesteps: 	 1283
+MaxRew: 	 6.675526729512811
+MeanRew: 	 4.120984317996069 +- 10.656485677877436
+MeanSlowdown: 	 4.057142857142857
+MeanLen: 	 25.66 +- 11.095242223583945
+MeanEntropy 	 2.3850374
+Elapsed time	 3.90106296539 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 36
+NumTrajs: 	 50
+NumTimesteps: 	 1260
+MaxRew: 	 7.186426231053997
+MeanRew: 	 4.630937874004435 +- 10.592713579532429
+MeanSlowdown: 	 3.2285714285714286
+MeanLen: 	 25.2 +- 12.606347607455538
+MeanEntropy 	 2.2818215
+Elapsed time	 3.92102909088 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 37
+NumTrajs: 	 50
+NumTimesteps: 	 1412
+MaxRew: 	 7.673606904096848
+MeanRew: 	 5.109686381950344 +- 10.756388127352446
+MeanSlowdown: 	 4.457142857142857
+MeanLen: 	 28.24 +- 19.924417180936562
+MeanEntropy 	 2.2206147
+Elapsed time	 4.27559614182 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 38
+NumTrajs: 	 50
+NumTimesteps: 	 1290
+MaxRew: 	 8.125105717017925
+MeanRew: 	 5.159035117225833 +- 11.484633702034893
+MeanSlowdown: 	 3.657142857142857
+MeanLen: 	 25.8 +- 13.779695207079147
+MeanEntropy 	 2.0819893
+Elapsed time	 3.9973089695 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 39
+NumTrajs: 	 50
+NumTimesteps: 	 1280
+MaxRew: 	 7.213384278818715
+MeanRew: 	 5.665580007365548 +- 10.9620513430409
+MeanSlowdown: 	 3.0642857142857145
+MeanLen: 	 25.6 +- 11.954915307102764
+MeanEntropy 	 2.0350354
+Elapsed time	 3.94001984596 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 40
+NumTrajs: 	 50
+NumTimesteps: 	 1288
+MaxRew: 	 7.574213182818741
+MeanRew: 	 5.783351148689231 +- 11.050086253466079
+MeanSlowdown: 	 2.8214285714285716
+MeanLen: 	 25.76 +- 12.292371618202893
+MeanEntropy 	 2.0224314
+Elapsed time	 3.89990615845 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 41
+NumTrajs: 	 50
+NumTimesteps: 	 1292
+MaxRew: 	 8.067766867738829
+MeanRew: 	 5.124303402059017 +- 10.870867347076542
+MeanSlowdown: 	 3.1714285714285713
+MeanLen: 	 25.84 +- 12.728487734212576
+MeanEntropy 	 2.0905108
+Elapsed time	 15.484333992 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 42
+NumTrajs: 	 50
+NumTimesteps: 	 1170
+MaxRew: 	 8.362355257756423
+MeanRew: 	 6.388326218955424 +- 11.187754841482185
+MeanSlowdown: 	 1.9785714285714286
+MeanLen: 	 23.4 +- 9.241212041718338
+MeanEntropy 	 2.055083
+Elapsed time	 3.46306610107 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 43
+NumTrajs: 	 50
+NumTimesteps: 	 1404
+MaxRew: 	 7.4404875008342
+MeanRew: 	 5.068097820871241 +- 11.700082368784006
+MeanSlowdown: 	 4.064285714285714
+MeanLen: 	 28.08 +- 17.937491463412602
+MeanEntropy 	 1.862398
+Elapsed time	 4.06478500366 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 44
+NumTrajs: 	 50
+NumTimesteps: 	 1172
+MaxRew: 	 7.351211511577864
+MeanRew: 	 4.896894351214425 +- 11.485742661486166
+MeanSlowdown: 	 2.95
+MeanLen: 	 23.44 +- 10.18657940625802
+MeanEntropy 	 1.944346
+Elapsed time	 3.64083790779 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 45
+NumTrajs: 	 50
+NumTimesteps: 	 1234
+MaxRew: 	 8.631493209262647
+MeanRew: 	 5.8855345619328885 +- 11.459243327112969
+MeanSlowdown: 	 2.3142857142857145
+MeanLen: 	 24.68 +- 11.428805711884335
+MeanEntropy 	 1.7430114
+Elapsed time	 3.77834892273 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 46
+NumTrajs: 	 50
+NumTimesteps: 	 1296
+MaxRew: 	 7.946174763004953
+MeanRew: 	 6.3787909365728686 +- 11.361047383330442
+MeanSlowdown: 	 3.0642857142857145
+MeanLen: 	 25.92 +- 13.848956639400674
+MeanEntropy 	 1.900351
+Elapsed time	 3.96960902214 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 47
+NumTrajs: 	 50
+NumTimesteps: 	 1246
+MaxRew: 	 8.436743209262644
+MeanRew: 	 5.538380341769684 +- 11.367799979505737
+MeanSlowdown: 	 2.6785714285714284
+MeanLen: 	 24.92 +- 10.476335237095078
+MeanEntropy 	 2.053736
+Elapsed time	 3.83878898621 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 48
+NumTrajs: 	 50
+NumTimesteps: 	 1199
+MaxRew: 	 8.529808807182732
+MeanRew: 	 5.965652257186407 +- 11.6125816322671
+MeanSlowdown: 	 2.7642857142857142
+MeanLen: 	 23.98 +- 10.953519982179245
+MeanEntropy 	 1.9796644
+Elapsed time	 3.72087001801 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 49
+NumTrajs: 	 50
+NumTimesteps: 	 1184
+MaxRew: 	 8.13843542166974
+MeanRew: 	 5.183492457810514 +- 11.642904505158802
+MeanSlowdown: 	 2.414285714285714
+MeanLen: 	 23.68 +- 9.91047930223357
+MeanEntropy 	 1.8738469
+Elapsed time	 3.61317396164 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 50
+NumTrajs: 	 50
+NumTimesteps: 	 1167
+MaxRew: 	 7.745757432741085
+MeanRew: 	 6.110994635138621 +- 11.157725860598047
+MeanSlowdown: 	 2.45
+MeanLen: 	 23.34 +- 8.9120368042328
+MeanEntropy 	 1.9452455
+Elapsed time	 3.62117910385 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 51
+NumTrajs: 	 50
+NumTimesteps: 	 1210
+MaxRew: 	 8.125105717017925
+MeanRew: 	 6.969074433955191 +- 11.406844473951715
+MeanSlowdown: 	 2.0642857142857145
+MeanLen: 	 24.2 +- 10.192153844992728
+MeanEntropy 	 2.0276463
+Elapsed time	 16.4232158661 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 52
+NumTrajs: 	 50
+NumTimesteps: 	 1175
+MaxRew: 	 8.142706453012647
+MeanRew: 	 7.010179671304986 +- 11.846036057776171
+MeanSlowdown: 	 2.1142857142857143
+MeanLen: 	 23.5 +- 9.48525170989152
+MeanEntropy 	 1.9674585
+Elapsed time	 3.67400503159 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 53
+NumTrajs: 	 50
+NumTimesteps: 	 1162
+MaxRew: 	 8.291737085240797
+MeanRew: 	 6.892501652741409 +- 11.479924073164943
+MeanSlowdown: 	 2.3142857142857145
+MeanLen: 	 23.24 +- 9.220759187832638
+MeanEntropy 	 1.8644165
+Elapsed time	 3.64315891266 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 54
+NumTrajs: 	 50
+NumTimesteps: 	 1139
+MaxRew: 	 8.356823463947672
+MeanRew: 	 7.077419326163056 +- 11.650814245188243
+MeanSlowdown: 	 1.9857142857142858
+MeanLen: 	 22.78 +- 8.614615487646562
+MeanEntropy 	 1.7983786
+Elapsed time	 3.64420199394 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 55
+NumTrajs: 	 50
+NumTimesteps: 	 1284
+MaxRew: 	 8.096987085240798
+MeanRew: 	 6.691945697925536 +- 11.379334419704682
+MeanSlowdown: 	 3.2
+MeanLen: 	 25.68 +- 16.71459242697829
+MeanEntropy 	 1.5563841
+Elapsed time	 4.0573849678 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 56
+NumTrajs: 	 50
+NumTimesteps: 	 1188
+MaxRew: 	 7.525775117059891
+MeanRew: 	 5.8681312853342975 +- 11.53287468771747
+MeanSlowdown: 	 2.4857142857142858
+MeanLen: 	 23.76 +- 11.138330215970434
+MeanEntropy 	 1.5083528
+Elapsed time	 3.67443203926 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 57
+NumTrajs: 	 50
+NumTimesteps: 	 1215
+MaxRew: 	 8.096987085240798
+MeanRew: 	 6.117196863577538 +- 11.006360249288457
+MeanSlowdown: 	 3.2285714285714286
+MeanLen: 	 24.3 +- 11.431972708154968
+MeanEntropy 	 1.5824181
+Elapsed time	 3.86363911629 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 58
+NumTrajs: 	 50
+NumTimesteps: 	 1353
+MaxRew: 	 8.65303340464955
+MeanRew: 	 6.815452668885872 +- 11.417301469301712
+MeanSlowdown: 	 2.7642857142857142
+MeanLen: 	 27.06 +- 16.079067137119615
+MeanEntropy 	 1.3680711
+Elapsed time	 4.1887280941 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 59
+NumTrajs: 	 50
+NumTimesteps: 	 1274
+MaxRew: 	 8.631493209262647
+MeanRew: 	 6.602843839882211 +- 11.560836846644197
+MeanSlowdown: 	 2.742857142857143
+MeanLen: 	 25.48 +- 13.772784758355877
+MeanEntropy 	 1.4601765
+Elapsed time	 4.01244783401 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 60
+NumTrajs: 	 50
+NumTimesteps: 	 1194
+MaxRew: 	 8.631493209262647
+MeanRew: 	 6.280681747651233 +- 11.157605774633918
+MeanSlowdown: 	 2.85
+MeanLen: 	 23.88 +- 10.504551394514666
+MeanEntropy 	 1.566818
+Elapsed time	 3.75386404991 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 61
+NumTrajs: 	 50
+NumTimesteps: 	 1161
+MaxRew: 	 8.362355257756423
+MeanRew: 	 7.092498271229198 +- 11.521493871116185
+MeanSlowdown: 	 1.8571428571428572
+MeanLen: 	 23.22 +- 9.233179300760925
+MeanEntropy 	 1.6962904
+Elapsed time	 15.2684540749 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 62
+NumTrajs: 	 50
+NumTimesteps: 	 1197
+MaxRew: 	 8.362355257756423
+MeanRew: 	 6.929844505244414 +- 11.597132656546536
+MeanSlowdown: 	 2.0714285714285716
+MeanLen: 	 23.94 +- 9.34967379110095
+MeanEntropy 	 1.8012002
+Elapsed time	 3.76021409035 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 63
+NumTrajs: 	 50
+NumTimesteps: 	 1181
+MaxRew: 	 8.362355257756423
+MeanRew: 	 6.937526933102488 +- 11.48995113572909
+MeanSlowdown: 	 2.0357142857142856
+MeanLen: 	 23.62 +- 9.15399366396984
+MeanEntropy 	 1.7471906
+Elapsed time	 3.70653605461 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 64
+NumTrajs: 	 50
+NumTimesteps: 	 1145
+MaxRew: 	 8.3439111072873
+MeanRew: 	 6.860706045399751 +- 11.522218421722998
+MeanSlowdown: 	 2.164285714285714
+MeanLen: 	 22.9 +- 9.04267659490264
+MeanEntropy 	 1.8373272
+Elapsed time	 3.60736083984 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 65
+NumTrajs: 	 50
+NumTimesteps: 	 1163
+MaxRew: 	 7.948668953012645
+MeanRew: 	 6.792849584150868 +- 11.218913417227698
+MeanSlowdown: 	 2.1
+MeanLen: 	 23.26 +- 9.04170337934175
+MeanEntropy 	 1.6630368
+Elapsed time	 3.62975406647 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 66
+NumTrajs: 	 50
+NumTimesteps: 	 1189
+MaxRew: 	 8.291737085240797
+MeanRew: 	 7.092628039264765 +- 11.48673221201928
+MeanSlowdown: 	 2.242857142857143
+MeanLen: 	 23.78 +- 10.547587401865888
+MeanEntropy 	 1.6183393
+Elapsed time	 3.68502187729 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 67
+NumTrajs: 	 50
+NumTimesteps: 	 1190
+MaxRew: 	 8.847783404649551
+MeanRew: 	 6.824681296094835 +- 11.647147172110625
+MeanSlowdown: 	 2.0142857142857142
+MeanLen: 	 23.8 +- 10.686440005914037
+MeanEntropy 	 1.5100385
+Elapsed time	 3.7104010582 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 68
+NumTrajs: 	 50
+NumTimesteps: 	 1126
+MaxRew: 	 8.137862557182732
+MeanRew: 	 7.207025751470253 +- 11.398791919104658
+MeanSlowdown: 	 1.9
+MeanLen: 	 22.52 +- 8.91345051032427
+MeanEntropy 	 1.3971934
+Elapsed time	 3.63980913162 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 69
+NumTrajs: 	 50
+NumTimesteps: 	 1131
+MaxRew: 	 8.557105257756422
+MeanRew: 	 7.324686623793264 +- 11.708463723988865
+MeanSlowdown: 	 2.0714285714285716
+MeanLen: 	 22.62 +- 9.344281673836678
+MeanEntropy 	 1.286118
+Elapsed time	 3.56527495384 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 70
+NumTrajs: 	 50
+NumTimesteps: 	 1146
+MaxRew: 	 8.847783404649551
+MeanRew: 	 7.152645308345089 +- 11.738206980114025
+MeanSlowdown: 	 2.0142857142857142
+MeanLen: 	 22.92 +- 9.001866473126558
+MeanEntropy 	 1.6196429
+Elapsed time	 3.6062810421 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 71
+NumTrajs: 	 50
+NumTimesteps: 	 1134
+MaxRew: 	 8.847783404649551
+MeanRew: 	 7.842654477187469 +- 11.950787026138226
+MeanSlowdown: 	 1.5571428571428572
+MeanLen: 	 22.68 +- 8.68893549291281
+MeanEntropy 	 1.2782476
+Elapsed time	 16.0516829491 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 72
+NumTrajs: 	 50
+NumTimesteps: 	 1137
+MaxRew: 	 8.473970908819634
+MeanRew: 	 7.298300031963763 +- 11.56369693748147
+MeanSlowdown: 	 1.7785714285714285
+MeanLen: 	 22.74 +- 8.979554554653589
+MeanEntropy 	 1.3762764
+Elapsed time	 3.56287312508 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 73
+NumTrajs: 	 50
+NumTimesteps: 	 1128
+MaxRew: 	 8.42911356856287
+MeanRew: 	 6.991805450799169 +- 11.379835578400689
+MeanSlowdown: 	 1.8142857142857143
+MeanLen: 	 22.56 +- 8.725044412494414
+MeanEntropy 	 1.4513297
+Elapsed time	 3.67543101311 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 74
+NumTrajs: 	 50
+NumTimesteps: 	 1192
+MaxRew: 	 7.973076141368691
+MeanRew: 	 6.470323171573643 +- 11.173627568400304
+MeanSlowdown: 	 3.1285714285714286
+MeanLen: 	 23.84 +- 12.101834571667222
+MeanEntropy 	 1.3840758
+Elapsed time	 3.75911808014 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 75
+NumTrajs: 	 50
+NumTimesteps: 	 1160
+MaxRew: 	 8.024225984093755
+MeanRew: 	 6.245877559628593 +- 11.057849452523605
+MeanSlowdown: 	 2.5214285714285714
+MeanLen: 	 23.2 +- 8.98665677546439
+MeanEntropy 	 1.5063059
+Elapsed time	 3.68921089172 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 76
+NumTrajs: 	 50
+NumTimesteps: 	 1133
+MaxRew: 	 8.557105257756422
+MeanRew: 	 6.723102197758197 +- 11.655991049852414
+MeanSlowdown: 	 2.3142857142857145
+MeanLen: 	 22.66 +- 8.538407345635369
+MeanEntropy 	 1.6482638
+Elapsed time	 3.58097195625 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 77
+NumTrajs: 	 50
+NumTimesteps: 	 1224
+MaxRew: 	 8.362355257756423
+MeanRew: 	 6.689847902881212 +- 11.268517304153582
+MeanSlowdown: 	 2.3642857142857143
+MeanLen: 	 24.48 +- 11.461657820751762
+MeanEntropy 	 1.4882016
+Elapsed time	 3.80144882202 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 78
+NumTrajs: 	 50
+NumTimesteps: 	 1129
+MaxRew: 	 8.847783404649551
+MeanRew: 	 7.0641405924980685 +- 11.360040977804708
+MeanSlowdown: 	 2.0285714285714285
+MeanLen: 	 22.58 +- 9.000199997777827
+MeanEntropy 	 1.3141357
+Elapsed time	 3.54880189896 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 79
+NumTrajs: 	 50
+NumTimesteps: 	 1101
+MaxRew: 	 8.668720908819637
+MeanRew: 	 7.4339757246966665 +- 11.567727413308319
+MeanSlowdown: 	 1.7
+MeanLen: 	 22.02 +- 8.396403992186178
+MeanEntropy 	 1.3769802
+Elapsed time	 3.4911339283 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 80
+NumTrajs: 	 50
+NumTimesteps: 	 1110
+MaxRew: 	 8.631493209262647
+MeanRew: 	 7.35453205767785 +- 11.473512509470408
+MeanSlowdown: 	 1.95
+MeanLen: 	 22.2 +- 8.683317338436964
+MeanEntropy 	 1.3033597
+Elapsed time	 3.57866978645 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 81
+NumTrajs: 	 50
+NumTimesteps: 	 1150
+MaxRew: 	 8.631493209262647
+MeanRew: 	 7.96823447854413 +- 11.949528872763967
+MeanSlowdown: 	 1.5571428571428572
+MeanLen: 	 23.0 +- 8.9509776002401
+MeanEntropy 	 1.2239138
+Elapsed time	 15.3696539402 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 82
+NumTrajs: 	 50
+NumTimesteps: 	 1113
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.090446581509854 +- 12.131592591642297
+MeanSlowdown: 	 1.4214285714285715
+MeanLen: 	 22.26 +- 8.432816848479517
+MeanEntropy 	 1.1848508
+Elapsed time	 3.57167100906 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 83
+NumTrajs: 	 50
+NumTimesteps: 	 1115
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.103823073947567 +- 12.09570346662059
+MeanSlowdown: 	 1.3571428571428572
+MeanLen: 	 22.3 +- 8.474078120952155
+MeanEntropy 	 1.1282173
+Elapsed time	 3.54644083977 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 84
+NumTrajs: 	 50
+NumTimesteps: 	 1090
+MaxRew: 	 8.631493209262647
+MeanRew: 	 7.794842605773256 +- 12.023620802727697
+MeanSlowdown: 	 1.5
+MeanLen: 	 21.8 +- 8.106787279804498
+MeanEntropy 	 1.2910277
+Elapsed time	 3.47312498093 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 85
+NumTrajs: 	 50
+NumTimesteps: 	 1105
+MaxRew: 	 8.3439111072873
+MeanRew: 	 7.522540750388486 +- 11.712828962435875
+MeanSlowdown: 	 1.7857142857142858
+MeanLen: 	 22.1 +- 8.304817878797824
+MeanEntropy 	 1.1234981
+Elapsed time	 3.57776594162 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 86
+NumTrajs: 	 50
+NumTimesteps: 	 1118
+MaxRew: 	 8.557105257756422
+MeanRew: 	 7.230619048927806 +- 11.672375292814014
+MeanSlowdown: 	 2.0785714285714287
+MeanLen: 	 22.36 +- 8.86737841754822
+MeanEntropy 	 0.92768174
+Elapsed time	 3.54709386826 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 87
+NumTrajs: 	 50
+NumTimesteps: 	 1102
+MaxRew: 	 8.557105257756422
+MeanRew: 	 7.543998096976258 +- 11.800045557917617
+MeanSlowdown: 	 1.7285714285714286
+MeanLen: 	 22.04 +- 8.328169066487545
+MeanEntropy 	 1.013796
+Elapsed time	 3.50185990334 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 88
+NumTrajs: 	 50
+NumTimesteps: 	 1089
+MaxRew: 	 8.668720908819637
+MeanRew: 	 7.906034369934641 +- 12.02099756943085
+MeanSlowdown: 	 1.5928571428571427
+MeanLen: 	 21.78 +- 8.151785080582044
+MeanEntropy 	 1.1105804
+Elapsed time	 3.47176814079 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 89
+NumTrajs: 	 50
+NumTimesteps: 	 1087
+MaxRew: 	 8.668720908819635
+MeanRew: 	 8.08478138125878 +- 12.195842989280989
+MeanSlowdown: 	 1.4357142857142857
+MeanLen: 	 21.74 +- 8.130953203653307
+MeanEntropy 	 1.2080922
+Elapsed time	 3.4649078846 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 90
+NumTrajs: 	 50
+NumTimesteps: 	 1088
+MaxRew: 	 8.668720908819637
+MeanRew: 	 8.151077363781853 +- 12.166529056131527
+MeanSlowdown: 	 1.4357142857142857
+MeanLen: 	 21.76 +- 8.130338246346213
+MeanEntropy 	 1.1483973
+Elapsed time	 3.46791315079 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 91
+NumTrajs: 	 50
+NumTimesteps: 	 1085
+MaxRew: 	 8.847783404649551
+MeanRew: 	 8.34490692159316 +- 12.407918303376576
+MeanSlowdown: 	 1.1
+MeanLen: 	 21.7 +- 7.993122043357027
+MeanEntropy 	 1.2902547
+Elapsed time	 16.1607232094 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 92
+NumTrajs: 	 50
+NumTimesteps: 	 1085
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.21691455700709 +- 12.237797354739772
+MeanSlowdown: 	 1.25
+MeanLen: 	 21.7 +- 8.050465825031493
+MeanEntropy 	 1.3465075
+Elapsed time	 3.41549110413 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 93
+NumTrajs: 	 50
+NumTimesteps: 	 1082
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.162188409368293 +- 12.339997925646761
+MeanSlowdown: 	 1.3071428571428572
+MeanLen: 	 21.64 +- 7.984384760268007
+MeanEntropy 	 1.2879097
+Elapsed time	 3.41491699219 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 94
+NumTrajs: 	 50
+NumTimesteps: 	 1084
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.394898950455671 +- 12.406615792049816
+MeanSlowdown: 	 1.1071428571428572
+MeanLen: 	 21.68 +- 7.97104760994438
+MeanEntropy 	 1.2406986
+Elapsed time	 3.43825292587 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 95
+NumTrajs: 	 50
+NumTimesteps: 	 1084
+MaxRew: 	 8.529808807182732
+MeanRew: 	 7.7630353758552815 +- 12.07358875504054
+MeanSlowdown: 	 1.5142857142857142
+MeanLen: 	 21.68 +- 7.9131283320820724
+MeanEntropy 	 1.182928
+Elapsed time	 3.48584794998 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 96
+NumTrajs: 	 50
+NumTimesteps: 	 1083
+MaxRew: 	 8.529808807182732
+MeanRew: 	 7.595836900269505 +- 13.443784267636806
+MeanSlowdown: 	 1.0857142857142856
+MeanLen: 	 21.66 +- 7.890779429181887
+MeanEntropy 	 0.9305877
+Elapsed time	 3.43934988976 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 97
+NumTrajs: 	 50
+NumTimesteps: 	 1097
+MaxRew: 	 8.631493209262647
+MeanRew: 	 8.131505973804007 +- 12.33650921187639
+MeanSlowdown: 	 1.25
+MeanLen: 	 21.94 +- 8.14962575827872
+MeanEntropy 	 1.1042906
+Elapsed time	 3.54469895363 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 98
+NumTrajs: 	 50
+NumTimesteps: 	 1095
+MaxRew: 	 8.668720908819637
+MeanRew: 	 7.9348191610322285 +- 12.15574384084883
+MeanSlowdown: 	 1.4785714285714286
+MeanLen: 	 21.9 +- 8.163945124754331
+MeanEntropy 	 1.1098804
+Elapsed time	 3.4453458786 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 99
+NumTrajs: 	 50
+NumTimesteps: 	 1086
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.296525427069122 +- 12.27558567345102
+MeanSlowdown: 	 1.3357142857142856
+MeanLen: 	 21.72 +- 8.089598259493483
+MeanEntropy 	 0.9170206
+Elapsed time	 3.47658896446 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 100
+NumTrajs: 	 50
+NumTimesteps: 	 1083
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.201123018626413 +- 12.233935730870122
+MeanSlowdown: 	 1.3214285714285714
+MeanLen: 	 21.66 +- 8.009019915070757
+MeanEntropy 	 0.8211488
+Elapsed time	 3.5605430603 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 101
+NumTrajs: 	 50
+NumTimesteps: 	 1081
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.359495795653286 +- 12.33254273668886
+MeanSlowdown: 	 1.2285714285714286
+MeanLen: 	 21.62 +- 7.962135391966153
+MeanEntropy 	 0.7761111
+Elapsed time	 15.3375058174 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 102
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6826775
+Elapsed time	 3.42974901199 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 103
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6820219
+Elapsed time	 3.42177200317 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 104
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6840385
+Elapsed time	 3.43057799339 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 105
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6574182
+Elapsed time	 3.43116116524 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 106
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.440172115030778 +- 12.439786130804581
+MeanSlowdown: 	 1.1
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.63297653
+Elapsed time	 3.37633705139 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 107
+NumTrajs: 	 50
+NumTimesteps: 	 1087
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.196739877000116 +- 12.364643835938564
+MeanSlowdown: 	 1.3285714285714285
+MeanLen: 	 21.74 +- 8.13095320365331
+MeanEntropy 	 0.6284811
+Elapsed time	 3.43340778351 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 108
+NumTrajs: 	 50
+NumTimesteps: 	 1117
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.298452783959453 +- 12.320268987071714
+MeanSlowdown: 	 1.4857142857142858
+MeanLen: 	 22.34 +- 10.11456375727594
+MeanEntropy 	 0.55439544
+Elapsed time	 3.53679299355 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 109
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6657111
+Elapsed time	 3.42357206345 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 110
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.68952405
+Elapsed time	 3.43603301048 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+/home/terhard/.conda/envs/py27/lib/python2.7/site-packages/matplotlib/pyplot.py:522: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  max_open_warning, RuntimeWarning)
+None
+4 out of 5
+-----------------
+Epoch: 	 111
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7272768
+Elapsed time	 16.2331609726 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 112
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7400107
+Elapsed time	 3.47841596603 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 113
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.74205726
+Elapsed time	 3.40806698799 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 114
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7410444
+Elapsed time	 3.43810415268 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 115
+NumTrajs: 	 50
+NumTimesteps: 	 1092
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.472988855333908 +- 12.492853193282757
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.84 +- 8.097802170959723
+MeanEntropy 	 0.6972846
+Elapsed time	 3.44662213326 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 116
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7677777
+Elapsed time	 3.44540786743 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 117
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.423922994682734 +- 12.534666138254028
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7391192
+Elapsed time	 3.40756201744 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 118
+NumTrajs: 	 50
+NumTimesteps: 	 1082
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.355332592039245 +- 12.31912175822018
+MeanSlowdown: 	 1.2357142857142858
+MeanLen: 	 21.64 +- 7.984384760268007
+MeanEntropy 	 0.7104982
+Elapsed time	 3.40494704247 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 119
+NumTrajs: 	 50
+NumTimesteps: 	 1082
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.276014474703148 +- 12.310241909432868
+MeanSlowdown: 	 1.2357142857142858
+MeanLen: 	 21.64 +- 7.984384760268007
+MeanEntropy 	 0.7882182
+Elapsed time	 3.55605888367 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 120
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7911228
+Elapsed time	 3.45304703712 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 121
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8436559
+Elapsed time	 15.2106909752 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 122
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.85872316
+Elapsed time	 3.46792197227 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 123
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86139303
+Elapsed time	 3.43032097816 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 124
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.85864264
+Elapsed time	 3.50799608231 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 125
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8181664
+Elapsed time	 3.44663381577 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 126
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.78162247
+Elapsed time	 3.43213891983 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 127
+NumTrajs: 	 50
+NumTimesteps: 	 1082
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.355332592039245 +- 12.31912175822018
+MeanSlowdown: 	 1.2357142857142858
+MeanLen: 	 21.64 +- 7.984384760268007
+MeanEntropy 	 0.85472053
+Elapsed time	 3.41951704025 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 128
+NumTrajs: 	 50
+NumTimesteps: 	 1098
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.292648381470299 +- 12.278638703769666
+MeanSlowdown: 	 1.3357142857142856
+MeanLen: 	 21.96 +- 8.241262039275295
+MeanEntropy 	 1.0137403
+Elapsed time	 3.47693109512 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 129
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.6911833
+Elapsed time	 3.41762208939 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 130
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.721058
+Elapsed time	 3.45003509521 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 131
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.510763569087494 +- 12.41793155659239
+MeanSlowdown: 	 1.0785714285714285
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.748243
+Elapsed time	 15.1341822147 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 132
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.510763569087494 +- 12.41793155659239
+MeanSlowdown: 	 1.0785714285714285
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.73591703
+Elapsed time	 3.37765002251 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 133
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.707105
+Elapsed time	 3.39229393005 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 134
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7027805
+Elapsed time	 3.39630794525 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 135
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.66125476
+Elapsed time	 3.43403697014 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 136
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.476865900932733 +- 12.489796545218807
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.73837334
+Elapsed time	 3.39519190788 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 137
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.84952503
+Elapsed time	 3.42727899551 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 138
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.82443225
+Elapsed time	 3.40935492516 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 139
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.9397732965116825
+MeanEntropy 	 0.8151506
+Elapsed time	 3.39843797684 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 140
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.510763569087494 +- 12.417931556592388
+MeanSlowdown: 	 1.0785714285714285
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.84586936
+Elapsed time	 3.43101596832 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 141
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 16.0198290348 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 142
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.4197499752 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 143
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.40392613411 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 144
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063806
+Elapsed time	 3.45815706253 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 145
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.45684814453 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 146
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.82709694
+Elapsed time	 3.41244506836 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 147
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.81700975
+Elapsed time	 3.4428498745 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 148
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.79285806
+Elapsed time	 3.44761991501 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 149
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.9397732965116825
+MeanEntropy 	 0.78457665
+Elapsed time	 3.38336420059 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 150
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.44301486015 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 151
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 15.3069899082 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 152
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.39655399323 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 153
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.35856080055 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 154
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063794
+Elapsed time	 3.45201706886 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 155
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.47830510139 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 156
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8270969
+Elapsed time	 3.38842201233 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 157
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.81700975
+Elapsed time	 3.43545484543 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 158
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7928581
+Elapsed time	 3.39302587509 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 159
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.9397732965116825
+MeanEntropy 	 0.78457665
+Elapsed time	 3.45128703117 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 160
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.50623393059 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 161
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 15.1992380619 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 162
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.4588470459 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 163
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.40735793114 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 164
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063806
+Elapsed time	 3.41506099701 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 165
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.43873286247 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 166
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8270969
+Elapsed time	 3.3770840168 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 167
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.81700975
+Elapsed time	 3.44357919693 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 168
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7928581
+Elapsed time	 3.41323113441 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 169
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.78457665
+Elapsed time	 3.42220187187 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 170
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.47824597359 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 171
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 16.3122701645 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 172
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.44839286804 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 173
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.45657396317 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 174
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063806
+Elapsed time	 3.48379921913 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 175
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.44792604446 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 176
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8270969
+Elapsed time	 3.40369796753 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 177
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.81700975
+Elapsed time	 3.48505806923 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 178
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7928581
+Elapsed time	 3.50662612915 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 179
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.78457665
+Elapsed time	 3.49822497368 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 180
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.4809718132 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 181
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 15.5135838985 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 182
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.52980880718273
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.3807721138 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 183
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.38065099716 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 184
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063806
+Elapsed time	 3.422976017 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 185
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.46148180962 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 186
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.82709694
+Elapsed time	 3.38438987732 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 187
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8170098
+Elapsed time	 3.42304110527 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 188
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7928581
+Elapsed time	 3.42244791985 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 189
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.78457665
+Elapsed time	 3.47947096825 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 190
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.48583483696 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 191
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 15.2115550041 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 192
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.29357385635 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 193
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8864446
+Elapsed time	 3.37347388268 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 194
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.88063794
+Elapsed time	 3.43175792694 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 195
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8345892
+Elapsed time	 3.43831682205 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 196
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8270969
+Elapsed time	 3.41160202026 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 197
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.81700975
+Elapsed time	 3.45185923576 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 198
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.7928581
+Elapsed time	 3.40581488609 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 199
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.78457665
+Elapsed time	 3.46973896027 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 200
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552431
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.8145521
+Elapsed time	 3.41737389565 seconds
+-----------------
+initialize the environment...
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+('Input layer shape: ', (None, 1, 30, 225))
+('Conv1 layer shape: ', (None, 16, 28, 223))
+('Pool1 layer shape: ', (None, 16, 14, 111))
+('Hidden layer shape: ', (None, 64))
+('Output layer shape: ', (None, 16))
+None
+4 out of 5
+-----------------
+Epoch: 	 201
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.44453994255243
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.86559486
+Elapsed time	 16.384002924 seconds
+-----------------
+4 out of 5
+-----------------
+Epoch: 	 202
+NumTrajs: 	 50
+NumTimesteps: 	 1080
+MaxRew: 	 8.529808807182732
+MeanRew: 	 8.529808807182732 +- 12.444539942552433
+MeanSlowdown: 	 1.0714285714285714
+MeanLen: 	 21.6 +- 7.939773296511683
+MeanEntropy 	 0.882675
+Elapsed time	 3.41409301758 seconds
+-----------------
+4 out of 5
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 6526693.0 ON gcn53 CANCELLED AT 2024-06-06T15:23:27 ***
+slurmstepd: error: *** JOB 6526693 ON gcn53 CANCELLED AT 2024-06-06T15:23:27 ***
+
+JOB STATISTICS
+==============
+Job ID: 6526693
+Cluster: snellius
+User/Group: terhard/terhard
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 02:58:43
+CPU Efficiency: 58.92% of 05:03:18 core-walltime
+Job Wall-clock time: 00:16:51
+Memory Utilized: 3.05 GB
+Memory Efficiency: 2.54% of 120.00 GB

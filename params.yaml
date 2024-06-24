@@ -1,12 +1,12 @@
 anomalous_job_len-middle_bound: 23
 anomalous_job_len_lower_bound: 19
 anomalous_job_len_upper_bound: 29
-anomalous_job_rate: 0.5
+anomalous_job_rate: 0.1
 anomalous_job_resources_lower: 11
 anomalous_job_resources_upper: 15
 backlog_size: 120
 backlog_width: 4
-batch_size: 512
+batch_size: 10
 delay_penalty: -1
 discount: 0.95
 dismiss_penalty: -1
@@ -31,7 +31,7 @@ dist: !!python/object:job_distribution.Dist
   other_res_lower: 1
   other_res_upper: 2
 episode_max_length: 3000
-evaluate_policy_name: SJF
+evaluate_policy_name: WRR
 hold_penalty: -1
 job_num_cap: 40
 lr_rate: 0.001
@@ -42,8 +42,8 @@ network_compact_dim: 106
 network_input_height: 30
 network_input_width: 225
 network_output_dim: 16
-new_job_rate: 1
-num_epochs: 51
+new_job_rate: 0.7
+num_epochs: 101
 num_ex: 5
 num_frames: 1
 num_nw: 5
@@ -56,6 +56,6 @@ res_slot2: 10
 res_slot3: 15
 rms_eps: 1.0e-09
 rms_rho: 0.9
-simu_len: 5
+simu_len: 10
 time_horizon: 30
 unseen: false
