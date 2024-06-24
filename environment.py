@@ -81,10 +81,11 @@ class Env:
 
         self.seq_no = 0  # which example sequence
         self.seq_idx = 0  # index in that sequence
+
         self.iteration = 0
-        
         # initialize system
         self.machine = Machine(pa)
+    #    self.job_slot = JobSlot(pa)
         self.job_slot1 = JobSlot1(pa)
         self.job_backlog = JobBacklog(pa)
         self.job_record = JobRecord()
@@ -92,61 +93,68 @@ class Env:
 
         self.data_collection_instance = data_collection.Data_collection()
 
-        # print("starting or finishing...........")
+        #print("starting or finishing...........")
     def generate_sequence_work(self, simu_len):
 
         nw_len_seq = np.zeros(simu_len, dtype=int)
         nw_size_seq = np.zeros((simu_len, self.pa.num_res), dtype=int)
-        # print("size seq", nw_size_seq)
+        #print("size seq", nw_size_seq)
         for i in range(simu_len):
+
             if np.random.rand() < self.pa.new_job_rate:  # a new job comes
+
                 nw_len_seq[i], nw_size_seq[i, :] = self.nw_dist()
+
         return nw_len_seq, nw_size_seq
         
 
     def get_new_job_from_seq(self, seq_no, seq_idx):
+
         new_job = Job(res_vec=self.nw_size_seqs[seq_no, seq_idx, :],
                         job_len=self.nw_len_seqs[seq_no, seq_idx],
                         job_id=len(self.job_record.record),
                         enter_time=self.curr_time)
+            
         #print('the new job id: ', new_job.id, 'len', new_job.len, 'enter time: ', new_job.enter_time, 'start time: ', new_job.start_time, 'finish time: ', new_job.finish_time, 'res vec?:', new_job.res_vec)
         return new_job
 
     def observe(self):
         if self.repre == 'image':
-            # print('this is image mode')
+            #print('this is image mode')
             backlog_width = int(math.ceil(self.pa.backlog_size / float(self.pa.time_horizon)))
-            # print('width of backlog: ', backlog_width)
+        #    print('width of backlog: ', backlog_width)
             image_repr = np.zeros((self.pa.network_input_height, self.pa.network_input_width))
-            # print('image repre before: ', image_repr.shape, image_repr)
+            #print('image repre before: ', image_repr.shape, image_repr)
             ir_pt = 0
 
             for i in xrange(self.pa.num_res):
                 #print("Shape of image_repr: ", image_repr.shape)
-                # print("Shape of machine.canvas for resource ", i, ": ", self.machine.canvas[i, :, :].shape)
-                # print("Value of res_slot: ", self.pa.res_slot)
+               # print("Shape of machine.canvas for resource ", i, ": ", self.machine.canvas[i, :, :].shape)
+              #  print("Value of res_slot: ", self.pa.res_slot)
                 image_repr[:, ir_pt: ir_pt + self.pa.res_slot1] = self.machine.canvas1[i, :, :] #change res slot to anomalous. #explore this in more details TODO
                 ir_pt += self.pa.res_slot1
-                # print('check the image representation pt after canvas 1: ', ir_pt, "and img", image_repr.shape)
+             #   print('check the image representation pt after canvas 1: ', ir_pt, "and img", image_repr.shape)
 
                 image_repr[:, ir_pt: ir_pt + self.pa.res_slot2] += self.machine.canvas2[i, :, :] #change res slot to anomalous. #explore this in more details TODO
                 ir_pt += self.pa.res_slot2
-                # print('check the image representation pt after canvas 2: ', ir_pt, "and img", image_repr.shape)
+             #   print('check the image representation pt after canvas 2: ', ir_pt, "and img", image_repr.shape)
 
                 image_repr[:, ir_pt: ir_pt + self.pa.res_slot3] += self.machine.canvas3[i, :, :] #change res slot to anomalous. #explore this in more details TODO
                 ir_pt += self.pa.res_slot3
-                # print('check the image representation after canva 3 pt: ', ir_pt, "and img", image_repr.shape)
+             #   print('check the image representation after canva 3 pt: ', ir_pt, "and img", image_repr.shape)
 
                 for j in xrange(self.pa.num_nw):
+
                     if self.job_slot1.slot[j] is not None:  # fill in a block of work
                         image_repr[: self.job_slot1.slot[j].len, ir_pt: ir_pt + self.job_slot1.slot[j].res_vec[i]] = 1
+
                     ir_pt += self.pa.anomalous_job_resources_upper
-                    # print('check ir_pt value: ', ir_pt)
-                    # print(' max job size: ', ir_pt)
+            #        print('check ir_pt value: ', ir_pt)
+                    #print(' max job size: ', ir_pt)
                 
             image_repr[: self.job_backlog.curr_size / backlog_width,
                        ir_pt: ir_pt + backlog_width] = 1
-            # print('image rep backlog ting: ', image_repr)
+           # print('image rep backlog ting: ', image_repr)
             if self.job_backlog.curr_size % backlog_width > 0:
                 image_repr[self.job_backlog.curr_size / backlog_width,
                            ir_pt: ir_pt + self.job_backlog.curr_size % backlog_width] = 1
@@ -155,13 +163,14 @@ class Env:
             image_repr[:, ir_pt: ir_pt + 1] = self.extra_info.time_since_last_new_job / \
                                               float(self.extra_info.max_tracking_time_since_last_job)
             
-            # print('I need to know that: ', self.extra_info.time_since_last_new_job, self.extra_info.max_tracking_time_since_last_job, self.extra_info.time_since_last_new_job / \
-            #                                   float(self.extra_info.max_tracking_time_since_last_job)) #TODO, might need to change this.
+          #  print('I need to know that: ', self.extra_info.time_since_last_new_job, self.extra_info.max_tracking_time_since_last_job, self.extra_info.time_since_last_new_job / \
+           #                                   float(self.extra_info.max_tracking_time_since_last_job)) #TODO, might need to change this.
             ir_pt += 1
-            # print('image represenation: ', image_repr, 'and shape of image: ', image_repr.shape)
-            # print('check backlog: ',  )
-            # print('the image at the end of obv func: ', image_repr,  image_repr.shape, 'and irpt', ir_pt)
+            #print('image represenation: ', image_repr, 'and shape of image: ', image_repr.shape)
+            #print('check backlog: ',  )
+            #print('the image at the end of obv func: ', image_repr,  image_repr.shape, 'and irpt', ir_pt)
             assert ir_pt == image_repr.shape[1]
+
             return image_repr
 
         elif self.repre == 'compact':
@@ -189,6 +198,7 @@ class Env:
 
             # new work duration and size
             for i in range(self.pa.num_nw):
+
                 if self.job_slot1.slot[i] is None:
                     compact_repr[cr_pt: cr_pt + self.pa.num_res + 1] = 0
                     cr_pt += self.pa.num_res + 1
@@ -205,6 +215,7 @@ class Env:
             cr_pt += 1
 
             assert cr_pt == len(compact_repr)  # fill up the compact representation vector
+
             return compact_repr
 
     def plot_state(self):
@@ -213,18 +224,23 @@ class Env:
         skip_row = 0
 
         for i in xrange(self.pa.num_res):
+
             plt.subplot(self.pa.num_res,
                         1 + self.pa.num_nw + 1,  # first +1 for current work, last +1 for backlog queue
                         i * (self.pa.num_nw + 1) + skip_row + 1)  # plot the backlog at the end, +1 to avoid 0
+
             plt.imshow(self.machine.canvas1[i, :, :], interpolation='nearest', vmax=1)
 
             for j in xrange(self.pa.num_nw):
+
                 job_slot1 = np.zeros((self.pa.time_horizon, self.pa.max_job_size))
                 if self.job_slot1.slot[j] is not None:  # fill in a block of work
                     job_slot1[: self.job_slot1.slot[j].len, :self.job_slot1.slot[j].res_vec[i]] = 1
+
                 plt.subplot(self.pa.num_res,
                             1 + self.pa.num_nw + 1,  # first +1 for current work, last +1 for backlog queue
                             1 + i * (self.pa.num_nw + 1) + j + skip_row + 1)  # plot the backlog at the end, +1 to avoid 0
+
                 plt.imshow(job_slot1, interpolation='nearest', vmax=1)
 
                 if j == self.pa.num_nw - 1:
@@ -253,22 +269,31 @@ class Env:
 
         plt.imshow(extra_info, interpolation='nearest', vmax=1)
 
-        plt.show()          # manual
-        # plt.pause(0.01)   # automatic
+        plt.show()     # manual
+        # plt.pause(0.01)  # automatic
 
     def get_reward(self):
 
         reward = 0
-        
         for j in self.machine.running_job:
+           # if j.len >= self.pa.anomalous_job_len_middle_bound:
+          #      reward += self.pa.delay_penalty / (-float(j.len))
+         #   else: 
+          #  if j.len >= self.pa.anomalous_job_len_middle_bound:
+           #     reward += self.pa.delay_penalty / (-(float(j.len)))
+            #else:
             reward += self.pa.delay_penalty / float(j.len)
 
         for j in self.machine.running_job2:
+ 
             reward += self.pa.delay_penalty / float(j.len)
 
         for j in self.machine.running_job3:
             if j.len >= self.pa.anomalous_job_len_lower_bound:
-                reward += self.pa.delay_penalty * float(-3)
+                reward += self.pa.delay_penalty * float(-3) #(-(float(j.len)))
+            #if max(j.res_vec) >= self.pa.anomalous_job_resources_lower:
+             #   reward += self.pa.delay_penalty / (-float(max(j.res_vec)))
+            
             else:
                 reward += self.pa.delay_penalty * float(2)
 
@@ -283,6 +308,9 @@ class Env:
         return reward
 
     def step(self, a, s=None, repeat=False, test_type=None):
+        #print("Active child processes:- ", multiprocessing.active_children())
+        #print("Active threads:", threading.enumerate())
+    #    print('testtype', test_type)
         status = None
         list_of_actions = []
         done = False
@@ -290,9 +318,9 @@ class Env:
         info = None
         list_of_actions.append(a)
         append_to_csv('./output_re.csv', [[a]])
+        #print('current timestep: ', self.curr_time, "and actions taken: ", a, "job_slots: ", self.job_slot1.slot, "backlog size: ", self.job_backlog.curr_size)
         
-        # print('current timestep: ', self.curr_time, "and actions taken: ", a, "job_slots: ", self.job_slot1.slot, "backlog size: ", self.job_backlog.curr_size)
-        #  print('the action a is: ', a , 'at time: ', self.curr_time)
+      #  print('the action a is: ', a , 'at time: ', self.curr_time)
 
         if a == self.pa.num_nw:  # explicit void action # if action taken is 5 then move on
             status = 'MoveOn'
@@ -327,7 +355,7 @@ class Env:
                         self.data_collection_instance.append_job_to_csv(self.allocatedJobsFile3,self.allocatedJobsHeaders,self.job_info)
                     status = 'Allocate3'
         elif self.job_slot1.slot[a] is None:  # implicit void action # if no actions then move on        
-            # print("Status : Value of a:", a, 'and job slots: ', self.job_slot.slot[a])
+          #  print("Status : Value of a:", a, 'and job slots: ', self.job_slot.slot[a])
             status = 'MoveOn'
 
         else:
@@ -354,7 +382,7 @@ class Env:
 
             if self.end == "no_new_job":  # end of new job sequence
                 if self.seq_idx >= self.pa.simu_len:
-                    # print('idx ting', self.seq_idx)
+                    #print('idx ting', self.seq_idx)
                     done = True
                     print('no new jobs')
             elif self.end == "all_done":  # everything has to be finished
@@ -368,11 +396,11 @@ class Env:
                 elif self.curr_time > self.pa.episode_max_length:  # run too long, force termination
                     print('It ran for too long: ', 'job slots: ', self.job_slot1.slot, 'backlog: ', self.job_backlog.curr_size)
                     done = True
-                    # print('ran for too long')
+                   # print('ran for too long')
 
             if not done:
-                # print('back log size',self.job_backlog.curr_size)
-                # print('the backlog: ', self.job_backlog.curr_size, 'the job slots: ', self.job_slot.slot, 'the remove slots', self.remove_slot.slot, 'destroy slots: ', self.destroyed_slot.slot[:10])# self.job_backlog.backlog[0:10])
+                #print('back log size',self.job_backlog.curr_size)
+                #print('the backlog: ', self.job_backlog.curr_size, 'the job slots: ', self.job_slot.slot, 'the remove slots', self.remove_slot.slot, 'destroy slots: ', self.destroyed_slot.slot[:10])# self.job_backlog.backlog[0:10])
                 if self.seq_idx < self.pa.simu_len:  # otherwise, end of new job sequence, i.e. no new jobs
                     new_job = self.get_new_job_from_seq(self.seq_no, self.seq_idx)
                     if new_job.len > 0:  # a new job comes
@@ -382,11 +410,11 @@ class Env:
                                 self.job_slot1.slot[i] = new_job
                                 self.job_record.record[new_job.id] = new_job #put the newly arrived job in the records. 
                                 to_backlog = False
-                                # print('queue content: ', self.job_slot.slot, 'and new job arriving w id,len,resource and slot: ', new_job.id, new_job.len, new_job.res_vec, self.job_slot.slot[i])
+             #                   print('queue content: ', self.job_slot.slot, 'and new job arriving w id,len,resource and slot: ', new_job.id, new_job.len, new_job.res_vec, self.job_slot.slot[i])
                                 break
                         if to_backlog:
                             if self.job_backlog.curr_size < self.pa.backlog_size:
-                                # print('Job sent to the backlog: ', new_job.id, 'and backlog information at the time: ', self.job_backlog.curr_size)
+            #                    print('Job sent to the backlog: ', new_job.id, 'and backlog information at the time: ', self.job_backlog.curr_size)
                                 self.job_backlog.backlog[self.job_backlog.curr_size] = new_job
                                 self.job_backlog.curr_size += 1
                                 self.job_record.record[new_job.id] = new_job
@@ -428,11 +456,12 @@ class Env:
                 self.job_backlog.backlog[-1] = None
                 self.job_backlog.curr_size -= 1
 
-            # print('reward allocate act: ', reward)
+    
+            #print('reward allocate act: ', reward)
 
         ob = self.observe()
         info = self.job_record
-        # print('the info about records: ', self.job_record.record, 'and record id', self.job_record)
+        #print('the info about records: ', self.job_record.record, 'and record id', self.job_record)
         if done:
             # print('final reward', reward)
             self.iteration_counter += 1
@@ -440,11 +469,11 @@ class Env:
             # print('finished!')
             # print('final backlog: ', self.job_backlog.curr_size, 'job slots: ', self.job_slot1.slot )
             final_list = map(lambda x: [self.iteration_counter] + list(x), self.machine.job_information)
-            # print('the test list: ', self.machine.test_list)
+            #print('the test list: ', self.machine.test_list)
             if not os.path.isfile('./output_re.csv') or os.path.getsize('./output_re.csv') == 0:
                 with open('./output_re.csv', mode='ab') as file:
                     csv_writer = csv.writer(file)
-                    # csv_writer.writerow(['Iteration', 'Job ID', 'Current Time', 'Start Time', 'Finish Time', 'Waiting Time', 'Job Length', 'Job Resource Vector', 'Available resource after job allocation'])
+                    #csv_writer.writerow(['Iteration', 'Job ID', 'Current Time', 'Start Time', 'Finish Time', 'Waiting Time', 'Job Length', 'Job Resource Vector', 'Available resource after job allocation'])
                     csv_writer.writerow(['Action Label'])
 
             self.seq_idx = 0
@@ -457,7 +486,7 @@ class Env:
         
         if self.render:
             self.plot_state()
-            # print('the reward 2', reward)
+      #  print('the reward 2', reward)
         return ob, reward, done, info
 
     def reset(self):
@@ -507,6 +536,8 @@ class Machine:
     
     def __init__(self, pa):
 
+        #self.test_type = slow_down_cdf.launch.
+
         self.removedJobsFile = 'removedJobs.csv'
         self.removedJobsHeaders = ['iteration', 'job object', 'job ID', 'job Length', 'job ressource requirement', 'job enter time', 'current time']
 
@@ -554,16 +585,18 @@ class Machine:
         np.random.shuffle(self.colormap)
 
         # graphical representation
-        # self.canvas = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot1))
+        #self.canvas = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot1))
         self.canvas1 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot1))
         self.canvas2 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot2))
         self.canvas3 = np.zeros((pa.num_res, pa.time_horizon, pa.res_slot3))
-        # print('the canvas: ', self.canvas, 'and shape: ', self.canvas.shape) 
+       # print('the canvas: ', self.canvas, 'and shape: ', self.canvas.shape)
+    
+    # implement two logics one for with s and one without. 
 
     
     def allocate_job_machine1(self, job, curr_time):
         allocated = False
-        # print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
+        #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
             new_avbl_res1 = self.avbl_slot1[t: t + job.len, :] - job.res_vec
             if np.all(new_avbl_res1[:] >= 0):
@@ -576,14 +609,14 @@ class Machine:
                 
                 self.resource_utilisation.append((curr_time, new_avbl_res1))
                 # update graphical representation
-                # print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res1)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res1)
                
                 self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res1))
                 self.test_list.append((job.id, job.len, job.res_vec))
                 used_color = np.unique(self.canvas1[:])
                 # WARNING: there should be enough colors in the color map
                 for color in self.colormap:
-                    if color not in self.used_colors_set:# used_color:
+                    if color not in self.used_colors_set:#used_color:
                         new_color = color
                         self.used_colors_set.add(new_color)
                         break
@@ -594,12 +627,12 @@ class Machine:
                 assert job.finish_time > job.start_time
                 canvas_start_time = job.start_time - curr_time
                 canvas_end_time = job.finish_time - curr_time
-                # print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
+                #print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
 
                 for res in xrange(self.num_res):
                     for i in range(canvas_start_time, canvas_end_time):
-                        avbl_slot1 = np.where(self.canvas1[res, i, :] == 0)[0]
-                        self.canvas1[res, i, tuple(avbl_slot1[: job.res_vec[res]])] = new_color
+                        avbl_slot1 = np.where(self.canvas1[res, i, :] == 0)[0] #TODO probably need to change that
+                        self.canvas1[res, i, avbl_slot1[: job.res_vec[res]]] = new_color
                 break
             
         return allocated
@@ -607,7 +640,7 @@ class Machine:
 
     def allocate_job_machine2(self, job, curr_time):
         allocated = False
-        # print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
+        #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
             new_avbl_res2 = self.avbl_slot2[t: t + job.len, :] - job.res_vec
             if np.all(new_avbl_res2[:] >= 0):
@@ -620,7 +653,7 @@ class Machine:
                 
                 self.resource_utilisation.append((curr_time, new_avbl_res2))
                 # update graphical representation
-                # print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res2)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res2)
                
                 self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res2))
                 self.test_list.append((job.id, job.len, job.res_vec))
@@ -637,7 +670,7 @@ class Machine:
                 assert job.finish_time > job.start_time
                 canvas_start_time2 = job.start_time - curr_time
                 canvas_end_time2 = job.finish_time - curr_time
-                # print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
+                #print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
 
                 for res in xrange(self.num_res):
                     for i in range(canvas_start_time2, canvas_end_time2):
@@ -651,7 +684,7 @@ class Machine:
 
     def allocate_job_machine3(self, job, curr_time):
         allocated = False
-        # print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
+        #print('allocated job:', job.id, 'at time: ', curr_time, 'with res and len ', job.len, job.res_vec)
         for t in xrange(0, self.time_horizon - job.len):
             new_avbl_res3 = self.avbl_slot3[t: t + job.len, :] - job.res_vec
             if np.all(new_avbl_res3[:] >= 0):
@@ -664,7 +697,7 @@ class Machine:
                 
                 self.resource_utilisation.append((curr_time, new_avbl_res3))
                 # update graphical representation
-                # print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res3)
+                #print("Job", job.id, "allocated at time", curr_time, 'start at time: ', job.start_time, "and finishes at time", job.finish_time, "job length: ", job.len, 'job resource vector', job.res_vec, 'and new avble ressource: ', new_avbl_res3)
                
                 self.job_information.append((job.id, curr_time,job.start_time,job.finish_time,job.waiting_time,job.len, job.res_vec, new_avbl_res3))
                 self.test_list.append((job.id, job.len, job.res_vec))
@@ -682,13 +715,13 @@ class Machine:
                 assert job.finish_time > job.start_time
                 canvas_start_time3 = job.start_time - curr_time
                 canvas_end_time3 = job.finish_time - curr_time
-                # print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
+                #print('start time: ', canvas_start_time, 'end time: ', canvas_end_time)
 
                 for res in xrange(self.num_res):
                     for i in range(canvas_start_time3, canvas_end_time3):
                         avbl_slot3 = np.where(self.canvas3[res, i, :] == 0)[0] #TODO probably need to change that
                         self.canvas3[res, i, avbl_slot3[: job.res_vec[res]]] = new_color
-                        # print('and print the start-end: ', canvas_start_time, canvas_end_time, canvas_end_time-canvas_start_time, 'and color', new_color)
+                   # print('and print the start-end: ', canvas_start_time, canvas_end_time, canvas_end_time-canvas_start_time, 'and color', new_color)
                 break
             
         return allocated
@@ -708,7 +741,7 @@ class Machine:
         for job in self.running_job:
 
             if job.finish_time <= curr_time:
-                # print('job finish time: ', job.finish_time, 'current time', curr_time, 'job id',job.id )
+              #  print('job finish time: ', job.finish_time, 'current time', curr_time, 'job id',job.id )
                 if job.color in self.used_colors_set:
                     self.used_colors_set.remove(job.color)
                 self.running_job.remove(job)
@@ -717,7 +750,7 @@ class Machine:
         for job2 in self.running_job2:
 
             if job2.finish_time <= curr_time:
-                # print('job finish time: ', job2.finish_time, 'current time', curr_time, 'job id',job2.id )
+            #    print('job finish time: ', job2.finish_time, 'current time', curr_time, 'job id',job2.id )
                 if job2.color in self.used_colors_set:
                     self.used_colors_set.remove(job2.color)
                 self.running_job2.remove(job2)
@@ -726,12 +759,13 @@ class Machine:
         for job3 in self.running_job3:
 
             if job3.finish_time <= curr_time:
-                # print('job finish time: ', job3.finish_time, 'current time', curr_time, 'job id',job3.id )
+             #   print('job finish time: ', job3.finish_time, 'current time', curr_time, 'job id',job3.id )
                 if job3.color in self.used_colors_set:
                     self.used_colors_set.remove(job3.color)
                 self.running_job3.remove(job3)
 
         # update graphical representation
+
         self.canvas1[:, :-1, :] = self.canvas1[:, 1:, :]
         self.canvas1[:, -1, :] = 0
 
