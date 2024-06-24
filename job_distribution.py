@@ -1,5 +1,6 @@
 import numpy as np
 import parameters
+# from memory_profiler import profile
 
 class Dist:
 
@@ -90,7 +91,6 @@ class Dist:
         nw_len = np.random.randint(self.job_len_big_upper, self.job_len_big_upper * 2)
         nw_size = np.random.randint(self.dominant_res_upper, self.dominant_res_upper * 2, size=self.num_res)
         return nw_len, nw_size
-
 
 def generate_sequence_work(pa, seed=42):
 

@@ -1,5 +1,5 @@
 import os
-os.environ["THEANO_FLAGS"] = "device=gpu, floatX=float32"
+os.environ["THEANO_FLAGS"] = "device=cpu, floatX=float32"
 import sys
 import getopt
 import matplotlib
@@ -39,8 +39,7 @@ def script_usage():
           '--render <plot dynamics> \n'
           '--unseen <generate unseen example> \n'
           '--use_cnn <use CNN instead of dense network> \n')
-
-
+    
 def main():
 
     pa = parameters.Parameters()

@@ -1,0 +1,29 @@
+iteration,job object,job ID,job Length,job ressource requirement,job enter time,job start time,job finish time,job waiting time,current time
+1,<environment.Job instance at 0x1515cbd8e780>,2,3,[5 1],3,8,11,5,8
+1,<environment.Job instance at 0x1515cb16a460>,2,3,[6 2],3,22,25,19,22
+1,<environment.Job instance at 0x1515cc53ef50>,0,3,[10  2],1,1,4,0,1
+1,<environment.Job instance at 0x1515cc53eeb0>,0,1,[1 7],1,2,3,1,2
+1,<environment.Job instance at 0x1515cc9b6910>,3,17,[1 5],4,10,27,6,10
+1,<environment.Job instance at 0x1515b03039b0>,0,2,[10  2],1,2,4,1,2
+1,<environment.Job instance at 0x1515836bd190>,2,3,[5 1],3,8,11,5,8
+1,<environment.Job instance at 0x15158324f640>,2,3,[6 2],3,22,25,19,22
+1,<environment.Job instance at 0x1515cc7882d0>,0,3,[10  2],1,1,4,0,1
+1,<environment.Job instance at 0x1515cc03ff50>,0,1,[1 7],1,2,3,1,2
+1,<environment.Job instance at 0x1515cc03f190>,3,17,[1 5],4,10,27,6,10
+1,<environment.Job instance at 0x1515820c3640>,0,2,[10  2],1,2,4,1,2
+1,<environment.Job instance at 0x151581490190>,2,3,[5 1],3,8,11,5,8
+1,<environment.Job instance at 0x1515cbd526e0>,0,3,[10  2],1,1,4,0,1
+1,<environment.Job instance at 0x1515cad174b0>,1,1,[5 2],2,3,4,1,3
+1,<environment.Job instance at 0x1515cad91690>,2,3,[5 1],3,8,11,5,8
+1,<environment.Job instance at 0x151580537f00>,2,3,[6 2],3,4,7,1,4
+1,<environment.Job instance at 0x151581ac7a50>,1,1,[2 5],2,6,7,4,6
+1,<environment.Job instance at 0x151581ac15a0>,2,2,[7 1],3,13,15,10,13
+1,<environment.Job instance at 0x15158150e460>,2,2,[ 1 10],3,4,6,1,4
+1,<environment.Job instance at 0x1515cc72a280>,0,2,[10  2],1,2,4,1,2
+1,<environment.Job instance at 0x1515cbb45320>,1,1,[5 2],2,3,4,1,3
+1,<environment.Job instance at 0x151581a3f640>,2,3,[6 2],3,4,7,1,4
+1,<environment.Job instance at 0x151583e5a9b0>,3,3,[1 8],4,5,8,1,5
+1,<environment.Job instance at 0x151583e5a410>,2,2,[7 1],3,6,8,3,6
+1,<environment.Job instance at 0x151583dc5d70>,1,1,[2 5],2,7,8,5,7
+1,<environment.Job instance at 0x1515cac43dc0>,3,17,[1 5],4,5,22,1,5
+1,<environment.Job instance at 0x1515cbabeeb0>,1,1,[8 1],2,10,11,8,10

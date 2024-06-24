@@ -1,0 +1,29 @@
+iteration,job object,job ID,job Length,job ressource requirement,job enter time,job start time,job finish time,job waiting time,current time
+1,<environment.Job instance at 0x14a9f08650f0>,0,1,[7 1],1,5,6,4,5
+1,<environment.Job instance at 0x14a9ef8c4320>,0,3,[10  2],1,3,6,2,3
+1,<environment.Job instance at 0x14a9ef8cc1e0>,2,2,[ 1 10],3,7,9,4,7
+1,<environment.Job instance at 0x14a9ef8cc410>,3,17,[1 5],4,9,26,5,7
+1,<environment.Job instance at 0x14a9f1b60f50>,1,13,[2 8],2,4,17,2,4
+1,<environment.Job instance at 0x14a9ea9bd690>,2,3,[6 2],3,5,8,2,5
+1,<environment.Job instance at 0x14a9e8e98c80>,2,2,[7 1],3,3,5,0,3
+1,<environment.Job instance at 0x14a9efb44190>,1,13,[2 8],2,2,15,0,2
+1,<environment.Job instance at 0x14a9f1616c80>,2,3,[5 1],3,3,6,0,3
+1,<environment.Job instance at 0x14a9edbb02d0>,2,2,[7 1],3,3,5,0,3
+1,<environment.Job instance at 0x14a9f0f74870>,1,1,[8 1],2,2,3,0,2
+1,<environment.Job instance at 0x14a9eb84bb90>,3,17,[1 5],4,5,22,1,5
+1,<environment.Job instance at 0x14a9ee7ee320>,2,1,[1 5],3,4,5,1,4
+1,<environment.Job instance at 0x14a9ed2883c0>,0,1,[7 1],1,1,2,0,1
+1,<environment.Job instance at 0x14a9ed288b40>,3,13,[1 5],4,4,17,0,4
+1,<environment.Job instance at 0x14a9ece0ca00>,0,3,[10  2],1,1,4,0,1
+1,<environment.Job instance at 0x14a9e8ba1870>,0,1,[1 7],1,1,2,0,1
+1,<environment.Job instance at 0x14a9f38990f0>,3,17,[1 5],4,5,22,1,5
+1,<environment.Job instance at 0x14a9f033b780>,1,13,[2 8],2,2,15,0,2
+1,<environment.Job instance at 0x14a9e8c1c0a0>,3,3,[8 1],4,4,7,0,4
+1,<environment.Job instance at 0x14a9e92bc730>,0,1,[7 1],1,1,2,0,1
+1,<environment.Job instance at 0x14a9e526c6e0>,2,3,[6 2],3,3,6,0,3
+1,<environment.Job instance at 0x14a9e99eb7d0>,3,13,[1 5],4,4,17,0,4
+1,<environment.Job instance at 0x14a9e99ebf50>,0,3,[10  2],1,1,4,0,1
+1,<environment.Job instance at 0x14a9ea397780>,3,3,[1 8],4,4,7,0,4
+1,<environment.Job instance at 0x14a9ea397fa0>,0,1,[1 7],1,1,2,0,1
+1,<environment.Job instance at 0x14a9e99ebdc0>,1,1,[8 1],2,2,3,0,2
+1,<environment.Job instance at 0x14a9f29abd20>,3,17,[1 5],4,4,21,0,4

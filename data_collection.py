@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import os
 import csv
+# from memory_profiler import profile
 
 class Data_collection:
-
         def convert_parameter_to_yaml(self,pa):
                 parameters = {                
                         'output_filename': pa.output_filename,
@@ -60,7 +60,6 @@ class Data_collection:
                         with open(file, 'a', newline='') as f:
                                 writer = csv.writer(f)
                                 writer.writerow(headers)
-
         def append_job_to_csv(self, file, header, job_info):
                         if not os.path.isfile(file) or os.path.getsize(file) == 0:
                                 with open(file, 'a') as f:

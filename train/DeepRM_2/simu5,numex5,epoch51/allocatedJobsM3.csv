@@ -1,0 +1,29 @@
+iteration,job object,job ID,job Length,job ressource requirement,job enter time,job start time,job finish time,job waiting time,current time
+1,<environment.Job instance at 0x14a9f5a63640>,2,1,[1 5],3,3,4,0,3
+1,<environment.Job instance at 0x14a9f440d1e0>,3,3,[8 1],4,4,7,0,4
+1,<environment.Job instance at 0x14a9f440d640>,2,3,[5 1],3,3,6,0,3
+1,<environment.Job instance at 0x14a9f440dc30>,1,1,[5 2],2,4,5,2,4
+1,<environment.Job instance at 0x14a9f4409910>,1,2,[1 9],2,3,5,1,3
+1,<environment.Job instance at 0x14a9f0863be0>,2,3,[6 2],3,3,6,0,3
+1,<environment.Job instance at 0x14a9ef8c4500>,1,1,[2 5],2,3,4,1,3
+1,<environment.Job instance at 0x14a9ef8c43c0>,2,2,[7 1],3,8,10,5,8
+1,<environment.Job instance at 0x14a9ef8d0730>,1,1,[8 1],2,3,4,1,3
+1,<environment.Job instance at 0x14a9ec0bd190>,0,2,[10  2],1,1,3,0,1
+1,<environment.Job instance at 0x14a9f1b60fa0>,3,3,[8 1],4,4,7,0,4
+1,<environment.Job instance at 0x14a9f1b63b40>,1,1,[5 2],2,4,5,2,4
+1,<environment.Job instance at 0x14a9f1b609b0>,1,2,[1 9],2,3,5,1,3
+1,<environment.Job instance at 0x14a9ea9a83c0>,1,1,[2 5],2,3,4,1,3
+1,<environment.Job instance at 0x14a9ea9a8870>,1,1,[8 1],2,4,5,2,4
+1,<environment.Job instance at 0x14a9ef0b40f0>,3,17,[1 5],4,7,24,3,7
+1,<environment.Job instance at 0x14a9efb44460>,0,2,[10  2],1,1,3,0,1
+1,<environment.Job instance at 0x14a9efb44640>,3,3,[8 1],4,4,7,0,4
+1,<environment.Job instance at 0x14a9f160a190>,1,1,[5 2],2,4,5,2,4
+1,<environment.Job instance at 0x14a9f07c1960>,1,1,[2 5],2,3,4,1,3
+1,<environment.Job instance at 0x14a9f52074b0>,3,3,[8 1],4,4,7,0,4
+1,<environment.Job instance at 0x14a9ed288780>,2,3,[6 2],3,3,6,0,3
+1,<environment.Job instance at 0x14a9e8ba1a00>,2,2,[ 1 10],3,4,6,1,4
+1,<environment.Job instance at 0x14a9f033be60>,0,2,[10  2],1,1,3,0,1
+1,<environment.Job instance at 0x14a9f033b460>,2,1,[1 5],3,3,4,0,3
+1,<environment.Job instance at 0x14a9e8c7c690>,0,2,[1 9],1,1,3,0,1
+1,<environment.Job instance at 0x14a9e526c6e0>,3,17,[2 6],4,4,21,0,4
+1,<environment.Job instance at 0x14a9e526c690>,1,2,[1 9],2,2,4,0,2
